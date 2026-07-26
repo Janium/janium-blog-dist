@@ -1,0 +1,38 @@
+{
+  "contract": 1,
+  "generated": "2026-07-26T00:00:00Z",
+  "posts": [
+    {
+      "slug": "que-es-janium-collect",
+      "date": "2026-07-24",
+      "tags": ["fundamentos", "producto"],
+      "translations": {
+        "es": {
+          "title": "Qué es Janium Collect",
+          "description": "Extracción de metadatos con IA, sin plantillas: de documentos, imágenes, audio y video a registros de catálogo en formatos estándar.",
+          "cover": "assets/que-es-collect.webp",
+          "html": "posts/que-es-janium-collect.es.html"
+        },
+        "en": {
+          "title": "What Janium Collect is",
+          "description": "AI metadata extraction, no templates: from documents, images, audio and video to catalog records in standard formats.",
+          "cover": "assets/que-es-collect.webp",
+          "html": "posts/que-es-janium-collect.en.html"
+        }
+      }
+    },
+    {
+      "slug": "de-documentos-sueltos-a-fondo-y-serie",
+      "date": "2026-07-24",
+      "tags": ["proceso", "isad-g"],
+      "translations": {
+        "es": {
+          "title": "De documentos sueltos a Fondo y Serie",
+          "description": "Cómo Collect genera los nodos de Fondo, Sección y Serie a partir de los documentos, sube lo que la mayoría comparte y agrega rango de fechas y volumen.",
+          "cover": null,
+          "html": "posts/de-documentos-sueltos-a-fondo-y-serie.es.html"
+        }
+      }
+    }
+  ]
+}
