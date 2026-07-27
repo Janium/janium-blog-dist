@@ -1,27 +1,73 @@
-<!--
-  Fragmento de ejemplo (contract 1). Es el CUERPO del artículo, sin <html>/<head>/<body>,
-  sin el <h1> del título (lo pone janium.com desde manifest.title) y sin chrome del sitio.
-  El cuerpo empieza en <h2>. Las imágenes referencian assets/ con ruta repo-relativa.
--->
-<p>Janium Collect lee un documento —o una imagen, un audio, un video— y produce un
-registro de catálogo en un formato estándar. No a partir de una plantilla por tipo de
-material, sino leyendo el contenido y decidiendo qué va en cada campo.</p>
-
-<h2>Qué hace, en concreto</h2>
-<p>Recibe material de una carpeta local, SFTP, Google Drive, Zoho WorkDrive o SharePoint,
-y entrega registros en Dublin Core, MARC21/UNIMARC, ISAD-G o CDWA. Entre la lectura y la
-salida aplica traducción selectiva del vocabulario, control de autoridades y correctores
-deterministas.</p>
-
-<figure>
-  <img src="assets/que-es-collect.webp" alt="Diagrama del flujo de Janium Collect: de documento a registro de catálogo">
-  <figcaption>Del documento al registro, sin plantillas por tipo de material.</figcaption>
-</figure>
-
-<h2>Qué no inventa</h2>
-<p>Cuando el documento no dice un dato, Collect prefiere dejarlo ausente antes que
-rellenarlo. Ese sesgo —preferir el hueco al invento— es lo que hace que el registro sea
-revisable en lugar de plausible.</p>
-
-<p>Si tu institución tiene material digitalizado esperando catalogarse, escríbenos a
-<a href="mailto:info@janium.com">info@janium.com</a>.</p>
+<p>Toda institución con acervo llega tarde o temprano al mismo cuello de botella: el
+material existe, pero para encontrarlo y usarlo hay que describirlo. Un libro, un
+expediente, una fotografía, una grabación, un contrato —cada uno necesita un
+registro de catálogo en un formato estándar, hecho por alguien que sabe catalogar.
+Ese trabajo toma tiempo, y las personas que lo hacen bien no abundan. Mientras
+tanto el material se acumula, muchas veces ya digitalizado pero sin describir,
+repartido entre una carpeta en la nube, un servidor y cajas de escaneos.</p>
+<p>Janium Collect se ocupa de la primera parte de ese trabajo. Vigila los lugares
+donde la institución guarda sus documentos, los lee con ayuda de un modelo de
+lenguaje, y produce un registro de catálogo en el formato que la institución usa.
+Quien cataloga deja de teclear cada registro desde cero y pasa a revisar los que
+el sistema propone.</p>
+<h2>Qué produce</h2>
+<p>La salida de Collect es un registro estructurado, no un texto libre. Según el tipo
+de acervo, ese registro sale en el formato correspondiente:</p>
+<ul>
+<li><strong>Dublin Core</strong> para una descripción simple e interoperable.</li>
+<li><strong>MARC21</strong> (y su variante MARCedit/RDA, y UNIMARC) para catálogos de biblioteca.</li>
+<li><strong>ISAD-G</strong> para archivos, donde importa la procedencia y la jerarquía —fondo,
+  sección, serie— más que el ítem aislado.</li>
+<li><strong>CDWA</strong> para obras de arte y objetos culturales, con el vocabulario del Getty.</li>
+</ul>
+<p>La institución no cambia su catálogo ni su norma de descripción para usar Collect;
+el sistema se ajusta al formato que ya usa.</p>
+<h2>De qué material parte</h2>
+<p>El acervo rara vez es homogéneo, y Collect lee varios tipos de fuente con el mismo
+destino —un registro—:</p>
+<ul>
+<li>Documentos de texto, en PDF o en alguno de los más de treinta formatos de oficina
+  y publicación que convierte para procesarlos.</li>
+<li>Imágenes y documentos escaneados, con reconocimiento de texto cuando hace falta,
+  o leyendo la imagen directamente cuando el texto no basta.</li>
+<li>Datos ya estructurados —una hoja de cálculo, una lista de inventario— que se
+  convierten en registros sin volver a capturarlos.</li>
+<li>Audio y video, transcribiendo la voz y, en el video, tomando fotogramas por
+  escena para describir el contenido.</li>
+</ul>
+<h2>El criterio que sostiene la confianza</h2>
+<p>Collect no se limita a transcribir: identifica el material y completa el registro con
+datos que la fuente no traía —materias, fecha, a veces el ISBN—, tomados del
+conocimiento del modelo. Ese enriquecimiento es el valor. El riesgo es que un dato
+que suena razonable pero es falso se quede en el catálogo con aspecto de correcto.</p>
+<p>La confianza no descansa en no enriquecer, sino en saber de dónde viene cada dato. Lo
+verificable se verifica y se atribuye: nombres y materias se contrastan contra
+autoridades y vocabularios controlados y salen con su fuente anotada; lo que viene
+solo del conocimiento del modelo queda sin esa marca. Los campos con regla fija —el
+número de clasificación, por ejemplo— se computan, no se estiman. Y cada registro
+pasa por una evaluación que lo califica y lo marca para revisión cuando cae por debajo
+del umbral, de modo que la revisión se enfoque en lo que el sistema señala.</p>
+<h2>Dónde encaja</h2>
+<p>Collect produce los registros; el catálogo los recibe. Se integra con el sistema de
+la institución —Janium u otro— y puede tomar de vuelta las correcciones que el
+catalogador hace, para que la fuente y el catálogo no se desincronicen. La persona
+que cataloga sigue en el centro del proceso; lo que cambia es en qué gasta su
+tiempo.</p>
+<h2>Lo que no hace</h2>
+<p>Collect trabaja con lo que el documento contiene: si el documento no declara una
+fecha o una medida, el registro no la inventa. La calidad de la salida depende de la
+del material de partida, y el sistema no reemplaza el criterio de quien conoce el
+acervo.</p>
+<p>Lo que cambia es cuánta atención humana hace falta y dónde. Cada registro pasa por
+una evaluación que lo califica, y el sistema frena los que no llegan al mínimo antes
+de que entren al catálogo. Esa calificación permite calibrar la revisión según el
+contexto: una biblioteca con catalogadores puede revisar registro por registro; un
+despacho que procesa miles de contratos, o un archivo que describe en ISAD-G a gran
+escala, no tiene una persona por registro y revisa por excepción —atiende lo que la
+calificación señala y confía en el resto—. La calidad alcanzada vuelve practicable
+ese modo donde revisar todo no lo es.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu institución tiene material digitalizado esperando descripción, o un flujo
+constante de documentos que catalogar, el cuello de botella deja de ser teclear cada
+registro y pasa a ser revisarlos. Si ese es tu problema, escríbenos a
+info@janium.com; nos interesa entender cómo es tu acervo y cómo lo describes hoy.</p>

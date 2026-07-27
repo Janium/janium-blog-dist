@@ -1,0 +1,74 @@
+<p>Every institution with a collection reaches the same bottleneck sooner or later:
+the material exists, but to find it and use it, it has to be described. A book, a
+file, a photograph, a recording, a contract — each one needs a catalog record in a
+standard format, produced by someone who knows how to catalog. That work takes
+time, and the people who do it well are scarce. Meanwhile the material piles up,
+often already digitized but undescribed, scattered across a cloud folder, a server
+and boxes of scans.</p>
+<p>Janium Collect takes on the first part of that work. It watches the places where
+the institution keeps its documents, reads them with the help of a language model,
+and produces a catalog record in the format the institution uses. Whoever catalogs
+stops typing every record from scratch and moves to reviewing the ones the system
+proposes.</p>
+<h2>What it produces</h2>
+<p>Collect&rsquo;s output is a structured record, not free text. Depending on the type of
+collection, that record comes out in the corresponding format:</p>
+<ul>
+<li><strong>Dublin Core</strong> for a simple, interoperable description.</li>
+<li><strong>MARC21</strong> (and its MARCedit/RDA variant, and UNIMARC) for library catalogs.</li>
+<li><strong>ISAD-G</strong> for archives, where provenance and hierarchy — fonds, section, series —
+  matter more than the isolated item.</li>
+<li><strong>CDWA</strong> for works of art and cultural objects, with the Getty vocabulary.</li>
+</ul>
+<p>The institution doesn&rsquo;t change its catalog or its descriptive standard to use
+Collect; the system adapts to the format it already uses.</p>
+<h2>What material it starts from</h2>
+<p>Collections are rarely homogeneous, and Collect reads several kinds of source with
+the same destination — a record:</p>
+<ul>
+<li>Text documents, in PDF or in one of the thirty-plus office and publishing formats
+  it converts for processing.</li>
+<li>Images and scanned documents, with text recognition when needed, or by reading
+  the image directly when text isn&rsquo;t enough.</li>
+<li>Already-structured data — a spreadsheet, an inventory list — turned into records
+  without recapturing them.</li>
+<li>Audio and video, transcribing the speech and, in video, taking keyframes per scene
+  to describe the content.</li>
+</ul>
+<h2>The criterion that underpins trust</h2>
+<p>Collect doesn&rsquo;t just transcribe: it identifies the material and completes the record
+with data the source didn&rsquo;t carry —subjects, a date, sometimes the ISBN—, drawn from
+the model&rsquo;s knowledge. That enrichment is the value. The risk is that a value that
+sounds reasonable but is wrong stays in the catalog looking correct.</p>
+<p>Trust doesn&rsquo;t rest on not enriching, but on knowing where each value comes from. What
+can be verified is verified and attributed: names and subjects are checked against
+authority files and controlled vocabularies and carry their source; what comes only
+from the model&rsquo;s knowledge stays unmarked. Fields with a fixed rule —the
+classification number, for instance— are computed, not estimated. And each record
+goes through an evaluation that scores it and flags it for review when it falls below
+the threshold, so review focuses on what the system points to.</p>
+<h2>Where it fits</h2>
+<p>Collect produces the records; the catalog receives them. It integrates with the
+institution&rsquo;s system — Janium or another — and can take back the corrections the
+cataloger makes, so that the source and the catalog don&rsquo;t drift apart. The person
+who catalogs stays at the center of the process; what changes is where their time
+goes.</p>
+<h2>What it doesn&rsquo;t do</h2>
+<p>Collect works with what the document contains: if the document doesn&rsquo;t state a date
+or a measurement, the record doesn&rsquo;t invent it. The quality of the output depends on
+that of the source material, and the system doesn&rsquo;t replace the judgment of someone
+who knows the collection.</p>
+<p>What changes is how much human attention is needed, and where. Each record goes
+through an evaluation that scores it, and the system stops those that fall below the
+minimum before they enter the catalog. That score lets each context calibrate how
+much to review: a library with catalogers can review record by record; a firm
+processing thousands of contracts, or an archive describing in ISAD-G at scale, has
+no one person per record and reviews by exception —addressing what the score flags
+and trusting the rest. The quality reached makes that mode workable where reviewing
+everything isn&rsquo;t.</p>
+<h2>To continue the conversation</h2>
+<p>If your institution has digitized material waiting to be described, or a steady flow
+of documents to catalog, the bottleneck stops being typing every record and becomes
+reviewing them. If that&rsquo;s your problem, write to us at info@janium.com; we&rsquo;re
+interested in understanding what your collection looks like and how you describe it
+today.</p>
