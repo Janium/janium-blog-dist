@@ -36,6 +36,7 @@ assets/<archivo>              # imágenes referenciadas por manifiesto y posts
     {
       "slug": "que-es-janium-collect",
       "date": "2026-07-24",
+      "datetime": "2026-07-24T06:00:00Z",
       "tags": ["fundamentos", "producto"],
       "translations": {
         "es": {
@@ -62,9 +63,10 @@ assets/<archivo>              # imágenes referenciadas por manifiesto y posts
 |---|---|---|
 | `contract` | int | Debe ser `1`. Si janium.com lee un `contract` que no soporta, **falla el build** (no adivina). |
 | `generated` | string ISO-8601 UTC | Sello de la emisión. Informativo. Lo estampa Docta. |
-| `posts` | array | Puede estar vacío (`[]`). Orden **no** significativo: el consumidor ordena por `date`. |
+| `posts` | array | Puede estar vacío (`[]`). Orden **no** significativo: el consumidor ordena por `datetime` (con fallback a `date`). |
 | `posts[].slug` | string | `[a-z0-9-]+`. Único en el manifiesto. Estable en el tiempo (cambiarlo rompe URLs y canonical). |
-| `posts[].date` | string `YYYY-MM-DD` | Fecha de publicación. Ordena el índice, el widget del home y el RSS (más reciente primero). |
+| `posts[].date` | string `YYYY-MM-DD` | Fecha **a mostrar** (la del autor). Etiqueta visible del post y del RSS. |
+| `posts[].datetime` | string ISO-8601 UTC (sufijo `Z`) | **Opcional (aditivo en contrato 1).** Instante de publicación en GMT/UTC. **Ordena** índice, widget del home, RSS `pubDate` y `datePublished` del JSON-LD (más reciente primero). Permite conservar el orden al publicar desde husos distintos. Si falta (bundle previo), el consumidor cae a `date` a medianoche UTC. |
 | `posts[].tags` | array de string | Puede estar vacío. Taxonomía libre; el consumidor puede mostrarlos o ignorarlos. |
 | `posts[].translations` | objeto | **Al menos un idioma.** Clave = código de idioma; valor = objeto de traducción. |
 
