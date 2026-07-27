@@ -1,47 +1,27 @@
 # janium-blog-dist
 
-Bundle de blog para **janium.com**. Es el punto de encuentro entre dos sistemas:
+Contenido del blog de **[Janium](https://www.janium.com)**, renderizado y listo para
+publicar. Es el puente entre **Docta** —el sistema que redacta y renderiza los
+artículos— y el sitio **janium.com**, que lo hornea en tiempo de build.
 
-- **Docta** (`Janium/docta`) *renderiza* los artículos (desde el markdown fuente de
-  `Janium/docta-vault`), resuelve traducciones e imágenes, y **empuja** aquí el
-  resultado como HTML + manifiesto + assets.
-- **janium.com** (`Janium/janium-website`) *consume* este repo en build-time: su
-  `build.mjs` lee el manifiesto y hornea `/blog`, las páginas de cada entrada, el
-  widget de "últimas entradas" del home, `feed.xml` y el sitemap.
+- **Blog en vivo:** https://www.janium.com/blog/
+- Cada entrada: `posts/<slug>.<lang>.html` (el cuerpo del artículo) + su portada en
+  `assets/`, indexadas en `manifest.json`. Idiomas: `es`, `en`, `pt`.
+- Contrato del formato: **[`SPEC.md`](SPEC.md)** (`contract 1`).
 
-Ninguno de los dos lados improvisa el formato: ambos respetan **[`SPEC.md`](SPEC.md)**,
-el contrato de este repo. Cambios al contrato se acuerdan por PR aquí antes de
-implementarse en cualquiera de los dos lados.
+## Sobre Janium Collect
 
-## Por qué git como transporte
+[Janium Collect](https://www.janium.com/janiumcollect/) cataloga acervos con IA: lee
+documentos, imágenes, audio y video, y produce registros en formatos estándar —Dublin
+Core, MARC21/UNIMARC, ISAD-G, CDWA (Getty)—. **Identifica y enriquece con procedencia**:
+lo verificable se contrasta contra autoridades y se atribuye; cada registro se evalúa y
+se marca para revisión. Procesa en la infraestructura de la institución cuando el
+material no puede salir. Bibliotecas, archivos y museos en Latinoamérica, España y
+Portugal.
 
-- **Versionado**: cada emisión de Docta es un commit. Un build de janium.com puede
-  fijarse a un commit del bundle (submódulo) → builds reproducibles y rollback.
-- **Diff por publicación**: se ve exactamente qué cambió entre dos estados del blog.
-- **Encaja en el flujo**: Jenkins ya hace checkout de git; no hace falta un canal nuevo.
+## Cómo se produce
 
-Caveat: las imágenes son binarios. Al vivir en un repo *dedicado* (no el de código)
-el bloat queda contenido. Si `assets/` crece mucho, migrar esos tipos a **git-lfs**
-(ver `SPEC.md` §Assets); hoy no es necesario.
-
-## Estructura
-
-```
-manifest.json                 # índice de todas las entradas publicadas (lo emite Docta)
-posts/<slug>.<lang>.html      # cuerpo del artículo renderizado, un archivo por idioma
-assets/<archivo>              # portadas e imágenes embebidas (webp/jpg/png)
-SPEC.md                       # el contrato (fuente de verdad del formato)
-manifest.sample.json          # ejemplo del manifiesto para desarrollar contra él
-```
-
-## Quién escribe qué
-
-| | Docta (productor) | janium.com (consumidor) |
-|---|---|---|
-| `manifest.json` | **escribe** | lee |
-| `posts/*.html` | **escribe** (cuerpo del artículo) | lee, envuelve con el chrome del sitio |
-| `assets/*` | **escribe** | copia a `/assets/blog/` |
-| `SPEC.md` | acuerda por PR | acuerda por PR |
-
-Este repo **no** contiene el markdown fuente (eso vive en `Janium/docta-vault`) ni el
-código del sitio (`Janium/janium-website`). Solo el artefacto renderizado y su contrato.
+Docta renderiza los artículos **publicados** desde su vault (nunca borradores) y empuja
+aquí `manifest.json` + `posts/` + `assets/`. janium.com consume este repositorio en
+build-time: valida el contrato, genera las páginas del blog y copia las imágenes. El
+detalle del formato y las responsabilidades de cada lado están en `SPEC.md`.
