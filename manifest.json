@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-07-28T09:05:19Z",
+  "generated": "2026-07-28T15:37:21Z",
   "posts": [
     {
       "slug": "glosario",
@@ -17,6 +17,18 @@
           "description": "Definiciones breves de los términos que cruzan esta serie: de la IA (modelo de lenguaje o LLM, modelo de frontera, on-premise, air-gapped, anonimización, OCR, ASR) y de la catalogación (MARC21, Dublin Core, ISAD-G, CDWA, control de autoridades). Para quien viene de bibliotecas y archivos y se topa con jerga de IA, o al revés.",
           "cover": "assets/glosario-es-cover-d129439f.svg",
           "html": "posts/glosario.es.html"
+        },
+        "en": {
+          "title": "Glossary: the AI and cataloging terms in this blog",
+          "description": "Short definitions of the terms that cross this series: from AI (language model or LLM, frontier model, on-premise, air-gapped, anonymization, OCR, ASR) and from cataloging (MARC21, Dublin Core, ISAD-G, CDWA, authority control). For readers coming from libraries and archives who run into AI jargon, or the other way around.",
+          "cover": "assets/glosario-en-cover-d129439f.svg",
+          "html": "posts/glosario.en.html"
+        },
+        "pt": {
+          "title": "Glossário: os termos de IA e catalogação deste blog",
+          "description": "Definições breves dos termos que atravessam esta série: da IA (modelo de linguagem ou LLM, modelo de fronteira, on-premise, air-gapped, anonimização, OCR, ASR) e da catalogação (MARC21, Dublin Core, ISAD-G, CDWA, controle de autoridade). Para quem vem de bibliotecas e arquivos e esbarra em jargão de IA, ou o contrário.",
+          "cover": "assets/glosario-pt-cover-d129439f.svg",
+          "html": "posts/glosario.pt.html"
         }
       }
     },
@@ -36,6 +48,18 @@
           "description": "Hay acervos que no pueden salir de la institución, por residencia de datos, política o confidencialidad. Cómo Collect cataloga con IA en la propia infraestructura, con un modelo local e incluso air-gapped; el modo híbrido con anonimización para escalar los casos difíciles; y por qué lo raro no es la IA soberana ni la catalogación por separado, sino las dos juntas. Con los límites de cada modo.",
           "cover": "assets/soberania-de-datos-es-cover-47994b20.svg",
           "html": "posts/soberania-de-datos.es.html"
+        },
+        "en": {
+          "title": "Cataloging with AI without the material leaving the institution",
+          "description": "Some collections cannot leave the institution — data residency, policy or confidentiality. How Collect catalogs with AI on the institution's own infrastructure, with a local model and even air-gapped; the hybrid mode with anonymization for the hard cases; and why the rare thing isn't sovereign AI or cataloging on their own, but the two together. With the limits of each mode.",
+          "cover": "assets/soberania-de-datos-en-cover-47994b20.svg",
+          "html": "posts/soberania-de-datos.en.html"
+        },
+        "pt": {
+          "title": "Catalogar com IA sem que o material saia da instituição",
+          "description": "Há acervos que não podem sair da instituição — por residência de dados, política ou confidencialidade. Como o Collect cataloga com IA na própria infraestrutura, com um modelo local e até air-gapped; o modo híbrido com anonimização para os casos difíceis; e por que o raro não é a IA soberana nem a catalogação isoladas, mas as duas juntas. Com os limites de cada modo.",
+          "cover": "assets/soberania-de-datos-pt-cover-47994b20.svg",
+          "html": "posts/soberania-de-datos.pt.html"
         }
       }
     },
