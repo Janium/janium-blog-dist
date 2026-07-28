@@ -1,7 +1,44 @@
 {
   "contract": 1,
-  "generated": "2026-07-28T05:45:55Z",
+  "generated": "2026-07-28T08:51:24Z",
   "posts": [
+    {
+      "slug": "glosario",
+      "date": "2026-07-28",
+      "datetime": "2026-07-28T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia",
+        "referencia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Glosario: los términos de IA y catalogación de este blog",
+          "description": "Definiciones breves de los términos que cruzan esta serie: de la IA (modelo de lenguaje o LLM, modelo de frontera, on-premise, air-gapped, anonimización, OCR, ASR) y de la catalogación (MARC21, Dublin Core, ISAD-G, CDWA, control de autoridades). Para quien viene de bibliotecas y archivos y se topa con jerga de IA, o al revés.",
+          "cover": "assets/glosario-es-cover-d129439f.svg",
+          "html": "posts/glosario.es.html"
+        }
+      }
+    },
+    {
+      "slug": "soberania-de-datos",
+      "date": "2026-07-27",
+      "datetime": "2026-07-27T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia",
+        "soberania",
+        "gobierno"
+      ],
+      "translations": {
+        "es": {
+          "title": "Catalogar con IA sin que el material salga de la institución",
+          "description": "Hay acervos que no pueden salir de la institución, por residencia de datos, política o confidencialidad. Cómo Collect cataloga con IA en la propia infraestructura, con un modelo local e incluso air-gapped; el modo híbrido con anonimización para escalar los casos difíciles; y por qué lo raro no es la IA soberana ni la catalogación por separado, sino las dos juntas. Con los límites de cada modo.",
+          "cover": "assets/soberania-de-datos-es-cover-47994b20.svg",
+          "html": "posts/soberania-de-datos.es.html"
+        }
+      }
+    },
     {
       "slug": "que-es-janium-collect",
       "date": "2026-07-24",
