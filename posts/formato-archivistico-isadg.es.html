@@ -1,0 +1,76 @@
+<p>Quien viene de la biblioteca y llega al archivo suele traer un hábito que no
+funciona: describir cada pieza como si valiera por sí misma. Un libro sí vale por
+sí mismo. Su ficha lo describe completo —autor, título, edición, materia— y ese
+registro basta para encontrarlo y usarlo, sin importar qué haya en el estante de
+al lado. Un documento de archivo no es así. Un oficio suelto, sin saber quién lo
+produjo, en qué expediente estaba ni qué lo antecede, dice poco. Su sentido viene
+tanto de su contenido como de su lugar dentro de un conjunto.</p>
+<p>Esa diferencia es la que separa la descripción bibliográfica de la archivística, y
+es la razón por la que existe <strong>ISAD-G</strong> —la Norma Internacional General de
+Descripción Archivística, del Consejo Internacional de Archivos—. Este texto trata
+de qué es y por qué un archivo la necesita. El mecanismo con el que Collect genera
+los niveles superiores queda para otro post; aquí interesa el principio.</p>
+<h2>Procedencia y orden original</h2>
+<p>Dos ideas sostienen toda la práctica archivística.</p>
+<p>La primera es el <strong>principio de procedencia</strong>: los documentos de un mismo productor
+—una dependencia, una empresa, una persona— se mantienen juntos y no se mezclan con
+los de otro, aunque hablen del mismo tema. Un contrato de compraventa de la
+Notaría A y otro de la Notaría B no van juntos en una carpeta de &ldquo;compraventas&rdquo;;
+cada uno pertenece al fondo de su notaría. Lo que agrupa no es la materia, es el
+origen.</p>
+<p>La segunda es el <strong>respeto al orden original</strong>: el archivo conserva la organización
+que el productor le dio a sus documentos, en lugar de reordenarlos por criterios
+externos. Ese orden es evidencia. Dice cómo trabajaba la oficina, qué trámite
+seguía a cuál, cómo se agrupaban los asuntos. Reordenar alfabéticamente o por fecha
+puede parecer más prolijo, pero borra información que el archivo debía preservar.</p>
+<p>De estas dos ideas se sigue todo lo demás. Un archivo no es una colección de piezas
+independientes que se catalogan una por una; es una estructura que se describe
+entera.</p>
+<h2>Del todo a la parte</h2>
+<p>Por eso ISAD-G describe en niveles, del conjunto mayor a la unidad menor:</p>
+<blockquote>
+<p><strong>Fondo → Sección → Serie → Expediente → Unidad documental</strong></p>
+</blockquote>
+<p>El <strong>fondo</strong> es todo lo producido por un mismo organismo o persona. Dentro de él, las
+<strong>secciones</strong> corresponden a divisiones —áreas, funciones—; las <strong>series</strong> agrupan
+documentos generados por una misma actividad (correspondencia, actas, nóminas); el
+<strong>expediente</strong> reúne los documentos de un mismo asunto; y al fondo de la jerarquía está
+la <strong>unidad documental</strong>, la pieza concreta.</p>
+<p>La descripción va de arriba hacia abajo, y cada nivel hereda del anterior. Lo que se
+dice en el fondo —quién lo produjo, su historia, las condiciones de acceso— no se
+repite en cada expediente ni en cada documento; se describe una vez, en el nivel que
+corresponde, y aplica a todo lo que cuelga debajo. ISAD-G lo llama regla de no
+repetición. Describir un archivo como si fuera un catálogo de fichas planas —cada
+documento con su productor, su historia y sus condiciones repetidos— no solo cuesta
+más trabajo: pierde la estructura que hacía legible al conjunto.</p>
+<h2>Qué produce Collect, y qué necesita para hacerlo</h2>
+<p>Janium Collect lee los documentos de un acervo y produce registros en el formato que
+la institución usa. Para archivos, ese formato es <strong>ISAD-G</strong>, con sus niveles y su
+lógica de procedencia.</p>
+<p>Collect describe en un orden particular. Primero las unidades documentales —lo que
+está a la vista en cada documento— y, a partir de ellas, su exportador jerárquico
+<strong>genera los niveles superiores</strong>: reconoce a qué
+serie, sección y fondo pertenece cada unidad, arma el árbol y sube al nivel que
+corresponde los datos que las unidades comparten. El resultado es una descripción
+que va del fondo a la pieza, construida desde la pieza hacia arriba.</p>
+<p>La jerarquía no se inventa, pero tampoco exige que la procedencia venga declarada de
+antemano. Collect la construye con las señales que encuentra en el material. Cuando
+son explícitas —una clasificación, una estructura de carpetas, datos que dicen a qué
+serie y fondo pertenece cada unidad—, arma el árbol directamente. Cuando no las hay,
+se apoya en <strong>patrones del propio contenido</strong>: si reconoce que un documento es una
+factura e identifica a su emisor, infiere a qué sección corresponde; al agrupar esas
+inferencias propone una organización que no venía dada. Esa propuesta es un punto de
+partida para que un archivista la revise y corrija, no un veredicto.</p>
+<p>El límite está donde no queda señal que leer. Un conjunto de escaneos sueltos, sin
+clasificación, sin estructura y sin patrones reconocibles en su contenido, no da de
+dónde deducir una jerarquía, y forzarla sería inventarla. Ahí la organización es
+trabajo humano previo, y Collect describe lo que ya tiene un orden. Ese es también el
+criterio de cuándo aporta en la parte jerárquica: cuando hay procedencia que respetar
+o pistas de las cuales partir, no cuando no queda ninguna.</p>
+<h2>Para continuar la conversación</h2>
+<p>ISAD-G no es un formato más entre MARC y Dublin Core; es la forma de describir cuando
+lo que importa es de dónde viene un documento y con qué otros va. Si tu institución
+tiene un fondo por describir y quieres ver cómo se comporta la generación de niveles
+con tu propia estructura de procedencia —o discutir dónde están sus límites con tu
+material concreto—, escríbenos a info@janium.com; nos interesa entender cómo está
+organizado tu archivo hoy.</p>

@@ -1,7 +1,66 @@
 {
   "contract": 1,
-  "generated": "2026-08-03T11:14:05Z",
+  "generated": "2026-08-03T11:14:44Z",
   "posts": [
+    {
+      "slug": "confiar-en-catalogo-con-ia",
+      "date": "2026-08-03",
+      "datetime": "2026-08-03T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia",
+        "fundamentos"
+      ],
+      "translations": {
+        "es": {
+          "title": "Por qué confiar en un catálogo hecho con IA",
+          "description": "Cómo se hace confiable un catálogo hecho con IA: no negando que el modelo enriquece, sino sabiendo de dónde viene cada dato. Se apoya en la fuente que respalda cada uno, la verificación contra autoridades, el cómputo determinista de los campos con regla, la evaluación por registro y un filtro de calidad que frena lotes degradados, con los límites explícitos.",
+          "cover": "assets/confiar-en-catalogo-con-ia-es-cover-4bc2c5d9.svg",
+          "html": "posts/confiar-en-catalogo-con-ia.es.html"
+        },
+        "en": {
+          "title": "Why trust a catalog made with AI",
+          "description": "How a catalog made with AI becomes trustworthy: not by denying that the model enriches, but by knowing where each piece of data comes from. It rests on the source that backs each one, verification against authorities, deterministic computation of rule-based fields, per-record evaluation and a quality gate that stops degraded batches, with the limits made explicit.",
+          "cover": "assets/confiar-en-catalogo-con-ia-en-cover-4bc2c5d9.svg",
+          "html": "posts/confiar-en-catalogo-con-ia.en.html"
+        },
+        "pt": {
+          "title": "Por que confiar em um catálogo feito com IA",
+          "description": "Como um catálogo feito com IA se torna confiável: não negando que o modelo enriquece, mas sabendo de onde vem cada dado. Apoia-se na fonte que respalda cada um, na verificação contra autoridades, no cálculo determinístico dos campos com regra, na avaliação por registro e num filtro de qualidade que barra lotes degradados, com os limites explícitos.",
+          "cover": "assets/confiar-en-catalogo-con-ia-pt-cover-4bc2c5d9.svg",
+          "html": "posts/confiar-en-catalogo-con-ia.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "formato-archivistico-isadg",
+      "date": "2026-08-03",
+      "datetime": "2026-08-03T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo describir un archivo en ISAD-G con IA",
+          "description": "Qué distingue la descripción archivística de la bibliográfica, por qué un archivo necesita ISAD-G, y cómo se produce descripción en ISAD-G con IA —por procedencia y jerarquía, no por ítem aislado—.",
+          "cover": "assets/formato-archivistico-isadg-es-cover-dc020629.svg",
+          "html": "posts/formato-archivistico-isadg.es.html"
+        },
+        "en": {
+          "title": "How to describe an archive in ISAD-G with AI",
+          "description": "What sets archival description apart from bibliographic description, why an archive needs ISAD-G, and how ISAD-G description is produced with AI —by provenance and hierarchy, not item by isolated item—.",
+          "cover": "assets/formato-archivistico-isadg-en-cover-dc020629.svg",
+          "html": "posts/formato-archivistico-isadg.en.html"
+        },
+        "pt": {
+          "title": "Como descrever um arquivo em ISAD-G com IA",
+          "description": "O que distingue a descrição arquivística da bibliográfica, por que um arquivo precisa de ISAD-G, e como se produz descrição em ISAD-G com IA —por proveniência e hierarquia, não por item isolado—.",
+          "cover": "assets/formato-archivistico-isadg-pt-cover-dc020629.svg",
+          "html": "posts/formato-archivistico-isadg.pt.html"
+        }
+      }
+    },
     {
       "slug": "glosario",
       "date": "2026-07-28",
