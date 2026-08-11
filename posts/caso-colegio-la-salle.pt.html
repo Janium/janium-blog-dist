@@ -1,0 +1,57 @@
+<p>O Colégio de La Salle, em Bogotá, é um colégio bilíngue com uma biblioteca em cada
+seção: uma para o ensino médio e outra infantil. Quando decidiu levar sua biblioteca
+ao Janium, seu acervo não vivia em um sistema bibliotecário, mas em uma planilha:
+uma lista de Excel com quatro colunas por livro —autor, título, editora e ano—.
+Hoje opera um sistema na nuvem que cataloga, empresta e publica seu catálogo em linha.
+Este caso relata como se fez a conversão e o que têm agora.</p>
+<h2>O que falta a uma lista em Excel</h2>
+<p>Quatro campos bastam para saber quais livros há, mas não para operar uma biblioteca.
+Com uma lista de autor, título, editora e ano não se busca por assunto, não se
+distinguem dois autores com o mesmo nome, não se agrupa a obra de um deles sob uma
+forma normalizada e, sobretudo, não se empresta: uma planilha não sabe quem tem
+qual livro nem quando deve devolvê-lo. Passar dessa lista a um sistema que catalogue
+e empreste, campo por campo e à mão, é o trabalho que muitas bibliotecas pequenas
+adiam durante anos.</p>
+<h2>A conversão, com enriquecimento</h2>
+<p>Para não voltar a digitar cada ficha, a Janium processou a lista com o <strong>Collect</strong>, sua
+ferramenta interna de extração de metadados com inteligência artificial. O
+colégio não contratou o Collect: foi o meio com o qual se fez a conversão.</p>
+<p>A partir do autor e do título, o Collect identificou cada obra e produziu um registro
+completo em <strong>MARC21/RDA</strong>. Além dos quatro campos de origem, cada registro
+saiu com uma nota de resumo, cabeçalhos de assunto normalizados e entre <strong>16
+e 33 campos</strong>. Foram 2.423 títulos da biblioteca do ensino médio e 410 da
+infantil, processados em quatro dias.</p>
+<p>A qualidade não é dada como boa às cegas: o Collect avalia cada registro e o pontua
+conforme sua completude e o quanto pôde respaldar, e marca com uma nota visível os que
+ficam abaixo do limiar. Isso é o que permite <strong>revisar por exceção</strong> — o catalogador
+atende aos registros que o sistema aponta, não a lista inteira um por um. O
+trabalho de descrição chega pronto; a atenção humana se concentra onde o sistema
+avisa que convém olhar.</p>
+<h2>O sistema que operam agora</h2>
+<p>Os registros não ficaram em uma base apenas para consultar. O colégio passou de uma
+lista que se lia a uma biblioteca que funciona, sobre o Janium na nuvem (JaniumNet),
+com estes módulos:</p>
+<ul>
+<li><strong>Catálogo público em linha (OPAC)</strong>, acessível em <code>colsalle.janium.net</code>, onde alunos
+  e docentes buscam por autor, título ou assunto.</li>
+<li><strong>Circulação</strong>: empréstimos, devoluções, reservas e multas, com serviços ao
+  usuário. É a peça que uma planilha nunca deu: saber quem tem cada
+  livro e gerenciar sua devolução.</li>
+<li><strong>Repositório digital</strong> para imagens, texto, áudio e vídeo, com índice de texto
+  completo e visualizador de aproximação.</li>
+<li><strong>Controle de autoridade</strong> para manter consistentes os nomes e os assuntos, e
+  <strong>inventário</strong> físico sem deter o empréstimo.</li>
+</ul>
+<p>Para a biblioteca de um colégio deste tamanho —duas seções, cerca de 2.800
+títulos—, a assinatura anual do Janium na nuvem, com a implementação, a
+conversão do acervo e a capacitação incluídas, situa-se na ordem de <strong>alguns
+milhares de dólares por ano</strong>. É uma referência de escala, não uma tarifa: depende
+dos módulos e do tamanho do acervo de cada instituição.</p>
+<h2>O que este caso deixa</h2>
+<p>Muitas bibliotecas pequenas guardam seu acervo em uma planilha porque montar um
+sistema em forma parece um projeto grande. O trecho se revelou curto: a conversão
+com enriquecimento fez o trabalho de descrição, a revisão se concentrou no
+que o sistema marcou e, ao final, o colégio ficou operando uma biblioteca que
+cataloga, empresta e publica seu catálogo em linha, muito longe da planilha com
+a qual começou. Para uma instituição deste tamanho, esse ponto de entrada é mais
+acessível do que costuma se supor.</p>

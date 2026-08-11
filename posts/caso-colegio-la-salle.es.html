@@ -1,0 +1,57 @@
+<p>El Colegio de La Salle, en Bogotá, es un colegio bilingüe con una biblioteca en cada
+sección: una para bachillerato y otra infantil. Cuando decidió llevar su biblioteca a
+Janium, su acervo no vivía en un sistema bibliotecario, sino en una hoja de cálculo:
+una lista de Excel con cuatro columnas por libro —autor, título, editorial y año—.
+Hoy opera un sistema en la nube que cataloga, presta y publica su catálogo en línea.
+Este caso recuenta cómo se hizo la conversión y qué tienen ahora.</p>
+<h2>Qué le falta a una lista en Excel</h2>
+<p>Cuatro campos bastan para saber qué libros hay, pero no para operar una biblioteca.
+Con una lista de autor, título, editorial y año no se busca por materia, no se
+distingue a dos autores con el mismo nombre, no se agrupa la obra de uno bajo una
+forma normalizada, y sobre todo no se presta: una hoja de cálculo no sabe quién tiene
+qué libro ni cuándo lo debe devolver. Pasar de esa lista a un sistema que catalogue y
+preste, campo por campo y a mano, es el trabajo que muchas bibliotecas pequeñas
+posponen durante años.</p>
+<h2>La conversión, con enriquecimiento</h2>
+<p>Para no volver a teclear cada ficha, Janium procesó la lista con <strong>Collect</strong>, su
+herramienta interna de extracción de metadatos con inteligencia artificial. El
+colegio no contrató Collect: fue el medio con el que se hizo la conversión.</p>
+<p>A partir del autor y el título, Collect identificó cada obra y produjo un registro
+completo en <strong>MARC21/RDA</strong>. Además de los cuatro campos de origen, cada registro
+salió con una nota de resumen, encabezamientos de materia normalizados y entre <strong>16
+y 33 campos</strong>. Fueron 2,423 títulos de la biblioteca de bachillerato y 410 de la
+infantil, procesados en cuatro días.</p>
+<p>La calidad no se confía a ciegas: Collect evalúa cada registro y lo califica según su
+completitud y cuánto pudo respaldar, y marca con una nota visible los que quedan por
+debajo del umbral. Eso es lo que permite <strong>revisar por excepción</strong> — el catalogador
+atiende los registros que el sistema señala, no la lista entera uno por uno. El
+trabajo de descripción llega hecho; la atención humana se concentra donde el sistema
+avisa que conviene mirar.</p>
+<h2>El sistema que operan ahora</h2>
+<p>Los registros no quedaron en una base para solo consultar. El colegio pasó de una
+lista que se leía a una biblioteca que funciona, sobre Janium en la nube (JaniumNet),
+con estos módulos:</p>
+<ul>
+<li><strong>Catálogo al público en línea</strong>, accesible en <code>colsalle.janium.net</code>, donde alumnos
+  y docentes buscan por autor, título o materia.</li>
+<li><strong>Circulación</strong>: préstamos, devoluciones, reservas y multas, con servicios al
+  usuario. Es la pieza que una hoja de cálculo nunca dio: saber quién tiene cada
+  libro y gestionar su devolución.</li>
+<li><strong>Repositorio digital</strong> para imágenes, texto, audio y video, con índice de texto
+  completo y visor de acercamiento.</li>
+<li><strong>Control de autoridades</strong> para mantener consistentes los nombres y las materias, e
+  <strong>inventario</strong> físico sin detener el préstamo.</li>
+</ul>
+<p>Para la biblioteca de un colegio de este tamaño —dos secciones, alrededor de 2,800
+títulos—, la suscripción anual a Janium en la nube, con la implementación, la
+conversión del acervo y la capacitación incluidas, se ubica en el orden de <strong>un par
+de miles de dólares al año</strong>. Es una referencia de escala, no una tarifa: depende de
+los módulos y del tamaño del acervo de cada institución.</p>
+<h2>Qué deja este caso</h2>
+<p>Muchas bibliotecas pequeñas guardan su acervo en una hoja de cálculo porque montar un
+sistema en forma parece un proyecto grande. El trecho resultó corto: la conversión
+con enriquecimiento hizo el trabajo de descripción, la revisión se concentró en lo
+que el sistema marcó, y al final el colegio quedó operando una biblioteca que
+cataloga, presta y publica su catálogo en línea, muy lejos de la hoja de cálculo con
+la que empezó. Para una institución de este tamaño, ese punto de entrada es más
+accesible de lo que suele suponerse.</p>

@@ -1,7 +1,39 @@
 {
   "contract": 1,
-  "generated": "2026-08-07T05:53:12Z",
+  "generated": "2026-08-11T07:13:22Z",
   "posts": [
+    {
+      "slug": "caso-colegio-la-salle",
+      "date": "2026-08-11",
+      "datetime": "2026-08-11T06:00:00Z",
+      "tags": [
+        "janiumnet",
+        "janiumcollect",
+        "ia",
+        "educacion",
+        "colombia"
+      ],
+      "translations": {
+        "es": {
+          "title": "El Colegio de La Salle: de un Excel de cuatro campos a un sistema bibliotecario en la nube",
+          "description": "La biblioteca de un colegio bilingüe de Bogotá tenía su acervo en una hoja de cálculo con cuatro columnas por libro. Cómo esa lista se convirtió en registros MARC21 con Collect, y en un sistema que hoy cataloga, presta y publica su catálogo en línea.",
+          "cover": "assets/caso-colegio-la-salle-es-cover-b8a25cf3.svg",
+          "html": "posts/caso-colegio-la-salle.es.html"
+        },
+        "en": {
+          "title": "Colegio de La Salle: from a four-field Excel to a library system in the cloud",
+          "description": "The library of a bilingual school in Bogotá kept its collection in a spreadsheet with four columns per book. How that list became MARC21 records with Collect, and a system that today catalogs, circulates and publishes its catalog online.",
+          "cover": "assets/caso-colegio-la-salle-en-cover-11fe52d4.svg",
+          "html": "posts/caso-colegio-la-salle.en.html"
+        },
+        "pt": {
+          "title": "O Colégio de La Salle: de uma planilha Excel de quatro campos a um sistema de biblioteca na nuvem",
+          "description": "A biblioteca de um colégio bilíngue de Bogotá tinha seu acervo em uma planilha com quatro colunas por livro. Como essa lista se transformou em registros MARC21 com o Collect, e em um sistema que hoje cataloga, empresta e publica seu catálogo em linha.",
+          "cover": "assets/caso-colegio-la-salle-pt-cover-848ee0de.svg",
+          "html": "posts/caso-colegio-la-salle.pt.html"
+        }
+      }
+    },
     {
       "slug": "caso-diocesana-bilbao",
       "date": "2026-08-06",
