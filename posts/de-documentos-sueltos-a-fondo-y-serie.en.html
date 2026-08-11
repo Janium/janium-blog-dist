@@ -1,0 +1,87 @@
+<p>In a library, the item is the natural unit of description: a book is cataloged as
+a book, complete in itself. In an archive the criterion is different. An isolated
+file says little if there is no way to know which series it comes from, who
+produced it and under what function. The <strong>ISAD-G</strong> standard starts from there:
+description is by <strong>provenance</strong> and by <strong>hierarchy</strong> —Fonds, Section, Series,
+File— and not by the loose document. Describing a thousand documents as a thousand
+independent records is not an incomplete archival description; it is a description
+of something else.</p>
+<p>This raises a concrete problem when extraction is done with AI. A <a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a>
+reads one document at a time and produces one record per document. Nothing in that
+reading, however good it may be, builds the Series level or the Fonds level,
+because those levels do not live in any individual document: they emerge from the
+whole. Someone has to create those nodes and decide which information belongs to
+each one. That is the work Collect&rsquo;s hierarchical exporter does between extraction
+and the final archive.</p>
+<h2>From per-document records to a tree</h2>
+<p>The starting point is the document records that extraction has already produced.
+Each one carries, besides its data, its <strong>archival location</strong> —the place it
+occupies in the institution&rsquo;s classification scheme—. With that location, the
+exporter builds the tree: it groups the documents that hang from a single Series,
+the Series that hang from a Section, and so on up to the Fonds. The levels it
+exports run from Fonds to Item, passing through Subfonds, Section, Series,
+Subseries, File and Document; the fixed upper levels —Country, Institution— are
+assumed from the context and are not emitted as records.</p>
+<p>The origin of that structure is explicit. <strong>The hierarchy is generated from the
+classification scheme; it is not inferred by the language model.</strong> If the documents
+arrive without their archival location, there is nothing from which to build the
+tree: the exporter can emit the document records, but not the parent nodes that
+organize them. The quality of the hierarchy depends on that provenance information
+coming with the material.</p>
+<h2>Raising what is shared</h2>
+<p>Once the tree is built, the question the standard answers with the principle of
+<strong>non-repetition</strong> (ISAD-G 2.4) appears: a datum that is common to all the
+documents of a Series is described once, at the Series level, not a thousand times
+in each document. The producer of a fonds, the conditions of access of a series,
+the language of the documentation —they are properties of the whole, and repeating
+them in each child hinders more than it helps.</p>
+<p>The exporter applies this by raising to the upper levels the fields that most of
+the children share. It does not raise just anything: only a bounded set of fields
+where the principle makes archival sense —<strong>producer</strong>, administrative history,
+<strong>conditions of access</strong>, <strong>language</strong>, and the subject, geographic and corporate
+descriptors—. A value is raised to a level when it is shared by a sufficient
+proportion of the documents that hang from it; that threshold is deliberately high
+—the great majority, not a simple majority—: raising a datum that in reality only
+half the children share would turn it into a false statement about the other half.</p>
+<p>The mechanism has a limit. <strong>It is a heuristic: a majority threshold, not a
+judgment about the meaning of the field.</strong> It may raise a value that statistically
+dominates but that an archivist, looking at the fonds, would qualify; and it may
+leave below a datum that did belong to the upper level because a few documents
+carried it differently. That is why the result is reviewed: the aggregation
+proposes a reasonable structure, not a definitive one.</p>
+<h2>Adding date and extent</h2>
+<p>There are data that a parent node does not inherit from its children but rather
+summarizes. The <strong>date range</strong> of a Series is the one that spans from the oldest
+document to the most recent it contains; the exporter computes it by aggregating
+the dates of the children —with outlier filtering, such as a biographical date
+that describes not the documentary production but a person mentioned—. The
+<strong>extent</strong> is the count of documents under that node. Thus, a Fonds record may end
+up with &ldquo;1940 / 2020&rdquo; as its extreme date and &ldquo;9033 documents&rdquo; as its extent: two
+data that none of the individual documents contains, because they are properties
+of the aggregate.</p>
+<p>Here a distinction from the life cycle comes into play. In a current/active
+records archive, which keeps receiving documents, those ranges are <strong>recomputed</strong>
+in each export: the holding is open and its extreme date changes as material comes
+in. In a historical archive, closed, the ranges are <strong>frozen</strong>, so that a minor
+correction to a document does not inadvertently alter the range of an entire
+section.</p>
+<h2>Why the output is not the model&rsquo;s</h2>
+<p>From all of this a consequence follows: the ISAD-G archive that Collect delivers
+<strong>does not coincide</strong> with the sum of what the model extracted document by
+document. Between extraction and export there is structure generation —the Fonds,
+Section and Series nodes that did not exist— and there is aggregation —the producer
+raised to its level, the date range computed, the extent counted—.</p>
+<p>That is not a deviation from the original data; it is what an archival description
+requires. The document record is still there, with what the model read from it.
+What is added on top is the context that makes it archivally legible: which series
+it comes from, who produced it, in which fonds it is inscribed. Without that layer,
+you would have an inventory of items; with it, a described classification scheme.</p>
+<p>The three limits, brought together. The hierarchy exists only if the documents
+carry their archival location. The <a href="/en/blog/glosario/#bubble-up">bubble-up</a> is a
+majority heuristic, with a configurable threshold, and that is why the result goes
+through review before entering the catalog. And the aggregation summarizes what the
+documents contain: it does not complete a series that the material left incomplete.</p>
+<p>If your institution describes with ISAD-G and has digitized documents waiting to be
+organized by provenance and hierarchy, write to us at info@janium.com; we are
+interested in understanding how your classification scheme is built and what
+provenance information accompanies your documents today.</p>

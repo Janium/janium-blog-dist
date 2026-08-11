@@ -1,7 +1,66 @@
 {
   "contract": 1,
-  "generated": "2026-08-11T08:00:26Z",
+  "generated": "2026-08-11T08:27:00Z",
   "posts": [
+    {
+      "slug": "de-documentos-sueltos-a-fondo-y-serie",
+      "date": "2026-08-12",
+      "datetime": "2026-08-12T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "De documentos sueltos a Fondo y Serie: generar la jerarquía ISAD-G automáticamente",
+          "description": "Cómo generar automáticamente la jerarquía ISAD-G —Fondo, Sección, Serie— al catalogar: el exportador arma el árbol desde el cuadro de clasificación, sube a los niveles superiores lo que la mayoría de los hijos comparte, y agrega rango de fechas y volumen.",
+          "cover": "assets/de-documentos-sueltos-a-fondo-y-serie-es-cover-58c799d3.svg",
+          "html": "posts/de-documentos-sueltos-a-fondo-y-serie.es.html"
+        },
+        "en": {
+          "title": "From loose documents to Fonds and Series: generating the ISAD-G hierarchy automatically",
+          "description": "How to automatically generate the ISAD-G hierarchy —Fonds, Section, Series— while cataloging: the exporter builds the tree from the classification scheme, raises to the upper levels what most of the children share, and adds date range and extent.",
+          "cover": "assets/de-documentos-sueltos-a-fondo-y-serie-en-cover-58c799d3.svg",
+          "html": "posts/de-documentos-sueltos-a-fondo-y-serie.en.html"
+        },
+        "pt": {
+          "title": "De documentos avulsos a Fundo e Série: gerar a hierarquia ISAD-G automaticamente",
+          "description": "Como gerar automaticamente a hierarquia ISAD-G —Fundo, Seção, Série— ao catalogar: o exportador monta a árvore a partir do quadro de classificação, sobe aos níveis superiores o que a maioria dos filhos compartilha, e acrescenta intervalo de datas e volume.",
+          "cover": "assets/de-documentos-sueltos-a-fondo-y-serie-pt-cover-58c799d3.svg",
+          "html": "posts/de-documentos-sueltos-a-fondo-y-serie.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "que-exigir-catalogacion-con-ia",
+      "date": "2026-08-12",
+      "datetime": "2026-08-12T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia",
+        "evaluacion"
+      ],
+      "translations": {
+        "es": {
+          "title": "Qué exigirle a una herramienta de catalogación con IA",
+          "description": "Casi cualquier herramienta de catalogación con IA se ve bien en una demostración. Estas son las preguntas que revelan si sus registros son confiables en tu catálogo, más allá de esa primera impresión: de dónde viene cada dato, contra qué autoridades verifica, qué calcula con regla, si es correcto en la norma, si evalúa cada registro, si se ajusta a tu acervo, si respeta tu soberanía y si es honesto sobre sus límites. Sirven para evaluar a cualquier proveedor.",
+          "cover": "assets/que-exigir-catalogacion-con-ia-es-cover-afcc7a1e.svg",
+          "html": "posts/que-exigir-catalogacion-con-ia.es.html"
+        },
+        "en": {
+          "title": "What to demand from an AI cataloging tool",
+          "description": "Almost any AI cataloging tool looks good in a demo. These are the questions that reveal whether its records are reliable in your catalog, beyond that first impression: where each datum comes from, against which authorities it verifies, what it computes by rule, whether it is correct against the standard, whether it evaluates each record, whether it fits your collection, whether it respects your sovereignty and whether it is honest about its limits. They work for evaluating any vendor.",
+          "cover": "assets/que-exigir-catalogacion-con-ia-en-cover-afcc7a1e.svg",
+          "html": "posts/que-exigir-catalogacion-con-ia.en.html"
+        },
+        "pt": {
+          "title": "O que exigir de uma ferramenta de catalogação com IA",
+          "description": "Quase qualquer ferramenta de catalogação com IA parece boa numa demonstração. Estas são as perguntas que revelam se seus registros são confiáveis em seu catálogo, para além dessa primeira impressão: de onde vem cada dado, contra quais autoridades verifica, o que calcula com regra, se está correto na norma, se avalia cada registro, se se ajusta ao seu acervo, se respeita sua soberania e se é honesto sobre seus limites. Servem para avaliar qualquer fornecedor.",
+          "cover": "assets/que-exigir-catalogacion-con-ia-pt-cover-afcc7a1e.svg",
+          "html": "posts/que-exigir-catalogacion-con-ia.pt.html"
+        }
+      }
+    },
     {
       "slug": "caso-colegio-la-salle",
       "date": "2026-08-11",

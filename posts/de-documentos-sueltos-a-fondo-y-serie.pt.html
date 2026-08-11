@@ -1,0 +1,85 @@
+<p>Numa biblioteca, o item é a unidade natural de descrição: um livro se cataloga
+como um livro, completo em si mesmo. Num arquivo o critério é outro. Um dossiê
+isolado diz pouco se não se sabe de que série provém, quem o produziu e sob que
+função. A norma <strong>ISAD-G</strong> parte daí: descreve-se por <strong>proveniência</strong> e por
+<strong>hierarquia</strong> —Fundo, Seção, Série, Dossiê— e não pelo documento avulso.
+Descrever mil documentos como mil fichas independentes não é uma descrição
+arquivística incompleta; é uma descrição de outra coisa.</p>
+<p>Isso coloca um problema concreto quando se extrai com IA. Um <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a>
+lê um documento por vez e produz um registro por documento. Nada nessa leitura,
+por melhor que seja, constrói o nível da Série nem o do Fundo, porque esses
+níveis não vivem em nenhum documento individual: emergem do conjunto. Alguém tem
+que criar esses nós e decidir que informação pertence a cada um. Esse é o
+trabalho que faz o exportador hierárquico do Collect entre a extração e o arquivo
+final.</p>
+<h2>De registros por documento a uma árvore</h2>
+<p>O ponto de partida são os registros de documento que a extração já produziu. Cada
+um traz, além dos seus dados, sua <strong>localização arquivística</strong> —o lugar que ocupa
+no quadro de classificação da instituição—. Com essa localização, o exportador
+monta a árvore: agrupa os documentos que pendem de uma mesma Série, as Séries que
+pendem de uma Seção, e assim até o Fundo. Os níveis que exporta vão de Fundo a
+Item, passando por Subfundo, Seção, Série, Subsérie, Dossiê e Documento; os níveis
+fixos superiores —País, Instituição— assumem-se do contexto e não se emitem como
+registros.</p>
+<p>A origem dessa estrutura é explícita. <strong>A hierarquia se gera a partir do quadro de
+classificação, não a infere o modelo de linguagem.</strong> Se os documentos chegam sem
+sua localização arquivística, não há de onde construir a árvore: o exportador pode
+emitir os registros de documento, mas não os nós pais que os organizam. A
+qualidade da hierarquia depende de que essa informação de proveniência venha com o
+material.</p>
+<h2>Subir o que se compartilha</h2>
+<p>Uma vez montada a árvore, aparece a pergunta que a norma responde com o princípio
+da <strong>não repetição</strong> (ISAD-G 2.4): um dado que é comum a todos os documentos de
+uma Série descreve-se uma vez, no nível da Série, não mil vezes em cada documento.
+O produtor de um fundo, as condições de acesso de uma série, a língua da
+documentação —são propriedades do conjunto, e repeti-las em cada filho atrapalha
+mais do que ajuda.</p>
+<p>O exportador aplica isso subindo aos níveis superiores os campos que a maioria dos
+filhos compartilha. Não sobe qualquer coisa: apenas um conjunto restrito de campos
+onde o princípio tem sentido arquivístico —<strong>produtor</strong>, história institucional,
+<strong>condições de acesso</strong>, <strong>língua</strong>, e os descritores de tema, geográficos e
+corporativos—. Um valor sobe a um nível quando o compartilha uma proporção
+suficiente dos documentos que pendem dele; esse limiar é deliberadamente alto —a
+grande maioria, não uma simples maioria—: subir um dado que na realidade só
+compartilha a metade dos filhos o tornaria uma afirmação falsa sobre a outra
+metade.</p>
+<p>O mecanismo tem um limite. <strong>É uma heurística: um limiar de maioria, não um juízo
+sobre o significado do campo.</strong> Pode subir um valor que estatisticamente domina
+mas que um arquivista, olhando o fundo, matizaria; e pode deixar embaixo um dado
+que de fato correspondia ao nível superior porque uns poucos documentos o traziam
+diferente. Por isso o resultado se revisa: a agregação propõe uma estrutura
+razoável, não uma definitiva.</p>
+<h2>Agregar data e volume</h2>
+<p>Há dados que um nó pai não herda dos seus filhos, mas sim resume. O <strong>intervalo de
+datas</strong> de uma Série é o que abrange desde o documento mais antigo até o mais
+recente que contém; o exportador o calcula agregando as datas dos filhos —com
+filtragem de valores atípicos, como uma data biográfica que não descreve a
+produção documental e sim uma pessoa mencionada—. O <strong>volume</strong> é a contagem de
+documentos sob esse nó. Assim, um registro de Fundo pode terminar com &ldquo;1940 /
+2020&rdquo; como data extrema e &ldquo;9033 documentos&rdquo; como volume: dois dados que nenhum dos
+documentos individuais contém, porque são propriedades do agregado.</p>
+<p>Aqui intervém uma distinção do ciclo de vida. Num arquivo corrente, que segue
+recebendo documentos, esses intervalos se <strong>recalculam</strong> a cada exportação: o
+acervo está aberto e sua data extrema muda conforme ingressa material. Num arquivo
+histórico, fechado, os intervalos se <strong>congelam</strong>, de modo que uma correção menor a
+um documento não altere inadvertidamente o intervalo de uma seção inteira.</p>
+<h2>Por que a saída não é a do modelo</h2>
+<p>De tudo isso decorre uma consequência: o arquivo ISAD-G que o Collect entrega
+<strong>não coincide</strong> com a soma do que o modelo extraiu documento por documento. Entre
+a extração e a exportação há geração de estrutura —os nós de Fundo, Seção e Série
+que não existiam— e há agregação —o produtor subido ao seu nível, o intervalo de
+datas calculado, o volume contado—.</p>
+<p>Isso não é um desvio do dado original; é o que uma descrição arquivística requer.
+O registro de documento segue estando ali, com o que o modelo leu dele. O que se
+acrescenta em cima é o contexto que o torna arquivisticamente legível: de que
+série provém, quem o produziu, em que fundo se inscreve. Sem essa camada,
+ter-se-ia um inventário de itens; com ela, um quadro de classificação descrito.</p>
+<p>Os três limites, reunidos. A hierarquia existe apenas se os documentos trazem sua
+localização arquivística. O <a href="/pt/blog/glosario/#bubble-up">bubble-up</a> é uma
+heurística de maioria, com um limiar configurável, e por isso o resultado passa
+por revisão antes de entrar no catálogo. E a agregação resume o que os documentos
+contêm: não completa uma série que o material deixou incompleta.</p>
+<p>Se a sua instituição descreve com ISAD-G e tem documentos digitalizados esperando
+organizar-se por proveniência e hierarquia, escreva para info@janium.com;
+interessa-nos entender como está montado o seu quadro de classificação e que
+informação de proveniência acompanha hoje os seus documentos.</p>
