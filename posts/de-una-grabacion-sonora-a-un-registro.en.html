@@ -1,0 +1,84 @@
+<p>A collection with audio poses a problem that paper does not: the content cannot be
+read at a glance. A one-hour recording hides its subject, its names and its dates
+within sixty minutes of speech that someone has to listen to in order to describe
+it. A collection of interviews, oral minutes or sound recordings is cataloged
+slowly for that reason, and often ends up uncataloged because listening to each
+file in full does not fit in the team&rsquo;s time.</p>
+<p>Janium Collect treats audio with the same destination as a document: read it and
+propose a catalog record. The difference is in the first step. Before a
+<a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> can extract metadata, the voice has to be turned into
+text. That step is <strong>automatic transcription</strong> (ASR), and from there on the audio
+travels the same path as a PDF.</p>
+<h2>From voice to text, and from text to record</h2>
+<p>Collect transcribes the recording and uses that transcription as the &ldquo;content&rdquo; of
+the file. On top of that text, the model extracts the record&rsquo;s fields: subject,
+description, people mentioned, coverage. The output comes out in the format the
+collection uses —<strong>Dublin Core</strong> for a simple description, <strong>MARC21</strong> for a library
+catalog, <strong>ISAD-G</strong> for an archive where provenance matters—. There is no separate
+flow for audio; it is the usual process with a different initial stage.</p>
+<p>Not all of the record comes from speech. Some data comes from the <strong>file&rsquo;s
+technical metadata</strong>, not from the content: the duration, the codec, the sampling
+resolution. That is computed deterministically, without going through the model,
+because these are measurable facts and it is not advisable to ask a system that
+might estimate them wrong. The resource type —that it is a sound recording— is also
+set this way; the model does not decide it.</p>
+<h2>Transcribing locally or in the cloud</h2>
+<p>Transcription can be done in two ways, and the choice has different cost and
+operational consequences.</p>
+<ul>
+<li><strong>Local.</strong> The audio is transcribed on the institution&rsquo;s own machine, without
+  leaving the institution. It processes long recordings, hours long, but it is
+  <strong>slow on CPU</strong>: transcription takes time. It is the option when the material
+  must not leave the environment or when there is no wish to depend on an external
+  service.</li>
+<li><strong>In the cloud.</strong> Transcription is delegated to a service, faster and without
+  load on the local hardware. Here a useful cost lever appears: transcription does
+  not need the same expensive model that does metadata extraction. An inexpensive
+  model can be used just to transcribe, and the good model reserved for the
+  cataloging step. In internal tests, separating that lever and limiting the
+  model&rsquo;s reasoning reduced cost appreciably without the quality of the records
+  dropping in the sample.</li>
+</ul>
+<p>Neither is &ldquo;the right one&rdquo; in the abstract. Local protects the data and avoids
+external dependencies at the cost of time; the cloud gives speed and a lower cost
+per record at the cost of the audio leaving the institution. The decision depends
+on the collection and its constraints, not on a technical preference.</p>
+<h2>When the recording is not a single thing</h2>
+<p>An interview has turns. Oral minutes have agenda items. A session has interventions
+from different people. Describing all of that in a single record loses the
+structure that makes the material consultable.</p>
+<p>Collect can <strong>segment</strong> the recording, as an option enabled per institution. With
+segmentation on, in addition to the global record of the complete recording, the
+system divides the transcription into interventions or subjects and catalogs each
+one as a <strong>child record linked to the parent</strong>. Each child carries its own record
+and an explicit reference to the recording it is part of —<code>dcterms:isPartOf</code> in
+Dublin Core, field 773 in MARC—, so that the catalog preserves the relationship
+between the whole and its parts.</p>
+<p>The link works in both directions. A fragment in the middle of the recording often
+does not announce its own subject, so the system fills the child&rsquo;s empty fields
+with what the segmentation has already deduced, and inherits from the parent the
+common identity —author, date—. Conversely, the record of the complete recording
+can be described from its children: its subject is the union of the subjects of the
+segments, its description the sum of their summaries. It is description derived
+deterministically, not invented.</p>
+<h2>Where the limits are</h2>
+<p>Automatic transcription <strong>has error</strong>, and the error grows with the audio quality.
+A clean recording transcribes well; one with background noise, overlapping voices
+or a distant microphone produces text with faults, and those faults carry over to
+the metadata extraction. When the system detects that a file has almost no speech
+—music or ambience instead of voice—, it does not force a description out of a poor
+transcription: it prefers to rely on the file&rsquo;s metadata and flag the case, so as
+not to fabricate content that is not there.</p>
+<p>As with the rest of Collect, what comes out are <strong>proposed records that someone
+reviews</strong>, not a finished catalog. The transcription is a draft of the content, not
+literal oral minutes, and certain data —a call number, a date of the session, the
+exact name of an entity— come from the technical metadata or from the cataloger&rsquo;s
+judgment, not from the audio. The system shortens the listening and the typing; it
+does not replace the person who knows the collection.</p>
+<h2>To continue the conversation</h2>
+<p>If your institution has sound recordings waiting to be described —interviews, oral
+minutes, audiovisual holdings— and the bottleneck is that each one has to be
+listened to in order to catalog it, this is what Collect tries to relieve. Write to
+us at info@janium.com; we are interested in knowing what your sound material is
+like, in what format you describe it and how clean the audio is, because that
+changes what can be expected.</p>

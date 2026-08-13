@@ -1,0 +1,83 @@
+<p>Um acervo com áudio apresenta um problema que o papel não tem: o conteúdo não se
+pode ler de relance. Uma gravação de uma hora esconde seu tema, seus nomes e
+suas datas dentro de sessenta minutos de fala que alguém precisa escutar para
+descrever. Uma coleção de entrevistas, atas orais ou registros sonoros se
+cataloga devagar por essa razão, e muitas vezes fica sem catalogar porque
+escutar cada arquivo inteiro não cabe no tempo da equipe.</p>
+<p>O Janium Collect trata o áudio com o mesmo destino que um documento: lê-lo e
+propor um registro de catálogo. A diferença está no primeiro passo. Antes de
+que um <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a> possa extrair metadados, a voz tem que se converter em
+texto. Esse passo é a <strong>transcrição automática</strong> (ASR), e daí em diante o
+áudio percorre o mesmo caminho que um PDF.</p>
+<h2>Da voz ao texto, e do texto ao registro</h2>
+<p>O Collect transcreve a gravação e usa essa transcrição como o &ldquo;conteúdo&rdquo; do
+arquivo. Sobre esse texto, o modelo extrai os campos do registro: tema,
+descrição, pessoas mencionadas, cobertura. A saída sai no formato que o
+acervo usa —<strong>Dublin Core</strong> para uma descrição simples, <strong>MARC21</strong> para um
+catálogo de biblioteca, <strong>ISAD-G</strong> para um arquivo onde importa a procedência—.
+Não há um fluxo à parte para áudio; é o processo de sempre com uma etapa inicial
+distinta.</p>
+<p>Nem todo o registro sai da fala. Alguns dados vêm dos <strong>metadados técnicos do
+arquivo</strong>, não do conteúdo: a duração, o códec, a resolução de amostragem. Isso
+se calcula de forma determinista, sem passar pelo modelo, porque são fatos
+mensuráveis e não convém pedi-los a um sistema que poderia estimá-los mal. O tipo
+de recurso —que se trata de um registro sonoro— também se fixa assim, não o decide
+o modelo.</p>
+<h2>Transcrever local ou na nuvem</h2>
+<p>A transcrição pode ser feita de duas maneiras, e a escolha tem consequências
+de custo e de operação distintas.</p>
+<ul>
+<li><strong>Local.</strong> O áudio é transcrito na própria máquina, sem sair da
+  instituição. Processa gravações longas, de horas, mas é <strong>lento em CPU</strong>: a
+  transcrição demora. É a opção quando o material não deve sair do ambiente ou
+  quando não se quer depender de um serviço externo.</li>
+<li><strong>Na nuvem.</strong> A transcrição é delegada a um serviço, mais rápido e sem carga
+  para o hardware local. Aqui aparece uma alavanca de custo útil: a transcrição
+  não precisa do mesmo modelo caro que faz a extração de metadados. Pode-se
+  usar um modelo econômico apenas para transcrever, e reservar o modelo bom para
+  o passo de catalogação. Em testes internos, separar essa alavanca e limitar o
+  raciocínio do modelo reduziu o custo de forma apreciável sem que a qualidade dos
+  registros caísse na amostra.</li>
+</ul>
+<p>Nenhuma das duas é &ldquo;a correta&rdquo; em abstrato. O local protege o dado e evita
+dependências externas em troca de tempo; a nuvem dá velocidade e menor custo por
+registro em troca de que o áudio saia da instituição. A decisão depende do
+acervo e de suas restrições, não de uma preferência técnica.</p>
+<h2>Quando a gravação não é uma coisa só</h2>
+<p>Uma entrevista tem turnos. Uma ata oral tem pontos da ordem do dia. Uma
+sessão tem intervenções de pessoas distintas. Descrever tudo isso em um único
+registro perde a estrutura que torna consultável o material.</p>
+<p>O Collect pode <strong>segmentar</strong> a gravação, como opção que se ativa por
+instituição. Com a segmentação ligada, além do registro global da
+gravação completa, o sistema divide a transcrição em intervenções ou temas e
+cataloga cada um como um <strong>registro filho vinculado ao pai</strong>. Cada filho leva seu
+próprio registro e uma referência explícita à gravação da qual faz parte
+—<code>dcterms:isPartOf</code> em Dublin Core, o campo 773 em MARC—, de modo que o catálogo
+conserva a relação entre o todo e suas partes.</p>
+<p>O vínculo funciona nas duas direções. Um fragmento no meio da gravação
+muitas vezes não anuncia seu próprio tema, então o sistema completa os campos
+vazios do filho com o que a segmentação já deduziu, e herda do pai a
+identidade comum —autor, data—. Ao contrário, o registro da gravação completa
+pode se descrever a partir de seus filhos: seu tema é a união dos temas dos
+segmentos, sua descrição a soma de seus resumos. É descrição derivada de
+maneira determinista, não inventada.</p>
+<h2>Onde estão os limites</h2>
+<p>A transcrição automática <strong>tem erro</strong>, e o erro cresce com a qualidade do
+áudio. Uma gravação limpa se transcreve bem; uma com ruído de fundo, vozes
+sobrepostas ou microfone distante produz texto com falhas, e essas falhas se arrastam à
+extração de metadados. Quando o sistema detecta que um arquivo quase não tem
+fala —música ou ambiente em vez de voz—, não força uma descrição a partir de uma
+transcrição pobre: prefere apoiar-se nos metadados do arquivo e marcar o
+caso, para não fabricar conteúdo que não está.</p>
+<p>Como no restante do Collect, o que sai são <strong>registros propostos que alguém
+revisa</strong>, não um catálogo terminado. A transcrição é um rascunho do conteúdo,
+não uma ata literal, e certos dados —uma cota, uma data da sessão, o
+nome exato de uma entidade— vêm dos metadados ou do critério do catalogador, não
+do áudio. O sistema encurta a escuta e a digitação; não substitui quem conhece o
+acervo.</p>
+<h2>Para continuar a conversa</h2>
+<p>Se sua instituição tem gravações sonoras esperando descrição —entrevistas,
+atas orais, fundos audiovisuais— e o gargalo é que é preciso escutar
+cada uma para catalogá-la, isso é o que o Collect tenta aliviar. Escreva para
+info@janium.com; interessa-nos saber como é seu material sonoro, em que formato você o
+descreve e quão limpo é o áudio, porque isso muda o que se pode esperar.</p>

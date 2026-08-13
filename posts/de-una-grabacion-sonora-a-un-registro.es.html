@@ -1,0 +1,83 @@
+<p>Un acervo con audio plantea un problema que el papel no tiene: el contenido no se
+puede leer de un vistazo. Una grabación de una hora esconde su tema, sus nombres y
+sus fechas dentro de sesenta minutos de habla que alguien tiene que escuchar para
+describir. Una colección de entrevistas, actas orales o registros sonoros se
+cataloga despacio por esa razón, y muchas veces se queda sin catalogar porque
+escuchar cada archivo entero no cabe en el tiempo del equipo.</p>
+<p>Janium Collect trata el audio con el mismo destino que un documento: leerlo y
+proponer un registro de catálogo. La diferencia está en el primer paso. Antes de
+que un <a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> pueda extraer metadatos, la voz tiene que convertirse en
+texto. Ese paso es la <strong>transcripción automática</strong> (ASR), y de ahí en adelante el
+audio recorre el mismo camino que un PDF.</p>
+<h2>De la voz al texto, y del texto al registro</h2>
+<p>Collect transcribe la grabación y usa esa transcripción como el &ldquo;contenido&rdquo; del
+archivo. Sobre ese texto, el modelo extrae los campos del registro: tema,
+descripción, personas mencionadas, cobertura. La salida sale en el formato que el
+acervo usa —<strong>Dublin Core</strong> para una descripción simple, <strong>MARC21</strong> para un
+catálogo de biblioteca, <strong>ISAD-G</strong> para un archivo donde importa la procedencia—.
+No hay un flujo aparte para audio; es el proceso de siempre con una etapa inicial
+distinta.</p>
+<p>No todo el registro sale del habla. Algunos datos vienen de la <strong>ficha técnica del
+archivo</strong>, no del contenido: la duración, el códec, la resolución de muestreo. Eso
+se calcula de forma determinista, sin pasar por el modelo, porque son hechos
+medibles y no conviene pedírselos a un sistema que podría estimarlos mal. El tipo
+de recurso —que se trata de un registro sonoro— también se fija así, no lo decide
+el modelo.</p>
+<h2>Transcribir en local o en la nube</h2>
+<p>La transcripción se puede hacer de dos maneras, y la elección tiene consecuencias
+de costo y de operación distintas.</p>
+<ul>
+<li><strong>Local.</strong> El audio se transcribe en la propia máquina, sin salir de la
+  institución. Procesa grabaciones largas, de horas, pero es <strong>lento en CPU</strong>: la
+  transcripción tarda. Es la opción cuando el material no debe salir del entorno o
+  cuando no se quiere depender de un servicio externo.</li>
+<li><strong>En la nube.</strong> La transcripción se delega a un servicio, más rápido y sin carga
+  para el hardware local. Aquí aparece una palanca de costo útil: la transcripción
+  no necesita el mismo modelo caro que hace la extracción de metadatos. Se puede
+  usar un modelo económico solo para transcribir, y reservar el modelo bueno para
+  el paso de catalogación. En pruebas internas, separar esa palanca y limitar el
+  razonamiento del modelo redujo el costo de forma apreciable sin que la calidad de
+  los registros cayera en la muestra.</li>
+</ul>
+<p>Ninguna de las dos es &ldquo;la correcta&rdquo; en abstracto. El local protege el dato y evita
+dependencias externas a cambio de tiempo; la nube da velocidad y menor costo por
+registro a cambio de que el audio salga de la institución. La decisión depende del
+acervo y de sus restricciones, no de una preferencia técnica.</p>
+<h2>Cuando la grabación no es una sola cosa</h2>
+<p>Una entrevista tiene turnos. Un acta oral tiene puntos del orden del día. Una
+sesión tiene intervenciones de distintas personas. Describir todo eso en un solo
+registro pierde la estructura que hace consultable el material.</p>
+<p>Collect puede <strong>segmentar</strong> la grabación, como opción que se activa por
+institución. Con la segmentación encendida, además del registro global de la
+grabación completa, el sistema divide la transcripción en intervenciones o temas y
+cataloga cada uno como un <strong>registro hijo enlazado al padre</strong>. Cada hijo lleva su
+propio registro y una referencia explícita a la grabación de la que forma parte
+—<code>dcterms:isPartOf</code> en Dublin Core, el campo 773 en MARC—, de modo que el catálogo
+conserva la relación entre el todo y sus partes.</p>
+<p>El vínculo funciona en las dos direcciones. Un fragmento a mitad de la grabación
+muchas veces no anuncia su propio tema, así que el sistema completa los campos
+vacíos del hijo con lo que la segmentación ya dedujo, y hereda del padre la
+identidad común —autor, fecha—. A la inversa, el registro de la grabación completa
+puede describirse a partir de sus hijos: su tema es la unión de los temas de los
+segmentos, su descripción la suma de sus resúmenes. Es descripción derivada de
+manera determinista, no inventada.</p>
+<h2>Dónde están los límites</h2>
+<p>La transcripción automática <strong>tiene error</strong>, y el error crece con la calidad del
+audio. Una grabación limpia se transcribe bien; una con ruido de fondo, voces
+solapadas o micrófono lejano produce texto con fallos, y esos fallos se arrastran a
+la extracción de metadatos. Cuando el sistema detecta que un archivo casi no tiene
+habla —música o ambiente en vez de voz—, no fuerza una descripción a partir de una
+transcripción pobre: prefiere apoyarse en los metadatos del archivo y marcar el
+caso, para no fabricar contenido que no está.</p>
+<p>Como con el resto de Collect, lo que sale son <strong>registros propuestos que alguien
+revisa</strong>, no un catálogo terminado. La transcripción es un borrador del contenido,
+no una acta literal, y ciertos datos —una signatura, una fecha de la sesión, el
+nombre exacto de una entidad— vienen de la ficha o del criterio del catalogador, no
+del audio. El sistema acorta la escucha y el tecleo; no sustituye a quien conoce el
+acervo.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu institución tiene grabaciones sonoras esperando descripción —entrevistas,
+actas orales, fondos audiovisuales— y el cuello de botella es que hay que escuchar
+cada una para catalogarla, esto es lo que Collect intenta aliviar. Escríbenos a
+info@janium.com; nos interesa saber cómo es tu material sonoro, en qué formato lo
+describes y qué tan limpio es el audio, porque eso cambia lo que se puede esperar.</p>
