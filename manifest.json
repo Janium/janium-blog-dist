@@ -1,7 +1,37 @@
 {
   "contract": 1,
-  "generated": "2026-08-13T16:34:03Z",
+  "generated": "2026-08-15T07:02:56Z",
   "posts": [
+    {
+      "slug": "que-es-janium-collect",
+      "date": "2026-08-15",
+      "datetime": "2026-08-15T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia",
+        "fundamentos"
+      ],
+      "translations": {
+        "es": {
+          "title": "De documentos a registros de catálogo — qué es Janium Collect",
+          "description": "Qué problema resuelve Janium Collect para una institución con acervo, cómo convierte documentos de distintos tipos en registros de catálogo en formatos estándar, y dónde están los límites de lo que hace.",
+          "cover": "assets/que-es-janium-collect-es-cover-08144f1e.png",
+          "html": "posts/que-es-janium-collect.es.html"
+        },
+        "en": {
+          "title": "From documents to catalog records — what Janium Collect is",
+          "description": "What problem Janium Collect solves for an institution with a collection, how it turns documents of different kinds into catalog records in standard formats, and where the limits of what it does lie.",
+          "cover": "assets/que-es-janium-collect-en-cover-08144f1e.png",
+          "html": "posts/que-es-janium-collect.en.html"
+        },
+        "pt": {
+          "title": "De documentos a registos de catálogo — o que é o Janium Collect",
+          "description": "Que problema resolve o Janium Collect para uma instituição com acervo, como converte documentos de diferentes tipos em registos de catálogo em formatos padrão, e onde estão os limites do que faz.",
+          "cover": "assets/que-es-janium-collect-pt-cover-08144f1e.png",
+          "html": "posts/que-es-janium-collect.pt.html"
+        }
+      }
+    },
     {
       "slug": "de-una-grabacion-sonora-a-un-registro",
       "date": "2026-08-14",
@@ -299,36 +329,6 @@
           "description": "Há acervos que não podem sair da instituição — por residência de dados, política ou confidencialidade. Como o Collect cataloga com IA na própria infraestrutura, com um modelo local e até air-gapped; o modo híbrido com anonimização para os casos difíceis; e por que o raro não é a IA soberana nem a catalogação isoladas, mas as duas juntas. Com os limites de cada modo.",
           "cover": "assets/soberania-de-datos-pt-cover-47994b20.svg",
           "html": "posts/soberania-de-datos.pt.html"
-        }
-      }
-    },
-    {
-      "slug": "que-es-janium-collect",
-      "date": "2026-07-24",
-      "datetime": "2026-07-24T06:00:00Z",
-      "tags": [
-        "janiumcollect",
-        "ia",
-        "fundamentos"
-      ],
-      "translations": {
-        "es": {
-          "title": "De documentos a registros de catálogo — qué es Janium Collect",
-          "description": "Qué problema resuelve Janium Collect para una institución con acervo, cómo convierte documentos de distintos tipos en registros de catálogo en formatos estándar, y dónde están los límites de lo que hace.",
-          "cover": "assets/que-es-janium-collect-es-cover-08144f1e.png",
-          "html": "posts/que-es-janium-collect.es.html"
-        },
-        "en": {
-          "title": "From documents to catalog records — what Janium Collect is",
-          "description": "What problem Janium Collect solves for an institution with a collection, how it turns documents of different kinds into catalog records in standard formats, and where the limits of what it does lie.",
-          "cover": "assets/que-es-janium-collect-en-cover-08144f1e.png",
-          "html": "posts/que-es-janium-collect.en.html"
-        },
-        "pt": {
-          "title": "De documentos a registos de catálogo — o que é o Janium Collect",
-          "description": "Que problema resolve o Janium Collect para uma instituição com acervo, como converte documentos de diferentes tipos em registos de catálogo em formatos padrão, e onde estão os limites do que faz.",
-          "cover": "assets/que-es-janium-collect-pt-cover-08144f1e.png",
-          "html": "posts/que-es-janium-collect.pt.html"
         }
       }
     }
