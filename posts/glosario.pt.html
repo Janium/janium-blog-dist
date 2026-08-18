@@ -2,7 +2,9 @@
 <h2>Inteligência artificial</h2>
 <h3 id="modelo-de-lenguaje">Modelo de linguagem (LLM)</h3>
 <p>O tipo de inteligência artificial por trás de ferramentas como o ChatGPT: um programa treinado com enormes quantidades de texto que, a partir do que lê, identifica, resume e completa informação. &ldquo;LLM&rdquo; é a sigla em inglês (<em>large language model</em>). Neste blog é o que lê o documento e propõe o registro.</p>
-<h3 id="modelo-de-frontera">Modelo de fronteira</h3>
+<h3 id="rag">RAG — geração aumentada por recuperação</h3>
+<p>Buscam-se fragmentos próximos de uma consulta e entregam-se a um modelo de linguagem para que redija uma resposta. Serve para perguntar em linguagem natural sobre um conjunto de documentos. Não substitui um catálogo: não dá um índice alfabético de autores nem de matérias, e a quantidade de texto que o modelo realmente aproveita tem um teto (a janela de contexto efetiva).</p>
+<h3 id="modelo-de-fronteira">Modelo de fronteira</h3>
 <p>Os modelos de linguagem mais capazes e recentes, operados por grandes fornecedores e acessíveis pela internet (na nuvem). Rendem melhor nos casos difíceis, mas processar com eles implica enviar-lhes o material. Contrapõem-se a um modelo local, que roda na infraestrutura da instituição.</p>
 <h3 id="anonimizacion">Anonimização e <em>tokens</em></h3>
 <p>Substituir os dados pessoais de um texto por marcadores neutros —os <em>tokens</em>— antes de enviá-lo a um serviço externo, e restaurá-los ao voltar. Reduz a exposição de dados pessoais, embora não garanta que não reste nenhum.</p>
@@ -28,7 +30,16 @@
 <p>Ao descrever um arquivo em ISAD-G, subir aos níveis superiores da hierarquia —série, fundo— os dados que a maioria dos documentos que deles dependem compartilha, em vez de repeti-los em cada um. Aplica o princípio de não repetição da norma. É uma heurística de maioria, com um limiar configurável, e seu resultado é revisado.</p>
 <h3 id="cdwa">CDWA</h3>
 <p>O padrão para descrever obras de arte e objetos culturais, com o vocabulário do Getty. Distingue a obra da sua reprodução.</p>
+<h3 id="extensiones-corporativas">Extensões corporativas</h3>
+<p>Campos que o Collect acrescenta ao registro (sobre Dublin Core ou ISAD-G) quando o material é um documento de gestão: pessoas com o seu papel, organizações, montantes, datas críticas, garantias, cláusulas, obrigações e relações entre entidades. No Janium indexam-se como pontos de acesso especializados. O que o documento não declara não se preenche.</p>
+<h3 id="punto-de-acceso">Ponto de acesso</h3>
+<p>Cabeçalho pelo qual se encontra um registro no catálogo: um nome, uma matéria, um título, uma data. O Collect os extrai do material (os <em>aflora</em>). No Janium alimentam os índices especializados —busca por palavra-chave— e o ficheiro de autoridades —busca alfabética—. Não são um resumo para o modelo: são as entradas do índice.</p>
+<h3 id="articulo-50-2">Artigo 50.2</h3>
+<p>Obrigação do Regulamento (UE) 2024/1689, em vigor desde 2 de agosto de 2026: quem comercializa um sistema de IA que gera ou manipula texto deve marcar essas saídas em formato legível por máquina, de modo que se detetem como geradas ou manipuladas, na medida do tecnicamente viável. O Collect marca as saídas de catalogação que entram nesse pressuposto.</p>
 <h3 id="control-de-autoridades">Controle de autoridade</h3>
 <p>O mecanismo que garante que uma mesma pessoa, entidade ou matéria seja sempre registrada da mesma forma, confrontando-a com listas de referência —VIAF, ISNI, os vocabulários do Getty, ou o catálogo da própria instituição—. Evita que um mesmo autor entre no índice com três grafias diferentes.</p>
+<h2>Sistemas</h2>
+<h3 id="janium">Janium</h3>
+<p>Sistema web de gestão de informação para bibliotecas, arquivos e repositórios digitais. Recebe registros em formatos padrão (MARC21, Dublin Core, ISAD-G e outros), sustenta o catálogo público, a circulação e o controle de autoridades, e pode indexar o texto completo dos objetos digitais. Opera nos servidores da instituição ou como serviço na nuvem (JaniumNet). O Collect produz os registros; o Janium é o catálogo que os busca e os empresta. A ficha do produto está em <a href="https://www.janium.com/janium/">janium.com/janium</a>.</p>
 <hr />
 <p>Falta algum termo que você gostaria de ver aqui? Escreva para info@janium.com.</p>

@@ -2,6 +2,8 @@
 <h2>Artificial intelligence</h2>
 <h3 id="modelo-de-lenguaje">Language model (LLM)</h3>
 <p>The kind of artificial intelligence behind tools like ChatGPT: a program trained on enormous amounts of text that, from what it reads, identifies, summarizes and completes information. &ldquo;LLM&rdquo; stands for <em>large language model</em>. In this blog it is what reads the document and proposes the record.</p>
+<h3 id="rag">RAG — retrieval-augmented generation</h3>
+<p>Fragments close to a query are retrieved and handed to a language model so it can draft an answer. It is useful for asking questions in natural language over a set of documents. It does not replace a catalog: it does not give an alphabetical index of authors or subjects, and the amount of text the model can actually use has a ceiling (the effective context window).</p>
 <h3 id="modelo-de-frontera">Frontier model</h3>
 <p>The most capable and recent language models, run by large providers and reachable over the internet (in the cloud). They perform better on the hard cases, but processing with them means sending them the material. They contrast with a local model, which runs on the institution&rsquo;s infrastructure.</p>
 <h3 id="anonimizacion">Anonymization and <em>tokens</em></h3>
@@ -28,7 +30,16 @@
 <p>When describing an archive in ISAD-G, raising to the higher levels of the hierarchy —series, fonds— the data that most of the documents hanging from them share, instead of repeating it in each one. It applies the standard&rsquo;s non-repetition principle. It is a majority heuristic, with a configurable threshold, and its result is reviewed.</p>
 <h3 id="cdwa">CDWA</h3>
 <p>The standard for describing works of art and cultural objects, with the Getty vocabulary. It distinguishes the work from its reproduction.</p>
+<h3 id="extensiones-corporativas">Corporate extensions</h3>
+<p>Fields Collect adds to the record (on top of Dublin Core or ISAD-G) when the material is a management document: people with their role, organizations, amounts, critical dates, guarantees, clauses, obligations and relationships between entities. In Janium they are indexed as specialized access points. What the document does not state is not filled in.</p>
+<h3 id="punto-de-acceso">Access point</h3>
+<p>A heading by which a record is found in the catalog: a name, a subject, a title, a date. Collect extracts them from the material (it <em>surfaces</em> them). In Janium they feed the specialized indexes —keyword search— and the authority file —alphabetical browse—. They are not a summary for the model: they are the index entries.</p>
+<h3 id="articulo-50-2">Article 50.2</h3>
+<p>Duty under Regulation (EU) 2024/1689, in force since 2 August 2026: anyone who places on the market an AI system that generates or manipulates text must mark that output in a machine-readable format so it can be detected as generated or manipulated, to the extent technically feasible. Collect marks cataloguing output that falls under that rule.</p>
 <h3 id="control-de-autoridades">Authority control</h3>
 <p>The mechanism that ensures the same person, entity or subject is always recorded in the same form, checking it against reference lists —VIAF, ISNI, the Getty vocabularies, or the institution&rsquo;s own catalog—. It keeps the same author from entering the index under three different spellings.</p>
+<h2>Systems</h2>
+<h3 id="janium">Janium</h3>
+<p>A web information-management system for libraries, archives and digital repositories. It takes records in standard formats (MARC21, Dublin Core, ISAD-G and others), runs the public catalog, circulation and authority control, and can index the full text of digital objects. It can run on the institution&rsquo;s own servers or as a cloud service (JaniumNet). Collect produces the records; Janium is the catalog that searches them and circulates them. Product page: <a href="https://www.janium.com/janium/">janium.com/janium</a>.</p>
 <hr />
 <p>Is there a term you would like to see here? Write to us at info@janium.com.</p>

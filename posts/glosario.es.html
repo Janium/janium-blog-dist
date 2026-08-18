@@ -2,6 +2,8 @@
 <h2>Inteligencia artificial</h2>
 <h3 id="modelo-de-lenguaje">Modelo de lenguaje (LLM)</h3>
 <p>El tipo de inteligencia artificial detrás de herramientas como ChatGPT: un programa entrenado con enormes cantidades de texto que, a partir de lo que lee, identifica, resume y completa información. &ldquo;LLM&rdquo; son sus siglas en inglés (<em>large language model</em>). En este blog es lo que lee el documento y propone el registro.</p>
+<h3 id="rag">RAG — generación aumentada por recuperación</h3>
+<p>Se buscan fragmentos cercanos a una consulta y se le entregan a un modelo de lenguaje para que redacte una respuesta. Sirve para preguntar en lenguaje natural sobre un conjunto de documentos. No sustituye un catálogo: no da un índice alfabético de autores ni de materias, y la cantidad de texto que el modelo aprovecha de verdad tiene un techo (la ventana de contexto efectiva).</p>
 <h3 id="modelo-de-frontera">Modelo de frontera</h3>
 <p>Los modelos de lenguaje más capaces y recientes, operados por grandes proveedores y accesibles por internet (en la nube). Rinden mejor en los casos difíciles, pero procesar con ellos implica enviarles el material. Se contraponen a un modelo local, que corre en la infraestructura de la institución.</p>
 <h3 id="anonimizacion">Anonimización y <em>tokens</em></h3>
@@ -28,7 +30,16 @@
 <p>Al describir un archivo en ISAD-G, subir a los niveles superiores de la jerarquía —serie, fondo— los datos que comparte la mayoría de los documentos que cuelgan de ellos, en vez de repetirlos en cada uno. Aplica el principio de no repetitividad de la norma. Es una heurística de mayoría, con un umbral configurable, y su resultado se revisa.</p>
 <h3 id="cdwa">CDWA</h3>
 <p>El estándar para describir obras de arte y objetos culturales, con el vocabulario del Getty. Distingue la obra de su reproducción.</p>
+<h3 id="extensiones-corporativas">Extensiones corporativas</h3>
+<p>Campos que Collect añade al registro (sobre Dublin Core o ISAD-G) cuando el material es un documento de gestión: personas con su rol, organizaciones, montos, fechas críticas, garantías, cláusulas, obligaciones y relaciones entre entidades. En Janium se indexan como puntos de acceso especializados. Lo que el documento no declara no se rellena.</p>
+<h3 id="punto-de-acceso">Punto de acceso</h3>
+<p>Encabezamiento por el que se encuentra un registro en el catálogo: un nombre, una materia, un título, una fecha. Collect los extrae del material (los <em>aflora</em>). En Janium alimentan los índices especializados —búsqueda por palabra clave— y el fichero de autoridades —búsqueda alfabética—. No son un resumen para el modelo: son las entradas del índice.</p>
+<h3 id="articulo-50-2">Artículo 50.2</h3>
+<p>Obligación del Reglamento (UE) 2024/1689, vigente desde el 2 de agosto de 2026: quien comercializa un sistema de IA que genera o manipula texto debe marcar esas salidas en formato legible por máquina, de modo que se detecten como generadas o manipuladas, en la medida en que sea técnicamente viable. Collect marca las salidas de catalogación que entran en ese supuesto.</p>
 <h3 id="control-de-autoridades">Control de autoridades</h3>
 <p>El mecanismo que asegura que una misma persona, entidad o materia se registre siempre de la misma forma, contrastándola contra listas de referencia —VIAF, ISNI, los vocabularios del Getty, o el catálogo de la propia institución—. Evita que un mismo autor entre al índice con tres grafías distintas.</p>
+<h2>Sistemas</h2>
+<h3 id="janium">Janium</h3>
+<p>Sistema web de gestión de información para bibliotecas, archivos y repositorios digitales. Recibe registros en formatos estándar (MARC21, Dublin Core, ISAD-G y otros), sostiene el catálogo público, la circulación y el control de autoridades, y puede indexar el texto completo de los objetos digitales. Se opera en los servidores de la institución o como servicio en la nube (JaniumNet). Collect produce los registros; Janium es el catálogo que los busca y los presta. La ficha de producto está en <a href="https://www.janium.com/janium/">janium.com/janium</a>.</p>
 <hr />
 <p>¿Falta un término que te gustaría ver aquí? Escríbenos a info@janium.com.</p>

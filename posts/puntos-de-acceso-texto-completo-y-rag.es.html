@@ -1,0 +1,130 @@
+<p>Un <a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> admite, sobre el papel,
+cientos de miles o millones de tokens. En la práctica aprovecha muchos menos.
+Norman Paulsen lo midió de forma sistemática: define una <em>ventana de contexto
+máxima efectiva</em> (MECW, por las siglas en inglés) —el tramo de entrada a partir
+del cual añadir tokens ya no mejora la respuesta, y a menudo la empeora— y la
+compara con la ventana que anuncian los proveedores. En su muestra, la mayoría
+de los modelos degradan con claridad hacia los mil tokens de contexto; algunos
+fallan con cientos. La distancia respecto al máximo arquitectónico llega a ser
+de más del 99 por ciento. El tipo de problema desplaza ese umbral: no hay un
+número único (<a href="https://arxiv.org/abs/2509.21361">Paulsen, 2025</a>).</p>
+<p>Eso no es un argumento contra el RAG. Es un dato sobre <em>cuánto</em> contexto
+conviene ponerle al modelo, y <em>cuándo</em>.</p>
+<h2>Qué resuelve el RAG, y dónde se queda corto</h2>
+<p>El <a href="/blog/glosario/#rag">RAG</a> (generación aumentada por recuperación) parte de una idea sana: el
+modelo no tiene que memorizar el acervo. Se recupera un puñado de fragmentos
+cercanos a la consulta y se los entrega para que redacte una respuesta. Bien
+acotado —pocos fragmentos, relevantes, por debajo de la ventana efectiva— el
+mismo estudio encuentra que la exactitud puede acercarse al ciento por ciento.
+Ese es el uso que vale la pena defender: una pregunta en lenguaje natural
+sobre un conjunto de documentos, con una respuesta sintetizada.</p>
+<p>El límite aparece cuando se trata el RAG como el índice del acervo. Recuperar
+más para «no perderse nada» empuja el prompt más allá de la ventana efectiva:
+Paulsen observa que un RAG que inyecta conteos altos de tokens <em>baja</em> el
+rendimiento en lugar de subirlo. A eso se suma lo que ya se sabía: el modelo
+atiende peor lo que queda en el medio del contexto
+(<a href="https://arxiv.org/abs/2307.03172">Liu et al., 2023</a>), y el
+troceo del documento decide qué se puede recuperar. Un fragmento demasiado
+grande diluye; uno demasiado chico corta la frase que importaba.</p>
+<p>Para preguntar «¿qué dice este expediente sobre la cláusula X?» eso se
+mitiga. Para <em>encontrar</em> en un catálogo —el autor, la materia, el título
+exacto, todas las obras de una persona, el volumen que empieza por una
+letra— el cuello de botella no es la redacción de una respuesta. Es tener
+puntos de acceso estables sobre los que buscar y hojear.</p>
+<h2>Lo que Collect deja listo para buscar</h2>
+<p><a href="/blog/que-es-janium-collect/">Collect</a> usa el modelo en el momento de
+describir, no en el de cada consulta. Lee el material —un PDF, una imagen,
+una hoja, una grabación— e identifica la obra. Del documento <strong>aflora</strong> los
+<a href="/blog/glosario/#punto-de-acceso">puntos de acceso</a>: los encabezamientos por
+los que se va a encontrar el registro —nombres, materias, títulos, fechas—
+y, cuando hay coincidencia, los deja en forma autorizada. No son un
+párrafo para el modelo: son las entradas que <a href="/blog/glosario/#janium">Janium</a>
+carga en sus índices.</p>
+<p>Eso es lo que el catálogo ya sabe buscar, en tres vías que la ficha
+comercial de Janium distingue:</p>
+<ul>
+<li><strong>Por palabra clave</strong> en los índices especializados que esos
+  encabezamientos alimentan.</li>
+<li><strong>Alfabética</strong> en autoridades: todas las obras de un autor, todas las
+  materias que empiezan por una letra, el título en su forma normalizada.</li>
+<li><strong>Texto completo</strong> en los objetos digitales vinculados, cuando hay un
+  cuerpo que indexar.</li>
+</ul>
+<h2>Extensiones corporativas</h2>
+<p>En un libro, los puntos de acceso bastan con autor, título y materia. En un
+contrato, un acta o un informe de gestión, lo que hay que encontrar no cabe
+en esos tres. Collect, cuando el formato de salida lleva
+<a href="/blog/glosario/#extensiones-corporativas">extensiones corporativas</a>
+(Dublin Core o ISAD-G), extrae del documento un bloque aparte de
+encabezamientos:</p>
+<ul>
+<li>personas con su rol (firmante, representante, acreditado)</li>
+<li>organizaciones y el papel que juegan</li>
+<li>montos, con concepto y moneda</li>
+<li>fechas críticas (vencimiento, firma, vigencia) y su criticidad</li>
+<li>garantías y colaterales</li>
+<li>cláusulas citadas, obligaciones de hacer y restricciones</li>
+<li>relaciones entre entidades que el texto declara</li>
+<li>lugares y materias</li>
+</ul>
+<p>No son un análisis jurídico ni una segunda lectura del modelo en el
+momento de la consulta. Son campos: Collect los aflora una vez, Janium
+los carga como índices especializados. La consulta «contratos con esta
+persona, esta empresa y montos por encima de un umbral, firmados en tal
+año» se resuelve contra esos índices, no recorriendo el texto ni
+inyectándolo otra vez al modelo.</p>
+<p>Lo que el documento no declara no se rellena. Una cláusula se cita si
+está; una relación societaria, si el texto la dice. El mismo criterio de
+siempre: completar lo identificable, marcar procedencia, dejar hueco lo
+que no se sostiene.</p>
+<p>El modelo interviene una vez, al catalogar. La consulta del lector no vuelve
+a pasar por un LLM ni por un tope de tokens. El resultado es el mismo
+aunque el acervo crezca: el coste de describir no se paga otra vez en cada
+búsqueda.</p>
+<p>Ese enriquecimiento tiene el riesgo que ya
+<a href="/blog/confiar-en-catalogo-con-ia/">hemos dicho</a>: un dato plausible puede
+ser falso. Por eso el registro marca procedencia cuando hay autoridad,
+califica cada ficha y señala las que conviene revisar. El punto de acceso
+queda inspeccionable. Un fragmento recuperado en un RAG, no.</p>
+<h2>El markdown, si se necesita el texto</h2>
+<p>Collect puede entregar, además del registro, el texto extraído en markdown:
+lo que el documento decía, ya en una forma que se puede indexar. Eso no sustituye los
+puntos de acceso; cubre otra pregunta: «¿en qué página aparece esta
+frase?».</p>
+<p>Ese markdown se indexa en <strong>texto completo</strong> en Janium (u otro motor
+léxico). La búsqueda por palabra clave deja de limitarse a los campos del
+registro y alcanza el cuerpo. Sigue siendo un índice, no una generación: no
+hay ventana de contexto que se sature cuando el fondo pasa de miles a
+cientos de miles de páginas.</p>
+<p>El mismo markdown sirve, si la institución lo quiere, para <strong>embeddings</strong>.
+Ahí el RAG vuelve a tener sentido —como capa opcional, sobre un texto ya
+limpio y ya anclado a un registro— no como único camino para encontrar una
+obra. Quien necesita una respuesta redactada («compara estas tres
+cláusulas») recupera pocos pasajes y se queda bajo la ventana efectiva.
+Quien necesita el autor o la signatura no tiene por qué pasar por ahí.</p>
+<h2>Tres capas, un solo acervo</h2>
+<p>No es Collect <em>o</em> RAG. Es un orden:</p>
+<ol>
+<li><strong>Puntos de acceso</strong> en el catálogo — lo que Collect aflora y Janium
+   busca en alfabético, por palabra clave y, si hay extensiones
+   corporativas, por monto, vencimiento, cláusula u obligación. Es la
+   capa que un acervo tiene que sostener aunque nadie haga una pregunta
+   en lenguaje natural.</li>
+<li><strong>Texto completo</strong> del markdown — cuando hace falta localizar una
+   frase, no solo la ficha.</li>
+<li><strong>Embeddings / RAG</strong> — cuando hace falta sintetizar o comparar, con
+   pocos fragmentos y a sabiendas del umbral efectivo del modelo.</li>
+</ol>
+<p>El estudio de Paulsen no dice que el RAG esté agotado. Dice que el modelo
+deja de aprovechar el contexto mucho antes de lo que anuncia la ficha
+técnica, y que un RAG que ignora ese techo se perjudica solo. Collect
+usa el modelo donde rinde —identificar y completar un registro, una vez—
+y deja en Janium un catálogo que no depende de volver a caber en esa
+ventana.</p>
+<p>Si tu institución está evaluando si «poner el acervo en un RAG» sustituye
+a catalogarlo, la pregunta útil es otra: qué consultas tienes que
+resolver todos los días. Las que se contestan con un punto de acceso o
+con una frase del documento no necesitan generar un párrafo. Las que sí,
+pueden apoyarse en el markdown que Collect ya dejó listo. Si quieres
+verlo con una muestra de tu propio material, escríbenos a
+info@janium.com.</p>
