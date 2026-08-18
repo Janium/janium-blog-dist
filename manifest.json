@@ -1,7 +1,38 @@
 {
   "contract": 1,
-  "generated": "2026-08-18T06:16:50Z",
+  "generated": "2026-08-18T06:32:14Z",
   "posts": [
+    {
+      "slug": "marcado-procedencia-ia",
+      "date": "2026-08-18",
+      "datetime": "2026-08-18T18:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia",
+        "cumplimiento",
+        "espana"
+      ],
+      "translations": {
+        "es": {
+          "title": "Collect marca los metadatos hechos con IA",
+          "description": "Collect cumple el Art. 50.2 del Reglamento de IA: las salidas de catalogación llevan un marcado legible por máquina, el registro de catálogo no cambia y la prueba queda en la institución.",
+          "cover": "assets/marcado-procedencia-ia-es-cover-94d11c24.svg",
+          "html": "posts/marcado-procedencia-ia.es.html"
+        },
+        "en": {
+          "title": "Collect marks AI-made metadata",
+          "description": "Collect meets Article 50.2 of the EU AI Act: cataloguing output carries a machine-readable mark, the catalog record does not change, and the proof stays with the institution.",
+          "cover": "assets/marcado-procedencia-ia-en-cover-94d11c24.svg",
+          "html": "posts/marcado-procedencia-ia.en.html"
+        },
+        "pt": {
+          "title": "O Collect marca os metadados feitos com IA",
+          "description": "O Collect cumpre o art. 50.2 do Regulamento de IA: as saídas de catalogação levam uma marcação legível por máquina, o registo de catálogo não muda e a prova fica na instituição.",
+          "cover": "assets/marcado-procedencia-ia-pt-cover-94d11c24.svg",
+          "html": "posts/marcado-procedencia-ia.pt.html"
+        }
+      }
+    },
     {
       "slug": "puntos-de-acceso-texto-completo-y-rag",
       "date": "2026-08-18",
@@ -29,37 +60,6 @@
           "description": "Um estudo recente mede até onde um modelo aproveita de verdade o contexto que se lhe injeta. O que isso implica para o RAG, e o que uma instituição obtém quando o Collect aflora pontos de acesso —também as extensões corporativas— para o Janium os procurar.",
           "cover": "assets/puntos-de-acceso-texto-completo-y-rag-pt-cover-7debe6a4.svg",
           "html": "posts/puntos-de-acceso-texto-completo-y-rag.pt.html"
-        }
-      }
-    },
-    {
-      "slug": "marcado-procedencia-ia",
-      "date": "2026-08-18",
-      "datetime": "2026-08-18T15:00:00Z",
-      "tags": [
-        "janiumcollect",
-        "ia",
-        "cumplimiento",
-        "espana"
-      ],
-      "translations": {
-        "es": {
-          "title": "Collect marca los metadatos hechos con IA",
-          "description": "Collect cumple el Art. 50.2 del Reglamento de IA: las salidas de catalogación llevan un marcado legible por máquina. El registro de catálogo no cambia. La prueba queda en la institución.",
-          "cover": "assets/marcado-procedencia-ia-es-cover-94d11c24.svg",
-          "html": "posts/marcado-procedencia-ia.es.html"
-        },
-        "en": {
-          "title": "Collect marks AI-made metadata",
-          "description": "Collect meets Article 50.2 of the EU AI Act: cataloguing output carries a machine-readable mark. The catalog record does not change. The proof stays with the institution.",
-          "cover": "assets/marcado-procedencia-ia-en-cover-94d11c24.svg",
-          "html": "posts/marcado-procedencia-ia.en.html"
-        },
-        "pt": {
-          "title": "O Collect marca os metadados feitos com IA",
-          "description": "O Collect cumpre o art. 50.2 do Regulamento de IA: as saídas de catalogação levam uma marcação legível por máquina. O registo de catálogo não muda. A prova fica na instituição.",
-          "cover": "assets/marcado-procedencia-ia-pt-cover-94d11c24.svg",
-          "html": "posts/marcado-procedencia-ia.pt.html"
         }
       }
     },
