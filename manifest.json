@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-08-18T06:32:14Z",
+  "generated": "2026-08-21T15:27:40Z",
   "posts": [
+    {
+      "slug": "de-un-video-a-registros-enlazados",
+      "date": "2026-08-21",
+      "datetime": "2026-08-21T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Catalogar un video de acervo con IA: de la grabación a registros enlazados",
+          "description": "Un noticiario o una sesión grabada no traen el contenido escrito. Collect propone un registro del video entero y, si hace falta, un registro por escena, enlazado al primero.",
+          "cover": "assets/de-un-video-a-registros-enlazados-es-cover-d5c3b989.svg",
+          "html": "posts/de-un-video-a-registros-enlazados.es.html"
+        },
+        "en": {
+          "title": "Cataloging a collection video with AI: from the recording to linked records",
+          "description": "A newsreel or a recorded session does not come with the content written down. Collect proposes a record for the whole video and, if needed, a record per scene, linked to the first.",
+          "cover": "assets/de-un-video-a-registros-enlazados-en-cover-d5c3b989.svg",
+          "html": "posts/de-un-video-a-registros-enlazados.en.html"
+        },
+        "pt": {
+          "title": "Catalogar um vídeo de acervo com IA: da gravação a registros vinculados",
+          "description": "Um cinejornal ou uma sessão gravada não trazem o conteúdo escrito. O Collect propõe um registro do vídeo inteiro e, se faz falta, um registro por cena, vinculado ao primeiro.",
+          "cover": "assets/de-un-video-a-registros-enlazados-pt-cover-d5c3b989.svg",
+          "html": "posts/de-un-video-a-registros-enlazados.pt.html"
+        }
+      }
+    },
     {
       "slug": "marcado-procedencia-ia",
       "date": "2026-08-18",
