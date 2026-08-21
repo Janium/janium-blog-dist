@@ -1,0 +1,106 @@
+<p>En un índice, &ldquo;García Márquez, Gabriel&rdquo;, &ldquo;G. García Márquez&rdquo; y &ldquo;Gabriel García
+Marquez&rdquo; son tres personas distintas. Quien busca una de esas grafías no
+encuentra los libros archivados bajo las otras. El
+<a href="/blog/glosario/#control-de-autoridades">control de autoridades</a> existe para que
+las tres apunten al mismo sitio: una forma del nombre, decidida una vez, para
+todo el catálogo.</p>
+<p>Cuando Collect lee un documento, el <a href="/blog/glosario/#modelo-de-lenguaje">modelo</a>
+propone una forma del nombre a partir de lo que ve. Esa propuesta no se da por
+buena sola. Se coteja contra las listas que la institución ya usa, y en el
+registro queda escrito de cuál de esas listas salió la forma final. Ese rastro es
+lo que permite confiar en el nombre sin volver a teclearlo. El panorama de por
+qué un catálogo asistido con IA es fiable está en
+<a href="/blog/confiar-en-catalogo-con-ia/">Por qué confiar en un catálogo hecho con IA</a>.</p>
+<h2>Primero el catálogo de la casa, después el mundo</h2>
+<p>Para un nombre de persona, Collect sigue una cascada y se detiene en el primer
+peldaño que responde. Antes de consultar nada, normaliza la forma: pasa el nombre
+a &ldquo;apellido, nombre&rdquo; y quita los tratamientos (&ldquo;Lic.&rdquo;, &ldquo;Dr.&rdquo;, &ldquo;Sr.&rdquo;). Con esa
+forma limpia consulta, en orden:</p>
+<ul>
+<li><strong>El catálogo de autoridades de la institución</strong> (el ILS: Janium, Alma, Sierra
+  o Koha). Si la casa ya fijó una forma autorizada para ese autor, esa gana. Es
+  la de mayor confianza, porque es la decisión que la propia institución ya tomó.</li>
+<li><strong>VIAF</strong>, el fichero internacional donde las bibliotecas nacionales registran la
+  forma autorizada de cada autor. Las fechas de nacimiento y muerte, cuando el
+  registro las trae, sirven para distinguir homónimos. Si VIAF resuelve el nombre,
+  el registro se lleva además el enlace a esa entrada (el identificador de VIAF).</li>
+<li><strong>El normalizador de nombres</strong>, si ninguna lista tuvo el autor. Deja el nombre
+  bien formado —apellido primero, sin tratamientos—, pero sin respaldo externo y
+  sin ese enlace.</li>
+</ul>
+<p>La cascada baja de peldaño solo cuando el anterior no encuentra nada. El orden es
+también de confianza descendente, y el registro conserva qué peldaño lo resolvió.</p>
+<h2>La procedencia va escrita en el registro</h2>
+<p>Lo que distingue a un nombre verificado de uno solo bien escrito no es una
+promesa: es un dato en el propio registro. Un nombre resuelto por VIAF llega con
+el enlace a esa entrada. Uno que tomó la forma del catálogo de la casa llega con
+esa forma —la que la institución ya había fijado— y sin el identificador
+internacional. Uno que solo pasó por el normalizador llega bien escrito y también
+sin ese enlace. El enlace marca coincidencia con VIAF o con ISNI; su ausencia no
+dice que el nombre esté mal escrito, dice que no hay identificador de esas
+listas.</p>
+<p>Para las materias la marca es un código de fuente en el mismo registro (el
+subcampo <code>$2</code> en MARC): dice contra qué vocabulario se validó el término. Un
+término sin ese código no se contrastó contra ninguna lista.</p>
+<p>El efecto para quien cataloga es directo: abre el registro y sabe qué nombres
+vienen respaldados por una autoridad y cuáles conviene revisar, sin tener que
+comprobarlos todos. Ningún nombre inferido se presenta como si estuviera
+verificado.</p>
+<h2>Entidades: empresas, organismos, instituciones</h2>
+<p>Los nombres de entidad —una editorial, un ministerio, una empresa— siguen una
+cascada propia, porque las listas que mejor los cubren no son las mismas que para
+las personas: el catálogo local primero; <strong>ISNI</strong> cuando la institución lo tiene
+activo, porque cubre mejor organizaciones; VIAF como respaldo; y por último el
+normalizador de entidades.</p>
+<p>Ese normalizador hace un trabajo que los nombres de empresa suelen necesitar:
+quita la forma legal (&ldquo;S.A. de C.V.&rdquo;, &ldquo;S. de R.L.&rdquo;) y coloca la unidad
+subordinada en su lugar, de modo que &ldquo;Editorial Planeta, S.A.&rdquo; entre al índice
+como corresponde y no como una cadena literal con la razón social pegada.</p>
+<h2>Materias: la lista correcta para cada región</h2>
+<p>Las materias no se resuelven como los nombres. Una materia suele venir del
+vocabulario de la Library of Congress, en inglés, y hay que llevarla al
+vocabulario controlado de la región. Collect lo hace consultando id.loc.gov, que
+enlaza cada materia con su equivalente oficial en otras listas nacionales:
+<strong>EMBNE</strong> en España, <strong>RAMEAU</strong> en Francia, <strong>GND</strong> en Alemania, entre otras.</p>
+<p>Cuando no hay un vocabulario oficial para esa región, Collect traduce el término
+respetando la terminología local. No es lo mismo &ldquo;computadora&rdquo; en México,
+&ldquo;computador&rdquo; en Chile y &ldquo;ordenador&rdquo; en España: la traducción usa la forma de la
+región, no una genérica. Para Colombia usa la terminología de LEMB. Cada materia
+sale con el código de la fuente contra la que se resolvió.</p>
+<h2>Arte: los vocabularios del Getty</h2>
+<p>Un acervo de arte usa listas especializadas, las del Getty: <strong>ULAN</strong> para nombres
+de artistas, <strong>AAT</strong> para tipos de objeto y materiales, <strong>TGN</strong> para lugares.
+Collect las consulta para los registros de obra, y aquí la regla es más estricta
+que en el resto: <strong>solo enlaza cuando hay una coincidencia exacta y sin
+ambigüedad</strong>.</p>
+<p>La razón es concreta. La búsqueda por texto del Getty ordena por relevancia, no
+por exactitud: &ldquo;Rivera Diego&rdquo; devuelve primero &ldquo;Museo Diego Rivera&rdquo;, y &ldquo;Zamora&rdquo;
+devuelve trece lugares distintos. Tomar el primer resultado enlazaría a un
+concepto equivocado, y un enlace equivocado es peor que ninguno: aparenta
+precisión donde no la hay. Si no existe exactamente un concepto cuyo nombre
+coincida con el término, Collect no enlaza y deja el término sin marca.</p>
+<h2>Límites</h2>
+<ul>
+<li><strong>Los homónimos siguen siendo trabajo humano.</strong> Dos &ldquo;Juan Pérez&rdquo; nacidos en la
+  misma década, sin fechas que los separen, no los desambigua ninguna lista.
+  Collect deja ambos en forma de catálogo; decidir si son la misma persona lo
+  hace quien conoce el fondo.</li>
+<li><strong>Los nombres que ninguna lista conoce</strong> —un funcionario local, una empresa que
+  no está en VIAF ni en ISNI— igual entran bien escritos, apellido primero y sin
+  tratamientos, pero sin el enlace de autoridad. Se sabe que no vienen
+  respaldados justamente porque les falta esa marca.</li>
+<li><strong>Juntar variantes bajo un solo encabezamiento del fondo</strong> todavía no lo hace
+  Collect. Hoy deja cada nombre en su forma autorizada; unificar las grafías de un
+  mismo autor en un único encabezamiento del acervo es una extensión prevista, y
+  lo contaremos cuando esté lista.</li>
+<li><strong>La forma siempre se corrige, aunque no haya coincidencia.</strong> La normalización
+  del nombre ocurre antes de consultar cualquier lista; lo que la validación
+  externa agrega es la procedencia, no el buen formato.</li>
+</ul>
+<p>Ninguna de estas listas reemplaza a quien cataloga: le quita de encima el tecleo
+repetido y el emparejamiento manual de grafías, y le deja el juicio —los
+homónimos, las personas que ninguna lista internacional registra— que es donde su
+criterio hace falta.</p>
+<p>Si en tu institución el trabajo se va en reescribir nombres y emparejar grafías
+de un mismo autor, escríbenos a info@janium.com; nos interesa saber contra qué
+autoridades catalogas hoy.</p>

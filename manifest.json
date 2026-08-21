@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-08-21T15:27:40Z",
+  "generated": "2026-08-21T15:31:39Z",
   "posts": [
+    {
+      "slug": "control-de-autoridades-y-vocabularios",
+      "date": "2026-08-21",
+      "datetime": "2026-08-21T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Control de autoridades: que cada nombre entre al catálogo de una sola forma",
+          "description": "El mismo autor escrito de tres maneras son tres personas en el índice. Collect coteja cada nombre y materia contra las listas que la institución ya usa —su catálogo, VIAF, ISNI, los vocabularios del Getty— y deja escrito de qué lista salió la forma.",
+          "cover": "assets/control-de-autoridades-y-vocabularios-es-cover-9cb88221.svg",
+          "html": "posts/control-de-autoridades-y-vocabularios.es.html"
+        },
+        "en": {
+          "title": "Authority control: each name enters the catalog in one form",
+          "description": "The same author spelled three ways is three people in the index. Collect checks each name and subject against the lists the institution already uses —its catalog, VIAF, ISNI, the Getty vocabularies— and records which list the form came from.",
+          "cover": "assets/control-de-autoridades-y-vocabularios-en-cover-9cb88221.svg",
+          "html": "posts/control-de-autoridades-y-vocabularios.en.html"
+        },
+        "pt": {
+          "title": "Controle de autoridade: cada nome entra no catálogo de uma só forma",
+          "description": "O mesmo autor escrito de três maneiras são três pessoas no índice. O Collect confere cada nome e matéria contra as listas que a instituição já usa —seu catálogo, VIAF, ISNI, os vocabulários do Getty— e deixa escrito de que lista saiu a forma.",
+          "cover": "assets/control-de-autoridades-y-vocabularios-pt-cover-9cb88221.svg",
+          "html": "posts/control-de-autoridades-y-vocabularios.pt.html"
+        }
+      }
+    },
     {
       "slug": "de-un-video-a-registros-enlazados",
       "date": "2026-08-21",

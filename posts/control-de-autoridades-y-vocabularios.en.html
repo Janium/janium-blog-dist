@@ -1,0 +1,103 @@
+<p>In an index, &ldquo;García Márquez, Gabriel&rdquo;, &ldquo;G. García Márquez&rdquo; and &ldquo;Gabriel García
+Marquez&rdquo; are three different people. Anyone searching under one of those
+spellings does not find the books filed under the others.
+<a href="/en/blog/glosario/#control-de-autoridades">Authority control</a> exists so that
+the three point to the same place: one form of the name, decided once, for the
+whole catalog.</p>
+<p>When Collect reads a document, the <a href="/en/blog/glosario/#modelo-de-lenguaje">model</a>
+proposes a form of the name from what it sees. That proposal is not taken as
+good on its own. It is checked against the lists the institution already uses,
+and the record states which of those lists the final form came from. That trail
+is what makes the name trustworthy without typing it again. Why a catalog built
+with AI can be trusted is in
+<a href="/en/blog/confiar-en-catalogo-con-ia/">Why trust a catalog made with AI</a>.</p>
+<h2>The house catalog first, then the world</h2>
+<p>For a personal name, Collect follows a cascade and stops at the first rung that
+answers. Before it queries anything, it normalizes the form: it turns the name
+to &ldquo;family name, given names&rdquo; and strips courtesy titles (&ldquo;Lic.&rdquo;, &ldquo;Dr.&rdquo;, &ldquo;Mr.&rdquo;).
+With that clean form it looks up, in order:</p>
+<ul>
+<li><strong>The institution&rsquo;s authority file</strong> (the ILS: Janium, Alma, Sierra or Koha).
+  If the house already fixed an authorized form for that author, that form wins.
+  It is the highest confidence, because it is the decision the institution
+  already made.</li>
+<li><strong>VIAF</strong>, the international file where national libraries record the
+  authorized form of each author. Birth and death dates, when the record has
+  them, help tell homonyms apart. If VIAF resolves the name, the record also
+  carries the link to that entry (the VIAF identifier).</li>
+<li><strong>The name normalizer</strong>, if no list had the author. It leaves the name well
+  formed —family name first, without titles— but with no external backing and
+  without that link.</li>
+</ul>
+<p>The cascade steps down only when the previous rung finds nothing. The order is
+also descending confidence, and the record keeps which rung resolved it.</p>
+<h2>Provenance is written in the record</h2>
+<p>What distinguishes a verified name from one that is only well written is not a
+promise: it is a datum in the record itself. A name resolved by VIAF arrives
+with the link to that entry. One that took the form from the house catalog
+arrives with that form —the one the institution had already fixed— and without
+the international identifier. One that only went through the normalizer arrives
+well written and also without that link. The link marks a match with VIAF or
+with ISNI; its absence does not mean the name is badly written, it means there
+is no identifier from those lists.</p>
+<p>For subjects the mark is a source code in the same record (the <code>$2</code> subfield in
+MARC): it says against which vocabulary the term was validated. A term without
+that code was not checked against any list.</p>
+<p>The effect for the cataloger is direct: open the record and see which names
+come backed by an authority and which ones are worth reviewing, without
+checking them all. No inferred name is presented as if it were verified.</p>
+<h2>Organizations: companies, agencies, institutions</h2>
+<p>Entity names —a publisher, a ministry, a company— follow their own cascade,
+because the lists that cover them best are not the same as for persons: the
+local catalog first; <strong>ISNI</strong> when the institution has it on, because it covers
+organizations better; VIAF as fallback; and last the entity normalizer.</p>
+<p>That normalizer does work company names usually need: it strips the legal form
+(&ldquo;S.A. de C.V.&rdquo;, &ldquo;S. de R.L.&rdquo;) and puts the subordinate unit in its place, so
+that &ldquo;Editorial Planeta, S.A.&rdquo; enters the index as it should and not as a
+literal string with the legal name stuck on.</p>
+<h2>Subjects: the right list for each region</h2>
+<p>Subjects are not resolved the way names are. A subject often comes from the
+Library of Congress vocabulary, in English, and has to be taken to the region&rsquo;s
+controlled vocabulary. Collect does that by querying id.loc.gov, which links
+each subject to its official equivalent in other national lists: <strong>EMBNE</strong> in
+Spain, <strong>RAMEAU</strong> in France, <strong>GND</strong> in Germany, among others.</p>
+<p>When there is no official vocabulary for that region, Collect translates the
+term using local terminology. &ldquo;Computadora&rdquo; in Mexico, &ldquo;computador&rdquo; in Chile
+and &ldquo;ordenador&rdquo; in Spain are not the same word: the translation uses the
+region&rsquo;s form, not a generic one. For Colombia it uses LEMB terminology. Each
+subject goes out with the code of the source against which it was resolved.</p>
+<h2>Art: the Getty vocabularies</h2>
+<p>An art collection uses specialized lists, the Getty ones: <strong>ULAN</strong> for artist
+names, <strong>AAT</strong> for object types and materials, <strong>TGN</strong> for places. Collect
+queries them for work records, and here the rule is stricter than elsewhere:
+<strong>it links only when there is an exact, unambiguous match</strong>.</p>
+<p>The reason is concrete. Getty text search ranks by relevance, not exactness:
+&ldquo;Rivera Diego&rdquo; returns &ldquo;Museo Diego Rivera&rdquo; first, and &ldquo;Zamora&rdquo; returns thirteen
+different places. Taking the first result would link to the wrong concept, and
+a wrong link is worse than none: it looks precise where it is not. If there is
+not exactly one concept whose name matches the term, Collect does not link and
+leaves the term unmarked.</p>
+<h2>Limits</h2>
+<ul>
+<li><strong>Homonyms remain human work.</strong> Two &ldquo;Juan Pérez&rdquo; born in the same decade,
+  with no dates to tell them apart, are not disambiguated by any list. Collect
+  leaves both in catalog form; deciding whether they are the same person is
+  done by whoever knows the collection.</li>
+<li><strong>Names no list knows</strong> —a local official, a company that is not in VIAF or
+  ISNI— still enter well written, family name first and without titles, but
+  without the authority link. They are known to be unbacked precisely because
+  that mark is missing.</li>
+<li><strong>Bringing variants under a single heading for the collection</strong> is something
+  Collect does not yet do. Today it leaves each name in its authorized form;
+  unifying one author&rsquo;s spellings into a single heading for the holdings is a
+  planned extension, and we will say so when it is ready.</li>
+<li><strong>The form is always corrected, even when there is no match.</strong> Name
+  normalization happens before any list is queried; what external validation
+  adds is provenance, not good formatting.</li>
+</ul>
+<p>None of these lists replaces the cataloger: they take away the repeated typing
+and the manual matching of spellings, and leave the judgment —homonyms, people
+no international list records— where that judgment is needed.</p>
+<p>If at your institution the work goes into rewriting names and matching
+spellings of the same author, write to us at info@janium.com; we want to know
+which authorities you catalog against today.</p>
