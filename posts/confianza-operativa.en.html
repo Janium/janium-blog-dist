@@ -1,0 +1,43 @@
+<p><a href="/en/blog/confiar-en-catalogo-con-ia/">An earlier post in this series</a> dealt with
+trust in the content of each record: that the system knows where each piece of
+data comes from, that it verifies names against authorities, that it computes the
+rule-based fields with fixed rules. That is the risk at the level of a single
+record. When the work goes from a handful of documents to batches of thousands,
+another risk appears, of a different nature: that something fails in the operation
+and degrades the whole batch without anyone noticing at the time.</p>
+<p>A badly extracted field in one record is not the same as a failure that hits them
+all at once. A batch of a thousand records that comes out without the links to its
+source files still looks fine —it has its titles, its dates, its authors— until
+someone tries to open the document from the catalog and finds the link missing. By
+then the batch is already loaded, and reconstructing where each record came from is
+manual work.</p>
+<h2>Fail visibly, not in silence</h2>
+<p>The principle that governs Collect against this risk is simple to state: <strong>fail
+visibly instead of producing bad data in silence.</strong> A batch that does not meet the
+conditions to be delivered does not go out with a footnote warning no one will
+read; the process stops loudly, with a message that says what degraded. A visible
+halt, one that forces you to look, is better than a delivery that appears fine and
+blows up weeks later, when the cost has already multiplied.</p>
+<p>That principle applies at every point where an operational failure could slip in
+and turn into data that looks correct but is not. If something is not as it should
+be, Collect prefers to stop and flag it rather than carry on.</p>
+<h2>The operator decides, but knowingly</h2>
+<p>Stopping is not always what the institution wants. There are moments when the
+operator, knowing what they are doing, decides to continue despite a degraded
+condition. Collect allows it, but as an <strong>explicit decision</strong>, not a default path:
+what is delivered under those conditions is flagged for review, with the reason
+noted. That is the difference from a silent accident: operating degraded is a
+conscious choice, not something that happens without anyone realizing.</p>
+<h2>What this trust covers, and what it does not</h2>
+<p>It is worth being clear about the scope. This operational trust looks after the
+<strong>integrity of the batch at scale</strong>: that records keep the link to their source
+document, that mandatory fields are not missing, that records are not lost between
+one stage and the next. It does not verify the accuracy of each field of each
+record —whether a date was transcribed correctly, whether a name is the right
+one—; that is a matter for content review, the layer <a href="/en/blog/confiar-en-catalogo-con-ia/">the earlier
+post</a> covers. They are two distinct
+safeguards: one sees that the batch arrives whole, the other that each piece of
+data is faithful.</p>
+<p>If your institution processes collections in large batches and you worry that an
+operational failure might degrade a load without it being noticed in time, write to
+us at info@janium.com; we can talk about how this fits your workflow.</p>

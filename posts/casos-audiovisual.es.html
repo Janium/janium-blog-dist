@@ -1,0 +1,96 @@
+<p>Un acervo audiovisual es difícil de describir por una razón simple: hay que verlo
+o escucharlo para saber qué contiene. Una hoja de un expediente se lee de un
+vistazo; un noticiario de media hora o una grabación de una sesión no dicen su
+contenido hasta que alguien los reproduce entero. Un archivo de noticiarios, una
+fonoteca de entrevistas, una colección de videograbaciones de eventos —cada uno
+guarda dentro nombres, fechas y temas que están repartidos a lo largo de minutos
+de imagen y sonido, no en una portada.</p>
+<p>Por eso estos fondos se catalogan despacio, y muchas veces se quedan sin
+catalogar. Reproducir cada archivo completo para describirlo no cabe en el tiempo
+del equipo, y mientras tanto el material se acumula, a menudo ya digitalizado pero
+sin un registro que permita encontrarlo. Ese es el caso que atiende Janium
+Collect cuando el acervo es audiovisual.</p>
+<h2>De qué parte la descripción</h2>
+<p>Collect no &ldquo;mira&rdquo; el video ni &ldquo;oye&rdquo; el audio como lo haría una persona. Trabaja
+con dos derivados del archivo que sí puede leer un <a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a>.</p>
+<p>El primero es la <strong>transcripción</strong>: la voz del audio —sea una grabación sonora o
+la pista de un video— se convierte en texto con reconocimiento automático del
+habla, y ese texto se vuelve el contenido sobre el que se extraen los metadatos.
+El segundo, en el caso del video, son los <strong>fotogramas por escena</strong>: en lugar de
+un cuadro cada tantos segundos, el sistema detecta cuándo cambia la imagen de
+manera significativa y toma un fotograma representativo de cada tramo. Así el
+modelo ve una secuencia de imágenes que resume lo que pasa en pantalla, apoyada
+en lo que se dice.</p>
+<p>El mecanismo de cada modalidad ya está descrito en detalle en dos posts previos
+—cómo funciona la transcripción y la elección entre transcribir en local o en la
+nube en <a href="/blog/de-una-grabacion-sonora-a-un-registro/">«De una grabación sonora a un registro de catálogo»</a>,
+y cómo se muestrean los fotogramas y se combinan las dos vías en
+<a href="/blog/de-un-video-a-registros-enlazados/">«De un video a registros enlazados»</a>—.
+Aquí interesa el caso de uso: qué obtiene un archivo audiovisual de aplicar ambos.</p>
+<h2>Un registro del conjunto, y uno por cada parte</h2>
+<p>El punto que distingue a un acervo audiovisual de otros es que el contenido casi
+nunca es una sola cosa. Un noticiario tiene varias notas. Una sesión grabada tiene
+varios puntos del orden del día. Una entrevista tiene turnos. Describir todo eso
+en una sola ficha entrega un registro real pero pobre: quien busca una nota
+específica, una intervención o un tema de esa media hora no la encuentra, porque
+quedó subsumida en un resumen general.</p>
+<p>Collect aborda esto con dos niveles de registro. Por defecto, cada archivo produce
+<strong>una ficha</strong>: el resumen global del contenido, que para mucho material basta.
+Cuando el fondo lo amerita, se activa por institución la <strong>segmentación</strong>: además
+del registro global, el sistema divide el material —en intervenciones para el
+audio, en escenas para el video— y cataloga cada segmento como un <strong>registro hijo
+enlazado al padre</strong>. El enlace es explícito y bidireccional: cada hijo referencia
+al padre con el campo que corresponde al formato (<code>dcterms:isPartOf</code> en Dublin
+Core, el 773 en MARC), y el padre referencia a sus hijos sin embeberlos. Cada
+segmento queda como un registro consultable por sí mismo, y a la vez se sabe de
+qué grabación forma parte.</p>
+<p>Aquí interviene una regla que Collect aplica en todo el proceso: no rellenar un
+campo con lo que no puede sostener. Un fragmento a mitad de una grabación rara vez
+trae su propio título, así que el modelo deja vacíos esos campos. En la vía de
+audio, donde la segmentación ya dedujo un tema y un resumen de cada intervención,
+esos huecos se rellenan de forma determinista, y el registro del conjunto puede
+describirse agregando lo de sus partes: su materia es la unión de los temas, su
+descripción la suma de los resúmenes. En la vía de video, el hijo de cada escena
+se cataloga a partir de sus fotogramas, sin esa pasada de relleno. En ambos casos
+es descripción derivada de lo que ya se extrajo, no una segunda ronda de
+suposición.</p>
+<h2>En el formato que ya usa la institución</h2>
+<p>Nada de esto cambia la norma de descripción del acervo. La salida sale en el
+formato que la institución usa: <strong>Dublin Core</strong> para una descripción simple,
+<strong>ISAD-G</strong> para un archivo donde importan la procedencia y la jerarquía, <strong>MARC21</strong>
+para un catálogo de biblioteca. El registro hijo sale en el mismo formato que el
+padre, no en uno aparte.</p>
+<p>Parte del registro, además, no depende del contenido en absoluto. Los datos
+técnicos del archivo —duración, códec, resolución— se leen directamente del
+contenedor, sin pasar por el modelo, porque son hechos medibles; en MARC alimentan
+los campos fijos de material audiovisual de forma determinista. El tipo de recurso
+—que se trata de un registro sonoro o de una imagen en movimiento— también se fija
+así, no lo decide el modelo. Eso deja al modelo solo la parte que exige leer el
+contenido, que es donde aporta.</p>
+<h2>Límites</h2>
+<p>La transcripción automática tiene error, y ese error crece cuando el audio es malo: ruido de fondo, voces solapadas,
+un micrófono lejano producen texto con fallos que se arrastran a la extracción. La
+descripción de lo visual se hace a partir de <strong>algunos fotogramas</strong>, no del video
+completo: capturan el asunto de cada escena, no sus matices, y una toma breve o un
+gesto pueden no quedar reflejados. La segmentación por escena es heurística —se
+basa en cuándo cambia la imagen, que se aproxima a los cortes temáticos pero no
+coincide siempre con ellos—, así que sirve como punto de partida para navegar el
+material, no como una segmentación editorial definitiva.</p>
+<p>Cuando un audio casi no tiene habla —música, ambiente— el sistema no fuerza una
+descripción a partir de una transcripción pobre: se apoya en los metadatos del
+archivo y marca el caso, para no fabricar contenido que no está. Y como en el resto
+de Collect, lo que sale son registros propuestos que alguien revisa. La
+transcripción y la descripción por fotogramas <strong>asisten el trabajo; no sustituyen
+el visionado experto</strong> de material patrimonial. Un fondo audiovisual histórico
+pide el criterio de quien sabe qué está viendo y oyendo —una atribución, una fecha
+de la grabación, la identificación de una persona o un lugar en cuadro— y esa
+última palabra sigue siendo humana. Lo que cambia es el punto de partida: la
+revisión empieza desde un borrador estructurado y enlazado, no desde cero, y sobre
+todo desde un material que ya está descrito lo bastante para encontrarlo.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu institución tiene un archivo de noticiarios, una fonoteca o un acervo de
+video de eventos esperando descripción, y el cuello de botella es que hay que ver
+o escuchar cada pieza para catalogarla, esto es lo que este flujo intenta aliviar,
+sin quitarle a quien cataloga la decisión final. Escríbenos a info@janium.com; nos
+interesa saber cómo es tu material audiovisual, en qué formato lo describes y qué
+tan limpio es el audio, porque eso cambia lo que se puede esperar.</p>

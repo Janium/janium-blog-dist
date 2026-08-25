@@ -1,7 +1,65 @@
 {
   "contract": 1,
-  "generated": "2026-08-21T15:31:39Z",
+  "generated": "2026-08-25T11:49:08Z",
   "posts": [
+    {
+      "slug": "casos-audiovisual",
+      "date": "2026-08-25",
+      "datetime": "2026-08-25T16:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Catalogar acervos audiovisuales — noticiarios, grabaciones y video",
+          "description": "Cómo Janium Collect ayuda a describir a escala un acervo audiovisual —noticiarios, grabaciones sonoras, registros en video de eventos— a partir de la transcripción y de los fotogramas por escena, produciendo un registro padre y segmentos hijos en el formato que usa la institución.",
+          "cover": "assets/casos-audiovisual-es-cover-ce9b3863.svg",
+          "html": "posts/casos-audiovisual.es.html"
+        },
+        "en": {
+          "title": "Cataloging audiovisual collections — newsreels, recordings and video",
+          "description": "How Janium Collect helps describe an audiovisual collection at scale —newsreels, sound recordings, video records of events— from the transcription and the per-scene frames, producing a parent record and child segments in the format the institution uses.",
+          "cover": "assets/casos-audiovisual-en-cover-ce9b3863.svg",
+          "html": "posts/casos-audiovisual.en.html"
+        },
+        "pt": {
+          "title": "Catalogar acervos audiovisuais — noticiários, gravações e vídeo",
+          "description": "Como o Janium Collect ajuda a descrever em escala um acervo audiovisual —noticiários, gravações sonoras, registros em vídeo de eventos— a partir da transcrição e dos fotogramas por cena, produzindo um registro pai e segmentos filhos no formato que a instituição usa.",
+          "cover": "assets/casos-audiovisual-pt-cover-ce9b3863.svg",
+          "html": "posts/casos-audiovisual.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "confianza-operativa",
+      "date": "2026-08-25",
+      "datetime": "2026-08-25T15:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Evitar que un lote degradado entre al catálogo: filtros de calidad",
+          "description": "A escala, el riesgo no es un campo mal extraído en un registro, sino un fallo operativo que degrada un lote entero sin que nadie lo note. El criterio con que Janium Collect lo enfrenta: fallar de forma visible en lugar de producir datos malos en silencio, y que operar en condiciones degradadas sea una decisión consciente del operador, no un accidente.",
+          "cover": "assets/confianza-operativa-es-cover-d4f0bf8a.svg",
+          "html": "posts/confianza-operativa.es.html"
+        },
+        "en": {
+          "title": "Keeping a degraded batch out of the catalog: quality gates",
+          "description": "At scale, the risk is not one badly extracted field in a record, but an operational failure that degrades a whole batch without anyone noticing. The principle Janium Collect faces it with: fail visibly instead of producing bad data in silence, and make operating under degraded conditions a conscious decision by the operator, not an accident.",
+          "cover": "assets/confianza-operativa-en-cover-d4f0bf8a.svg",
+          "html": "posts/confianza-operativa.en.html"
+        },
+        "pt": {
+          "title": "Evitar que um lote degradado entre no catálogo: filtros de qualidade",
+          "description": "Em escala, o risco não é um campo mal extraído em um registro, mas uma falha operacional que degrada um lote inteiro sem que ninguém perceba. O critério com que o Janium Collect o enfrenta: falhar de forma visível em vez de produzir dados ruins em silêncio, e fazer com que operar em condições degradadas seja uma decisão consciente do operador, não um acidente.",
+          "cover": "assets/confianza-operativa-pt-cover-d4f0bf8a.svg",
+          "html": "posts/confianza-operativa.pt.html"
+        }
+      }
+    },
     {
       "slug": "control-de-autoridades-y-vocabularios",
       "date": "2026-08-21",

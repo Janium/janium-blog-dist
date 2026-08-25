@@ -1,0 +1,97 @@
+<p>An audiovisual collection is hard to describe for a simple reason: you have to
+watch or listen to it to know what it contains. A sheet from a file is read at a
+glance; a half-hour newsreel or a recording of a session do not state their content
+until someone plays them in full. An archive of newsreels, a sound library of
+interviews, a collection of event video recordings —each one holds inside names,
+dates and topics spread across minutes of image and sound, not on a cover.</p>
+<p>That is why these collections are cataloged slowly, and often go uncataloged.
+Playing each file in full to describe it does not fit in the team&rsquo;s time, and
+meanwhile the material piles up, often already digitized but without a record that
+makes it findable. That is the case Janium Collect addresses when the collection is
+audiovisual.</p>
+<h2>What the description starts from</h2>
+<p>Collect does not &ldquo;watch&rdquo; the video or &ldquo;hear&rdquo; the audio the way a person would. It
+works with two derivatives of the file that a <a href="/en/blog/glosario/#modelo-de-lenguaje">language
+model</a> can read.</p>
+<p>The first is the <strong>transcription</strong>: the voice in the audio —whether a sound
+recording or a video&rsquo;s track— is turned into text with automatic speech
+recognition, and that text becomes the content from which the metadata is
+extracted. The second, in the case of video, is the <strong>per-scene frames</strong>: instead
+of one frame every so many seconds, the system detects when the image changes
+significantly and takes a representative frame from each stretch. This way the model
+sees a sequence of images that sums up what happens on screen, supported by what is
+said.</p>
+<p>The mechanism of each mode is already described in detail in two earlier posts —how
+the transcription works and the choice between transcribing locally or in the cloud
+in <a href="/en/blog/de-una-grabacion-sonora-a-un-registro/">«From a sound recording to a catalog record»</a>,
+and how the frames are sampled and the two paths combined in <a href="/en/blog/de-un-video-a-registros-enlazados/">«From a video to
+linked records»</a>—. What matters here is
+the use case: what an audiovisual file gains from applying both.</p>
+<h2>One record for the whole, and one for each part</h2>
+<p>The thing that sets an audiovisual collection apart is that the content is almost
+never a single thing. A newsreel has several stories. A recorded session has
+several agenda items. An interview has turns. Describing all that in a single record
+yields a real but poor record: whoever looks for a specific story, an intervention
+or a topic in that half hour does not find it, because it was subsumed into a
+general summary.</p>
+<p>Collect approaches this with two levels of record. By default, each file produces
+<strong>one record</strong>: the global summary of the content, which for much material is
+enough. When the collection warrants it, <strong>segmentation</strong> is enabled per
+institution: besides the global record, the system splits the material —into
+interventions for audio, into scenes for video— and catalogs each segment as a
+<strong>child record linked to the parent</strong>. The link is explicit and bidirectional: each
+child references the parent with the field that matches the format
+(<code>dcterms:isPartOf</code> in Dublin Core, 773 in MARC), and the parent references its
+children without embedding them. Each segment stands as a record that can be
+consulted on its own, and at the same time it is known which recording it is part
+of.</p>
+<p>Here a rule Collect applies throughout the process comes into play: do not fill a
+field with what it cannot support. A fragment in the middle of a recording rarely
+carries its own title, so the model leaves those fields empty. On the audio path,
+where segmentation has already deduced a topic and a summary for each intervention,
+those gaps are filled deterministically, and the record for the whole can be
+described by aggregating from its parts: its subject is the union of the topics, its
+description the sum of the summaries. On the video path, the child of each scene is
+cataloged from its frames, without that filling pass. In both cases it is
+description derived from what was already extracted, not a second round of guessing.</p>
+<h2>In the format the institution already uses</h2>
+<p>None of this changes the collection&rsquo;s description standard. The output comes out in
+the format the institution uses: <strong>Dublin Core</strong> for a simple description,
+<strong>ISAD-G</strong> for an archive where provenance and hierarchy matter, <strong>MARC21</strong> for a
+library catalog. The child record comes out in the same format as the parent, not in
+a separate one.</p>
+<p>Part of the record, moreover, does not depend on the content at all. The file&rsquo;s
+technical data —duration, codec, resolution— are read directly from the container,
+without going through the model, because they are measurable facts; in MARC they
+feed the fixed fields for audiovisual material deterministically. The resource type
+—whether it is a sound recording or a moving image— is also set that way, not
+decided by the model. That leaves the model only the part that requires reading the
+content, which is where it contributes.</p>
+<h2>Limits</h2>
+<p>Automatic transcription has error, and that error grows when the audio is poor:
+background noise, overlapping voices, a distant microphone produce text with flaws
+that carry over into the extraction. The description of the visual is done from
+<strong>some frames</strong>, not the whole video: they capture the subject of each scene, not
+its nuances, and a brief shot or a gesture may go unreflected. Scene segmentation is
+heuristic —it is based on when the image changes, which approximates the thematic
+cuts but does not always coincide with them—, so it serves as a starting point to
+navigate the material, not as a definitive editorial segmentation.</p>
+<p>When an audio has almost no speech —music, ambience— the system does not force a
+description out of a poor transcription: it relies on the file&rsquo;s metadata and flags
+the case, so as not to fabricate content that is not there. And as in the rest of
+Collect, what comes out are proposed records that someone reviews. Transcription and
+per-frame description <strong>assist the work; they do not replace the expert viewing</strong> of
+heritage material. A historical audiovisual collection calls for the judgment of
+someone who knows what they are seeing and hearing —an attribution, a date of the
+recording, the identification of a person or a place in frame— and that last word
+remains human. What changes is the starting point: review begins from a structured,
+linked draft, not from scratch, and above all from material already described enough
+to find it.</p>
+<h2>To continue the conversation</h2>
+<p>If your institution has an archive of newsreels, a sound library or a collection of
+event video waiting to be described, and the bottleneck is having to watch or listen
+to each piece to catalog it, this is what this workflow tries to ease, without
+taking the final decision away from whoever catalogs. Write to us at
+info@janium.com; we would like to know what your audiovisual material is like, in
+what format you describe it and how clean the audio is, because that changes what
+can be expected.</p>
