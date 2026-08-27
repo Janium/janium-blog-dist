@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-08-25T13:53:22Z",
+  "generated": "2026-08-27T06:30:16Z",
   "posts": [
+    {
+      "slug": "del-registro-al-catalogo",
+      "date": "2026-08-27",
+      "datetime": "2026-08-27T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Integrar la catalogación con IA a tu catálogo (ILS): cargar registros y mantener la jerarquía",
+          "description": "Cómo llegan al catálogo los registros que produce Collect —modo conectado por API o el plugin Janium por SFTP— y por qué, en un archivo jerárquico (ISAD-G), las correcciones del catalogador vuelven a Collect para recalcular el bubble-up. En los formatos planos, una vez cargado el registro el catálogo es la autoridad y no hay nada que regrese.",
+          "cover": "assets/del-registro-al-catalogo-es-cover-66f77f59.svg",
+          "html": "posts/del-registro-al-catalogo.es.html"
+        },
+        "en": {
+          "title": "Integrating AI cataloging into your catalog (ILS): loading records and keeping the hierarchy current",
+          "description": "How the records Collect produces reach the catalog —connected mode via API or the Janium plugin over SFTP— and why, in a hierarchical archive (ISAD-G), the cataloger's corrections return to Collect to recompute the bubble-up. In flat formats, once the record is loaded the catalog is the authority and nothing comes back.",
+          "cover": "assets/del-registro-al-catalogo-en-cover-66f77f59.svg",
+          "html": "posts/del-registro-al-catalogo.en.html"
+        },
+        "pt": {
+          "title": "Integrar a catalogação com IA ao seu catálogo (ILS): carregar registros e manter a hierarquia em dia",
+          "description": "Como os registros que o Collect produz chegam ao catálogo —modo conectado via API ou o plugin Janium por SFTP— e por que, em um arquivo hierárquico (ISAD-G), as correções do catalogador voltam ao Collect para recalcular o bubble-up. Nos formatos planos, uma vez carregado o registro o catálogo é a autoridade e nada retorna.",
+          "cover": "assets/del-registro-al-catalogo-pt-cover-66f77f59.svg",
+          "html": "posts/del-registro-al-catalogo.pt.html"
+        }
+      }
+    },
     {
       "slug": "casos-audiovisual",
       "date": "2026-08-25",

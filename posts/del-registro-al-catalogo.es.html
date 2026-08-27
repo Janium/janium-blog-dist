@@ -1,0 +1,83 @@
+<p>Janium Collect produce registros: lee los documentos de un acervo y entrega
+fichas estructuradas en el formato que la institución usa —<a href="/blog/glosario/#marc">MARC21</a>, <a href="/blog/glosario/#isad-g">ISAD-G</a>,
+<a href="/blog/glosario/#dublin-core">Dublin Core</a>, <a href="/blog/glosario/#cdwa">CDWA</a>. Pero un registro suelto no es un catálogo. El catálogo es
+donde esos registros se consultan, se relacionan entre sí y, sobre todo, donde
+alguien que sabe catalogar los revisa y los corrige. Generar el registro es una
+parte; la otra es cómo llega al catálogo —y, en un archivo con jerarquía, qué hay
+que hacer cuando el catalogador corrige un registro que cuelga de un fondo.</p>
+<h2>Cómo llegan los registros al catálogo</h2>
+<p>Hay dos maneras de llevar los registros de Collect al sistema de catálogo, y cuál
+conviene depende de cómo esté montada la institución y de qué exponga su catálogo.
+No hay que elegir una como &ldquo;la correcta&rdquo;; son respuestas a situaciones distintas.</p>
+<p>La primera es la <strong>sincronización directa vía API</strong>, lo que llamamos modo
+conectado. Collect envía los registros al catálogo a través de su interfaz de
+servicios. Es el camino más inmediato: cuando el catálogo está accesible en red y
+ofrece los puntos de entrada necesarios, los registros se propagan con poca
+demora. Encaja bien cuando ambos sistemas conviven en la misma infraestructura o
+hay conectividad estable entre ellos.</p>
+<p>La segunda es el <strong>intercambio por archivos sobre SFTP</strong>, mediante el plugin
+Janium. En lugar de llamadas en vivo, Collect deposita los registros como paquetes
+en una carpeta que el catálogo recoge, y el catálogo devuelve una confirmación de
+lo que procesó. Este camino sirve cuando no hay —o no se quiere— una conexión
+directa entre los dos sistemas: el archivo es la frontera, y cada lado la cruza a
+su ritmo. A cambio de esa independencia, tiene su propia latencia: los paquetes
+viajan en los ciclos de subida, recogida y sondeo que se hayan configurado.</p>
+<h2>La vuelta existe para mantener la jerarquía</h2>
+<p>Para la mayoría de los registros, cargarlos es el final del trayecto. El
+catalogador los revisa y los corrige en el catálogo, y ahí queda: una monografía
+en MARC, una ficha en Dublin Core, una obra en CDWA son registros independientes,
+y una vez cargados el catálogo es la autoridad. Collect no necesita enterarse de
+esas correcciones, y de hecho puede purgar esos registros cuando el trabajo
+termina.</p>
+<p>Hay un caso en que sí importa que la corrección regrese: los <strong>archivos
+jerárquicos</strong> descritos en <a href="/blog/glosario/#isad-g">ISAD-G</a>. Ahí los registros no
+son independientes: cuelgan de una estructura de fondo, sección y serie, y parte
+de la descripción de los nodos superiores se arma subiendo lo que comparten los
+documentos que cuelgan de ellos —el <a href="/blog/glosario/#bubble-up">bubble-up</a>—. Si el
+catalogador corrige un dato de un documento que participa en ese ascenso, el nodo
+superior queda desfasado respecto de sus hijos.</p>
+<p>Por eso, en un archivo jerárquico, la corrección hecha en el catálogo <strong>vuelve a
+Collect</strong>, que la aplica sobre su copia y <strong>recalcula la jerarquía</strong>: vuelve a
+subir a los nodos padre lo que corresponde, de modo que el fondo y la serie sigan
+reflejando a los documentos que contienen. Ese recálculo del bubble-up es la razón
+de que Collect conserve los registros del archivo mientras está activo, y de que
+exista el tramo de vuelta. En un catálogo plano, sin jerarquía que recalcular, no
+hay nada que sostener de este lado.</p>
+<h2>Qué vuelve, y qué hace Collect con ello</h2>
+<p>Una corrección es un cambio puntual sobre un registro identificado: actualizar el
+valor de un campo, eliminar un dato que sobraba, agregar uno que faltaba. Cada
+registro viaja con un identificador que ambos sistemas reconocen, de modo que la
+corrección se aplica sobre el registro correcto y no sobre otro parecido.</p>
+<p>Cuando esa corrección llega a Collect, reemplaza la copia local del registro —el
+catalogador es la autoridad, no se vuelve a procesar con el modelo—, se
+<strong>reindexan</strong> los datos derivados que dependen de él, como las personas y las
+fechas, y se <strong>recalcula el bubble-up</strong> de los nodos de los que ese documento
+forma parte. El efecto es que la revisión humana hecha en el catálogo no se queda
+solo arriba: la descripción del fondo y de la serie sigue coherente con la de sus
+documentos, sin que nadie tenga que rehacerla a mano.</p>
+<h2>Límites</h2>
+<p>Este mecanismo <strong>depende de que el catálogo destino exponga la interfaz
+correspondiente</strong>. Para la sincronización vía API, el catálogo tiene que ofrecer
+los puntos de entrada para recibir registros y emitir correcciones. Para el
+intercambio por archivos, hace falta el espacio SFTP acordado y que el
+catálogo genere las confirmaciones y las correcciones en el formato esperado. Con
+un catálogo que no expone ninguna de las dos cosas, Collect igual produce los
+registros, pero la carga vuelve a ser un trabajo manual.</p>
+<p>El tramo de vuelta, además, <strong>solo tiene sentido donde hay jerarquía que
+mantener</strong>. Para un acervo plano —bibliográfico, fototeca en Dublin Core, obra en
+CDWA— no hay bubble-up que recalcular: cargar el registro es todo, y la corrección
+vive en el catálogo. Prometer un &ldquo;ciclo cerrado&rdquo; ahí sería inventar un problema
+que ese acervo no tiene.</p>
+<p>El otro límite es la latencia del canal de archivos. Si la institución necesita
+que una corrección se refleje en cuestión de segundos, el intercambio por archivos
+no es el camino; ahí conviene la vía API. Si los ciclos por lotes son aceptables
+—y para muchos flujos de catalogación lo son—, el canal de archivos ofrece a
+cambio no exigir una conexión directa entre los dos sistemas.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu institución describe un archivo en ISAD-G y quiere que las correcciones de
+sus catalogadores se reflejen en la jerarquía sin rehacerla a mano, o si
+simplemente busca cargar al catálogo lo que Collect produce, la pregunta concreta
+es qué interfaz expone ese catálogo hoy —una API, un espacio de intercambio de
+archivos, o ninguna todavía— y si el acervo tiene jerarquía que mantener. De ahí
+depende qué integración aplica. Escríbenos a info@janium.com y lo revisamos sobre
+tu caso.</p>
