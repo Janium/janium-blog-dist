@@ -1,0 +1,102 @@
+<p>Which document formats AI can catalog is not a question of file extensions:
+it is a question of holdings. An institution digitizes late, in pieces and
+with whatever is at hand. In the same folder sit the PDF of a report, the
+scan of a paper file, the photograph of a catalog card or a work, and a text
+file someone exported from a system that is no longer in use. Cataloging
+that, if each type demands a separate treatment, becomes prior work: open,
+recognize, and only then describe.</p>
+<p>Janium Collect takes those files as they stand and a
+<a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> reads them. The
+destination is the same: a catalog record in the format the institution
+already uses. The cataloger stops preparing the material format by format
+and moves on to reviewing what the system proposes.</p>
+<h2>PDF</h2>
+<p>PDF is the container in which most digitized material arrives at an archive,
+a library or a documentation centre. Sometimes it was born digital: a
+report, a thesis, a bulletin. Sometimes it is paper put through a scanner:
+each sheet is an image inside the same file. For the cataloger the
+distinction matters —one can be searched by word, the other cannot— but both
+need a record, and both enter Collect as PDF.</p>
+<p>What the system reads is the document, not the file name. From a report or
+a file it produces <strong>two outputs</strong>. The <strong>catalog record</strong>: title, author,
+date, subjects, producer, the unit&rsquo;s dates. It completes what the source did
+not bring when the model can sustain it, and marks what it inferred.</p>
+<p>And the <strong>document text in structured markdown</strong>: what the PDF said, with
+headings, lists and tables when they are kept, in a form that can be indexed
+and displayed. That markdown does not replace the record. It serves <strong>full-text
+search</strong>, consulting the content next to the catalog entry, and, if the
+institution needs it, a <a href="/en/blog/glosario/#rag">RAG</a> layer over text already
+anchored to the record. How those layers are ordered is in <a href="/en/blog/puntos-de-acceso-texto-completo-y-rag/">Access points,
+full text and RAG</a>.</p>
+<p>A long PDF —a report of tens of pages, a yearbook, a thick file— is
+cataloged as one piece: the record describes that piece. The markdown keeps
+the body, to locate a phrase or read the text without going back to the
+original. An illegible or almost empty PDF produces a poor record and poor
+markdown: the quality of both outputs follows that of the material; it does
+not replace it.</p>
+<h2>The image</h2>
+<p>An image in a collection is not decoration on the record: it often <em>is</em> the
+document. The photograph of a museum label, of a title page, of a plan, of a
+page that never made it into a PDF, of a work. Collect reads it and proposes
+the record from what is seen.</p>
+<p>That covers two situations that are better not mixed. When the image <em>is</em>
+the object —a historical photograph, a work, a plan— the output is a
+description of what is visible. When the image <em>reproduces</em> a document —a
+card, a page, a caption— what is read is the text or the data on that
+reproduction. In both cases the file is an image; the record that belongs is
+not the same.</p>
+<p>The image does not declare what is not in it. A photo of a painting does not
+carry the accession number or the measurements; a photo of a catalog card
+does, if the card carries them. Combining what is seen with what is written
+is the subject of <a href="/en/blog/de-la-imagen-y-la-ficha-al-registro/">From the image and the catalog card to the
+record</a>.</p>
+<h2>Plain text</h2>
+<p>Some holdings are no longer a facsimile but text: an export from an earlier
+system, inventory notes, a dump from a website, a file someone kept because
+it was all that remained of the description. Collect reads it as it reads a
+document: the content is the text, and from it comes the record.</p>
+<p>The limit is that of the file itself. Text with a title, dates and names
+makes a useful record. A list of codes with no context makes little, and the
+system does not fabricate the context the file does not bring. What the
+source does not declare and the model cannot sustain is left unfilled.</p>
+<h2>What else comes in</h2>
+<p>A report or minutes in an office document —Word and the like— can also be
+cataloged. In many institutions that material lives alongside PDF and
+images: internal production that never went through a scanner. Collect takes
+it; the record comes out the same, in the catalog&rsquo;s format.</p>
+<p>Audio and video are another source type. A recording or a video also yields
+a record, and those cases have their own explanation: <a href="/en/blog/de-una-grabacion-sonora-a-un-registro/">from a sound
+recording to a catalog
+record</a> and <a href="/en/blog/de-un-video-a-registros-enlazados/">from a video
+to linked records</a>.</p>
+<p>A spreadsheet used as an inventory —each line a work, a book, a unit— is not
+cataloged as if it were one more document. There the material already comes
+tabulated; what the column states is transferred into the record, and
+Collect completes what is missing when the sheet only identifies.</p>
+<h2>The record that comes out</h2>
+<p>It makes no difference whether the file is a PDF, a photograph or text:
+Collect proposes the entry in <a href="/en/blog/glosario/#dublin-core">Dublin
+Core</a>, <a href="/en/blog/glosario/#marc">MARC21</a>,
+<a href="/en/blog/glosario/#isad-g">ISAD-G</a> or <a href="/en/blog/glosario/#cdwa">CDWA</a>,
+according to what the institution already uses. The catalog does not change
+standard because the holdings arrive mixed. From the PDF, in addition, the
+markdown of the body remains, to search it and consult it.</p>
+<p>The cataloger receives records to review, not a closed batch. A sharp PDF
+and a blurry image do not produce the same certainty, and the system flags
+the record when it falls short. Mixed formats cease to be prior work; they
+remain, when the original is bad, a problem of the holdings&rsquo; quality.</p>
+<h2>Where the limits are</h2>
+<p>A format Collect does not cover is not cataloged. Coverage reaches what a
+digitized collection usually holds —PDF, image, text, office documents— and
+it is not universal. A little-used proprietary or very old format may fall
+outside; it is worth knowing before assuming it comes in.</p>
+<p>Reading does not repair the original. An illegible scan, an underexposed
+photograph or truncated text do not become a good record because the model
+«completes». Completing is enriching what can be sustained; it is not
+standing in for a document that cannot be read.</p>
+<h2>To continue the conversation</h2>
+<p>If your institution has holdings split among PDF, images and text, and the
+bottleneck is treating each type as a separate case before cataloging, this
+is what Collect tries to ease. Write to us at info@janium.com; we are
+interested in how mixed your material is and in which format you describe
+it, because that changes what can be expected.</p>

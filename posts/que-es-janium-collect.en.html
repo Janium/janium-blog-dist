@@ -49,10 +49,12 @@ goes through an evaluation that scores it and flags it for review when it falls 
 the threshold, so review focuses on what the system points to.</p>
 <h2>Where it fits</h2>
 <p>Collect produces the records; the catalog receives them. It integrates with the
-institution&rsquo;s system — Janium or another — and can take back the corrections the
-cataloger makes, so that the source and the catalog don&rsquo;t drift apart. The person
-who catalogs stays at the center of the process; what changes is where their time
-goes.</p>
+institution&rsquo;s system — Janium or another — as a delivery (load batch, SFTP,
+folder), not by keeping a field-by-field copy of every record in line with the ILS.
+On a hierarchical ISAD-G fonds, the catalog sends Collect tree changes and unit
+dates: <a href="/en/blog/glosario/#bubble-up">bubble-up</a> computes parent date ranges from
+those dates. That is not a mirror of every record. The person who catalogs stays at
+the center of the process; what changes is where their time goes.</p>
 <h2>What it doesn&rsquo;t do</h2>
 <p>Collect enriches, but it does not fabricate. It completes from the model&rsquo;s
 knowledge what it can identify, and leaves marked what it inferred versus what

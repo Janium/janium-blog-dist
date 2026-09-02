@@ -1,84 +1,18 @@
-<p>Janium Collect produces records: it reads the documents of a collection and
-delivers structured records in the format the institution uses
-—<a href="/en/blog/glosario/#marc">MARC21</a>, <a href="/en/blog/glosario/#isad-g">ISAD-G</a>, <a href="/en/blog/glosario/#dublin-core">Dublin
-Core</a>, <a href="/en/blog/glosario/#cdwa">CDWA</a>. But a
-loose record is not a catalog. The catalog is where those records are consulted,
-related to one another and, above all, where someone who knows how to catalog
-reviews and corrects them. Producing the record is one part; the other is how it
-reaches the catalog —and, in an archive with hierarchy, what has to happen when the
-cataloger corrects a record that hangs from a fonds.</p>
-<h2>How the records reach the catalog</h2>
-<p>There are two ways to take Collect&rsquo;s records to the catalog system, and which one
-fits depends on how the institution is set up and on what its catalog exposes.
-There is no need to pick one as &ldquo;the right one&rdquo;; they are answers to different
-situations.</p>
-<p>The first is <strong>direct synchronization via API</strong>, what we call connected mode.
-Collect sends the records to the catalog through its service interface. It is the
-most immediate route: when the catalog is reachable over the network and offers the
-necessary entry points, the records propagate with little delay. It fits well when
-both systems live in the same infrastructure or there is stable connectivity
-between them.</p>
-<p>The second is <strong>file exchange over SFTP</strong>, through the Janium plugin. Instead of
-live calls, Collect drops the records as packages in a folder the catalog picks up,
-and the catalog returns a confirmation of what it processed. This route serves when
-there is no —or no wish for— a direct connection between the two systems: the file
-is the border, and each side crosses it at its own pace. In exchange for that
-independence, it has its own latency: the packages travel in the upload, pickup and
-polling cycles that have been configured.</p>
-<h2>The return trip exists to keep the hierarchy current</h2>
-<p>For most records, loading them is the end of the journey. The cataloger reviews and
-corrects them in the catalog, and there it stays: a monograph in MARC, a record in
-Dublin Core, a work in CDWA are independent records, and once loaded the catalog is
-the authority. Collect does not need to hear about those corrections, and can in
-fact purge those records when the work is done.</p>
-<p>There is a case where it does matter that the correction comes back: <strong>hierarchical
-archives</strong> described in <a href="/en/blog/glosario/#isad-g">ISAD-G</a>. There the records are
-not independent: they hang from a structure of fonds, section and series, and part
-of the description of the upper nodes is built by raising what the documents
-hanging from them share —the <a href="/en/blog/glosario/#bubble-up">bubble-up</a>—. If the
-cataloger corrects a piece of data in a document that takes part in that raising,
-the upper node falls out of step with its children.</p>
-<p>That is why, in a hierarchical archive, the correction made in the catalog
-<strong>returns to Collect</strong>, which applies it to its copy and <strong>recomputes the
-hierarchy</strong>: it raises to the parent nodes what belongs there again, so that the
-fonds and the series keep reflecting the documents they contain. That recomputation
-of the bubble-up is the reason Collect keeps the archive&rsquo;s records while it is
-active, and the reason the return trip exists. In a flat catalog, with no hierarchy
-to recompute, there is nothing to sustain on this side.</p>
-<h2>What comes back, and what Collect does with it</h2>
-<p>A correction is a specific change to an identified record: updating a field&rsquo;s
-value, removing a piece of data that was superfluous, adding one that was missing.
-Each record travels with an identifier both systems recognize, so the correction is
-applied to the right record and not to another that looks similar.</p>
-<p>When that correction reaches Collect, it replaces the local copy of the record —the
-cataloger is the authority, it is not reprocessed with the model—, the derived data
-that depends on it, such as persons and dates, is <strong>reindexed</strong>, and the
-<strong>bubble-up is recomputed</strong> for the nodes that document is part of. The effect is
-that the human review done in the catalog does not stay only at the top: the
-description of the fonds and the series stays consistent with that of its
-documents, without anyone having to redo it by hand.</p>
+<p>How to integrate AI cataloging with a <a href="/en/blog/glosario/#ils">catalog or ILS</a> is, in the usual case, a delivery. Collect reads the documents and produces records in the format the institution uses —<a href="/en/blog/glosario/#marc">MARC21</a>, <a href="/en/blog/glosario/#isad-g">ISAD-G</a>, <a href="/en/blog/glosario/#dublin-core">Dublin Core</a>, <a href="/en/blog/glosario/#cdwa">CDWA</a>. The catalog is where they are searched, circulated and corrected. Collect is not a second catalog: it does not keep a field-by-field copy of every record in line with the ILS.</p>
+<p>When a cataloger changes a heading or a date in the catalog, that change stays in the catalog. It does not come back to Collect so that “two databases stay in sync.” Reprocessing a document in Collect means reading the original again and producing a new record; it does not start from the ficha already edited in the ILS.</p>
+<h2>How the record arrives</h2>
+<p>There are several outbound paths, depending on how the destination is set up.</p>
+<p>The most direct for <a href="/en/blog/glosario/#janium">Janium</a> is the <strong>load batch</strong>: one file per run, ready for the catalog. <strong>SFTP exchange</strong> drops the same package (records, attachments, manifesto) in the catalog’s inbox; the catalog answers whether the batch processed or failed. That is a <strong>load acknowledgement</strong>, not the cataloger’s later edits on a single record.</p>
+<p>Publication can also go by <strong>SFTP or folder</strong>: original, JSON, thumbnail, manifesto. An ILS that is not Janium consumes that package on its own schedule, or someone loads it by hand. Collect still produces the records; what changes is who walks the last mile.</p>
+<h2>What Collect does keep</h2>
+<p>Collect keeps what it needs in order to catalog again: the source document, the markdown it read, field provenance, the score. That serves reprocessing, the batch gate, and showing where a datum came from. It does not replace the current record in the catalog.</p>
+<h2>The hierarchical case: the tree for bubble-up</h2>
+<p>The exception is a fonds described in <strong>ISAD-G with hierarchy</strong>. There Collect does not deliver only loose documents: it generates Fonds, Section and Series nodes and raises to those levels what most of the children share —producer, date range, extent. That is <a href="/en/blog/glosario/#bubble-up">bubble-up</a>, described in <a href="/en/blog/de-documentos-sueltos-a-fondo-y-serie/">from loose documents to Fonds and Series</a>.</p>
+<p>Recalculating those parents requires <strong>knowing the tree and the unit dates</strong>. The date range of a Fonds or Series is not written by the model: Collect computes it from the dates of the documents under that node. If a cataloger corrects a date in the catalog, that date <strong>comes back to Collect</strong> and is indexed. In a historical archive, that correction leaves the node’s range ready for the next export to recompute it.</p>
+<p>If a cataloger moves a file to another series, adds a level or reorders the scheme <strong>in the catalog</strong>, that hierarchy change <strong>is also sent to Collect</strong>. New records hang from the current tree; bubble-up uses that tree and the dates already corrected. A current records office recalculates ranges on each export; a closed historical archive can freeze them until a date changes again.</p>
+<p>Collect does not keep a mirror of the whole record. A heading or title amended in the ILS is not reimported to keep two catalogs in line. What comes back is what bubble-up needs: <strong>hierarchy and dates</strong>.</p>
+<p>Without an archival location on the documents there is no tree, and without a tree there is no bubble-up. The aggregation is reviewed before it enters the catalog: it is a majority heuristic.</p>
 <h2>Limits</h2>
-<p>This mechanism <strong>depends on the destination catalog exposing the corresponding
-interface</strong>. For synchronization via API, the catalog has to offer the entry points
-to receive records and emit corrections. For file exchange, the agreed SFTP space
-is needed, and the catalog has to generate the confirmations and the corrections in
-the expected format. With a catalog that exposes neither, Collect still produces the
-records, but loading them becomes manual work again.</p>
-<p>The return trip, moreover, <strong>only makes sense where there is a hierarchy to
-maintain</strong>. For a flat collection —bibliographic, a photo library in Dublin Core, a
-work in CDWA— there is no bubble-up to recompute: loading the record is everything,
-and the correction lives in the catalog. Promising a &ldquo;closed loop&rdquo; there would be
-inventing a problem that collection does not have.</p>
-<p>The other limit is the latency of the file channel. If the institution needs a
-correction to be reflected within seconds, file exchange is not the way; the API
-route fits there. If batch cycles are acceptable —and for many cataloging workflows
-they are—, the file channel offers in return not requiring a direct connection
-between the two systems.</p>
-<h2>To continue the conversation</h2>
-<p>If your institution describes an archive in ISAD-G and wants its catalogers&rsquo;
-corrections to be reflected in the hierarchy without redoing it by hand, or if it
-simply seeks to load into the catalog what Collect produces, the concrete question
-is what interface that catalog exposes today —an API, a file-exchange space, or none
-yet— and whether the collection has a hierarchy to maintain. That is what
-determines which integration applies. Write to us at info@janium.com and we will go
-over it for your case.</p>
+<p>A catalog that consumes neither the load batch nor the SFTP package can still receive the records: someone loads them, or a local process reads the publication folder. When anything returns to Collect, it is the <strong>hierarchy and unit dates</strong>, not every field on the record.</p>
+<p>Once loaded, the home of the description is the catalog. Collect uses the updated tree and dates to aggregate what comes next.</p>
+<p>If your institution already has an ILS and you want to see which delivery channel fits —FLAT, SFTP plugin, folder— and whether your classification scheme needs an ISAD-G hierarchy, write to us at info@janium.com and we can look at your case.</p>

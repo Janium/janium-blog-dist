@@ -1,0 +1,103 @@
+<p>Qué formatos de documento puede catalogar la IA no es una pregunta de
+extensiones: es una pregunta de acervo. Una institución digitaliza tarde, a
+trozos y con lo que tiene a mano. En la misma carpeta conviven el PDF de un
+informe, el escaneo de un expediente de papel, la fotografía de una ficha o
+de una obra, y un archivo de texto que alguien exportó de un sistema que ya
+no se usa. Catalogar eso, si cada tipo obliga a un tratamiento aparte, se
+vuelve un trabajo previo: abrir, reconocer, y recién entonces describir.</p>
+<p>Janium Collect toma esos archivos como están y un <a href="/blog/glosario/#modelo-de-lenguaje">modelo de
+lenguaje</a> los lee. El destino es el mismo:
+un registro de catálogo en el formato que la institución ya usa. Quien
+cataloga deja de preparar el material formato por formato y pasa a revisar
+lo que el sistema propone.</p>
+<h2>El PDF</h2>
+<p>El PDF es el contenedor en el que más material digitalizado llega a un
+archivo, a una biblioteca o a un centro de documentación. Unas veces nació
+digital: un informe, una tesis, un boletín. Otras es el resultado de pasar
+papel por un escáner: cada hoja es una imagen dentro del mismo archivo. Para
+quien cataloga la distinción importa —uno se puede buscar por palabra, el
+otro no—, pero los dos necesitan un registro, y los dos entran a Collect como
+PDF.</p>
+<p>Lo que el sistema lee es el documento, no el nombre del archivo. De un
+informe o de un expediente produce <strong>dos salidas</strong>. El <strong>registro de
+catálogo</strong>: título, autor, fecha, materias, productor, las fechas de la
+unidad. Completa lo que la fuente no traía cuando el modelo puede
+sostenerlo, y deja marcado lo que infirió.</p>
+<p>Y el <strong>texto del documento en markdown estructurado</strong>: lo que el PDF decía,
+con encabezados, listas y tablas cuando se conservan, en una forma que se
+puede indexar y mostrar. Ese markdown no sustituye al registro. Sirve para
+buscar en <strong>texto completo</strong>, para consultar el contenido junto a la ficha,
+y, si la institución lo necesita, para una capa de <a href="/blog/glosario/#rag">RAG</a>
+sobre un texto ya anclado al registro. Cómo se ordenan esas capas está en
+<a href="/blog/puntos-de-acceso-texto-completo-y-rag/">Puntos de acceso, texto completo y RAG</a>.</p>
+<p>Un PDF largo —un informe de decenas de páginas, una memoria, un expediente
+grueso— se cataloga como una pieza: el registro describe esa pieza. El
+markdown conserva el cuerpo, para localizar una frase o leer el texto sin
+volver al original. Un PDF ilegible o casi vacío produce un registro pobre y
+un markdown pobre: la calidad de las dos salidas sigue a la del material, no
+la sustituye.</p>
+<h2>La imagen</h2>
+<p>Una imagen en un acervo no es un adorno del registro: a menudo <em>es</em> el
+documento. La fotografía de una ficha de museo, de una portada, de un plano,
+de una página que no se llegó a pasar a PDF, de una obra. Collect la lee y
+propone el registro a partir de lo que se ve.</p>
+<p>Eso cubre dos situaciones que conviene no mezclar. Cuando la imagen <em>es</em> el
+objeto —una fotografía histórica, una obra, un plano—, lo que sale es una
+descripción de lo visible. Cuando la imagen <em>reproduce</em> un documento —una
+ficha, una página, un rótulo—, lo que se lee es el texto o los datos que
+están en esa reproducción. En ambos casos el archivo es una imagen; el
+registro que corresponde no es el mismo.</p>
+<p>La imagen no declara lo que no está en ella. Una foto de un cuadro no trae
+el número de inventario ni las medidas; una foto de una ficha, sí, si la
+ficha las trae. Combinar lo que se ve con lo que está escrito es el tema de
+<a href="/blog/de-la-imagen-y-la-ficha-al-registro/">De la imagen y la ficha al registro</a>.</p>
+<h2>El texto plano</h2>
+<p>Hay acervos cuyo material ya no es un facsímil sino texto: una exportación
+de un sistema anterior, notas de inventario, un volcado de un sitio, un
+archivo que alguien guardó porque era lo único que quedaba de la
+descripción. Collect lo lee como lee un documento: el contenido es el texto,
+y de ahí sale el registro.</p>
+<p>El límite es el del propio archivo. Un texto con título, fechas y nombres da
+para un registro útil. Una lista de códigos sin contexto da para poco, y el
+sistema no fabrica el contexto que el archivo no trae. Lo que la fuente no
+declara y el modelo no puede sostener queda sin rellenar.</p>
+<h2>Lo que también entra</h2>
+<p>Un informe o un acta en un documento de oficina —Word y similares— también
+puede catalogarse. En muchas instituciones ese material convive con el PDF y
+con las imágenes: es producción interna que nunca pasó por un escáner. Collect
+lo toma; el registro sale igual, en el formato del catálogo.</p>
+<p>El audio y el video son otro tipo de fuente. De una grabación o de un video
+también sale un registro, y esos casos tienen su propia explicación:
+<a href="/blog/de-una-grabacion-sonora-a-un-registro/">de una grabación sonora a un registro</a>
+y <a href="/blog/de-un-video-a-registros-enlazados/">de un video a registros enlazados</a>.</p>
+<p>Una hoja de cálculo usada como inventario —cada línea una obra, un libro, una
+unidad— no se cataloga como si fuera un documento más. Ahí el material ya
+viene tabulado; lo que la columna declara se traslada al registro, y Collect
+completa lo que falta cuando la hoja solo identifica.</p>
+<h2>El registro que sale</h2>
+<p>Da igual que el archivo sea un PDF, una fotografía o un texto: Collect
+propone la ficha en <a href="/blog/glosario/#dublin-core">Dublin Core</a>,
+<a href="/blog/glosario/#marc">MARC21</a>, <a href="/blog/glosario/#isad-g">ISAD-G</a> o
+<a href="/blog/glosario/#cdwa">CDWA</a>, según lo que ya use la institución. El catálogo
+no cambia de norma porque el acervo llegue mezclado. Del PDF, además, queda
+el markdown del cuerpo, para buscarlo y consultarlo.</p>
+<p>Quien cataloga recibe registros para revisar, no un lote cerrado. Un PDF
+nítido y una imagen borrosa no producen la misma certeza, y el sistema lo
+señala cuando el registro no llega. La heterogeneidad de formatos deja de ser
+un trabajo previo; sigue siendo, cuando el original es malo, un problema de
+calidad del acervo.</p>
+<h2>Dónde están los límites</h2>
+<p>Un formato que Collect no cubre no se cataloga. La cobertura alcanza lo
+habitual de un acervo digitalizado —PDF, imagen, texto, documentos de
+oficina—, y no es universal. Un formato propietario poco común o muy antiguo
+puede quedar fuera; conviene saberlo antes de asumir que entra.</p>
+<p>La lectura no repara el original. Un escaneo ilegible, una fotografía
+subexpuesta o un texto truncado no se vuelven un buen registro porque el
+modelo «complete». Completar es enriquecer lo que se puede sostener; no es
+suplir un documento que no se deja leer.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu institución tiene el acervo repartido entre PDF, imágenes y texto, y
+el cuello de botella es que hay que tratar cada tipo como un caso aparte
+antes de catalogar, esto es lo que Collect intenta aliviar. Escríbenos a
+info@janium.com; nos interesa ver cómo está mezclado tu material y en qué
+formato lo describes, porque eso cambia lo que se puede esperar.</p>

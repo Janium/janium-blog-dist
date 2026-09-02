@@ -1,83 +1,18 @@
-<p>Janium Collect produce registros: lee los documentos de un acervo y entrega
-fichas estructuradas en el formato que la institución usa —<a href="/blog/glosario/#marc">MARC21</a>, <a href="/blog/glosario/#isad-g">ISAD-G</a>,
-<a href="/blog/glosario/#dublin-core">Dublin Core</a>, <a href="/blog/glosario/#cdwa">CDWA</a>. Pero un registro suelto no es un catálogo. El catálogo es
-donde esos registros se consultan, se relacionan entre sí y, sobre todo, donde
-alguien que sabe catalogar los revisa y los corrige. Generar el registro es una
-parte; la otra es cómo llega al catálogo —y, en un archivo con jerarquía, qué hay
-que hacer cuando el catalogador corrige un registro que cuelga de un fondo.</p>
-<h2>Cómo llegan los registros al catálogo</h2>
-<p>Hay dos maneras de llevar los registros de Collect al sistema de catálogo, y cuál
-conviene depende de cómo esté montada la institución y de qué exponga su catálogo.
-No hay que elegir una como &ldquo;la correcta&rdquo;; son respuestas a situaciones distintas.</p>
-<p>La primera es la <strong>sincronización directa vía API</strong>, lo que llamamos modo
-conectado. Collect envía los registros al catálogo a través de su interfaz de
-servicios. Es el camino más inmediato: cuando el catálogo está accesible en red y
-ofrece los puntos de entrada necesarios, los registros se propagan con poca
-demora. Encaja bien cuando ambos sistemas conviven en la misma infraestructura o
-hay conectividad estable entre ellos.</p>
-<p>La segunda es el <strong>intercambio por archivos sobre SFTP</strong>, mediante el plugin
-Janium. En lugar de llamadas en vivo, Collect deposita los registros como paquetes
-en una carpeta que el catálogo recoge, y el catálogo devuelve una confirmación de
-lo que procesó. Este camino sirve cuando no hay —o no se quiere— una conexión
-directa entre los dos sistemas: el archivo es la frontera, y cada lado la cruza a
-su ritmo. A cambio de esa independencia, tiene su propia latencia: los paquetes
-viajan en los ciclos de subida, recogida y sondeo que se hayan configurado.</p>
-<h2>La vuelta existe para mantener la jerarquía</h2>
-<p>Para la mayoría de los registros, cargarlos es el final del trayecto. El
-catalogador los revisa y los corrige en el catálogo, y ahí queda: una monografía
-en MARC, una ficha en Dublin Core, una obra en CDWA son registros independientes,
-y una vez cargados el catálogo es la autoridad. Collect no necesita enterarse de
-esas correcciones, y de hecho puede purgar esos registros cuando el trabajo
-termina.</p>
-<p>Hay un caso en que sí importa que la corrección regrese: los <strong>archivos
-jerárquicos</strong> descritos en <a href="/blog/glosario/#isad-g">ISAD-G</a>. Ahí los registros no
-son independientes: cuelgan de una estructura de fondo, sección y serie, y parte
-de la descripción de los nodos superiores se arma subiendo lo que comparten los
-documentos que cuelgan de ellos —el <a href="/blog/glosario/#bubble-up">bubble-up</a>—. Si el
-catalogador corrige un dato de un documento que participa en ese ascenso, el nodo
-superior queda desfasado respecto de sus hijos.</p>
-<p>Por eso, en un archivo jerárquico, la corrección hecha en el catálogo <strong>vuelve a
-Collect</strong>, que la aplica sobre su copia y <strong>recalcula la jerarquía</strong>: vuelve a
-subir a los nodos padre lo que corresponde, de modo que el fondo y la serie sigan
-reflejando a los documentos que contienen. Ese recálculo del bubble-up es la razón
-de que Collect conserve los registros del archivo mientras está activo, y de que
-exista el tramo de vuelta. En un catálogo plano, sin jerarquía que recalcular, no
-hay nada que sostener de este lado.</p>
-<h2>Qué vuelve, y qué hace Collect con ello</h2>
-<p>Una corrección es un cambio puntual sobre un registro identificado: actualizar el
-valor de un campo, eliminar un dato que sobraba, agregar uno que faltaba. Cada
-registro viaja con un identificador que ambos sistemas reconocen, de modo que la
-corrección se aplica sobre el registro correcto y no sobre otro parecido.</p>
-<p>Cuando esa corrección llega a Collect, reemplaza la copia local del registro —el
-catalogador es la autoridad, no se vuelve a procesar con el modelo—, se
-<strong>reindexan</strong> los datos derivados que dependen de él, como las personas y las
-fechas, y se <strong>recalcula el bubble-up</strong> de los nodos de los que ese documento
-forma parte. El efecto es que la revisión humana hecha en el catálogo no se queda
-solo arriba: la descripción del fondo y de la serie sigue coherente con la de sus
-documentos, sin que nadie tenga que rehacerla a mano.</p>
+<p>Cómo integrar la catalogación con IA a un <a href="/blog/glosario/#ils">catálogo o ILS</a> es, en lo habitual, una entrega. Collect lee los documentos y produce registros en el formato que la institución usa —<a href="/blog/glosario/#marc">MARC21</a>, <a href="/blog/glosario/#isad-g">ISAD-G</a>, <a href="/blog/glosario/#dublin-core">Dublin Core</a>, <a href="/blog/glosario/#cdwa">CDWA</a>—. El catálogo es donde se consultan, se circulan y se corrigen. Collect no es un segundo catálogo: no guarda una copia de cada ficha alineada campo a campo con la que vive en el ILS.</p>
+<p>Cuando el catalogador cambia un encabezamiento o una fecha en el catálogo, ese cambio se queda en el catálogo. No vuelve a Collect para «no desincronizar dos bases». Quien reprocesa un documento en Collect vuelve a leer el original y genera de nuevo el registro; no parte de la ficha ya editada en el ILS.</p>
+<h2>Cómo llega el registro</h2>
+<p>Hay varios caminos de salida, según cómo esté montado el destino.</p>
+<p>El más directo para <a href="/blog/glosario/#janium">Janium</a> es el <strong>lote de carga</strong>: un archivo por tanda, listo para entrar al catálogo. El <strong>intercambio por SFTP</strong> deja el mismo paquete (registros, adjuntos, manifiesto) en la bandeja del catálogo; el catálogo responde si el lote se procesó o si falló. Eso es una <strong>confirmación de carga</strong>, no el envío de las ediciones que después haga un catalogador sobre un registro suelto.</p>
+<p>También se publica por <strong>SFTP o carpeta</strong>: el original, el JSON, la miniatura, el manifiesto. Un ILS que no es Janium consume ese paquete a su ritmo, o alguien lo carga a mano. Collect produce igual; lo que cambia es quién recorre el último metro.</p>
+<h2>Lo que Collect sí conserva</h2>
+<p>Collect conserva lo que necesita para volver a catalogar: el documento de origen, el markdown leído, la procedencia de los campos, el score. Eso sirve para reprocesar, para el filtro de lote y para mostrar de dónde salió un dato. No sustituye al registro vigente del catálogo.</p>
+<h2>El caso jerárquico: el árbol para el bubble-up</h2>
+<p>La excepción es un acervo descrito en <strong>ISAD-G con jerarquía</strong>. Ahí Collect no entrega solo documentos sueltos: genera los nodos de Fondo, Sección y Serie y sube a esos niveles lo que comparte la mayoría de los hijos —productor, rango de fechas, volumen—. Eso es el <a href="/blog/glosario/#bubble-up">bubble-up</a>, descrito en <a href="/blog/de-documentos-sueltos-a-fondo-y-serie/">de documentos sueltos a Fondo y Serie</a>.</p>
+<p>Para recalcular esos padres hace falta <strong>conocer el árbol y las fechas de las unidades</strong>. El rango de un Fondo o una Serie no lo escribe el modelo: Collect lo calcula a partir de las fechas de los documentos que cuelgan de ese nodo. Si el catalogador corrige una fecha en el catálogo, esa fecha <strong>vuelve a Collect</strong> y se incorpora al índice. En un archivo histórico, esa corrección deja el rango del nodo listo para que la siguiente exportación lo vuelva a calcular.</p>
+<p>Si el catalogador mueve un expediente de serie, crea un nivel o reordena el cuadro <strong>en el catálogo</strong>, ese cambio de jerarquía <strong>también se envía a Collect</strong>. Los registros nuevos se cuelgan del árbol vigente; el bubble-up usa ese árbol y las fechas ya corregidas. Un archivo de trámite recalcula rangos en cada exportación; uno histórico los puede congelar hasta que una fecha vuelva a cambiar.</p>
+<p>Collect no mantiene un espejo de toda la ficha. Un encabezamiento o un título enmendados en el ILS no se reimportan para alinear dos catálogos. Lo que vuelve es lo que el bubble-up necesita: <strong>jerarquía y fechas</strong>.</p>
+<p>Sin ubicación archivística en los documentos no hay árbol, y sin árbol no hay bubble-up. El resultado de la agregación se revisa antes de entrar al catálogo: es una heurística de mayoría.</p>
 <h2>Límites</h2>
-<p>Este mecanismo <strong>depende de que el catálogo destino exponga la interfaz
-correspondiente</strong>. Para la sincronización vía API, el catálogo tiene que ofrecer
-los puntos de entrada para recibir registros y emitir correcciones. Para el
-intercambio por archivos, hace falta el espacio SFTP acordado y que el
-catálogo genere las confirmaciones y las correcciones en el formato esperado. Con
-un catálogo que no expone ninguna de las dos cosas, Collect igual produce los
-registros, pero la carga vuelve a ser un trabajo manual.</p>
-<p>El tramo de vuelta, además, <strong>solo tiene sentido donde hay jerarquía que
-mantener</strong>. Para un acervo plano —bibliográfico, fototeca en Dublin Core, obra en
-CDWA— no hay bubble-up que recalcular: cargar el registro es todo, y la corrección
-vive en el catálogo. Prometer un &ldquo;ciclo cerrado&rdquo; ahí sería inventar un problema
-que ese acervo no tiene.</p>
-<p>El otro límite es la latencia del canal de archivos. Si la institución necesita
-que una corrección se refleje en cuestión de segundos, el intercambio por archivos
-no es el camino; ahí conviene la vía API. Si los ciclos por lotes son aceptables
-—y para muchos flujos de catalogación lo son—, el canal de archivos ofrece a
-cambio no exigir una conexión directa entre los dos sistemas.</p>
-<h2>Para continuar la conversación</h2>
-<p>Si tu institución describe un archivo en ISAD-G y quiere que las correcciones de
-sus catalogadores se reflejen en la jerarquía sin rehacerla a mano, o si
-simplemente busca cargar al catálogo lo que Collect produce, la pregunta concreta
-es qué interfaz expone ese catálogo hoy —una API, un espacio de intercambio de
-archivos, o ninguna todavía— y si el acervo tiene jerarquía que mantener. De ahí
-depende qué integración aplica. Escríbenos a info@janium.com y lo revisamos sobre
-tu caso.</p>
+<p>Un catálogo que no consume el lote de carga ni el paquete por SFTP igual puede recibir los registros: alguien los carga, o un proceso propio lee la carpeta de publicación. El retorno a Collect, cuando aplica, es el de la <strong>jerarquía y las fechas de unidad</strong>, no el de cada campo de la ficha.</p>
+<p>El destino de la descripción, una vez cargada, es el catálogo. Collect usa el árbol y las fechas actualizadas para agregar lo que viene después.</p>
+<p>Si tu institución ya tiene un ILS y quieres ver qué canal de entrega encaja —FLAT, plugin SFTP, carpeta— y si tu cuadro de clasificación pide jerarquía ISAD-G, escríbenos a info@janium.com y lo vemos sobre tu caso.</p>

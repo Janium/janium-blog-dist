@@ -1,31 +1,90 @@
 {
   "contract": 1,
-  "generated": "2026-08-27T06:30:16Z",
+  "generated": "2026-09-02T12:30:03Z",
   "posts": [
     {
-      "slug": "del-registro-al-catalogo",
-      "date": "2026-08-27",
-      "datetime": "2026-08-27T06:00:00Z",
+      "slug": "de-la-imagen-y-la-ficha-al-registro",
+      "date": "2026-09-02",
+      "datetime": "2026-09-02T08:35:00Z",
       "tags": [
         "janiumcollect",
         "ia"
       ],
       "translations": {
         "es": {
-          "title": "Integrar la catalogación con IA a tu catálogo (ILS): cargar registros y mantener la jerarquía",
-          "description": "Cómo llegan al catálogo los registros que produce Collect —modo conectado por API o el plugin Janium por SFTP— y por qué, en un archivo jerárquico (ISAD-G), las correcciones del catalogador vuelven a Collect para recalcular el bubble-up. En los formatos planos, una vez cargado el registro el catálogo es la autoridad y no hay nada que regrese.",
+          "title": "De la imagen y la ficha al registro",
+          "description": "Cómo combinar la imagen de un objeto y su ficha para catalogar: Collect toma lo visible de la reproducción y el dato documental de la ficha, y produce un registro. Lo que ninguna de las dos fuentes sostiene no se presenta como verificado.",
+          "cover": "assets/de-la-imagen-y-la-ficha-al-registro-es-cover-e13b2701.svg",
+          "html": "posts/de-la-imagen-y-la-ficha-al-registro.es.html"
+        },
+        "en": {
+          "title": "From the image and the catalog card to the record",
+          "description": "How to combine an object's image and its catalog card to catalog: Collect takes what is visible in the reproduction and the documentary data from the card, and produces a record. What neither source supports is not presented as verified.",
+          "cover": "assets/de-la-imagen-y-la-ficha-al-registro-en-cover-e13b2701.svg",
+          "html": "posts/de-la-imagen-y-la-ficha-al-registro.en.html"
+        },
+        "pt": {
+          "title": "Da imagem e da ficha ao registro",
+          "description": "Como combinar a imagem de um objeto e a sua ficha para catalogar: o Collect toma o visível da reprodução e o dado documental da ficha, e produz um registro. O que nenhuma das duas fontes sustenta não se apresenta como verificado.",
+          "cover": "assets/de-la-imagen-y-la-ficha-al-registro-pt-cover-e13b2701.svg",
+          "html": "posts/de-la-imagen-y-la-ficha-al-registro.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "de-cualquier-formato-a-un-registro",
+      "date": "2026-09-02",
+      "datetime": "2026-09-02T08:20:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "De cualquier formato a un registro",
+          "description": "Qué formatos de documento puede catalogar la IA con Janium Collect: PDF, imágenes y texto plano. Del PDF salen el registro de catálogo y un markdown estructurado para texto completo, consulta y, si se necesita, RAG.",
+          "cover": "assets/de-cualquier-formato-a-un-registro-es-cover-83e1fa4a.svg",
+          "html": "posts/de-cualquier-formato-a-un-registro.es.html"
+        },
+        "en": {
+          "title": "From any format to a catalog record",
+          "description": "Which document formats AI can catalog with Janium Collect: PDF, images and plain text. From a PDF come the catalog record and structured markdown for full text, display and, if needed, RAG.",
+          "cover": "assets/de-cualquier-formato-a-un-registro-en-cover-83e1fa4a.svg",
+          "html": "posts/de-cualquier-formato-a-un-registro.en.html"
+        },
+        "pt": {
+          "title": "De qualquer formato a um registro",
+          "description": "Quais formatos de documento a IA pode catalogar com o Janium Collect: PDF, imagens e texto simples. Do PDF saem o registro de catálogo e um markdown estruturado para texto completo, consulta e, se for preciso, RAG.",
+          "cover": "assets/de-cualquier-formato-a-un-registro-pt-cover-83e1fa4a.svg",
+          "html": "posts/de-cualquier-formato-a-un-registro.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "del-registro-al-catalogo",
+      "date": "2026-08-27",
+      "datetime": "2026-08-27T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia",
+        "integracion"
+      ],
+      "translations": {
+        "es": {
+          "title": "Integrar la catalogación con IA a tu catálogo (ILS)",
+          "description": "Cómo llegan los registros de Collect al catálogo o ILS —lote de carga, SFTP, carpeta— y qué no hace esa integración: Collect no mantiene una copia sincronizada de cada ficha. En ISAD-G jerárquico el catálogo envía a Collect el árbol y las fechas para el bubble-up.",
           "cover": "assets/del-registro-al-catalogo-es-cover-66f77f59.svg",
           "html": "posts/del-registro-al-catalogo.es.html"
         },
         "en": {
-          "title": "Integrating AI cataloging into your catalog (ILS): loading records and keeping the hierarchy current",
-          "description": "How the records Collect produces reach the catalog —connected mode via API or the Janium plugin over SFTP— and why, in a hierarchical archive (ISAD-G), the cataloger's corrections return to Collect to recompute the bubble-up. In flat formats, once the record is loaded the catalog is the authority and nothing comes back.",
+          "title": "Integrating AI cataloging with your catalog (ILS)",
+          "description": "How Collect records reach a catalog or ILS —load batch, SFTP, folder— and what that integration does not do: Collect does not keep a synchronized copy of every record. On hierarchical ISAD-G the catalog sends Collect the tree and the dates for bubble-up.",
           "cover": "assets/del-registro-al-catalogo-en-cover-66f77f59.svg",
           "html": "posts/del-registro-al-catalogo.en.html"
         },
         "pt": {
-          "title": "Integrar a catalogação com IA ao seu catálogo (ILS): carregar registros e manter a hierarquia em dia",
-          "description": "Como os registros que o Collect produz chegam ao catálogo —modo conectado via API ou o plugin Janium por SFTP— e por que, em um arquivo hierárquico (ISAD-G), as correções do catalogador voltam ao Collect para recalcular o bubble-up. Nos formatos planos, uma vez carregado o registro o catálogo é a autoridade e nada retorna.",
+          "title": "Integrar a catalogação com IA ao seu catálogo (ILS)",
+          "description": "Como os registros do Collect chegam ao catálogo ou ILS —lote de carga, SFTP, pasta— e o que essa integração não faz: o Collect não mantém uma cópia sincronizada de cada ficha. No ISAD-G hierárquico o catálogo envia ao Collect a árvore e as datas para o bubble-up.",
           "cover": "assets/del-registro-al-catalogo-pt-cover-66f77f59.svg",
           "html": "posts/del-registro-al-catalogo.pt.html"
         }
@@ -66,24 +125,25 @@
       "datetime": "2026-08-25T15:00:00Z",
       "tags": [
         "janiumcollect",
-        "ia"
+        "ia",
+        "operacion"
       ],
       "translations": {
         "es": {
           "title": "Evitar que un lote degradado entre al catálogo: filtros de calidad",
-          "description": "A escala, el riesgo no es un campo mal extraído en un registro, sino un fallo operativo que degrada un lote entero sin que nadie lo note. El criterio con que Janium Collect lo enfrenta: fallar de forma visible en lugar de producir datos malos en silencio, y que operar en condiciones degradadas sea una decisión consciente del operador, no un accidente.",
+          "description": "Cómo evitar que un lote degradado entre al catálogo: Collect comprueba las fuentes en la nube al arrancar y detiene la carga si se perdieron enlaces al original o un registro llegó incompleto. Fallar a la vista, no producir datos malos en silencio.",
           "cover": "assets/confianza-operativa-es-cover-d4f0bf8a.svg",
           "html": "posts/confianza-operativa.es.html"
         },
         "en": {
           "title": "Keeping a degraded batch out of the catalog: quality gates",
-          "description": "At scale, the risk is not one badly extracted field in a record, but an operational failure that degrades a whole batch without anyone noticing. The principle Janium Collect faces it with: fail visibly instead of producing bad data in silence, and make operating under degraded conditions a conscious decision by the operator, not an accident.",
+          "description": "How to keep a degraded batch out of the catalog: Collect checks cloud sources at start-up and stops the load if links to the original or a required record type were lost. Fail in the open; do not silently ship bad data.",
           "cover": "assets/confianza-operativa-en-cover-d4f0bf8a.svg",
           "html": "posts/confianza-operativa.en.html"
         },
         "pt": {
           "title": "Evitar que um lote degradado entre no catálogo: filtros de qualidade",
-          "description": "Em escala, o risco não é um campo mal extraído em um registro, mas uma falha operacional que degrada um lote inteiro sem que ninguém perceba. O critério com que o Janium Collect o enfrenta: falhar de forma visível em vez de produzir dados ruins em silêncio, e fazer com que operar em condições degradadas seja uma decisão consciente do operador, não um acidente.",
+          "description": "Como evitar que um lote degradado entre no catálogo: o Collect verifica as fontes na nuvem ao arrancar e detém a carga se se perderam ligações ao original ou um registro chegou incompleto. Falhar à vista, não produzir dados maus em silêncio.",
           "cover": "assets/confianza-operativa-pt-cover-d4f0bf8a.svg",
           "html": "posts/confianza-operativa.pt.html"
         }

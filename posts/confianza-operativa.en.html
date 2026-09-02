@@ -1,43 +1,14 @@
-<p><a href="/en/blog/confiar-en-catalogo-con-ia/">An earlier post in this series</a> dealt with
-trust in the content of each record: that the system knows where each piece of
-data comes from, that it verifies names against authorities, that it computes the
-rule-based fields with fixed rules. That is the risk at the level of a single
-record. When the work goes from a handful of documents to batches of thousands,
-another risk appears, of a different nature: that something fails in the operation
-and degrades the whole batch without anyone noticing at the time.</p>
-<p>A badly extracted field in one record is not the same as a failure that hits them
-all at once. A batch of a thousand records that comes out without the links to its
-source files still looks fine —it has its titles, its dates, its authors— until
-someone tries to open the document from the catalog and finds the link missing. By
-then the batch is already loaded, and reconstructing where each record came from is
-manual work.</p>
-<h2>Fail visibly, not in silence</h2>
-<p>The principle that governs Collect against this risk is simple to state: <strong>fail
-visibly instead of producing bad data in silence.</strong> A batch that does not meet the
-conditions to be delivered does not go out with a footnote warning no one will
-read; the process stops loudly, with a message that says what degraded. A visible
-halt, one that forces you to look, is better than a delivery that appears fine and
-blows up weeks later, when the cost has already multiplied.</p>
-<p>That principle applies at every point where an operational failure could slip in
-and turn into data that looks correct but is not. If something is not as it should
-be, Collect prefers to stop and flag it rather than carry on.</p>
-<h2>The operator decides, but knowingly</h2>
-<p>Stopping is not always what the institution wants. There are moments when the
-operator, knowing what they are doing, decides to continue despite a degraded
-condition. Collect allows it, but as an <strong>explicit decision</strong>, not a default path:
-what is delivered under those conditions is flagged for review, with the reason
-noted. That is the difference from a silent accident: operating degraded is a
-conscious choice, not something that happens without anyone realizing.</p>
-<h2>What this trust covers, and what it does not</h2>
-<p>It is worth being clear about the scope. This operational trust looks after the
-<strong>integrity of the batch at scale</strong>: that records keep the link to their source
-document, that mandatory fields are not missing, that records are not lost between
-one stage and the next. It does not verify the accuracy of each field of each
-record —whether a date was transcribed correctly, whether a name is the right
-one—; that is a matter for content review, the layer <a href="/en/blog/confiar-en-catalogo-con-ia/">the earlier
-post</a> covers. They are two distinct
-safeguards: one sees that the batch arrives whole, the other that each piece of
-data is faithful.</p>
-<p>If your institution processes collections in large batches and you worry that an
-operational failure might degrade a load without it being noticed in time, write to
-us at info@janium.com; we can talk about how this fits your workflow.</p>
+<p>How to keep a degraded batch out of the catalog is a different problem from a single bad field. <a href="/en/blog/confiar-en-catalogo-con-ia/">Why to trust a catalog made with AI</a> covers trust in content: where each datum comes from, <a href="/en/blog/glosario/#control-de-autoridades">authority control</a>, fields with a fixed rule, scoring per record. At the scale of thousands of documents another risk appears: something fails in the run and degrades the whole batch before anyone notices.</p>
+<p>A batch of a thousand records missing links to their source files still looks fine —titles, dates, authors— until someone tries to open the document from the catalog and the link is gone. By then the batch is loaded. Collect does not keep a backup of the batch <strong>before</strong> cataloging: if a bad batch is delivered, there is no automatic undo. That is why the defences sit on <strong>not delivering</strong>: stop in the open.</p>
+<h2>Check cloud sources before starting</h2>
+<p>When an institution catalogs from Google Drive or another cloud source, that source supplies the link to the original document on each record. If Collect starts without having connected a cloud source that is enabled, it produces records that look complete but lack that link; a later run can overwrite ones that had it.</p>
+<p>At start-up Collect checks that each enabled cloud source actually connected. If one did not, it stops and names which failed. Processing without them is not incomplete work to fix later: it is silently dropping links.</p>
+<p>You can continue on purpose, with that source down. Then the error is logged and affected records are flagged for review. That is a decision, not the default.</p>
+<p>A local folder does not trigger this check: it is not the case that loses the Drive link.</p>
+<h2>Stop the degraded batch before delivery</h2>
+<p>The second control sits at the end, when the batch is packed for the catalog —the hand-off in <a href="/en/blog/del-registro-al-catalogo/">from record to catalog</a>. Collect compares what is about to go out with what came in. If there are fewer links to the original than at the start, or a record arrives without the form type the catalog needs, the load is rejected: the process ends in error, not with a footnote nobody will read.</p>
+<p>It does not repair the batch. It stops it so it is not loaded into the <a href="/en/blog/glosario/#ils">ILS</a>.</p>
+<p>The operator can force delivery and accept the result. The scope is batch integrity against the input, not the accuracy of every field. A batch can pass the gate and still contain a mistyped date; that is content review.</p>
+<h2>Limits</h2>
+<p>There are two controls in the process: at start-up (cloud sources) and when the batch is delivered. They cover links to the original and that each record carries its type. They do not check every field. There is no automatic backup <strong>before</strong> cataloging: a later run overwrites what was there. The defence is not to load the degraded batch, and that running with a downed source is an explicit choice.</p>
+<p>If your institution processes large batches and you want to see how these controls behave with your sources, write to us at info@janium.com; we can review which ones apply in your case.</p>

@@ -1,42 +1,14 @@
-<p><a href="/pt/blog/confiar-en-catalogo-con-ia/">Um post anterior desta série</a> tratou da
-confiança no conteúdo de cada registro: que o sistema saiba de onde vem cada dado,
-que verifique os nomes contra autoridades, que calcule com regras fixas os campos
-que as têm. Esse é o risco no nível de um registro. Quando o trabalho passa de
-alguns poucos documentos a lotes de milhares, aparece outro risco, de natureza
-distinta: que algo falhe na operação e degrade o lote inteiro sem que ninguém
-perceba no momento.</p>
-<p>Não é o mesmo um campo mal extraído em um registro que uma falha que afeta todos de
-uma vez. Um lote de mil registros que sai sem os links para os seus arquivos de
-origem continua parecendo bem —tem os seus títulos, as suas datas, os seus
-autores— até que alguém tenta abrir o documento a partir do catálogo e descobre que
-o link não está. A essa altura o lote já foi carregado, e reconstruir de onde saiu
-cada registro é trabalho manual.</p>
-<h2>Falhar de forma visível, não em silêncio</h2>
-<p>O critério que governa o Collect diante desse risco é simples de enunciar:
-<strong>falhar de forma visível em vez de produzir dados ruins em silêncio.</strong> Um lote que
-não reúne as condições para ser entregue não sai com um aviso ao pé que ninguém vai
-ler; o processo se detém de forma ruidosa, com uma mensagem que diz o que se
-degradou. Uma parada evidente, que obriga a olhar, é preferível a uma entrega que
-aparenta estar bem e estoura semanas depois, quando o custo já se multiplicou.</p>
-<p>Esse princípio se aplica em cada ponto onde uma falha operacional poderia se
-infiltrar e se traduzir em dados que parecem corretos mas não são. Se algo não está
-como deveria, o Collect prefere parar e assinalá-lo antes de seguir adiante.</p>
-<h2>O operador decide, mas com consciência</h2>
-<p>Parar nem sempre é o que a instituição quer. Há momentos em que o operador, sabendo
-o que faz, decide continuar apesar de uma condição degradada. O Collect o permite,
-mas como uma <strong>decisão explícita</strong>, não como um caminho por padrão: o que se entrega
-nessas condições fica marcado para revisão, com o motivo anotado. Essa é a diferença
-em relação a um acidente silencioso: operar degradado é uma escolha consciente, não
-algo que acontece sem que ninguém perceba.</p>
-<h2>O que essa confiança cobre, e o que não</h2>
-<p>Convém ser claro sobre o alcance. Esta confiança operacional cuida da
-<strong>integridade do lote em escala</strong>: que os registros conservem o link para o seu
-documento de origem, que não faltem os campos obrigatórios, que não se percam
-registros entre uma etapa e a seguinte. Não verifica a exatidão de cada campo de
-cada registro —se uma data foi transcrita bem, se um nome é o correto—; isso é
-matéria da revisão de conteúdo, a camada que <a href="/pt/blog/confiar-en-catalogo-con-ia/">o post
-anterior</a> trata. São dois cuidados distintos:
-um zela por que o lote chegue inteiro, o outro por que cada dado seja fiel.</p>
-<p>Se a sua instituição processa acervos em lotes grandes e você se preocupa que uma
-falha operacional degrade uma carga sem que se perceba a tempo, escreva para
-info@janium.com; podemos conversar sobre como isso se encaixa no seu fluxo.</p>
+<p>Como evitar que um lote degradado entre no catálogo é um problema distinto do de um campo mal extraído. Em <a href="/pt/blog/confiar-en-catalogo-con-ia/">por que confiar num catálogo feito com IA</a> está a confiança de conteúdo: de onde vem cada dado, <a href="/pt/blog/glosario/#control-de-autoridades">autoridades</a>, campos com regra, avaliação por registro. À escala de milhares de documentos aparece outro risco: que algo falhe na operação e degrade o lote inteiro sem que ninguém note.</p>
+<p>Um lote de mil registros sem as ligações aos arquivos de origem continua a parecer bem —títulos, datas, autores— até alguém tentar abrir o documento no catálogo e a ligação não estar. Nessa altura o lote já entrou. O Collect não guarda uma cópia de segurança do lote <strong>antes</strong> de catalogar: se se entrega mal, não há um «desfazer» automático. Por isso as defesas estão em <strong>não entregar</strong>: parar de forma visível.</p>
+<h2>Verificar as fontes na nuvem antes de arrancar</h2>
+<p>Quando uma instituição cataloga a partir do Google Drive ou de outra nuvem, essa fonte traz a ligação ao documento original em cada registro. Se o Collect arranca sem ter ligado uma fonte na nuvem que está habilitada, produz registros que parecem completos mas sem essa ligação; uma segunda passagem pode escrever por cima dos que a tinham.</p>
+<p>Ao iniciar, o Collect comprova que cada fonte na nuvem habilitada ficou ligada. Se uma não ligou, pára e nomeia quais falharam. Processar sem elas não é um trabalho incompleto que se corrige depois: é perder as ligações em silêncio.</p>
+<p>Pode-se seguir de propósito, com essa fonte caída. Então regista-se o erro e os registros afetados marcam-se para revisão. Isso é uma decisão, não o comportamento por defeito.</p>
+<p>Uma pasta local não dispara esta verificação: não é o caso que perde a ligação ao Drive.</p>
+<h2>Deter o lote degradado antes de o entregar</h2>
+<p>O segundo controlo está no fim, quando o lote se arma para o catálogo —o envio que descreve <a href="/pt/blog/del-registro-al-catalogo/">do registro ao catálogo</a>. O Collect compara o que vai sair com o que entrou. Se há menos ligações ao original do que no início, ou um registro chega sem o tipo de formulário que o catálogo precisa, a carga rejeita-se: o processo termina com erro, não com uma nota ao pé que ninguém lerá.</p>
+<p>Não repara o lote. Detém-no para não o carregar no <a href="/pt/blog/glosario/#ils">ILS</a>.</p>
+<p>Quem opera pode forçar a entrega e aceitar o resultado. O alcance é a integridade do lote face à entrada, não a exatidão de cada campo. Um lote pode passar o controlo e ainda assim conter uma data mal transcrita; isso é revisão de conteúdo.</p>
+<h2>Limites</h2>
+<p>Há dois controlos no processo: ao arrancar (fontes na nuvem) e ao entregar o lote. Cobrem ligações ao original e que cada registro leve o seu tipo. Não verificam cada campo. Não há uma cópia de segurança automática <strong>antes</strong> de catalogar: uma segunda passagem pisa o que havia. A defesa é não carregar o lote degradado, e que operar com uma fonte caída seja uma decisão explícita.</p>
+<p>Se a sua instituição processa acervos em lotes grandes e lhe interessa como estes controlos se comportam face às suas fontes, escreva para info@janium.com; podemos rever quais se aplicam ao seu caso.</p>
