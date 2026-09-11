@@ -610,19 +610,19 @@
         "es": {
           "title": "Janium 2027 ya está disponible",
           "description": "Janium 2027 incorpora motor de búsqueda por relevancia, ficha de expediente en el OPAC, inventario en segundo plano, código al correo y caducidad de contraseña.",
-          "cover": "assets/janium-2027-es-cover-e0c8dec5.svg",
+          "cover": "assets/janium-2027-es-cover-9def8252.svg",
           "html": "posts/janium-2027.es.html"
         },
         "en": {
           "title": "Janium 2027 is now available",
           "description": "Janium 2027 adds a relevance-ranked search engine, file display in the OPAC, background inventory, an email sign-in code and password expiry.",
-          "cover": "assets/janium-2027-en-cover-e0c8dec5.svg",
+          "cover": "assets/janium-2027-en-cover-9def8252.svg",
           "html": "posts/janium-2027.en.html"
         },
         "pt": {
           "title": "O Janium 2027 já está disponível",
           "description": "O Janium 2027 incorpora motor de pesquisa por relevância, ficha de processo no OPAC, inventário em segundo plano, código no correio e caducidade da palavra-passe.",
-          "cover": "assets/janium-2027-pt-cover-e0c8dec5.svg",
+          "cover": "assets/janium-2027-pt-cover-9def8252.svg",
           "html": "posts/janium-2027.pt.html"
         }
       }
@@ -668,19 +668,19 @@
         "es": {
           "title": "Cómo buscar en el catálogo por relevancia, plurales y errores de tipeo",
           "description": "Cómo la búsqueda por palabra clave en Janium 2027 puede ordenar por relevancia, reconocer plurales y formas derivadas, no distinguir acentos y sugerir el término más cercano cuando no hay coincidencia exacta. El índice invertido sigue siendo el comportamiento por defecto.",
-          "cover": "assets/buscar-en-el-catalogo-por-relevancia-es-cover-e0c8dec5.svg",
+          "cover": "assets/buscar-en-el-catalogo-por-relevancia-es-cover-197df7d8.svg",
           "html": "posts/buscar-en-el-catalogo-por-relevancia.es.html"
         },
         "en": {
           "title": "How to search the catalog by relevance, plurals and typos",
           "description": "How keyword search in Janium 2027 can rank by relevance, recognize plurals and derived forms, ignore accents when matching and suggest the closest term when there is no exact hit. The inverted index remains the default.",
-          "cover": "assets/buscar-en-el-catalogo-por-relevancia-en-cover-e0c8dec5.svg",
+          "cover": "assets/buscar-en-el-catalogo-por-relevancia-en-cover-197df7d8.svg",
           "html": "posts/buscar-en-el-catalogo-por-relevancia.en.html"
         },
         "pt": {
           "title": "Como pesquisar no catálogo por relevância, plurais e erros de teclado",
           "description": "Como a pesquisa por palavra-chave no Janium 2027 pode ordenar por relevância, reconhecer plurais e formas derivadas, não distinguir acentos e sugerir o termo mais próximo quando não há coincidência exata. O índice invertido continua a ser o comportamento predefinido.",
-          "cover": "assets/buscar-en-el-catalogo-por-relevancia-pt-cover-e0c8dec5.svg",
+          "cover": "assets/buscar-en-el-catalogo-por-relevancia-pt-cover-197df7d8.svg",
           "html": "posts/buscar-en-el-catalogo-por-relevancia.pt.html"
         }
       }
