@@ -1,7 +1,181 @@
 {
   "contract": 1,
-  "generated": "2026-09-11T11:43:32Z",
+  "generated": "2026-09-14T07:25:49Z",
   "posts": [
+    {
+      "slug": "ficha-en-el-opac",
+      "date": "2026-09-14",
+      "datetime": "2026-09-14T07:10:00Z",
+      "tags": [
+        "janium",
+        "opac"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo se muestra una ficha de archivo o de libro en el OPAC",
+          "description": "Cómo se muestra una ficha de archivo o de libro en el OPAC de Janium 2027: los campos cortos siguen en lista, las notas largas se leen como párrafo, y un expediente con muchas notas pasa entero a ese formato. Un ISAD-G no se presenta igual que un libro de tres campos.",
+          "cover": "assets/ficha-en-el-opac-es-cover-dc595ace.svg",
+          "html": "posts/ficha-en-el-opac.es.html"
+        },
+        "en": {
+          "title": "How an archival file or a book record is shown in the OPAC",
+          "description": "How an archival file or a book record is shown in the Janium 2027 OPAC: short fields stay in a list, long notes read as a paragraph, and a file with many notes switches entirely to that layout. An ISAD-G record is not presented the same way as a three-field book.",
+          "cover": "assets/ficha-en-el-opac-en-cover-dc595ace.svg",
+          "html": "posts/ficha-en-el-opac.en.html"
+        },
+        "pt": {
+          "title": "Como se mostra uma ficha de arquivo ou de livro no OPAC",
+          "description": "Como se mostra uma ficha de arquivo ou de livro no OPAC do Janium 2027: os campos curtos mantêm-se em lista, as notas longas lêem-se como parágrafo, e um processo com muitas notas passa inteiro a esse formato. Um ISAD-G não se apresenta da mesma forma que um livro de três campos.",
+          "cover": "assets/ficha-en-el-opac-pt-cover-dc595ace.svg",
+          "html": "posts/ficha-en-el-opac.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "fichas-en-otro-idioma",
+      "date": "2026-09-14",
+      "datetime": "2026-09-14T07:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo catalogar fichas en otro idioma sin traducir títulos ni nombres",
+          "description": "Cómo catalogar material en otro idioma sin traducir títulos ni nombres: Collect traduce el vocabulario descriptivo —tipo de objeto, técnica, materia— y deja intactos el título de la obra, los nombres propios, las fechas, las inscripciones y los identificadores. El título traducido se guarda como título alterno con su idioma.",
+          "cover": "assets/fichas-en-otro-idioma-es-cover-360f43ea.svg",
+          "html": "posts/fichas-en-otro-idioma.es.html"
+        },
+        "en": {
+          "title": "How to catalog cards in another language without translating titles or names",
+          "description": "How to catalog material in another language without translating titles or names: Collect translates descriptive vocabulary —object type, technique, subject— and leaves intact the work’s title, proper names, dates, inscriptions and identifiers. The translated title is stored as an alternative title with its language.",
+          "cover": "assets/fichas-en-otro-idioma-en-cover-360f43ea.svg",
+          "html": "posts/fichas-en-otro-idioma.en.html"
+        },
+        "pt": {
+          "title": "Como catalogar fichas noutra língua sem traduzir títulos nem nomes",
+          "description": "Como catalogar material noutra língua sem traduzir títulos nem nomes: o Collect traduz o vocabulário descritivo —tipo de objeto, técnica, matéria— e deixa intactos o título da obra, os nomes próprios, as datas, as inscrições e os identificadores. O título traduzido guarda-se como título alterno com a sua língua.",
+          "cover": "assets/fichas-en-otro-idioma-pt-cover-360f43ea.svg",
+          "html": "posts/fichas-en-otro-idioma.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "dublin-core-y-extendido",
+      "date": "2026-09-14",
+      "datetime": "2026-09-14T06:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cuándo usar Dublin Core y dónde se queda corto",
+          "description": "Cuándo usar Dublin Core para describir un recurso —sus quince elementos y la versión extendida (DCMI Terms)— y dónde se queda corto frente a MARC o ISAD-G. Cómo Collect produce Dublin Core con protección de identificadores y traducción selectiva del vocabulario.",
+          "cover": "assets/dublin-core-y-extendido-es-cover-a284b7d8.svg",
+          "html": "posts/dublin-core-y-extendido.es.html"
+        },
+        "en": {
+          "title": "When to use Dublin Core and where it falls short",
+          "description": "When to use Dublin Core to describe a resource —its fifteen elements and the extended version (DCMI Terms)— and where it falls short against MARC or ISAD-G. How Collect produces Dublin Core with identifier protection and selective translation of vocabulary.",
+          "cover": "assets/dublin-core-y-extendido-en-cover-a284b7d8.svg",
+          "html": "posts/dublin-core-y-extendido.en.html"
+        },
+        "pt": {
+          "title": "Quando usar Dublin Core e onde fica curto",
+          "description": "Quando usar Dublin Core para descrever um recurso —os quinze elementos e a versão alargada (DCMI Terms)— e onde fica curto face ao MARC ou ao ISAD-G. Como o Collect produz Dublin Core com proteção de identificadores e tradução seletiva do vocabulário.",
+          "cover": "assets/dublin-core-y-extendido-pt-cover-a284b7d8.svg",
+          "html": "posts/dublin-core-y-extendido.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "buscar-en-el-catalogo-por-relevancia",
+      "date": "2026-09-11",
+      "datetime": "2026-09-11T11:20:00Z",
+      "tags": [
+        "janium",
+        "busqueda"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo buscar en el catálogo por relevancia, plurales y errores de tipeo",
+          "description": "Cómo la búsqueda por palabra clave en Janium 2027 puede ordenar por relevancia, reconocer plurales y formas derivadas, no distinguir acentos y sugerir el término más cercano cuando no hay coincidencia exacta. El índice invertido sigue siendo el comportamiento por defecto.",
+          "cover": "assets/buscar-en-el-catalogo-por-relevancia-es-cover-6a71657c.svg",
+          "html": "posts/buscar-en-el-catalogo-por-relevancia.es.html"
+        },
+        "en": {
+          "title": "How to search the catalog by relevance, plurals and typos",
+          "description": "How keyword search in Janium 2027 can rank by relevance, recognize plurals and derived forms, ignore accents when matching and suggest the closest term when there is no exact hit. The inverted index remains the default.",
+          "cover": "assets/buscar-en-el-catalogo-por-relevancia-en-cover-6a71657c.svg",
+          "html": "posts/buscar-en-el-catalogo-por-relevancia.en.html"
+        },
+        "pt": {
+          "title": "Como pesquisar no catálogo por relevância, plurais e erros de teclado",
+          "description": "Como a pesquisa por palavra-chave no Janium 2027 pode ordenar por relevância, reconhecer plurais e formas derivadas, não distinguir acentos e sugerir o termo mais próximo quando não há coincidência exata. O índice invertido continua a ser o comportamento predefinido.",
+          "cover": "assets/buscar-en-el-catalogo-por-relevancia-pt-cover-6a71657c.svg",
+          "html": "posts/buscar-en-el-catalogo-por-relevancia.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "formatos-bibliograficos-marc",
+      "date": "2026-09-11",
+      "datetime": "2026-09-11T11:10:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo generar registros MARC21 y UNIMARC con IA",
+          "description": "Cómo Janium Collect genera registros MARC21 y UNIMARC con IA, cuándo se usa cada uno, y cómo entrega ese registro en texto MarcEdit, MARCXML, MARC binario o FLAT, según lo que el catálogo receptor espera.",
+          "cover": "assets/formatos-bibliograficos-marc-es-cover-86dc1a2a.svg",
+          "html": "posts/formatos-bibliograficos-marc.es.html"
+        },
+        "en": {
+          "title": "How to generate MARC21 and UNIMARC records with AI",
+          "description": "How Janium Collect generates MARC21 and UNIMARC records with AI, when each is used, and how it delivers that record as MarcEdit text, MARCXML, binary MARC or FLAT, according to what the receiving catalog expects.",
+          "cover": "assets/formatos-bibliograficos-marc-en-cover-86dc1a2a.svg",
+          "html": "posts/formatos-bibliograficos-marc.en.html"
+        },
+        "pt": {
+          "title": "Como gerar registos MARC21 e UNIMARC com IA",
+          "description": "Como o Janium Collect gera registos MARC21 e UNIMARC com IA, quando se usa cada um, e como entrega esse registo em texto MarcEdit, MARCXML, MARC binário ou FLAT, conforme o que o catálogo recetor espera.",
+          "cover": "assets/formatos-bibliograficos-marc-pt-cover-86dc1a2a.svg",
+          "html": "posts/formatos-bibliograficos-marc.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "janium-2027",
+      "date": "2026-09-11",
+      "datetime": "2026-09-11T11:00:00Z",
+      "tags": [
+        "janium",
+        "version"
+      ],
+      "translations": {
+        "es": {
+          "title": "Janium 2027 ya está disponible",
+          "description": "Janium 2027 incorpora motor de búsqueda por relevancia, ficha de expediente en el OPAC, inventario en segundo plano, código al correo y caducidad de contraseña.",
+          "cover": "assets/janium-2027-es-cover-82e76ba9.svg",
+          "html": "posts/janium-2027.es.html"
+        },
+        "en": {
+          "title": "Janium 2027 is now available",
+          "description": "Janium 2027 adds a relevance-ranked search engine, file display in the OPAC, background inventory, an email sign-in code and password expiry.",
+          "cover": "assets/janium-2027-en-cover-82e76ba9.svg",
+          "html": "posts/janium-2027.en.html"
+        },
+        "pt": {
+          "title": "O Janium 2027 já está disponível",
+          "description": "O Janium 2027 incorpora motor de pesquisa por relevância, ficha de processo no OPAC, inventário em segundo plano, código no correio e caducidade da palavra-passe.",
+          "cover": "assets/janium-2027-pt-cover-82e76ba9.svg",
+          "html": "posts/janium-2027.pt.html"
+        }
+      }
+    },
     {
       "slug": "de-la-imagen-y-la-ficha-al-registro",
       "date": "2026-09-02",
@@ -330,8 +504,8 @@
     },
     {
       "slug": "que-es-janium-collect",
-      "date": "2026-07-24",
-      "datetime": "2026-07-24T06:00:00Z",
+      "date": "2026-08-15",
+      "datetime": "2026-08-15T06:00:00Z",
       "tags": [
         "janiumcollect",
         "ia",
@@ -595,93 +769,6 @@
           "description": "Há acervos que não podem sair da instituição — por residência de dados, política ou confidencialidade. Como o Collect cataloga com IA na própria infraestrutura, com um modelo local e até air-gapped; o modo híbrido com anonimização para os casos difíceis; e por que o raro não é a IA soberana nem a catalogação isoladas, mas as duas juntas. Com os limites de cada modo.",
           "cover": "assets/soberania-de-datos-pt-cover-47994b20.svg",
           "html": "posts/soberania-de-datos.pt.html"
-        }
-      }
-    },
-    {
-      "slug": "janium-2027",
-      "date": "2026-09-11",
-      "datetime": "2026-09-11T11:00:00Z",
-      "tags": [
-        "janium",
-        "version"
-      ],
-      "translations": {
-        "es": {
-          "title": "Janium 2027 ya está disponible",
-          "description": "Janium 2027 incorpora motor de búsqueda por relevancia, ficha de expediente en el OPAC, inventario en segundo plano, código al correo y caducidad de contraseña.",
-          "cover": "assets/janium-2027-es-cover-9def8252.svg",
-          "html": "posts/janium-2027.es.html"
-        },
-        "en": {
-          "title": "Janium 2027 is now available",
-          "description": "Janium 2027 adds a relevance-ranked search engine, file display in the OPAC, background inventory, an email sign-in code and password expiry.",
-          "cover": "assets/janium-2027-en-cover-9def8252.svg",
-          "html": "posts/janium-2027.en.html"
-        },
-        "pt": {
-          "title": "O Janium 2027 já está disponível",
-          "description": "O Janium 2027 incorpora motor de pesquisa por relevância, ficha de processo no OPAC, inventário em segundo plano, código no correio e caducidade da palavra-passe.",
-          "cover": "assets/janium-2027-pt-cover-9def8252.svg",
-          "html": "posts/janium-2027.pt.html"
-        }
-      }
-    },
-    {
-      "slug": "formatos-bibliograficos-marc",
-      "date": "2026-09-11",
-      "datetime": "2026-09-11T11:10:00Z",
-      "tags": [
-        "janiumcollect",
-        "ia"
-      ],
-      "translations": {
-        "es": {
-          "title": "Cómo generar registros MARC21 y UNIMARC con IA",
-          "description": "Cómo Janium Collect genera registros MARC21 y UNIMARC con IA, cuándo se usa cada uno, y cómo entrega ese registro en texto MarcEdit, MARCXML, MARC binario o FLAT, según lo que el catálogo receptor espera.",
-          "cover": "assets/formatos-bibliograficos-marc-es-cover-e0c8dec5.svg",
-          "html": "posts/formatos-bibliograficos-marc.es.html"
-        },
-        "en": {
-          "title": "How to generate MARC21 and UNIMARC records with AI",
-          "description": "How Janium Collect generates MARC21 and UNIMARC records with AI, when each is used, and how it delivers that record as MarcEdit text, MARCXML, binary MARC or FLAT, according to what the receiving catalog expects.",
-          "cover": "assets/formatos-bibliograficos-marc-en-cover-e0c8dec5.svg",
-          "html": "posts/formatos-bibliograficos-marc.en.html"
-        },
-        "pt": {
-          "title": "Como gerar registos MARC21 e UNIMARC com IA",
-          "description": "Como o Janium Collect gera registos MARC21 e UNIMARC com IA, quando se usa cada um, e como entrega esse registo em texto MarcEdit, MARCXML, MARC binário ou FLAT, conforme o que o catálogo recetor espera.",
-          "cover": "assets/formatos-bibliograficos-marc-pt-cover-e0c8dec5.svg",
-          "html": "posts/formatos-bibliograficos-marc.pt.html"
-        }
-      }
-    },
-    {
-      "slug": "buscar-en-el-catalogo-por-relevancia",
-      "date": "2026-09-11",
-      "datetime": "2026-09-11T11:20:00Z",
-      "tags": [
-        "janium",
-        "busqueda"
-      ],
-      "translations": {
-        "es": {
-          "title": "Cómo buscar en el catálogo por relevancia, plurales y errores de tipeo",
-          "description": "Cómo la búsqueda por palabra clave en Janium 2027 puede ordenar por relevancia, reconocer plurales y formas derivadas, no distinguir acentos y sugerir el término más cercano cuando no hay coincidencia exacta. El índice invertido sigue siendo el comportamiento por defecto.",
-          "cover": "assets/buscar-en-el-catalogo-por-relevancia-es-cover-197df7d8.svg",
-          "html": "posts/buscar-en-el-catalogo-por-relevancia.es.html"
-        },
-        "en": {
-          "title": "How to search the catalog by relevance, plurals and typos",
-          "description": "How keyword search in Janium 2027 can rank by relevance, recognize plurals and derived forms, ignore accents when matching and suggest the closest term when there is no exact hit. The inverted index remains the default.",
-          "cover": "assets/buscar-en-el-catalogo-por-relevancia-en-cover-197df7d8.svg",
-          "html": "posts/buscar-en-el-catalogo-por-relevancia.en.html"
-        },
-        "pt": {
-          "title": "Como pesquisar no catálogo por relevância, plurais e erros de teclado",
-          "description": "Como a pesquisa por palavra-chave no Janium 2027 pode ordenar por relevância, reconhecer plurais e formas derivadas, não distinguir acentos e sugerir o termo mais próximo quando não há coincidência exata. O índice invertido continua a ser o comportamento predefinido.",
-          "cover": "assets/buscar-en-el-catalogo-por-relevancia-pt-cover-197df7d8.svg",
-          "html": "posts/buscar-en-el-catalogo-por-relevancia.pt.html"
         }
       }
     }

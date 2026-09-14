@@ -1,0 +1,94 @@
+<p>Quando usar Dublin Core para descrever um recurso decide-o o trabalho que
+o registo tem de fazer, não o modelo. De todos os formatos que um
+catalogador maneja, o <a href="/pt/blog/glosario/#dublin-core">Dublin Core</a> é o
+que menos pede. Quinze elementos —título, criador, matéria, descrição,
+editor, colaborador, data, tipo, formato, identificador, fonte, língua,
+relação, cobertura e direitos— e nenhum obrigatório. Essa economia não é
+um descuido: o Dublin Core nasceu para que recursos descritos por gente
+distinta, em sistemas distintos, pudessem encontrar-se e entender-se. A
+descrição fina deixa-se para o formato que corresponder; o comum
+denominador mantém-se deliberadamente curto.</p>
+<h2>Para que serve um formato simples</h2>
+<p>O caso em que o Dublin Core rende é o do <strong>intercâmbio</strong>. Um repositório
+institucional que expõe os seus registos para que outros os colham —via
+OAI-PMH, por exemplo— precisa de um formato que qualquer agregador
+entenda sem acordos prévios. Aí quinze elementos bastam e a simplicidade é
+a virtude: não há regras de subcampo a interpretar nem perfis locais a
+negociar.</p>
+<p>Serve também como camada de descoberta sobre coleções heterogéneas. Se um
+acervo mistura documentos, imagens, dados e objetos de natureza distinta,
+um esquema comum permite listá-los e pesquisá-los em conjunto embora cada
+tipo, em separado, mereça uma descrição mais rica no seu próprio formato.
+O Dublin Core é então a vista partilhada, não o registo definitivo de cada
+peça.</p>
+<h2>Quando quinze elementos ficam curtos</h2>
+<p>O limite aparece quando a instituição precisa de exprimir algo que os
+quinze elementos não distinguem. «Data» não separa a data de criação da de
+publicação ou da de digitalização. «Relação» agrupa sob uma só etiqueta
+vínculos que podem ser «é parte de», «é versão de» ou «substitui». Para
+esses casos existe a <strong>versão alargada</strong>, os DCMI Metadata Terms: um
+vocabulário mais amplo que refina os quinze elementos originais
+—<code>created</code>, <code>issued</code>, <code>isPartOf</code>, <code>hasVersion</code>, <code>spatial</code>, <code>temporal</code>,
+entre outros— sem abandonar o quadro do Dublin Core.</p>
+<p>A extensão resolve a ambiguidade sem obrigar a saltar para um formato
+pesado. A decisão prática é identificar que distinções a instituição
+precisa de verdade antes de configurar o esquema, e acrescentar só esses
+termos. Um registo com três refinamentos bem usados comunica mais do que
+um que declara doze e preenche metade por inércia.</p>
+<h2>Quando convém outro formato</h2>
+<p>Escolher Dublin Core para o trabalho errado custa mais do que não o ter
+escolhido.</p>
+<p>Para <strong>descrição bibliográfica fina</strong> —controlo de autoridades, pontos de
+acesso, número de classificação, menção de responsabilidade estruturada—
+existe o <a href="/pt/blog/glosario/#marc">MARC21</a>. O Dublin Core pode levar um
+autor no elemento <code>creator</code>, mas não distingue autor de compilador de
+tradutor com a precisão que um catálogo de biblioteca dá por assumida.
+Como se produz esse registo está em <a href="/pt/blog/formatos-bibliograficos-marc/">Como gerar registos MARC21 e UNIMARC
+com IA</a>.</p>
+<p>Para <strong>descrição arquivística</strong> —onde importam a proveniência, o contexto
+de produção e a hierarquia de fundo, secção e série— o formato indicado é
+o <a href="/pt/blog/glosario/#isad-g">ISAD-G</a>. O Dublin Core descreve o item
+isolado; não tem forma nativa de exprimir que um documento é uma peça
+dentro de uma série dentro de um fundo. Essa descrição está em <a href="/pt/blog/formato-archivistico-isadg/">Como
+descrever um arquivo em ISAD-G com IA</a>.</p>
+<p>O Dublin Core não compete com esses formatos: cobre um troço distinto.
+Serve para a descoberta ampla e o intercâmbio entre sistemas; não
+substitui o registo pormenorizado que cada tipo de acervo precisa por
+dentro. Muitas instituições usam os dois níveis ao mesmo tempo —MARC ou
+ISAD-G como registo completo, Dublin Core como a vista que se partilha
+para fora— e essa convivência é o uso mais comum.</p>
+<h2>Como o produz o Collect</h2>
+<p>O <a href="/pt/blog/que-es-janium-collect/">Janium Collect</a> gera Dublin Core, na
+forma simples e na alargada, a partir do mesmo fluxo com que produz os
+outros formatos: lê o documento, propõe o registo e entrega-o para
+revisão. Dois cuidados são próprios deste trabalho.</p>
+<p>O primeiro é a <strong>proteção de campos</strong>. Os valores que não devem alterar-se
+—identificadores, datas, nomes próprios— transferem-se; a leitura do
+documento não os reescreve. Um identificador que muda é uma ligação
+quebrada, e num formato pensado para o intercâmbio esse dano propaga-se a
+cada sistema que colheu o registo.</p>
+<p>O segundo é a <strong>tradução seletiva do vocabulário descritivo</strong>. Quando o
+material está noutra língua, traduz-se o conteúdo descritivo —a matéria, a
+descrição, o tipo— enquanto o título original, os nomes e os dados de
+controlo se conservam tal qual. O objetivo é que o registo seja legível
+na língua da instituição sem falsear o que diz a fonte.</p>
+<p>Nenhum desses dois passos converte o Dublin Core no que não é. Continua a
+ser um formato simples, e essa é a razão para o usar quando o trabalho pede
+um comum denominador interoperável. Quando pede descrição bibliográfica ou
+arquivística fina, o formato correcto é outro, e o Collect também o produz.</p>
+<h2>Limites</h2>
+<p>O Collect não decide pela instituição se o catálogo de trabalho é Dublin
+Core, MARC ou ISAD-G. Essa escolha fixa-a o uso: intercâmbio e descoberta,
+ou descrição fina. A versão alargada acrescenta distinções; não converte
+quinze elementos num formato bibliográfico.</p>
+<p>O <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a> completa o
+registo com o que a fonte não trazia quando o pode sustentar, e deixa
+marcado o inferido: um dado inferido não se apresenta como verificado, e o
+que não se pode sustentar não se preenche para cumprir o esquema. A
+simplicidade do Dublin Core não é motivo para saltar essa marca.</p>
+<h2>Para continuar a conversa</h2>
+<p>Se a tua instituição expõe os seus registos para que outros os colham, ou
+mantém uma vista de descoberta sobre coleções de natureza distinta, e
+estás a decidir onde usar Dublin Core e onde convém um formato mais
+pormenorizado, escreve-nos para info@janium.com. Interessa-nos perceber
+como descreves o teu acervo hoje e o que precisas de intercambiar.</p>

@@ -1,0 +1,93 @@
+<p>When to use Dublin Core to describe a resource is decided by the work the
+record has to do, not by the model. Of all the formats a cataloger handles,
+<a href="/en/blog/glosario/#dublin-core">Dublin Core</a> asks the least. Fifteen
+elements —title, creator, subject, description, publisher, contributor,
+date, type, format, identifier, source, language, relation, coverage and
+rights— and none of them mandatory. That economy is not an oversight:
+Dublin Core was born so that resources described by different people, in
+different systems, could find one another and be understood. Fine-grained
+description is left to the format that belongs to the work; the common
+denominator is kept deliberately short.</p>
+<h2>What a simple format is for</h2>
+<p>Dublin Core earns its keep in <strong>exchange</strong>. An institutional repository
+that exposes its records for others to harvest —via OAI-PMH, for example—
+needs a format any harvester understands without prior agreements. There
+fifteen elements are enough, and their simplicity is the point: no
+subfield rules to interpret, no local profiles to negotiate.</p>
+<p>It also serves as a discovery layer over heterogeneous collections. If a
+holding mixes documents, images, data and objects of different kinds, a
+shared scheme lets them be listed and searched together even if each type,
+on its own, deserves a richer description in its own format. Dublin Core is
+then the shared view, not the definitive record of each piece.</p>
+<h2>When fifteen elements fall short</h2>
+<p>The limit appears when the institution needs to express something the
+fifteen elements do not distinguish. &ldquo;Date&rdquo; does not separate the date of
+creation from that of publication or of digitization. &ldquo;Relation&rdquo; groups
+under one label links that may be &ldquo;is part of&rdquo;, &ldquo;is version of&rdquo; or
+&ldquo;replaces&rdquo;. For those cases there is the <strong>extended version</strong>, the DCMI
+Metadata Terms: a broader vocabulary that refines the original fifteen
+—<code>created</code>, <code>issued</code>, <code>isPartOf</code>, <code>hasVersion</code>, <code>spatial</code>, <code>temporal</code>,
+among others— without leaving the Dublin Core frame.</p>
+<p>The extension resolves ambiguity without forcing a jump to a heavy format.
+The practical decision is to identify which distinctions the institution
+actually needs before configuring the scheme, and to add only those terms.
+A record with three well-used refinements says more than one that declares
+twelve and fills half of them by inertia.</p>
+<h2>When another format is the better fit</h2>
+<p>Choosing Dublin Core for the wrong work costs more than not having chosen
+it.</p>
+<p>For <strong>fine bibliographic description</strong> —authority control, access points,
+classification number, structured statement of responsibility—
+<a href="/en/blog/glosario/#marc">MARC21</a> exists. Dublin Core can carry an author
+in the <code>creator</code> element, but it does not distinguish author from compiler
+from translator with the precision a library catalog takes for granted. How
+that record is produced is in <a href="/en/blog/formatos-bibliograficos-marc/">How to generate MARC21 and UNIMARC records
+with AI</a>.</p>
+<p>For <strong>archival description</strong> —where provenance, the context of production
+and the hierarchy of fonds, section and series matter— the indicated
+format is <a href="/en/blog/glosario/#isad-g">ISAD-G</a>. Dublin Core describes the
+isolated item; it has no native way to say that a document is a piece
+inside a series inside a fonds. That description is in <a href="/en/blog/formato-archivistico-isadg/">How to describe an
+archive in ISAD-G with AI</a>.</p>
+<p>Dublin Core does not compete with those formats: it covers a different
+stretch. It serves broad discovery and exchange between systems; it does
+not replace the detailed record each kind of holding needs inside. Many
+institutions use both levels at once —MARC or ISAD-G as the complete
+record, Dublin Core as the view shared outward— and that coexistence is
+the common use.</p>
+<h2>How Collect produces it</h2>
+<p><a href="/en/blog/que-es-janium-collect/">Janium Collect</a> generates Dublin Core, in
+its simple form and in the extended one, from the same flow with which it
+produces the other formats: it reads the document, proposes the record and
+delivers it for review. Two cares are specific to this work.</p>
+<p>The first is <strong>field protection</strong>. Values that must not be altered —
+identifiers, dates, proper names— are transferred; the reading of the
+document does not rewrite them. An identifier that changes is a broken
+link, and in a format meant for exchange that damage propagates to every
+system that harvested the record.</p>
+<p>The second is <strong>selective translation of descriptive vocabulary</strong>. When the
+material is in another language, descriptive content —subject, description,
+type— is translated, while the original title, names and control data are
+kept as they stand. The aim is that the record be readable in the
+institution’s language without falsifying what the source says.</p>
+<p>Neither of those steps turns Dublin Core into what it is not. It remains a
+simple format, and that is the reason to use it when the work asks for an
+interoperable common denominator. When it asks for fine bibliographic or
+archival description, the correct format is another, and Collect produces
+that too.</p>
+<h2>Limits</h2>
+<p>Collect does not decide for the institution whether the working catalog is
+Dublin Core, MARC or ISAD-G. That choice is fixed by the use: exchange and
+discovery, or fine description. The extended version adds distinctions; it
+does not turn fifteen elements into a bibliographic format.</p>
+<p>The <a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> completes the
+record with what the source did not bring when it can support it, and
+leaves inferred data marked: an inferred fact is not presented as verified,
+and what cannot be supported is not filled in to satisfy the scheme.
+Dublin Core’s simplicity is not a reason to skip that mark.</p>
+<h2>To continue the conversation</h2>
+<p>If your institution exposes its records for others to harvest, or keeps a
+discovery view over collections of different kinds, and you are deciding
+where to use Dublin Core and where a more detailed format is the better
+fit, write to us at info@janium.com. We want to understand how you describe
+your holdings today and what you need to exchange.</p>

@@ -1,29 +1,101 @@
-<p>Janium 2027, the new version of the <a href="/en/blog/glosario/#janium">library and archives system</a>, is now available. Institutions on maintenance update to this version. It is the <a href="/en/blog/glosario/#ils">ILS</a> the institution already runs, with a search engine that can rank by relevance, a more readable OPAC record, inventory that continues if the browser is closed, circulation notices written by the institution, an email sign-in code and password expiry. The detail of each capability will have its own article; this text is the map.</p>
+<p>Janium 2027, the new version of the <a href="/en/blog/glosario/#janium">library and archives
+system</a>, is now available. Institutions on
+maintenance update to this version. It is the <a href="/en/blog/glosario/#ils">ILS</a>
+the institution already runs, with a search engine that can rank by
+relevance, a more readable OPAC record, inventory that continues if the
+browser is closed, circulation notices written by the institution, an email
+sign-in code and password expiry. The detail of each capability will have
+its own article; this text is the map.</p>
 <h2>Search engine</h2>
-<p>Keyword search can rank by relevance: the most pertinent first, not necessarily the last cataloged. It recognizes plurals and derived forms — Spanish, English and Portuguese ship with it, and other languages can be added when the catalog needs them — and does not distinguish accents when matching. If there are no exact hits, it can suggest the closest term —a typo or imperfect OCR. In the summary a snippet appears with the words marked, and while typing, suggestions from the holdings themselves.</p>
-<p>Someone searching <em>residencia</em> and someone searching <em>residencias</em> should not get two different sets of results. Someone typing <em>espanola</em> without an accent should still find the heading with one. Sort by relevance changes which record comes first; it is worth testing against the institution’s own holdings before leaving it as the default. If it does not fit, catalog order can be restored or field weights adjusted. The detail is in <a href="/en/blog/buscar-en-el-catalogo-por-relevancia/">How to search the catalog by relevance, plurals and typos</a>.</p>
-<p>The inverted index remains the default and the fallback. If the new engine is not turned on, keyword search behaves as it does today. Alphabetical browsing, authority control, ISBN, ISSN and classification do not go through that engine.</p>
-<p>Whoever uses Collect to catalog with AI still delivers records to Janium. 2027 changes how Janium searches them, not how Collect produces them. The relationship between access points, full text and an optional <a href="/en/blog/glosario/#rag">RAG</a> layer is in <a href="/en/blog/puntos-de-acceso-texto-completo-y-rag/">Access points, full text and RAG</a>.</p>
+<p>Keyword search can rank by relevance: the most pertinent first, not
+necessarily the last cataloged. It recognizes plurals and derived forms —
+Spanish, English and Portuguese ship with it, and other languages can be
+added when the catalog needs them — and does not distinguish accents when
+matching. If there are no exact hits, it can suggest the closest term —a
+typo or imperfect OCR. In the summary a snippet appears with the words
+marked, and while typing, suggestions from the holdings themselves.</p>
+<p>Someone searching <em>residencia</em> and someone searching <em>residencias</em> should
+not get two different sets of results. Someone typing <em>espanola</em> without an
+accent should still find the heading with one. Sort by relevance changes
+which record comes first; it is worth testing against the institution’s own
+holdings before leaving it as the default. If it does not fit, catalog order
+can be restored or field weights adjusted. The detail is in <a href="/en/blog/buscar-en-el-catalogo-por-relevancia/">How to search
+the catalog by relevance, plurals and
+typos</a>.</p>
+<p>The inverted index remains the default and the fallback. If the new engine
+is not turned on, keyword search behaves as it does today. Alphabetical
+browsing, authority control, ISBN, ISSN and classification do not go through
+that engine.</p>
+<p>Whoever uses Collect to catalog with AI still delivers records to Janium.
+2027 changes how Janium searches them, not how Collect produces them. The
+relationship between access points, full text and an optional
+<a href="/en/blog/glosario/#rag">RAG</a> layer is in <a href="/en/blog/puntos-de-acceso-texto-completo-y-rag/">Access points, full text and
+RAG</a>.</p>
 <h2>OPAC record display</h2>
-<p>In the OPAC and in the cataloging detail view, short fields (title, author, year) stay in a list. Narrative ones (summary, notes, archival description) display as a paragraph, label above, as in a printed document.</p>
-<p>If the record has many long notes —a file, a fonds— the whole record switches to that layout. A book with a short summary stays in the mixed layout. When the summary is long, the result list offers see more or see less.</p>
-<p>An <a href="/en/blog/glosario/#isad-g">ISAD-G</a> record with scope notes is not read the same way as a three-field record. 2027 does not change the standard; it changes how it is presented.</p>
+<p>In the OPAC and in the cataloging detail view, short fields (title, author,
+year) stay in a list. Narrative ones (summary, notes, archival description)
+display as a paragraph, label above, as in a printed document.</p>
+<p>If the record has many long notes —a file, a fonds— the whole record
+switches to that layout. A book with a short summary stays in the mixed
+layout. When the summary is long, the result list offers see more or see
+less.</p>
+<p>An <a href="/en/blog/glosario/#isad-g">ISAD-G</a> record with scope notes is not read
+the same way as a three-field record. 2027 does not change the standard; it
+changes how it is presented.</p>
 <h2>Covers and other catalogs</h2>
-<p>With the ISBN, Janium can look up the book’s cover in Open Library and Google Books and attach it to the record. It does not replace a cover already in the system: it only fills those that are missing. Without an ISBN there is no automatic lookup.</p>
-<p>In “other catalogs”, Z39.50 and SRU queries can go to several servers at once. Results show the source; one can filter to a single catalog or ask for more from one. If a server does not respond, it is flagged and the others continue. Catalogs consulted by web address, one by one, do not enter that simultaneous search.</p>
+<p>With the ISBN, Janium can look up the book’s cover in Open Library and
+Google Books and attach it to the record. It does not replace a cover
+already in the system: it only fills those that are missing. Without an
+ISBN there is no automatic lookup.</p>
+<p>In “other catalogs”, Z39.50 and SRU queries can go to several servers at
+once. Results show the source; one can filter to a single catalog or ask for
+more from one. If a server does not respond, it is flagged and the others
+continue. Catalogs consulted by web address, one by one, do not enter that
+simultaneous search.</p>
 <h2>Circulation</h2>
-<p>Batch inventory is no longer cancelled when the browser is closed or the connection is lost. Whoever starts the batch can leave and come back: the work continues on the server and the page shows which phase it is in (duplicates, not found, other library, inventoried). A second inventory cannot be started until the one in progress is closed.</p>
-<p>Circulation notices —loan about to fall due, hold ready for pickup, hold that could not be completed because the item was lent to someone else— no longer have a fixed email body. The institution writes the greeting, the table and the closing.</p>
-<p>The certificate of no outstanding fines can come out as Word, in addition to HTML. One template is enough for the whole system; each library can have its own.</p>
+<p>Batch inventory is no longer cancelled when the browser is closed or the
+connection is lost. Whoever starts the batch can leave and come back: the
+work continues on the server and the page shows which phase it is in
+(duplicates, not found, other library, inventoried). A second inventory
+cannot be started until the one in progress is closed.</p>
+<p>Circulation notices —loan about to fall due, hold ready for pickup, hold
+that could not be completed because the item was lent to someone else— no
+longer have a fixed email body. The institution writes the greeting, the
+table and the closing.</p>
+<p>The certificate of no outstanding fines can come out as Word, in addition to
+HTML. One template is enough for the whole system; each library can have its
+own.</p>
 <h2>Sign-in</h2>
 <p>There are two optional access reinforcements.</p>
-<p>After username and password, Janium can send a six-digit code to the registered email, valid for ten minutes. No extra application is needed. If the person has no email on the profile, or the message cannot be sent, sign-in is not blocked.</p>
-<p>If the password period the institution sets has lapsed, sign-in asks for a new password before opening the session. It also applies to the OPAC (account information and holds). Length and complexity are set by whoever administers the system.</p>
+<p>After username and password, Janium can send a six-digit code to the
+registered email, valid for ten minutes. No extra application is needed. If
+the person has no email on the profile, or the message cannot be sent,
+sign-in is not blocked.</p>
+<p>If the password period the institution sets has lapsed, sign-in asks for a
+new password before opening the session. It also applies to the OPAC
+(account information and holds). Length and complexity are set by whoever
+administers the system.</p>
 <h2>What does not change</h2>
-<p>2027 does not replace the catalog or force a change of description standard. <a href="/en/blog/glosario/#marc">MARC21</a>, <a href="/en/blog/glosario/#dublin-core">Dublin Core</a>, ISAD-G and the other formats already in use remain. Collect is not part of this version: it is another product, the one that produces records with AI; Janium is the one that searches, circulates and displays them.</p>
-<p>After the update, the search engine, covers, email sign-in code and password expiry are turned on per institution. If they are left off, keyword search, covers and sign-in behave as they do today. The OPAC record display and background inventory are part of the version.</p>
+<p>2027 does not replace the catalog or force a change of description standard.
+<a href="/en/blog/glosario/#marc">MARC21</a>, <a href="/en/blog/glosario/#dublin-core">Dublin Core</a>,
+ISAD-G and the other formats already in use remain. Collect is not part of
+this version: it is another product, the one that produces records with AI;
+Janium is the one that searches, circulates and displays them.</p>
+<p>After the update, the search engine, covers, email sign-in code and password
+expiry are turned on per institution. If they are left off, keyword search,
+covers and sign-in behave as they do today. The OPAC record display and
+background inventory are part of the version.</p>
 <h2>Limits</h2>
-<p>An automatic cover needs an ISBN and that one of the public sources has it; if not, the record is retried later, without replacing an image that already exists. A Z39.50 catalog that does not respond does not stop the others, but copy cataloging depends on the remote server answering. Sort by relevance changes which record comes first: it is worth validating with catalogers before leaving it as the default.</p>
-<p>Without email on the profile, the email sign-in code is not completed and sign-in continues. Whoever needs to block access when mail fails will not find that behaviour in this version.</p>
+<p>An automatic cover needs an ISBN and that one of the public sources has it;
+if not, the record is retried later, without replacing an image that already
+exists. A Z39.50 catalog that does not respond does not stop the others, but
+copy cataloging depends on the remote server answering. Sort by relevance
+changes which record comes first: it is worth validating with catalogers
+before leaving it as the default.</p>
+<p>Without email on the profile, the email sign-in code is not completed and
+sign-in continues. Whoever needs to block access when mail fails will not
+find that behaviour in this version.</p>
 <h2>To continue the conversation</h2>
-<p>To coordinate the update —which capabilities to turn on first, how a file looks in the OPAC— write to us at info@janium.com. The kind of holdings and how you search today change what is worth activating and in which order.</p>
+<p>To coordinate the update —which capabilities to turn on first, how a file
+looks in the OPAC— write to us at info@janium.com. The kind of holdings and
+how you search today change what is worth activating and in which order.</p>

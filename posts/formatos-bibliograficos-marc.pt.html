@@ -1,23 +1,79 @@
-<p>Como gerar um registo MARC21 ou UNIMARC com IA decide-o a norma que a instituição já usa, não o modelo. Quem cataloga numa biblioteca não escolhe o formato do registo por gosto: fixa-o a norma da instituição, o sistema onde vive o catálogo e, muitas vezes, a tradição da região. Um mesmo livro pode descrever-se em <a href="/pt/blog/glosario/#marc">MARC21</a> ou em UNIMARC: são dois esquemas de campos distintos para o mesmo trabalho. O Janium Collect produz o que a instituição já cataloga e entrega-o no invólucro que o recetor aceita.</p>
+<p>Como gerar um registo MARC21 ou UNIMARC com IA decide-o a norma que a
+instituição já usa, não o modelo. Quem cataloga numa biblioteca não escolhe o
+formato do registo por gosto: fixa-o a norma da instituição, o sistema onde
+vive o catálogo e, muitas vezes, a tradição da região. Um mesmo livro pode
+descrever-se em <a href="/pt/blog/glosario/#marc">MARC21</a> ou em UNIMARC: são dois
+esquemas de campos distintos para o mesmo trabalho. O Janium Collect produz o
+que a instituição já cataloga e entrega-o no invólucro que o recetor aceita.</p>
 <h2>MARC21: a norma de biblioteca</h2>
-<p><strong>MARC21</strong> é o formato de registo bibliográfico mais usado no mundo. Organiza a descrição em campos numerados —o 100 para o autor principal, o 245 para o título, o 260 ou 264 para a publicação, o 300 para a descrição física— e, dentro de cada campo, em subcampos identificados por letra. Essa granularidade é o que permite que um catálogo distinga um autor de um título e ordene, pesquise e partilhe registos entre sistemas que falam MARC.</p>
-<p>Muitas bibliotecas que catalogam em MARC21 aplicam as regras <strong>RDA</strong> (<em>Resource Description and Access</em>), a norma de catalogação que sucede às AACR2. A RDA não é um formato de registo: é o conjunto de regras com que se preenche o MARC21. Define, entre outras coisas, a pontuação com que se separam e fecham os subcampos —os espaços, hífenes, pontos e barras que um catalogador reconhece de imediato num registo bem formado— e os campos de tipo de conteúdo, de meio e de suporte. Essa pontuação não a decide o modelo: aplica-se de forma determinista no pós-processamento, depois de o modelo propor o conteúdo. Uma regra fixa cumpre-se melhor com uma regra, não pedindo-a a um modelo que pode acertá-la quase sempre mas não sempre.</p>
+<p><strong>MARC21</strong> é o formato de registo bibliográfico mais usado no mundo.
+Organiza a descrição em campos numerados —o
+100 para o autor principal, o 245 para o título, o 260 ou 264 para a
+publicação, o 300 para a descrição física— e, dentro de cada campo, em
+subcampos identificados por letra. Essa granularidade é o que permite que um
+catálogo distinga um autor de um título e ordene, pesquise e partilhe registos
+entre sistemas que falam MARC.</p>
+<p>Muitas bibliotecas que catalogam em MARC21 aplicam as regras <strong>RDA</strong> (<em>Resource
+Description and Access</em>), a norma de catalogação que sucede às AACR2. A RDA não
+é um formato de registo: é o conjunto de regras com que se preenche o MARC21.
+Define, entre outras coisas, a pontuação com que se separam e fecham os
+subcampos —os espaços, hífenes, pontos e barras que um catalogador reconhece de
+imediato num registo bem formado— e os campos de tipo de conteúdo, de meio e de
+suporte. Essa pontuação não a decide o modelo: aplica-se de forma determinista
+no pós-processamento, depois de o modelo propor o conteúdo. Uma regra fixa
+cumpre-se melhor com uma regra, não pedindo-a a um modelo que pode acertá-la
+quase sempre mas não sempre.</p>
 <h2>UNIMARC: a alternativa de algumas regiões</h2>
-<p><strong>UNIMARC</strong> é um formato de registo bibliográfico com a mesma vocação que o MARC21 —descrever o recurso com campos e subcampos— mas com um esquema de campos próprio e uma história distinta. Nasceu como formato de intercâmbio universal impulsionado pela IFLA, e várias bibliotecas nacionais e redes, sobretudo em partes da Europa, adotaram-no como norma local. Para uma instituição que cataloga em UNIMARC, entregar MARC21 não seria compatível com o seu catálogo; precisa de registos no seu próprio esquema.</p>
-<p>Produzir MARC21 ou UNIMARC exige o mesmo trabalho: escolher o campo adequado, separar bem os subcampos e respeitar os indicadores. O Collect apoia-se num <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a> capaz de sustentar essa estrutura, em qualquer dos dois.</p>
-<p>Duas normas maiores convivem porque respondem a tradições catalográficas reais, e cada instituição já sabe em qual trabalha. O Collect não impõe uma das duas.</p>
+<p><strong>UNIMARC</strong> é um formato de registo bibliográfico com a mesma vocação que o
+MARC21 —descrever o recurso com campos e subcampos— mas com um esquema de
+campos próprio e uma história distinta. Nasceu como formato de intercâmbio
+universal impulsionado pela IFLA, e várias bibliotecas nacionais e redes,
+sobretudo em partes da Europa, adotaram-no como norma local. Para uma
+instituição que cataloga em UNIMARC, entregar MARC21 não seria compatível com o
+seu catálogo; precisa de registos no seu próprio esquema.</p>
+<p>Produzir MARC21 ou UNIMARC exige o mesmo trabalho: escolher o campo adequado,
+separar bem os subcampos e respeitar os indicadores. O Collect apoia-se num
+<a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a> capaz de sustentar
+essa estrutura, em qualquer dos dois.</p>
+<p>Duas normas maiores convivem porque respondem a tradições catalográficas
+reais, e cada instituição já sabe em qual trabalha. O Collect não impõe uma das
+duas.</p>
 <h2>Invólucros de intercâmbio</h2>
-<p>O formato de descrição é MARC21 ou UNIMARC. Como viaja esse registo até ao catálogo é outra decisão. O exportador entrega o invólucro que corresponde:</p>
+<p>O formato de descrição é MARC21 ou UNIMARC. Como viaja esse registo até ao
+catálogo é outra decisão. O exportador entrega o invólucro que corresponde:</p>
 <ul>
-<li><strong>Texto MarcEdit</strong> (<code>.mrk</code>): o registo MARC21 ou UNIMARC escrito em texto legível, um campo por linha (<code>=245 10$aTítulo…</code>), o que usa a ferramenta do mesmo nome. Serve para rever e corrigir à mão, ou para carregar com o MarcEdit. O registo continua a ser MARC21 ou UNIMARC.</li>
-<li><strong>ISO 2709</strong> (<code>.mrc</code>): o MARC binário, quando o sistema recetor espera a forma canónica.</li>
-<li><strong>MARCXML</strong> (<code>.xml</code>): o mesmo registo em XML, o esquema da Library of Congress, quando o recetor espera XML em vez do binário ou do texto MarcEdit.</li>
-<li><strong>FLAT</strong>: o intercâmbio nativo do Janium, quando o destino é um catálogo Janium.</li>
+<li><strong>Texto MarcEdit</strong> (<code>.mrk</code>): o registo MARC21 ou UNIMARC escrito em texto
+  legível, um campo por linha (<code>=245 10$aTítulo…</code>), o que usa a ferramenta do
+  mesmo nome. Serve para rever e corrigir à mão, ou para carregar com o
+  MarcEdit. O registo continua a ser MARC21 ou UNIMARC.</li>
+<li><strong>ISO 2709</strong> (<code>.mrc</code>): o MARC binário, quando o sistema recetor espera a
+  forma canónica.</li>
+<li><strong>MARCXML</strong> (<code>.xml</code>): o mesmo registo em XML, o esquema da Library of
+  Congress, quando o recetor espera XML em vez do binário ou do texto
+  MarcEdit.</li>
+<li><strong>FLAT</strong>: o intercâmbio nativo do Janium, quando o destino é um catálogo
+  Janium.</li>
 </ul>
-<p>Um registo MARC21 e um UNIMARC podem sair em qualquer desses invólucros, conforme o que o recetor aceite. Antes de entregar o lote, o Collect verifica a integridade e detém-no se deteta degradação, para não carregar no catálogo material danificado. Como chega esse ficheiro ao ILS —lote de carga, SFTP, pasta— está em <a href="/pt/blog/del-registro-al-catalogo/">Integrar a catalogação com IA ao seu catálogo</a>.</p>
-<p>A descrição de arquivo, por proveniência e hierarquia, é outro formato: <a href="/pt/blog/formato-archivistico-isadg/">Como descrever um arquivo em ISAD-G</a>.</p>
+<p>Um registo MARC21 e um UNIMARC podem sair em qualquer desses invólucros,
+conforme o que o recetor aceite. Antes de entregar o lote, o Collect verifica a
+integridade e detém-no se deteta degradação, para não carregar no catálogo
+material danificado. Como chega esse ficheiro ao ILS —lote de carga, SFTP,
+pasta— está em <a href="/pt/blog/del-registro-al-catalogo/">Integrar a catalogação com IA ao seu catálogo</a>.</p>
+<p>A descrição de arquivo, por proveniência e hierarquia, é outro formato:
+<a href="/pt/blog/formato-archivistico-isadg/">Como descrever um arquivo em ISAD-G</a>.</p>
 <h2>Limites</h2>
-<p>O Collect não decide pela instituição se o catálogo é MARC21 ou UNIMARC. Essa escolha fixa-a a norma de catalogação e o sistema onde vive o catálogo; o Collect ajusta-se a ela. Tampouco garante que a pontuação RDA cubra cada caso de limite da norma: aplica as regras de pontuação no pós-processamento sobre o conteúdo que o modelo propõe, e os casos particulares que uma regra determinista não contemple ficam para a revisão de quem cataloga.</p>
-<p>O modelo completa o registo com o que a fonte não trazia quando o pode sustentar, e deixa marcado o que inferiu: um dado inferido não se apresenta como verificado, e o que não se pode sustentar não se preenche para cumprir o formato.</p>
+<p>O Collect não decide pela instituição se o catálogo é MARC21 ou UNIMARC. Essa
+escolha fixa-a a norma de catalogação e o sistema onde vive o catálogo; o
+Collect ajusta-se a ela. Tampouco garante que a pontuação RDA cubra cada caso
+de limite da norma: aplica as regras de pontuação no pós-processamento sobre o
+conteúdo que o modelo propõe, e os casos particulares que uma regra
+determinista não contemple ficam para a revisão de quem cataloga.</p>
+<p>O modelo completa o registo com o que a fonte não trazia quando o pode
+sustentar, e deixa marcado o que inferiu: um dado inferido não se apresenta
+como verificado, e o que não se pode sustentar não se preenche para cumprir o
+formato.</p>
 <h2>Para continuar a conversa</h2>
-<p>Se a sua biblioteca cataloga em MARC21 ou em UNIMARC, e tem material à espera de descrição, podemos rever como encaixa a sua norma com o que o Collect produz e em que invólucro carrega hoje no catálogo. Escreva-nos para info@janium.com.</p>
+<p>Se a sua biblioteca cataloga em MARC21 ou em UNIMARC, e tem material à espera
+de descrição, podemos rever como encaixa a sua norma com o que o Collect
+produz e em que invólucro carrega hoje no catálogo. Escreva-nos para
+info@janium.com.</p>

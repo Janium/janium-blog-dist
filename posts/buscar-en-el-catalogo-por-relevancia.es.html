@@ -1,17 +1,58 @@
-<p>Quien busca <em>residencia</em> y quien busca <em>residencias</em> no debería obtener dos listas. Quien escribe <em>espanola</em> sin tilde debería encontrar el encabezamiento con tilde. En la búsqueda por palabra clave de muchos catálogos cada grafía es otra consulta, y el orden sigue la fecha de entrada: primero lo último catalogado. El lector se lleva una lista vacía o una que no empieza por lo que buscaba.</p>
-<p>En <a href="/blog/glosario/#janium">Janium</a> 2027 esa búsqueda puede ordenar por relevancia, reconocer plurales y formas derivadas, y no distinguir acentos al coincidir. Si no hay resultados exactos, puede sugerir el término más cercano. La versión está en <a href="/blog/janium-2027/">Janium 2027 ya está disponible</a>.</p>
+<p>Quien busca <em>residencia</em> y quien busca <em>residencias</em> no debería obtener dos
+listas. Quien escribe <em>espanola</em> sin tilde debería encontrar el encabezamiento
+con tilde. En la búsqueda por palabra clave de muchos catálogos cada grafía es
+otra consulta, y el orden sigue la fecha de entrada: primero lo último
+catalogado. El lector se lleva una lista vacía o una que no empieza por lo que
+buscaba.</p>
+<p>En <a href="/blog/glosario/#janium">Janium</a> 2027 esa búsqueda puede ordenar por
+relevancia, reconocer plurales y formas derivadas, y no distinguir acentos al
+coincidir. Si no hay resultados exactos, puede sugerir el término más cercano.
+La versión está en <a href="/blog/janium-2027/">Janium 2027 ya está disponible</a>.</p>
 <h2>Ordenar por relevancia</h2>
-<p>La relevancia pone primero lo más pertinente a la consulta, no necesariamente lo último catalogado. Cambia qué ficha sale primera. Conviene probarlo con el acervo de la institución antes de dejarlo como predeterminado: un orden que sirve en un fondo de libros puede no ser el que espera quien busca expedientes.</p>
-<p>Si ese orden no encaja, el catálogo no queda atado a él. Se puede volver al orden de catálogo —el de siempre, por ficha o por fecha— y dejar la relevancia apagada. O se puede ajustar el esquema para que unos campos pesen más que otros, según cómo se consulta ese acervo: un catálogo que se busca sobre todo por título no debería ordenar igual que uno que se busca por materia o por expediente.</p>
+<p>La relevancia pone primero lo más pertinente a la consulta, no necesariamente
+lo último catalogado. Cambia qué ficha sale primera. Conviene probarlo con el
+acervo de la institución antes de dejarlo como predeterminado: un orden que
+sirve en un fondo de libros puede no ser el que espera quien busca expedientes.</p>
+<p>Si ese orden no encaja, el catálogo no queda atado a él. Se puede volver al
+orden de catálogo —el de siempre, por ficha o por fecha— y dejar la relevancia
+apagada. O se puede ajustar el esquema para que unos campos pesen más que
+otros, según cómo se consulta ese acervo: un catálogo que se busca sobre todo
+por título no debería ordenar igual que uno que se busca por materia o por
+expediente.</p>
 <h2>Plurales, acentos y formas derivadas</h2>
-<p>El motor reconoce plurales y formas derivadas. Trae español, inglés y portugués; se pueden añadir otras lenguas y otras formas cuando el catálogo las necesite. <em>Residencia</em> y <em>residencias</em> alimentan la misma búsqueda. Tampoco distingue acentos al coincidir: <em>espanola</em> encuentra el encabezamiento <em>española</em>. Eso no sustituye el <a href="/blog/control-de-autoridades-y-vocabularios/">control de autoridades</a>: la forma autorizada sigue siendo la del fichero; la palabra clave es una coincidencia sobre índices.</p>
+<p>El motor reconoce plurales y formas derivadas. Trae español, inglés y
+portugués; se pueden añadir otras lenguas y otras formas cuando el catálogo las
+necesite. <em>Residencia</em> y <em>residencias</em> alimentan la misma búsqueda. Tampoco
+distingue acentos al coincidir: <em>espanola</em> encuentra el encabezamiento
+<em>española</em>. Eso no sustituye el <a href="/blog/control-de-autoridades-y-vocabularios/">control de
+autoridades</a>: la forma autorizada
+sigue siendo la del fichero; la palabra clave es una coincidencia sobre
+índices.</p>
 <h2>Cuando no hay coincidencia exacta</h2>
-<p>Si no hay resultados exactos, puede sugerir el término más cercano: un error de tipeo o un OCR imperfecto. En el sumario aparece un fragmento con las palabras de la consulta marcadas. Al teclear, las sugerencias salen del propio acervo, no de un diccionario genérico.</p>
+<p>Si no hay resultados exactos, puede sugerir el término más cercano: un error de
+tipeo o un OCR imperfecto. En el sumario aparece un fragmento con las palabras
+de la consulta marcadas. Al teclear, las sugerencias salen del propio acervo,
+no de un diccionario genérico.</p>
 <h2>Qué no pasa por este motor</h2>
-<p>El índice invertido sigue siendo el comportamiento por defecto y el respaldo. Si no se activa el motor nuevo, la búsqueda por palabra clave se comporta como hasta ahora. El recorrido alfabético, el control de autoridades, el ISBN, el ISSN y la clasificación no pasan por ese motor.</p>
+<p>El índice invertido sigue siendo el comportamiento por defecto y el respaldo.
+Si no se activa el motor nuevo, la búsqueda por palabra clave se comporta como
+hasta ahora. El recorrido alfabético, el control de autoridades, el ISBN, el
+ISSN y la clasificación no pasan por ese motor.</p>
 <h2>Collect y el catálogo</h2>
-<p>Quien usa Collect para catalogar con IA sigue entregando registros a Janium. 2027 cambia cómo Janium busca por palabra clave, no cómo Collect produce los <a href="/blog/glosario/#punto-de-acceso">puntos de acceso</a>. Collect los aflora una vez; Janium los carga en sus índices. Un <a href="/blog/glosario/#rag">RAG</a> no sustituye ese catálogo. La relación está en <a href="/blog/puntos-de-acceso-texto-completo-y-rag/">Puntos de acceso, texto completo y RAG</a>.</p>
+<p>Quien usa Collect para catalogar con IA sigue entregando registros a Janium.
+2027 cambia cómo Janium busca por palabra clave, no cómo Collect produce los
+<a href="/blog/glosario/#punto-de-acceso">puntos de acceso</a>. Collect los aflora una vez;
+Janium los carga en sus índices. Un <a href="/blog/glosario/#rag">RAG</a> no sustituye ese
+catálogo. La relación está en <a href="/blog/puntos-de-acceso-texto-completo-y-rag/">Puntos de acceso, texto completo y
+RAG</a>.</p>
 <h2>Límites</h2>
-<p>La relevancia cambia el orden: hay que validarlo con quien cataloga y con cómo busca el público. Si no encaja, se vuelve al orden de catálogo o se ajustan los pesos. Al añadir una lengua o un conjunto de formas, el índice se reconstruye para que entren en la búsqueda. La sugerencia del término más cercano aparece cuando no hay coincidencia exacta; no reescribe la consulta si ya hubo resultados. Sin activar el motor, la búsqueda que ya está en uso no cambia.</p>
+<p>La relevancia cambia el orden: hay que validarlo con quien cataloga y con cómo
+busca el público. Si no encaja, se vuelve al orden de catálogo o se ajustan los
+pesos. Al añadir una lengua o un conjunto de formas, el índice se reconstruye
+para que entren en la búsqueda. La sugerencia del término más cercano aparece
+cuando no hay coincidencia exacta; no reescribe la consulta si ya hubo
+resultados. Sin activar el motor, la búsqueda que ya está en uso no cambia.</p>
 <h2>Para continuar la conversación</h2>
-<p>Si quieres ver cómo se comporta la relevancia con tu acervo —plurales, acentos, errores de tipeo— escríbenos a info@janium.com. Cómo buscan hoy cambia si conviene dejar el motor como predeterminado o probarlo primero.</p>
+<p>Si quieres ver cómo se comporta la relevancia con tu acervo —plurales, acentos,
+errores de tipeo— escríbenos a info@janium.com. Cómo buscan hoy cambia si
+conviene dejar el motor como predeterminado o probarlo primero.</p>
