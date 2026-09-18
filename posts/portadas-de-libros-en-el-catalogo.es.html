@@ -1,0 +1,56 @@
+<p>Cómo poner portadas de libros en el catálogo público es, para mucha
+biblioteca, un trabajo que no escala: alguien descarga la cubierta, la
+asocia al registro y pasa al siguiente. En un fondo de decenas de miles de
+títulos, las que faltan se quedan faltando. El lector ve una lista de
+fichas sin imagen; quien cataloga no tiene tiempo de completarlas a mano.</p>
+<p>En <a href="/blog/glosario/#janium">Janium</a> 2027, con el ISBN, el sistema puede
+buscar la portada en fuentes públicas y asociarla al registro. La versión
+está en <a href="/blog/janium-2027/">Janium 2027 ya está disponible</a>.</p>
+<h2>Con ISBN, Open Library y Google Books</h2>
+<p>La búsqueda usa el ISBN del registro. Con ese identificador consulta Open
+Library y Google Books, toma la cubierta cuando alguna de las dos la tiene
+y la deja asociada a la ficha. El OPAC y la vista de catalogación pueden
+mostrarla después, como cualquier otra imagen ya vinculada al registro.</p>
+<p>El ISBN es la llave. Es el identificador que esas fuentes públicas usan
+para el mismo libro. Un título o un autor no bastan para esa consulta: hay
+homónimos, ediciones y cubiertas distintas, y una coincidencia por nombre
+equivocaría la imagen.</p>
+<h2>Lo que ya está no se pisa</h2>
+<p>Si el registro ya tiene portada, 2027 no la reemplaza. La búsqueda
+automática cubre las que faltan. Una cubierta que la institución digitalizó,
+o que alguien asoció a mano, se queda.</p>
+<p>Eso importa en fondo antiguo, en ediciones locales y en cualquier título
+cuya cubierta real no es la que Open Library o Google Books tienen para
+ese ISBN —o para otro ISBN de la misma obra. La imagen que ya está en el
+sistema es la que vale.</p>
+<h2>Sin ISBN no hay búsqueda automática</h2>
+<p>Un registro sin ISBN no entra en esa consulta. Manuscritos, tesinas,
+ediciones anteriores al ISBN, material local sin número: la portada, si se
+quiere, se asocia a mano, como hasta ahora.</p>
+<p>Tampoco hay garantía de que las fuentes públicas tengan la cubierta. Un
+ISBN de una editorial pequeña, una edición agotada o un título de
+circulación restringida puede no devolver imagen. En ese caso el registro
+se reintenta más adelante; no se inventa una cubierta ni se toma la de otra
+edición.</p>
+<h2>Qué no es esta capacidad</h2>
+<p>Collect no busca portadas en Internet. Collect produce registros a partir
+del material de la institución; no consulta Open Library ni Google Books
+para ilustrar la ficha. La portada automática es de Janium, el
+<a href="/blog/glosario/#ils">ILS</a>, sobre registros que ya están en el catálogo y
+traen ISBN.</p>
+<p>Tras la actualización, la búsqueda de portadas se activa por institución.
+Si no se enciende, las cubiertas se comportan como hasta ahora: las que
+ya hay se ven, las que faltan siguen faltando.</p>
+<h2>Límites</h2>
+<p>Hace falta ISBN y que alguna de las dos fuentes tenga la imagen. Si no, el
+registro queda sin portada automática y se reintenta después. La cubierta
+que ya existe no se sustituye, aunque la fuente pública tenga otra.</p>
+<p>La búsqueda no distingue ediciones cuando el ISBN es el mismo, y no
+completa portadas de registros sin ISBN. Un acervo de archivo, de
+fototeca o de manuscritos no se cubre con esta capacidad: no es un problema
+de portadas de libro.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu catálogo tiene ISBN en una parte de la colección y quieres ver cuántas
+portadas faltarían por cubrir con Open Library y Google Books, escríbenos a
+info@janium.com. El porcentaje de registros con ISBN cambia si conviene
+encender la búsqueda al actualizar.</p>

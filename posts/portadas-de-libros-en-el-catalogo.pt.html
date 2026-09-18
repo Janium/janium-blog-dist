@@ -1,0 +1,55 @@
+<p>Como pôr capas de livros no catálogo público é, para muita biblioteca, um
+trabalho que não escala: alguém descarrega a capa, associa-a ao registo e
+passa ao seguinte. Num fundo de dezenas de milhares de títulos, as que
+faltam ficam a faltar. O leitor vê uma lista de fichas sem imagem; quem
+cataloga não tem tempo de as completar à mão.</p>
+<p>No <a href="/pt/blog/glosario/#janium">Janium</a> 2027, com o ISBN, o sistema pode
+procurar a capa em fontes públicas e associá-la ao registo. A versão está
+em <a href="/pt/blog/janium-2027/">O Janium 2027 já está disponível</a>.</p>
+<h2>Com ISBN, Open Library e Google Books</h2>
+<p>A pesquisa usa o ISBN do registo. Com esse identificador consulta a Open
+Library e o Google Books, toma a capa quando alguma das duas a tem e
+deixa-a associada à ficha. O OPAC e a vista de catalogação podem mostrá-la
+depois, como qualquer outra imagem já ligada ao registo.</p>
+<p>O ISBN é a chave. É o identificador que essas fontes públicas usam para o
+mesmo livro. Um título ou um autor não bastam para essa consulta: há
+homónimos, edições e capas distintas, e uma coincidência por nome
+equivocaria a imagem.</p>
+<h2>O que já está não se pisa</h2>
+<p>Se o registo já tem capa, o 2027 não a substitui. A pesquisa automática
+cobre as que faltam. Uma capa que a instituição digitalizou, ou que alguém
+associou à mão, fica.</p>
+<p>Isso importa em fundo antigo, em edições locais e em qualquer título cuja
+capa real não é a que a Open Library ou o Google Books têm para esse ISBN
+—ou para outro ISBN da mesma obra. A imagem que já está no sistema é a que
+vale.</p>
+<h2>Sem ISBN não há pesquisa automática</h2>
+<p>Um registo sem ISBN não entra nessa consulta. Manuscritos, teses, edições
+anteriores ao ISBN, material local sem número: a capa, se se quiser,
+associa-se à mão, como até agora.</p>
+<p>Tampouco há garantia de que as fontes públicas tenham a capa. Um ISBN de
+uma editora pequena, uma edição esgotada ou um título de circulação
+restrita pode não devolver imagem. Nesse caso o registo tenta-se mais
+tarde; não se inventa uma capa nem se toma a de outra edição.</p>
+<h2>O que esta capacidade não é</h2>
+<p>O Collect não procura capas na Internet. O Collect produz registos a
+partir do material da instituição; não consulta a Open Library nem o
+Google Books para ilustrar a ficha. A capa automática é do Janium, o
+<a href="/pt/blog/glosario/#ils">ILS</a>, sobre registos que já estão no catálogo e
+trazem ISBN.</p>
+<p>Após a atualização, a pesquisa de capas ativa-se por instituição. Se não
+se ligar, as capas comportam-se como até agora: as que já há vêem-se, as
+que faltam continuam a faltar.</p>
+<h2>Limites</h2>
+<p>É preciso ISBN e que alguma das duas fontes tenha a imagem. Se não, o
+registo fica sem capa automática e tenta-se depois. A capa que já existe
+não se substitui, ainda que a fonte pública tenha outra.</p>
+<p>A pesquisa não distingue edições quando o ISBN é o mesmo, e não completa
+capas de registos sem ISBN. Um acervo de arquivo, de fototeca ou de
+manuscritos não se cobre com esta capacidade: não é um problema de capas
+de livro.</p>
+<h2>Para continuar a conversa</h2>
+<p>Se o teu catálogo tem ISBN numa parte da coleção e queres ver quantas
+capas faltariam por cobrir com a Open Library e o Google Books,
+escreve-nos para info@janium.com. A percentagem de registos com ISBN muda
+se convém ligar a pesquisa ao atualizar.</p>

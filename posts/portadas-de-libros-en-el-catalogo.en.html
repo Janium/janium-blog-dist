@@ -1,0 +1,55 @@
+<p>How to put book covers in the public catalog is, for many libraries, work
+that does not scale: someone downloads the cover, attaches it to the
+record and moves on. In a holding of tens of thousands of titles, the ones
+that are missing stay missing. The reader sees a list of records without
+an image; whoever catalogs has no time to complete them by hand.</p>
+<p>In <a href="/en/blog/glosario/#janium">Janium</a> 2027, with the ISBN, the system can
+look up the cover in public sources and attach it to the record. The
+version is in <a href="/en/blog/janium-2027/">Janium 2027 is now available</a>.</p>
+<h2>With ISBN, Open Library and Google Books</h2>
+<p>The lookup uses the record’s ISBN. With that identifier it queries Open
+Library and Google Books, takes the cover when either has it, and leaves
+it attached to the record. The OPAC and the cataloging view can show it
+afterwards, like any other image already linked to the record.</p>
+<p>The ISBN is the key. It is the identifier those public sources use for the
+same book. A title or an author is not enough for that query: there are
+namesakes, editions and different covers, and a match by name would put
+the wrong image on the record.</p>
+<h2>What is already there is not overwritten</h2>
+<p>If the record already has a cover, 2027 does not replace it. Automatic
+lookup fills the ones that are missing. A cover the institution digitized,
+or that someone attached by hand, stays.</p>
+<p>That matters for rare books, local editions and any title whose real cover
+is not the one Open Library or Google Books have for that ISBN —or for
+another ISBN of the same work. The image already in the system is the one
+that counts.</p>
+<h2>Without an ISBN there is no automatic lookup</h2>
+<p>A record without an ISBN does not enter that query. Manuscripts, theses,
+pre-ISBN editions, local material without a number: the cover, if wanted,
+is attached by hand, as before.</p>
+<p>There is also no guarantee that the public sources have the cover. An ISBN
+from a small publisher, an out-of-print edition or a restricted-circulation
+title may return no image. In that case the record is retried later; a
+cover is not invented, and another edition’s is not taken.</p>
+<h2>What this capability is not</h2>
+<p>Collect does not look up covers on the Internet. Collect produces records
+from the institution’s material; it does not query Open Library or Google
+Books to illustrate the record. Automatic covers are Janium’s, the
+<a href="/en/blog/glosario/#ils">ILS</a>, over records already in the catalog that
+carry an ISBN.</p>
+<p>After the update, cover lookup is turned on per institution. If it is not
+turned on, covers behave as they do today: those that are there are seen,
+those that are missing stay missing.</p>
+<h2>Limits</h2>
+<p>An ISBN is required, and one of the two sources must have the image. If
+not, the record stays without an automatic cover and is retried later. An
+existing cover is not replaced, even if the public source has another.</p>
+<p>The lookup does not distinguish editions when the ISBN is the same, and it
+does not fill covers for records without an ISBN. An archival holding, a
+photo library or a manuscript collection is not covered by this
+capability: it is not a book-cover problem.</p>
+<h2>To continue the conversation</h2>
+<p>If your catalog has ISBNs on part of the collection and you want to see how
+many covers would still be missing after Open Library and Google Books,
+write to us at info@janium.com. The share of records with an ISBN changes
+whether it is worth turning the lookup on at update.</p>

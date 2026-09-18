@@ -1,7 +1,65 @@
 {
   "contract": 1,
-  "generated": "2026-09-15T10:57:40Z",
+  "generated": "2026-09-18T09:02:04Z",
   "posts": [
+    {
+      "slug": "portadas-de-libros-en-el-catalogo",
+      "date": "2026-09-18",
+      "datetime": "2026-09-18T09:10:00Z",
+      "tags": [
+        "janium",
+        "catalogo"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo poner portadas de libros en el catálogo público",
+          "description": "Cómo poner portadas de libros en el catálogo público de Janium 2027: con el ISBN, el sistema busca la cubierta en Open Library y Google Books y la asocia al registro. No reemplaza una portada que ya esté en el sistema. Sin ISBN no hay búsqueda automática.",
+          "cover": "assets/portadas-de-libros-en-el-catalogo-es-cover-a7b4b6ac.svg",
+          "html": "posts/portadas-de-libros-en-el-catalogo.es.html"
+        },
+        "en": {
+          "title": "How to put book covers in the public catalog",
+          "description": "How to put book covers in the Janium 2027 public catalog: with the ISBN, the system looks up the cover in Open Library and Google Books and attaches it to the record. It does not replace a cover already in the system. Without an ISBN there is no automatic lookup.",
+          "cover": "assets/portadas-de-libros-en-el-catalogo-en-cover-a7b4b6ac.svg",
+          "html": "posts/portadas-de-libros-en-el-catalogo.en.html"
+        },
+        "pt": {
+          "title": "Como pôr capas de livros no catálogo público",
+          "description": "Como pôr capas de livros no catálogo público do Janium 2027: com o ISBN, o sistema procura a capa na Open Library e no Google Books e associa-a ao registo. Não substitui uma capa que já esteja no sistema. Sem ISBN não há pesquisa automática.",
+          "cover": "assets/portadas-de-libros-en-el-catalogo-pt-cover-a7b4b6ac.svg",
+          "html": "posts/portadas-de-libros-en-el-catalogo.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "procesar-sin-exponer-datos-personales",
+      "date": "2026-09-18",
+      "datetime": "2026-09-18T09:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo procesar documentos con IA sin exponer datos personales",
+          "description": "Cómo procesar documentos con IA sin exponer datos personales: catalogar en local, sin que salga nada, o enviar a la nube una versión donde los identificadores de personas ya se sustituyeron. Dónde alcanza esa protección y dónde no.",
+          "cover": "assets/procesar-sin-exponer-datos-personales-es-cover-afe3490a.svg",
+          "html": "posts/procesar-sin-exponer-datos-personales.es.html"
+        },
+        "en": {
+          "title": "How to process documents with AI without exposing personal data",
+          "description": "How to process documents with AI without exposing personal data: catalog locally, with nothing leaving, or send to the cloud a version where person identifiers have already been replaced. Where that protection reaches and where it does not.",
+          "cover": "assets/procesar-sin-exponer-datos-personales-en-cover-afe3490a.svg",
+          "html": "posts/procesar-sin-exponer-datos-personales.en.html"
+        },
+        "pt": {
+          "title": "Como processar documentos com IA sem expor dados pessoais",
+          "description": "Como processar documentos com IA sem expor dados pessoais: catalogar em local, sem que saia nada, ou enviar para a nuvem uma versão em que os identificadores de pessoas já se substituíram. Onde essa proteção chega e onde não.",
+          "cover": "assets/procesar-sin-exponer-datos-personales-pt-cover-afe3490a.svg",
+          "html": "posts/procesar-sin-exponer-datos-personales.pt.html"
+        }
+      }
+    },
     {
       "slug": "ficha-en-el-opac",
       "date": "2026-09-14",

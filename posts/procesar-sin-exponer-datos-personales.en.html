@@ -1,0 +1,67 @@
+<p>How to process documents with AI without exposing personal data is not the
+same question as whether the material may leave the institution. That the
+facsimile not travel to a third-party model is document sovereignty; it is
+in <a href="/en/blog/soberania-de-datos/">Cataloging with AI without the material leaving the
+institution</a>. This text is about the other
+side: when something does leave, what happens to names, emails and person
+identifiers, and where that protection does not reach.</p>
+<p>A personnel file, a clinical card, a contract with amounts and signatures,
+the correspondence of a private fonds: all include data the institution is
+bound to protect. Describing that material with a frontier <a href="/en/blog/glosario/#modelo-de-lenguaje">language
+model</a> usually means sending text to
+a cloud service. The cloud performs better on many hard cases; sending
+personal data to a third party is what the protection framework seeks to
+avoid.</p>
+<h2>Local or hybrid</h2>
+<p>Collect works with two modes. The difference is what leaves the
+institution’s server.</p>
+<ul>
+<li><strong>Local.</strong> Processing happens entirely on the server. Nothing leaves. It
+  is the mode for documents where the risk of a third party seeing the
+  content is unacceptable: court files, medical data, classified
+  documents. Quality depends on the local model of that installation.</li>
+<li><strong>Hybrid.</strong> A local model does a first reading. If refinement is needed,
+  what goes to the cloud is a version where direct identifiers —names,
+  emails, phone numbers, documentary identifiers, amounts— have already
+  been replaced by <a href="/en/blog/glosario/#anonimizacion">markers</a>. On return,
+  they are restored. It covers most institutional holdings, where
+  documents mention officials, organizations and dates.</li>
+</ul>
+<p>The choice is of whoever knows the material. The same holding may have
+series that admit the hybrid and others that require local. It is worth
+deciding by document type before configuring, not after.</p>
+<p>There is a case that looks local and is not. In some installations the
+image of the document is read on the server and does not leave; what may
+go to the cloud is catalog text already extracted. The facsimile stays.
+The record does not. The anonymization in this post applies to that text.
+If the record cannot leave either, processing stays local.</p>
+<h2>What is replaced</h2>
+<p>Direct identifiers are replaced: person names, emails, phone numbers,
+social-media accounts, amounts and documentary identifiers. The name of a
+public institution in an archival description is not treated as personal
+data: hiding it protects no one and makes cataloging harder.</p>
+<p>The institution decides which categories to apply. What is sent is the
+text already replaced, not the original datum. Whoever must account for
+the processing can know, for a given document, what left and what did not.</p>
+<h2>Limits</h2>
+<p>Anonymization protects direct identifiers. It does not protect against
+contextual re-identification. A long text, even without names, may bring
+together date, post, place and procedure so that someone with knowledge of
+the context can deduce who is being talked about.</p>
+<p>It is not exhaustive either: an uncommon identifier, a name not recognized
+as a person, or personal data said indirectly may pass. It reduces
+exposure; it does not eliminate it.</p>
+<p>For material where re-identification would be unacceptable, the answer is
+not to tune the technique, but to stay local and send nothing. The hybrid
+covers most institutional holdings; it does not cover all. And reading the
+image on site is not the same as keeping the record on site.</p>
+<p>Trust in a catalog made with AI —provenance, evaluation, marking of what
+was inferred— is in <a href="/en/blog/confiar-en-catalogo-con-ia/">Why trust a catalog made with
+AI</a>. This post covers what leaves the
+server when there is personal data.</p>
+<h2>To continue the conversation</h2>
+<p>Which material may leave with its data replaced and which must stay inside
+is the institution’s decision, and it depends on each series more than on
+a technical capability. If you are evaluating a holding with personal data
+and want to review which mode belongs to each part, write to us at
+info@janium.com.</p>

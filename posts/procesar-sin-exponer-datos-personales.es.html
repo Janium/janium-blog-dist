@@ -1,0 +1,68 @@
+<p>Cómo procesar documentos con IA sin exponer datos personales no es la
+misma pregunta que si el material puede salir de la institución. Que el
+facsímil no viaje a un modelo de terceros es soberanía del documento; está
+en <a href="/blog/soberania-de-datos/">Catalogar con IA sin que el material salga de la
+institución</a>. Este texto trata de lo otro:
+cuando algo sí sale, qué ocurre con los nombres, correos e identificadores
+de personas, y dónde esa protección no alcanza.</p>
+<p>Un expediente de personal, una ficha clínica, un contrato con montos y
+firmas, la correspondencia de un fondo privado: todos incluyen datos que
+la institución tiene la obligación de proteger. Describir ese material con
+un <a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> de frontera
+suele significar enviar texto a un servicio en la nube. La nube rinde
+mejor en muchos casos difíciles; enviar datos personales a un tercero es
+lo que el marco de protección busca evitar.</p>
+<h2>Local o híbrido</h2>
+<p>Collect trabaja con dos modos. La diferencia es qué sale del servidor de
+la institución.</p>
+<ul>
+<li><strong>Local.</strong> El procesamiento ocurre por completo en el servidor. No sale
+  nada. Es el modo para documentos donde el riesgo de que un tercero vea
+  el contenido es inaceptable: expedientes judiciales, datos médicos,
+  documentos clasificados. La calidad depende del modelo local de esa
+  instalación.</li>
+<li><strong>Híbrido.</strong> Un modelo local hace una primera lectura. Si hace falta
+  refinar, a la nube va una versión donde los identificadores directos —
+  nombres, correos, teléfonos, identificadores documentales, montos— ya se
+  sustituyeron por <a href="/blog/glosario/#anonimizacion">marcadores</a>. Al volver,
+  se restauran. Cubre la mayoría de acervos institucionales, donde los
+  documentos mencionan funcionarios, organizaciones y fechas.</li>
+</ul>
+<p>La elección es de quien conoce el material. Un mismo acervo puede tener
+series que admiten el híbrido y otras que exigen el local. Conviene
+decidirlo por tipo de documento antes de configurar, no después.</p>
+<p>Hay un caso que parece local y no lo es. En algunas instalaciones la
+imagen del documento se lee en el servidor y no sale; lo que puede ir a la
+nube es el texto de catálogo ya extraído. El facsímil se queda. El
+registro, no. La anonimización de este post aplica a ese texto. Si tampoco
+puede salir el registro, el procesamiento se queda en local.</p>
+<h2>Qué se sustituye</h2>
+<p>Se sustituyen identificadores directos: nombres de persona, correos,
+teléfonos, cuentas de redes, montos e identificadores documentales. Un
+nombre de institución pública en una descripción archivística no se trata
+como dato personal: ocultarlo no protege a nadie y dificulta catalogar.</p>
+<p>La institución decide qué categorías aplicar. Lo que se envía es el texto
+ya sustituido, no el dato original. Quien tiene que rendir cuentas del
+tratamiento puede saber, de un documento concreto, qué salió y qué no.</p>
+<h2>Límites</h2>
+<p>La anonimización protege identificadores directos. No protege contra la
+re-identificación contextual. Un texto largo, aun sin nombres, puede
+reunir fecha, cargo, lugar y trámite de forma que alguien con conocimiento
+del contexto deduzca de quién se habla.</p>
+<p>Tampoco es exhaustiva: un identificador poco habitual, un nombre que no se
+reconoció como persona, o un dato personal dicho de modo indirecto pueden
+pasar. Reduce la exposición; no la elimina.</p>
+<p>Para el material donde la re-identificación sería inaceptable, la respuesta
+no es afinar la técnica, sino quedarse en local y no enviar nada. El
+híbrido cubre la mayoría de los acervos institucionales; no cubre todos.
+Y leer la imagen en casa no equivale a dejar el registro en casa.</p>
+<p>La confianza en un catálogo hecho con IA —procedencia, evaluación, marca de
+lo inferido— está en <a href="/blog/confiar-en-catalogo-con-ia/">Por qué confiar en un catálogo hecho con
+IA</a>. Este post cubre qué sale del
+servidor cuando hay datos personales.</p>
+<h2>Para continuar la conversación</h2>
+<p>Qué material admite salir con sus datos sustituidos y cuál debe quedarse
+dentro es decisión de la institución, y depende de cada serie más que de
+una capacidad técnica. Si estás evaluando un acervo con datos personales y
+quieres revisar qué modo corresponde a cada parte, escríbenos a
+info@janium.com.</p>
