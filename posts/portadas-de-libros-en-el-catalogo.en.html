@@ -1,8 +1,8 @@
 <p>How to put book covers in the public catalog is, for many libraries, work
 that does not scale: someone downloads the cover, attaches it to the
-record and moves on. In a holding of tens of thousands of titles, the ones
-that are missing stay missing. The reader sees a list of records without
-an image; whoever catalogs has no time to complete them by hand.</p>
+record and moves on. In a holding of tens of thousands of titles, whoever
+catalogs has no time to complete them by hand and the reader sees a list
+of records without an image.</p>
 <p>In <a href="/en/blog/glosario/#janium">Janium</a> 2027, with the ISBN, the system can
 look up the cover in public sources and attach it to the record. The
 version is in <a href="/en/blog/janium-2027/">Janium 2027 is now available</a>.</p>
@@ -15,7 +15,7 @@ afterwards, like any other image already linked to the record.</p>
 same book. A title or an author is not enough for that query: there are
 namesakes, editions and different covers, and a match by name would put
 the wrong image on the record.</p>
-<h2>What is already there is not overwritten</h2>
+<h2>Existing covers are kept</h2>
 <p>If the record already has a cover, 2027 does not replace it. Automatic
 lookup fills the ones that are missing. A cover the institution digitized,
 or that someone attached by hand, stays.</p>
@@ -38,8 +38,8 @@ Books to illustrate the record. Automatic covers are Janium’s, the
 <a href="/en/blog/glosario/#ils">ILS</a>, over records already in the catalog that
 carry an ISBN.</p>
 <p>After the update, cover lookup is turned on per institution. If it is not
-turned on, covers behave as they do today: those that are there are seen,
-those that are missing stay missing.</p>
+turned on, covers behave as they do today: the ones already attached are
+shown.</p>
 <h2>Limits</h2>
 <p>An ISBN is required, and one of the two sources must have the image. If
 not, the record stays without an automatic cover and is retried later. An
