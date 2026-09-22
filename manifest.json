@@ -1,7 +1,65 @@
 {
   "contract": 1,
-  "generated": "2026-09-19T08:25:27Z",
+  "generated": "2026-09-22T11:22:37Z",
   "posts": [
+    {
+      "slug": "correctores-deterministas",
+      "date": "2026-09-22",
+      "datetime": "2026-09-22T11:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo calcular el número Cutter y el nivel ISAD-G",
+          "description": "Collect calcula el número Cutter (Dewey y LC) y el código de nivel ISAD-G con la tabla o el algoritmo publicados. No usa el valor que proponga el modelo para esos campos.",
+          "cover": "assets/correctores-deterministas-es-cover-9e5b36a5.svg",
+          "html": "posts/correctores-deterministas.es.html"
+        },
+        "en": {
+          "title": "How to calculate the Cutter number and the ISAD-G level",
+          "description": "Collect calculates the Cutter number (Dewey and LC) and the ISAD-G level code with the published table or algorithm. It does not use the value the model proposes for those fields.",
+          "cover": "assets/correctores-deterministas-en-cover-9e5b36a5.svg",
+          "html": "posts/correctores-deterministas.en.html"
+        },
+        "pt": {
+          "title": "Como calcular o número Cutter e o nível ISAD-G",
+          "description": "O Collect calcula o número Cutter (Dewey e LC) e o código de nível ISAD-G com a tabela ou o algoritmo publicados. Não usa o valor que o modelo proponha para esses campos.",
+          "cover": "assets/correctores-deterministas-pt-cover-9e5b36a5.svg",
+          "html": "posts/correctores-deterministas.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "soporte-cdwa",
+      "date": "2026-09-22",
+      "datetime": "2026-09-22T10:55:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo catalogar obras de arte en CDWA con el vocabulario Getty",
+          "description": "Collect produce registros CDWA Lite para obras de arte y objetos culturales: creador con su función, técnica y soporte, obra y reproducción, y enlace a ULAN, AAT y TGN cuando la coincidencia es exacta.",
+          "cover": "assets/soporte-cdwa-es-cover-830d7e2f.svg",
+          "html": "posts/soporte-cdwa.es.html"
+        },
+        "en": {
+          "title": "How to catalog works of art in CDWA with the Getty vocabulary",
+          "description": "Collect produces CDWA Lite records for works of art and cultural objects: creator with role, technique and support, work and reproduction, and links to ULAN, AAT and TGN when the match is exact.",
+          "cover": "assets/soporte-cdwa-en-cover-830d7e2f.svg",
+          "html": "posts/soporte-cdwa.en.html"
+        },
+        "pt": {
+          "title": "Como catalogar obras de arte em CDWA com o vocabulário Getty",
+          "description": "O Collect produz registos CDWA Lite para obras de arte e objetos culturais: criador com a sua função, técnica e suporte, obra e reprodução, e ligação a ULAN, AAT e TGN quando a coincidência é exacta.",
+          "cover": "assets/soporte-cdwa-pt-cover-830d7e2f.svg",
+          "html": "posts/soporte-cdwa.pt.html"
+        }
+      }
+    },
     {
       "slug": "portadas-de-libros-en-el-catalogo",
       "date": "2026-09-18",
@@ -187,19 +245,19 @@
       "translations": {
         "es": {
           "title": "Cómo generar registros MARC21 y UNIMARC con IA",
-          "description": "Cómo Janium Collect genera registros MARC21 y UNIMARC con IA, cuándo se usa cada uno, y cómo entrega ese registro en texto MarcEdit, MARCXML, MARC binario o FLAT, según lo que el catálogo receptor espera.",
+          "description": "Cómo Janium Collect genera registros MARC21 y UNIMARC con IA, cuándo se usa cada uno, y cómo entrega ese registro en texto MarcEdit, MARCXML, MARC binario o archivo plano (FLAT), según lo que el catálogo receptor espera.",
           "cover": "assets/formatos-bibliograficos-marc-es-cover-86dc1a2a.svg",
           "html": "posts/formatos-bibliograficos-marc.es.html"
         },
         "en": {
           "title": "How to generate MARC21 and UNIMARC records with AI",
-          "description": "How Janium Collect generates MARC21 and UNIMARC records with AI, when each is used, and how it delivers that record as MarcEdit text, MARCXML, binary MARC or FLAT, according to what the receiving catalog expects.",
+          "description": "How Janium Collect generates MARC21 and UNIMARC records with AI, when each is used, and how it delivers that record as MarcEdit text, MARCXML, binary MARC or a flat file (FLAT), according to what the receiving catalog expects.",
           "cover": "assets/formatos-bibliograficos-marc-en-cover-86dc1a2a.svg",
           "html": "posts/formatos-bibliograficos-marc.en.html"
         },
         "pt": {
           "title": "Como gerar registos MARC21 e UNIMARC com IA",
-          "description": "Como o Janium Collect gera registos MARC21 e UNIMARC com IA, quando se usa cada um, e como entrega esse registo em texto MarcEdit, MARCXML, MARC binário ou FLAT, conforme o que o catálogo recetor espera.",
+          "description": "Como o Janium Collect gera registos MARC21 e UNIMARC com IA, quando se usa cada um, e como entrega esse registo em texto MarcEdit, MARCXML, MARC binário ou ficheiro plano (FLAT), conforme o que o catálogo recetor espera.",
           "cover": "assets/formatos-bibliograficos-marc-pt-cover-86dc1a2a.svg",
           "html": "posts/formatos-bibliograficos-marc.pt.html"
         }
