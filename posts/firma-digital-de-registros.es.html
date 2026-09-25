@@ -1,0 +1,47 @@
+<p>Janium Collect puede firmar el PDF que entra al flujo de catalogación. La
+firma es PKCS#7: un archivo <code>.p7s</code> junto al documento. El PDF no se
+modifica. Se comprueba con herramientas estándar, sin el software de
+Janium.</p>
+<p>El cálculo es este: se obtiene una huella SHA-256 del archivo y se cifra
+con el certificado de la institución. Si hay autoridad de sellado de
+tiempo (TSA), se añade un sello RFC 3161. Firma y sello se activan por
+institución.</p>
+<h2>Qué prueba la firma</h2>
+<p>Si el PDF cambia después de firmado, la verificación falla. El
+certificado identifica a la institución que firmó. La fecha cierta existe
+solo con el sello de tiempo. Sin sello hay integridad y origen. No hay
+fecha cierta.</p>
+<p>La firma no dice si el contenido es verdadero. Dice que el archivo no
+cambió después de firmado.</p>
+<h2>Cuándo se usa</h2>
+<p>Se usa cuando el escaneo tiene que sostenerse frente a un tercero:
+digitalización con valor probatorio, contratos y actas, archivos de
+dependencias públicas. Una fototeca de consulta suele no necesitarla.</p>
+<h2>México: NOM-151 y LFEA</h2>
+<p>La NOM-151-SCFI-2016 pide hash, sello de tiempo de un prestador de
+servicios de certificación (PSC) acreditado y firma del responsable, para
+que el digitalizado tenga validez equivalente al papel. Collect genera
+hash SHA-256, firma y sello RFC 3161. El sello tiene que emitirlo un PSC
+acreditado por la Secretaría de Economía. Con una TSA de pruebas no se
+cumple la NOM-151.</p>
+<p>La Ley de Firma Electrónica Avanzada (LFEA, 2012) cubre la firma en la
+Administración Pública Federal, con certificado del SAT (e.firma) u otra
+autoridad reconocida. Collect acepta esos certificados en PKCS#12.</p>
+<h2>Unión Europea: eIDAS</h2>
+<p>El reglamento eIDAS (UE 910/2014) distingue firma simple, avanzada y
+cualificada. Collect produce una firma electrónica avanzada (artículo
+26): vinculada al firmante, lo identifica, se crea con datos bajo su
+control y detecta cambios posteriores. La firma cualificada (QES) pide un
+dispositivo cualificado, por ejemplo un HSM, y un certificado de un
+prestador cualificado. Eso no lo da el módulo por sí solo.</p>
+<h2>Límites</h2>
+<p>Collect firma PDF cuando el archivo se va a conservar o publicar. No
+firma un PDF temporal que luego se borra. No mete la firma dentro del
+PDF. No valida el contenido. Cada operación queda en un registro de
+auditoría.</p>
+<p>El valor jurídico lo evalúa quien aplica la norma. Collect entrega los
+elementos técnicos.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si digitalizas documentos que tienen que sostenerse frente a un tercero,
+y quieres ver cómo encaja esto con el certificado y el marco que te
+aplican, escríbenos a info@janium.com.</p>

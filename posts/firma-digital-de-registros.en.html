@@ -1,0 +1,48 @@
+<p>Janium Collect can sign the PDF that enters the cataloging flow. The
+signature is PKCS#7: a <code>.p7s</code> file next to the document. The PDF is not
+modified. It is checked with standard tools, without Janium software.</p>
+<p>The calculation is this: a SHA-256 hash of the file is taken and
+encrypted with the institution’s certificate. If a time-stamping
+authority (TSA) is available, an RFC 3161 timestamp is added. Signature
+and timestamp are turned on per institution.</p>
+<h2>What the signature proves</h2>
+<p>If the PDF changes after it was signed, verification fails. The
+certificate identifies the institution that signed. A certain date exists
+only with the timestamp. Without a timestamp there is integrity and
+origin. There is no certain date.</p>
+<p>The signature does not say whether the content is true. It says the file
+did not change after it was signed.</p>
+<h2>When it is used</h2>
+<p>It is used when the scan has to stand up to a third party: digitization
+with evidential value, contracts and minutes, archives of public bodies.
+A picture library used for consultation usually does not need it.</p>
+<h2>Mexico: NOM-151 and LFEA</h2>
+<p>NOM-151-SCFI-2016 requires a hash, a timestamp from an accredited
+certification service provider (PSC) and the responsible person’s
+signature, so the digitized file has the same evidential value as paper.
+Collect produces a SHA-256 hash, the signature and an RFC 3161 timestamp.
+The timestamp has to come from a PSC accredited by the Secretaría de
+Economía. A test TSA does not meet NOM-151.</p>
+<p>The Advanced Electronic Signature Act (LFEA, 2012) covers signature in
+the Federal Public Administration, with a SAT certificate (e.firma) or
+another recognized authority. Collect accepts those certificates in
+PKCS#12.</p>
+<h2>European Union: eIDAS</h2>
+<p>The eIDAS regulation (EU 910/2014) distinguishes simple, advanced and
+qualified signatures. Collect produces an advanced electronic signature
+(Article 26): linked to the signer, identifies them, created with data
+under their control and able to detect later changes. A qualified
+signature (QES) needs a qualified device, for example an HSM, and a
+certificate from a qualified trust service provider. The module does not
+supply that by itself.</p>
+<h2>Limits</h2>
+<p>Collect signs PDFs when the file will be kept or published. It does not
+sign a temporary PDF that is then deleted. It does not embed the
+signature in the PDF. It does not validate the content. Each operation is
+written to an audit log.</p>
+<p>Legal effect is assessed by whoever applies the rule. Collect delivers
+the technical elements.</p>
+<h2>To continue the conversation</h2>
+<p>If you digitize documents that have to stand up to a third party, and you
+want to see how this fits the certificate and the framework that apply to
+you, write to us at info@janium.com.</p>

@@ -1,7 +1,65 @@
 {
   "contract": 1,
-  "generated": "2026-09-22T11:22:37Z",
+  "generated": "2026-09-25T05:55:52Z",
   "posts": [
+    {
+      "slug": "codigo-al-correo-y-caducidad",
+      "date": "2026-09-25",
+      "datetime": "2026-09-25T06:05:00Z",
+      "tags": [
+        "janium",
+        "acceso"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo reforzar el acceso a Janium: código al correo y caducidad de contraseña",
+          "description": "Janium 2027 puede pedir un código de seis dígitos a quien tiene correo en el perfil, y una contraseña nueva cuando vence el plazo. Sin correo, el ingreso queda como hasta ahora.",
+          "cover": "assets/codigo-al-correo-y-caducidad-es-cover-a3fc1304.svg",
+          "html": "posts/codigo-al-correo-y-caducidad.es.html"
+        },
+        "en": {
+          "title": "How to add an email code and password expiry to Janium",
+          "description": "Janium 2027 can ask for a six-digit code from anyone who has email on the profile, and a new password when the period ends. With no email, sign-in stays as it is.",
+          "cover": "assets/codigo-al-correo-y-caducidad-en-cover-a3fc1304.svg",
+          "html": "posts/codigo-al-correo-y-caducidad.en.html"
+        },
+        "pt": {
+          "title": "Como reforçar o acesso ao Janium: código no correio e caducidade da palavra-passe",
+          "description": "O Janium 2027 pode pedir um código de seis dígitos a quem tem correio no perfil, e uma palavra-passe nova quando vence o prazo. Sem correio, a entrada fica como até agora.",
+          "cover": "assets/codigo-al-correo-y-caducidad-pt-cover-a3fc1304.svg",
+          "html": "posts/codigo-al-correo-y-caducidad.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "firma-digital-de-registros",
+      "date": "2026-09-25",
+      "datetime": "2026-09-25T06:02:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Cómo firmar el PDF catalogado (NOM-151 y eIDAS)",
+          "description": "Collect firma el PDF que se cataloga con PKCS#7 y, si hay autoridad de sellado, un sello de tiempo RFC 3161. Qué es esa firma, qué prueba y qué exige NOM-151, LFEA y eIDAS.",
+          "cover": "assets/firma-digital-de-registros-es-cover-b65e257e.svg",
+          "html": "posts/firma-digital-de-registros.es.html"
+        },
+        "en": {
+          "title": "How to sign the cataloged PDF (NOM-151 and eIDAS)",
+          "description": "Collect signs the PDF being cataloged with PKCS#7 and, if a time-stamping authority is available, an RFC 3161 timestamp. What that signature is, what it proves, and what NOM-151, LFEA and eIDAS require.",
+          "cover": "assets/firma-digital-de-registros-en-cover-b65e257e.svg",
+          "html": "posts/firma-digital-de-registros.en.html"
+        },
+        "pt": {
+          "title": "Como assinar o PDF catalogado (NOM-151 e eIDAS)",
+          "description": "O Collect assina o PDF que se cataloga com PKCS#7 e, se há autoridade de selagem, um selo temporal RFC 3161. O que é essa assinatura, o que prova e o que exigem NOM-151, LFEA e eIDAS.",
+          "cover": "assets/firma-digital-de-registros-pt-cover-b65e257e.svg",
+          "html": "posts/firma-digital-de-registros.pt.html"
+        }
+      }
+    },
     {
       "slug": "correctores-deterministas",
       "date": "2026-09-22",

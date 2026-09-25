@@ -1,0 +1,47 @@
+<p>O Janium Collect pode assinar o PDF que entra no fluxo de catalogação. A
+assinatura é PKCS#7: um ficheiro <code>.p7s</code> junto ao documento. O PDF não se
+modifica. Comprova-se com ferramentas padrão, sem o software da Janium.</p>
+<p>O cálculo é este: obtém-se um hash SHA-256 do ficheiro e cifra-se com o
+certificado da instituição. Se há autoridade de selagem temporal
+(TSA), acrescenta-se um selo RFC 3161. Assinatura e selo activam-se por
+instituição.</p>
+<h2>O que a assinatura prova</h2>
+<p>Se o PDF mudar depois de assinado, a verificação falha. O certificado
+identifica a instituição que assinou. A data certa existe só com o selo
+temporal. Sem selo há integridade e origem. Não há data certa.</p>
+<p>A assinatura não diz se o conteúdo é verdadeiro. Diz que o ficheiro não
+mudou depois de assinado.</p>
+<h2>Quando se usa</h2>
+<p>Usa-se quando a digitalização tem de sustentar-se perante um terceiro:
+digitalização com valor probatório, contratos e actas, arquivos de
+organismos públicos. Uma fototeca de consulta costuma não precisar dela.</p>
+<h2>México: NOM-151 e LFEA</h2>
+<p>A NOM-151-SCFI-2016 pede hash, selo temporal de um prestador de serviços
+de certificação (PSC) acreditado e assinatura do responsável, para que o
+digitalizado tenha validade equivalente ao papel. O Collect gera hash
+SHA-256, assinatura e selo RFC 3161. O selo tem de o emitir um PSC
+acreditado pela Secretaría de Economía. Com uma TSA de testes não se
+cumpre a NOM-151.</p>
+<p>A Lei de Assinatura Electrónica Avançada (LFEA, 2012) cobre a assinatura
+na Administração Pública Federal, com certificado do SAT (e.firma) ou
+outra autoridade reconhecida. O Collect aceita esses certificados em
+PKCS#12.</p>
+<h2>União Europeia: eIDAS</h2>
+<p>O regulamento eIDAS (UE 910/2014) distingue assinatura simples, avançada
+e qualificada. O Collect produz uma assinatura electrónica avançada
+(artigo 26): ligada ao signatário, identifica-o, cria-se com dados sob o
+seu controlo e detecta alterações posteriores. A assinatura qualificada
+(QES) pede um dispositivo qualificado, por exemplo um HSM, e um
+certificado de um prestador qualificado. Isso não o dá o módulo por si
+só.</p>
+<h2>Limites</h2>
+<p>O Collect assina PDF quando o ficheiro se vai conservar ou publicar. Não
+assina um PDF temporário que depois se apaga. Não mete a assinatura
+dentro do PDF. Não valida o conteúdo. Cada operação fica num registo de
+auditoria.</p>
+<p>O valor jurídico avalia-o quem aplica a norma. O Collect entrega os
+elementos técnicos.</p>
+<h2>Para continuar a conversa</h2>
+<p>Se digitalizas documentos que têm de sustentar-se perante um terceiro, e
+queres ver como isto encaixa com o certificado e o quadro que te
+aplicam, escreve-nos para info@janium.com.</p>
