@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-09-25T05:55:52Z",
+  "generated": "2026-09-25T06:30:14Z",
   "posts": [
     {
       "slug": "codigo-al-correo-y-caducidad",
@@ -12,19 +12,19 @@
       ],
       "translations": {
         "es": {
-          "title": "Cómo reforzar el acceso a Janium: código al correo y caducidad de contraseña",
+          "title": "Código al correo y caducidad de contraseña en Janium",
           "description": "Janium 2027 puede pedir un código de seis dígitos a quien tiene correo en el perfil, y una contraseña nueva cuando vence el plazo. Sin correo, el ingreso queda como hasta ahora.",
           "cover": "assets/codigo-al-correo-y-caducidad-es-cover-a3fc1304.svg",
           "html": "posts/codigo-al-correo-y-caducidad.es.html"
         },
         "en": {
-          "title": "How to add an email code and password expiry to Janium",
+          "title": "Email code and password expiry in Janium",
           "description": "Janium 2027 can ask for a six-digit code from anyone who has email on the profile, and a new password when the period ends. With no email, sign-in stays as it is.",
           "cover": "assets/codigo-al-correo-y-caducidad-en-cover-a3fc1304.svg",
           "html": "posts/codigo-al-correo-y-caducidad.en.html"
         },
         "pt": {
-          "title": "Como reforçar o acesso ao Janium: código no correio e caducidade da palavra-passe",
+          "title": "Código no correio e caducidade da palavra-passe no Janium",
           "description": "O Janium 2027 pode pedir um código de seis dígitos a quem tem correio no perfil, e uma palavra-passe nova quando vence o prazo. Sem correio, a entrada fica como até agora.",
           "cover": "assets/codigo-al-correo-y-caducidad-pt-cover-a3fc1304.svg",
           "html": "posts/codigo-al-correo-y-caducidad.pt.html"
@@ -41,19 +41,19 @@
       ],
       "translations": {
         "es": {
-          "title": "Cómo firmar el PDF catalogado (NOM-151 y eIDAS)",
+          "title": "Firma del PDF catalogado (NOM-151 y eIDAS)",
           "description": "Collect firma el PDF que se cataloga con PKCS#7 y, si hay autoridad de sellado, un sello de tiempo RFC 3161. Qué es esa firma, qué prueba y qué exige NOM-151, LFEA y eIDAS.",
           "cover": "assets/firma-digital-de-registros-es-cover-b65e257e.svg",
           "html": "posts/firma-digital-de-registros.es.html"
         },
         "en": {
-          "title": "How to sign the cataloged PDF (NOM-151 and eIDAS)",
+          "title": "Signature of the cataloged PDF (NOM-151 and eIDAS)",
           "description": "Collect signs the PDF being cataloged with PKCS#7 and, if a time-stamping authority is available, an RFC 3161 timestamp. What that signature is, what it proves, and what NOM-151, LFEA and eIDAS require.",
           "cover": "assets/firma-digital-de-registros-en-cover-b65e257e.svg",
           "html": "posts/firma-digital-de-registros.en.html"
         },
         "pt": {
-          "title": "Como assinar o PDF catalogado (NOM-151 e eIDAS)",
+          "title": "Assinatura do PDF catalogado (NOM-151 e eIDAS)",
           "description": "O Collect assina o PDF que se cataloga com PKCS#7 e, se há autoridade de selagem, um selo temporal RFC 3161. O que é essa assinatura, o que prova e o que exigem NOM-151, LFEA e eIDAS.",
           "cover": "assets/firma-digital-de-registros-pt-cover-b65e257e.svg",
           "html": "posts/firma-digital-de-registros.pt.html"
@@ -70,19 +70,19 @@
       ],
       "translations": {
         "es": {
-          "title": "Cómo calcular el número Cutter y el nivel ISAD-G",
+          "title": "El número Cutter y el nivel ISAD-G",
           "description": "Collect calcula el número Cutter (Dewey y LC) y el código de nivel ISAD-G con la tabla o el algoritmo publicados. No usa el valor que proponga el modelo para esos campos.",
           "cover": "assets/correctores-deterministas-es-cover-9e5b36a5.svg",
           "html": "posts/correctores-deterministas.es.html"
         },
         "en": {
-          "title": "How to calculate the Cutter number and the ISAD-G level",
+          "title": "The Cutter number and the ISAD-G level",
           "description": "Collect calculates the Cutter number (Dewey and LC) and the ISAD-G level code with the published table or algorithm. It does not use the value the model proposes for those fields.",
           "cover": "assets/correctores-deterministas-en-cover-9e5b36a5.svg",
           "html": "posts/correctores-deterministas.en.html"
         },
         "pt": {
-          "title": "Como calcular o número Cutter e o nível ISAD-G",
+          "title": "O número Cutter e o nível ISAD-G",
           "description": "O Collect calcula o número Cutter (Dewey e LC) e o código de nível ISAD-G com a tabela ou o algoritmo publicados. Não usa o valor que o modelo proponha para esses campos.",
           "cover": "assets/correctores-deterministas-pt-cover-9e5b36a5.svg",
           "html": "posts/correctores-deterministas.pt.html"
@@ -99,19 +99,19 @@
       ],
       "translations": {
         "es": {
-          "title": "Cómo catalogar obras de arte en CDWA con el vocabulario Getty",
+          "title": "Obras de arte en CDWA con el vocabulario Getty",
           "description": "Collect produce registros CDWA Lite para obras de arte y objetos culturales: creador con su función, técnica y soporte, obra y reproducción, y enlace a ULAN, AAT y TGN cuando la coincidencia es exacta.",
           "cover": "assets/soporte-cdwa-es-cover-830d7e2f.svg",
           "html": "posts/soporte-cdwa.es.html"
         },
         "en": {
-          "title": "How to catalog works of art in CDWA with the Getty vocabulary",
+          "title": "Works of art in CDWA with the Getty vocabulary",
           "description": "Collect produces CDWA Lite records for works of art and cultural objects: creator with role, technique and support, work and reproduction, and links to ULAN, AAT and TGN when the match is exact.",
           "cover": "assets/soporte-cdwa-en-cover-830d7e2f.svg",
           "html": "posts/soporte-cdwa.en.html"
         },
         "pt": {
-          "title": "Como catalogar obras de arte em CDWA com o vocabulário Getty",
+          "title": "Obras de arte em CDWA com o vocabulário Getty",
           "description": "O Collect produz registos CDWA Lite para obras de arte e objetos culturais: criador com a sua função, técnica e suporte, obra e reprodução, e ligação a ULAN, AAT e TGN quando a coincidência é exacta.",
           "cover": "assets/soporte-cdwa-pt-cover-830d7e2f.svg",
           "html": "posts/soporte-cdwa.pt.html"
