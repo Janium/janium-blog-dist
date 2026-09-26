@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-09-25T06:30:14Z",
+  "generated": "2026-09-26T07:09:03Z",
   "posts": [
     {
       "slug": "codigo-al-correo-y-caducidad",
@@ -112,7 +112,7 @@
         },
         "pt": {
           "title": "Obras de arte em CDWA com o vocabulário Getty",
-          "description": "O Collect produz registos CDWA Lite para obras de arte e objetos culturais: criador com a sua função, técnica e suporte, obra e reprodução, e ligação a ULAN, AAT e TGN quando a coincidência é exacta.",
+          "description": "O Collect produz registos CDWA Lite para obras de arte e objetos culturais: criador com a sua função, técnica e suporte, obra e reprodução, e ligação a ULAN, AAT e TGN quando a coincidência é exata.",
           "cover": "assets/soporte-cdwa-pt-cover-830d7e2f.svg",
           "html": "posts/soporte-cdwa.pt.html"
         }
@@ -199,7 +199,7 @@
         },
         "pt": {
           "title": "Como se mostra uma ficha de arquivo ou de livro no OPAC",
-          "description": "Como se mostra uma ficha de arquivo ou de livro no OPAC do Janium 2027: os campos curtos mantêm-se em lista, as notas longas lêem-se como parágrafo, e um processo com muitas notas passa inteiro a esse formato. Um ISAD-G não se apresenta da mesma forma que um livro de três campos.",
+          "description": "Como se mostra uma ficha de arquivo ou de livro no OPAC do Janium 2027: os campos curtos mantêm-se em lista, as notas longas leem-se como parágrafo, e um processo com muitas notas passa inteiro a esse formato. Um ISAD-G não se apresenta da mesma forma que um livro de três campos.",
           "cover": "assets/ficha-en-el-opac-pt-cover-dc595ace.svg",
           "html": "posts/ficha-en-el-opac.pt.html"
         }
@@ -228,7 +228,7 @@
         },
         "pt": {
           "title": "Como catalogar fichas noutra língua sem traduzir títulos nem nomes",
-          "description": "Como catalogar material noutra língua sem traduzir títulos nem nomes: o Collect traduz o vocabulário descritivo —tipo de objeto, técnica, matéria— e deixa intactos o título da obra, os nomes próprios, as datas, as inscrições e os identificadores. O título traduzido guarda-se como título alterno com a sua língua.",
+          "description": "Como catalogar material noutra língua sem traduzir títulos nem nomes: o Collect traduz o vocabulário descritivo —tipo de objeto, técnica, assunto— e deixa intactos o título da obra, os nomes próprios, as datas, as inscrições e os identificadores. O título traduzido guarda-se como título alterno com a sua língua.",
           "cover": "assets/fichas-en-otro-idioma-pt-cover-360f43ea.svg",
           "html": "posts/fichas-en-otro-idioma.pt.html"
         }
@@ -372,8 +372,8 @@
           "html": "posts/de-la-imagen-y-la-ficha-al-registro.en.html"
         },
         "pt": {
-          "title": "Da imagem e da ficha ao registro",
-          "description": "Como combinar a imagem de um objeto e a sua ficha para catalogar: o Collect toma o visível da reprodução e o dado documental da ficha, e produz um registro. O que nenhuma das duas fontes sustenta não se apresenta como verificado.",
+          "title": "Da imagem e da ficha ao registo",
+          "description": "Como combinar a imagem de um objeto e a sua ficha para catalogar: o Collect toma o visível da reprodução e o dado documental da ficha, e produz um registo. O que nenhuma das duas fontes sustenta não se apresenta como verificado.",
           "cover": "assets/de-la-imagen-y-la-ficha-al-registro-pt-cover-e13b2701.svg",
           "html": "posts/de-la-imagen-y-la-ficha-al-registro.pt.html"
         }
@@ -401,8 +401,8 @@
           "html": "posts/de-cualquier-formato-a-un-registro.en.html"
         },
         "pt": {
-          "title": "De qualquer formato a um registro",
-          "description": "Quais formatos de documento a IA pode catalogar com o Janium Collect: PDF, imagens e texto simples. Do PDF saem o registro de catálogo e um markdown estruturado para texto completo, consulta e, se for preciso, RAG.",
+          "title": "De qualquer formato a um registo",
+          "description": "Quais formatos de documento a IA pode catalogar com o Janium Collect: PDF, imagens e texto simples. Do PDF saem o registo de catálogo e um markdown estruturado para texto completo, consulta e, se for preciso, RAG.",
           "cover": "assets/de-cualquier-formato-a-un-registro-pt-cover-83e1fa4a.svg",
           "html": "posts/de-cualquier-formato-a-un-registro.pt.html"
         }
@@ -432,7 +432,7 @@
         },
         "pt": {
           "title": "Integrar a catalogação com IA ao seu catálogo (ILS)",
-          "description": "Como os registros do Collect chegam ao catálogo ou ILS —lote de carga, SFTP, pasta— e o que essa integração não faz: o Collect não mantém uma cópia sincronizada de cada ficha. No ISAD-G hierárquico o catálogo envia ao Collect a árvore e as datas para o bubble-up.",
+          "description": "Como os registos do Collect chegam ao catálogo ou ILS —lote de carga, SFTP, pasta— e o que essa integração não faz: o Collect não mantém uma cópia sincronizada de cada ficha. No ISAD-G hierárquico o catálogo envia ao Collect a árvore e as datas para o bubble-up.",
           "cover": "assets/del-registro-al-catalogo-pt-cover-66f77f59.svg",
           "html": "posts/del-registro-al-catalogo.pt.html"
         }
@@ -461,7 +461,7 @@
         },
         "pt": {
           "title": "Catalogar acervos audiovisuais — noticiários, gravações e vídeo",
-          "description": "Como o Janium Collect ajuda a descrever em escala um acervo audiovisual —noticiários, gravações sonoras, registros em vídeo de eventos— a partir da transcrição e dos fotogramas por cena, produzindo um registro pai e segmentos filhos no formato que a instituição usa.",
+          "description": "Como o Janium Collect ajuda a descrever em escala um acervo audiovisual —noticiários, gravações sonoras, registos em vídeo de eventos— a partir da transcrição e dos fotogramas por cena, produzindo um registo pai e segmentos filhos no formato que a instituição usa.",
           "cover": "assets/casos-audiovisual-pt-cover-ce9b3863.svg",
           "html": "posts/casos-audiovisual.pt.html"
         }
@@ -491,7 +491,7 @@
         },
         "pt": {
           "title": "Evitar que um lote degradado entre no catálogo: filtros de qualidade",
-          "description": "Como evitar que um lote degradado entre no catálogo: o Collect verifica as fontes na nuvem ao arrancar e detém a carga se se perderam ligações ao original ou um registro chegou incompleto. Falhar à vista, não produzir dados maus em silêncio.",
+          "description": "Como evitar que um lote degradado entre no catálogo: o Collect verifica as fontes na nuvem ao arrancar e detém a carga se se perderam ligações ao original ou um registo chegou incompleto. Falhar à vista, não produzir dados maus em silêncio.",
           "cover": "assets/confianza-operativa-pt-cover-d4f0bf8a.svg",
           "html": "posts/confianza-operativa.pt.html"
         }
@@ -519,8 +519,8 @@
           "html": "posts/control-de-autoridades-y-vocabularios.en.html"
         },
         "pt": {
-          "title": "Controle de autoridade: cada nome entra no catálogo de uma só forma",
-          "description": "O mesmo autor escrito de três maneiras são três pessoas no índice. O Collect confere cada nome e matéria contra as listas que a instituição já usa —seu catálogo, VIAF, ISNI, os vocabulários do Getty— e deixa escrito de que lista saiu a forma.",
+          "title": "Controlo de autoridade: cada nome entra no catálogo de uma só forma",
+          "description": "O mesmo autor escrito de três maneiras são três pessoas no índice. O Collect confere cada nome e assunto contra as listas que a instituição já usa —seu catálogo, VIAF, ISNI, os vocabulários do Getty— e deixa escrito de que lista saiu a forma.",
           "cover": "assets/control-de-autoridades-y-vocabularios-pt-cover-9cb88221.svg",
           "html": "posts/control-de-autoridades-y-vocabularios.pt.html"
         }
@@ -548,8 +548,8 @@
           "html": "posts/de-un-video-a-registros-enlazados.en.html"
         },
         "pt": {
-          "title": "Catalogar um vídeo de acervo com IA: da gravação a registros vinculados",
-          "description": "Um cinejornal ou uma sessão gravada não trazem o conteúdo escrito. O Collect propõe um registro do vídeo inteiro e, se faz falta, um registro por cena, vinculado ao primeiro.",
+          "title": "Catalogar um vídeo de acervo com IA: da gravação a registos vinculados",
+          "description": "Um cinejornal ou uma sessão gravada não trazem o conteúdo escrito. O Collect propõe um registo do vídeo inteiro e, se faz falta, um registo por cena, vinculado ao primeiro.",
           "cover": "assets/de-un-video-a-registros-enlazados-pt-cover-d5c3b989.svg",
           "html": "posts/de-un-video-a-registros-enlazados.pt.html"
         }
@@ -640,7 +640,7 @@
         },
         "pt": {
           "title": "Glossário: os termos de IA e catalogação deste blog",
-          "description": "Definições breves dos termos que atravessam esta série: da IA (modelo de linguagem ou LLM, RAG, modelo de fronteira, on-premise, air-gapped, anonimização, OCR, ASR), da catalogação (MARC21, Dublin Core, ISAD-G, CDWA, controle de autoridade) e do sistema Janium. Para quem vem de bibliotecas e arquivos e esbarra em jargão de IA, ou o contrário.",
+          "description": "Definições breves dos termos que atravessam esta série: da IA (modelo de linguagem ou LLM, RAG, modelo de fronteira, on-premise, air-gapped, anonimização, OCR, ASR), da catalogação (MARC21, Dublin Core, ISAD-G, CDWA, controlo de autoridade) e do sistema Janium. Para quem vem de bibliotecas e arquivos e esbarra em jargão de IA, ou o contrário.",
           "cover": "assets/glosario-pt-cover-d129439f.svg",
           "html": "posts/glosario.pt.html"
         }
@@ -669,8 +669,8 @@
           "html": "posts/confiar-en-catalogo-con-ia.en.html"
         },
         "pt": {
-          "title": "Por que confiar em um catálogo feito com IA",
-          "description": "Como um catálogo feito com IA se torna confiável: não negando que o modelo enriquece, mas sabendo de onde vem cada dado. Apoia-se na fonte que respalda cada um, na verificação contra autoridades, no cálculo determinístico dos campos com regra, na avaliação por registro e num filtro de qualidade que barra lotes degradados, com os limites explícitos.",
+          "title": "Por que confiar num catálogo feito com IA",
+          "description": "Como um catálogo feito com IA se torna confiável: não negando que o modelo enriquece, mas sabendo de onde vem cada dado. Apoia-se na fonte que respalda cada um, na verificação contra autoridades, no cálculo determinístico dos campos com regra, na avaliação por registo e num filtro de qualidade que barra lotes degradados, com os limites explícitos.",
           "cover": "assets/confiar-en-catalogo-con-ia-pt-cover-4bc2c5d9.svg",
           "html": "posts/confiar-en-catalogo-con-ia.pt.html"
         }
@@ -728,8 +728,8 @@
           "html": "posts/de-una-grabacion-sonora-a-un-registro.en.html"
         },
         "pt": {
-          "title": "De uma gravação sonora a um registro de catálogo",
-          "description": "Como o Janium Collect cataloga acervos com áudio — gravações sonoras, entrevistas, atas orais — transcrevendo a voz e produzindo um registro em Dublin Core, MARC ou ISAD-G, com a opção de segmentar por intervenção em registros filhos vinculados.",
+          "title": "De uma gravação sonora a um registo de catálogo",
+          "description": "Como o Janium Collect cataloga acervos com áudio — gravações sonoras, entrevistas, atas orais — transcrevendo a voz e produzindo um registo em Dublin Core, MARC ou ISAD-G, com a opção de segmentar por intervenção em registos filhos vinculados.",
           "cover": "assets/de-una-grabacion-sonora-a-un-registro-pt-cover-7b832801.svg",
           "html": "posts/de-una-grabacion-sonora-a-un-registro.pt.html"
         }
@@ -758,7 +758,7 @@
         },
         "pt": {
           "title": "De documentos avulsos a Fundo e Série: gerar a hierarquia ISAD-G automaticamente",
-          "description": "Como gerar automaticamente a hierarquia ISAD-G —Fundo, Seção, Série— ao catalogar: o exportador monta a árvore a partir do quadro de classificação, sobe aos níveis superiores o que a maioria dos filhos compartilha, e acrescenta intervalo de datas e volume.",
+          "description": "Como gerar automaticamente a hierarquia ISAD-G —Fundo, Secção, Série— ao catalogar: o exportador monta a árvore a partir do quadro de classificação, sobe aos níveis superiores o que a maioria dos filhos partilha, e acrescenta intervalo de datas e volume.",
           "cover": "assets/de-documentos-sueltos-a-fondo-y-serie-pt-cover-58c799d3.svg",
           "html": "posts/de-documentos-sueltos-a-fondo-y-serie.pt.html"
         }
@@ -788,7 +788,7 @@
         },
         "pt": {
           "title": "O que exigir de uma ferramenta de catalogação com IA",
-          "description": "Quase qualquer ferramenta de catalogação com IA parece boa numa demonstração. Estas são as perguntas que revelam se seus registros são confiáveis em seu catálogo, para além dessa primeira impressão: de onde vem cada dado, contra quais autoridades verifica, o que calcula com regra, se está correto na norma, se avalia cada registro, se se ajusta ao seu acervo, se respeita sua soberania e se é honesto sobre seus limites. Servem para avaliar qualquer fornecedor.",
+          "description": "Quase qualquer ferramenta de catalogação com IA parece boa numa demonstração. Estas são as perguntas que revelam se os seus registos são confiáveis no seu catálogo, para além dessa primeira impressão: de onde vem cada dado, contra quais autoridades verifica, o que calcula com regra, se está correto na norma, se avalia cada registo, se se ajusta ao seu acervo, se respeita a sua soberania e se é honesto sobre os seus limites. Servem para avaliar qualquer fornecedor.",
           "cover": "assets/que-exigir-catalogacion-con-ia-pt-cover-afcc7a1e.svg",
           "html": "posts/que-exigir-catalogacion-con-ia.pt.html"
         }
@@ -819,8 +819,8 @@
           "html": "posts/caso-colegio-la-salle.en.html"
         },
         "pt": {
-          "title": "O Colégio de La Salle: de uma planilha Excel de quatro campos a um sistema de biblioteca na nuvem",
-          "description": "A biblioteca de um colégio bilíngue de Bogotá tinha seu acervo em uma planilha com quatro colunas por livro. Como essa lista se transformou em registros MARC21 com o Collect, e em um sistema que hoje cataloga, empresta e publica seu catálogo em linha.",
+          "title": "O Colégio de La Salle: de uma folha de cálculo Excel de quatro campos a um sistema de biblioteca na nuvem",
+          "description": "A biblioteca de um colégio bilíngue de Bogotá tinha o seu acervo numa folha de cálculo com quatro colunas por livro. Como essa lista se transformou em registos MARC21 com o Collect, e num sistema que hoje cataloga, empresta e publica o seu catálogo em linha.",
           "cover": "assets/caso-colegio-la-salle-pt-cover-848ee0de.svg",
           "html": "posts/caso-colegio-la-salle.pt.html"
         }
@@ -850,7 +850,7 @@
         },
         "pt": {
           "title": "A Biblioteca Diocesana de Bilbao: catalogar um acervo de vinis a partir da fotografia do disco",
-          "description": "Um acervo antigo de gravações sonoras —discos de vinil de música religiosa em espanhol, basco e latim— é difícil de catalogar porque a informação vive na capa, não em uma base. Como a biblioteca o catalogou com o JaniumCollect a partir de fotografias.",
+          "description": "Um acervo antigo de gravações sonoras —discos de vinil de música religiosa em espanhol, basco e latim— é difícil de catalogar porque a informação vive na capa, não numa base. Como a biblioteca o catalogou com o JaniumCollect a partir de fotografias.",
           "cover": "assets/caso-diocesana-bilbao-pt-cover-848ee0de.svg",
           "html": "posts/caso-diocesana-bilbao.pt.html"
         }
@@ -879,8 +879,8 @@
           "html": "posts/generico-no-basta.en.html"
         },
         "pt": {
-          "title": "Genérico não basta: por que um catálogo de registro precisa de mais que um LLM que preenche campos",
-          "description": "Um LLM genérico já produz registros completos e verossímeis; enriquecer é o valor da IA na catalogação. O que um catálogo de registro precisa além disso é saber de onde vem cada dado: a fonte que respalda cada um, cálculo determinístico onde há regra, avaliação e marcação por registro, lógica da norma, multi-idioma. E os limites do enriquecimento a partir do conhecimento do modelo.",
+          "title": "Genérico não basta: por que um catálogo de registo precisa de mais que um LLM que preenche campos",
+          "description": "Um LLM genérico já produz registos completos e verossímeis; enriquecer é o valor da IA na catalogação. O que um catálogo de registo precisa além disso é saber de onde vem cada dado: a fonte que respalda cada um, cálculo determinístico onde há regra, avaliação e marcação por registo, lógica da norma, multi-idioma. E os limites do enriquecimento a partir do conhecimento do modelo.",
           "cover": "assets/generico-no-basta-pt-cover-76679e4c.svg",
           "html": "posts/generico-no-basta.pt.html"
         }

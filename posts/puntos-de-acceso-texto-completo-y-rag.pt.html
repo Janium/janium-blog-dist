@@ -3,17 +3,17 @@
 <h2>O que o RAG resolve, e onde fica curto</h2>
 <p>O <a href="/pt/blog/glosario/#rag">RAG</a> (geração aumentada por recuperação) parte de uma ideia sã: o modelo não tem de memorizar o acervo. Recuperam-se um punhado de fragmentos próximos da consulta e entregam-se-lhe para que redija uma resposta. Bem delimitado —poucos fragmentos, relevantes, abaixo da janela efetiva— o mesmo estudo encontra que a exatidão pode aproximar-se dos cem por cento. Esse é o uso que vale a pena defender: uma pergunta em linguagem natural sobre um conjunto de documentos, com uma resposta sintetizada.</p>
 <p>O limite aparece quando se trata o RAG como o índice do acervo. Recuperar mais para «não perder nada» empurra o prompt para além da janela efetiva: Paulsen observa que um RAG que injeta contagens altas de tokens <em>baixa</em> o desempenho em vez de o subir. A isso soma-se o que já se sabia: o modelo atende pior o que fica no meio do contexto (<a href="https://arxiv.org/abs/2307.03172">Liu et al., 2023</a>), e o corte do documento decide o que se pode recuperar. Um fragmento demasiado grande dilui; um demasiado pequeno corta a frase que importava.</p>
-<p>Para perguntar «o que diz este expediente sobre a cláusula X?» isso mitiga-se. Para <em>encontrar</em> num catálogo —o autor, a matéria, o título exato, todas as obras de uma pessoa, o volume que começa por uma letra— o gargalo não é a redação de uma resposta, mas ter pontos de acesso estáveis sobre os quais procurar e folhear.</p>
+<p>Para perguntar «o que diz este expediente sobre a cláusula X?» isso mitiga-se. Para <em>encontrar</em> num catálogo —o autor, o assunto, o título exato, todas as obras de uma pessoa, o volume que começa por uma letra— o gargalo não é a redação de uma resposta, mas ter pontos de acesso estáveis sobre os quais procurar e folhear.</p>
 <h2>O que o Collect deixa pronto para procurar</h2>
-<p>O <a href="/pt/blog/que-es-janium-collect/">Collect</a> usa o modelo no momento de descrever, não em cada consulta. Lê o material —um PDF, uma imagem, uma folha, uma gravação— e identifica a obra. Do documento <strong>aflora</strong> os <a href="/pt/blog/glosario/#punto-de-acceso">pontos de acesso</a>: os cabeçalhos pelos quais se vai encontrar o registo —nomes, matérias, títulos, datas— e, quando há coincidência, deixa-os em forma autorizada. Não são um parágrafo para o modelo: são as entradas que o <a href="/pt/blog/glosario/#janium">Janium</a> carrega nos seus índices.</p>
+<p>O <a href="/pt/blog/que-es-janium-collect/">Collect</a> usa o modelo no momento de descrever, não em cada consulta. Lê o material —um PDF, uma imagem, uma folha, uma gravação— e identifica a obra. Do documento <strong>aflora</strong> os <a href="/pt/blog/glosario/#punto-de-acceso">pontos de acesso</a>: os cabeçalhos pelos quais se vai encontrar o registo —nomes, assuntos, títulos, datas— e, quando há coincidência, deixa-os em forma autorizada. Não são um parágrafo para o modelo: são as entradas que o <a href="/pt/blog/glosario/#janium">Janium</a> carrega nos seus índices.</p>
 <p>É o que o catálogo já sabe procurar, em três vias que a ficha comercial do Janium distingue:</p>
 <ul>
 <li><strong>Por palavra-chave</strong> nos índices especializados que esses cabeçalhos alimentam.</li>
-<li><strong>Alfabética</strong> em autoridades: todas as obras de um autor, todas as matérias que começam por uma letra, o título na sua forma normalizada.</li>
+<li><strong>Alfabética</strong> em autoridades: todas as obras de um autor, todos os assuntos que começam por uma letra, o título na sua forma normalizada.</li>
 <li><strong>Texto completo</strong> nos objetos digitais vinculados, quando há um corpo a indexar.</li>
 </ul>
 <h2>Extensões corporativas</h2>
-<p>Num livro, os pontos de acesso bastam com autor, título e matéria. Num contrato, numa ata ou num relatório de gestão, o que é preciso encontrar não cabe nesses três. O Collect, quando o formato de saída leva <a href="/pt/blog/glosario/#extensiones-corporativas">extensões corporativas</a> (Dublin Core ou ISAD-G), extrai do documento um bloco à parte de cabeçalhos:</p>
+<p>Num livro, os pontos de acesso bastam com autor, título e assunto. Num contrato, numa ata ou num relatório de gestão, o que é preciso encontrar não cabe nesses três. O Collect, quando o formato de saída leva <a href="/pt/blog/glosario/#extensiones-corporativas">extensões corporativas</a> (Dublin Core ou ISAD-G), extrai do documento um bloco à parte de cabeçalhos:</p>
 <ul>
 <li>pessoas com o seu papel (signatário, representante, acreditado)</li>
 <li>organizações e o papel que desempenham</li>
@@ -22,7 +22,7 @@
 <li>garantias e colaterais</li>
 <li>cláusulas citadas, obrigações de fazer e restrições</li>
 <li>relações entre entidades que o texto declara</li>
-<li>lugares e matérias</li>
+<li>lugares e assuntos</li>
 </ul>
 <p>Não são uma análise jurídica nem uma segunda leitura do modelo no momento da consulta, mas campos: o Collect aflora-os uma vez e o Janium carrega-os como índices especializados, de modo que a consulta «contratos com esta pessoa, esta empresa e montantes acima de um limiar, assinados em tal ano» se resolve contra esses índices, não percorrendo o texto nem injetando-o outra vez no modelo.</p>
 <p>O que o documento não declara não se preenche. Uma cláusula cita-se se está e uma relação societária só se o texto a diz — o mesmo critério de sempre: completar o identificável, marcar proveniência e deixar vazio o que não se sustenta.</p>
@@ -40,4 +40,4 @@
 <li><strong>Embeddings / RAG</strong> — quando é preciso sintetizar ou comparar, com poucos fragmentos e a sabendas do limiar efetivo do modelo.</li>
 </ol>
 <p>O estudo de Paulsen não diz que o RAG esteja esgotado. Diz que o modelo deixa de aproveitar o contexto muito antes do que anuncia a ficha técnica, e que um RAG que ignora esse teto prejudica-se sozinho. O Collect usa o modelo onde rende —identificar e completar um registo, uma vez— e deixa no Janium um catálogo que não depende de voltar a caber nessa janela.</p>
-<p>Se a tua instituição está a avaliar se «pôr o acervo num RAG» substitui catalogá-lo, a pergunta útil é outra: que consultas tens de resolver todos os dias. As que se contestam com um ponto de acesso ou com uma frase do documento não precisam de gerar um parágrafo. As que sim, podem apoiar-se no markdown que o Collect já deixou pronto. Se queres vê-lo com uma amostra do teu próprio material, escreve-nos para info@janium.com.</p>
+<p>Se a sua instituição está a avaliar se «pôr o acervo num RAG» substitui catalogá-lo, a pergunta útil é outra: que consultas tem de resolver todos os dias. As que se contestam com um ponto de acesso ou com uma frase do documento não precisam de gerar um parágrafo. As que sim, podem apoiar-se no markdown que o Collect já deixou pronto. Se quiser vê-lo com uma amostra do seu próprio material, escreva-nos para info@janium.com.</p>

@@ -1,27 +1,27 @@
-<p>El Cutter de una signatura Dewey se saca de la tabla Cutter-Sanborn. El
+<p>El Cutter de una signatura Dewey se saca de la tabla Cutter-Sanborn, y un
 <a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> no aplica esa
-tabla con precisión. Para Julián Rodríguez Fernández puede devolver <code>R63</code>
-o <code>R444</code>. En la tabla el valor es <code>R696</code>. Con un Cutter incorrecto el
-libro se coloca mal en el estante.</p>
+tabla con precisión: para Julián Rodríguez Fernández puede devolver <code>R63</code>
+o <code>R444</code> cuando el valor de la tabla es <code>R696</code>. Con un Cutter incorrecto
+el libro se coloca mal en el estante.</p>
 <p>Collect calcula el Cutter y el código de nivel ISAD-G después de extraer
-el registro. No usa lo que el modelo haya puesto en esos campos. El
-modelo sigue proponiendo título, autor y materias.</p>
+el registro, y descarta lo que el modelo haya puesto en esos dos campos.
+El modelo sigue proponiendo el título, el autor y las materias.</p>
 <h2>Cutter Dewey</h2>
 <p>En Dewey el Cutter completa la signatura (<code>082$b</code>; en CDU, <code>080$b</code>).
 Collect busca el apellido en la tabla <strong>Cutter-Sanborn Three-Figure
 Revised</strong>, de unas 12.000 entradas públicas, por el prefijo más largo. Si
 lo encuentra, ese código queda en el registro y en existencias (<code>852</code>).</p>
-<p>Si el apellido no está en la tabla, deja el código de la inicial. Se
-puede añadir el apellido a la tabla. Mientras tanto hay que revisar ese
-campo.</p>
+<p>Si el apellido no está en la tabla, queda el código de la inicial y ese
+campo hay que revisarlo, hasta que alguien añada el apellido a la tabla.</p>
 <h2>Cutter LC</h2>
 <p>En la clasificación de la Library of Congress el Cutter (<code>050$b</code>) se
-obtiene con un algoritmo publicado por LC. Hay resultado para cualquier
-palabra. Collect calcula ese valor y sustituye el que hubiera propuesto
-el modelo.</p>
-<p>El algoritmo completo alarga el Cutter letra a letra. <code>Rodriguez</code> daría
-<code>.R6375449</code>. En la práctica se usan dos o tres dígitos. Collect recorta
-al número configurado, dos por defecto, y deja <code>.R63</code>. Si el registro
+obtiene con un algoritmo publicado por LC que, a diferencia de la tabla
+Cutter-Sanborn, da resultado para cualquier palabra. Collect calcula ese
+valor y sustituye el que hubiera propuesto el modelo.</p>
+<p>El algoritmo completo alarga el Cutter letra a letra, de modo que
+<code>Rodriguez</code> daría <code>.R6375449</code>, mientras que en la práctica se usan dos o
+tres dígitos. Collect recorta al número configurado, dos por defecto, y
+deja <code>.R63</code>. Si el registro
 trae los datos, puede añadir:</p>
 <ul>
 <li>La marca de obra: la primera letra significativa del título, para
@@ -35,17 +35,18 @@ trae los datos, puede añadir:</p>
 autor. Qué clases cuentan como biográficas lo decide la institución.</p>
 <h2>Nivel de descripción ISAD-G</h2>
 <p>En <a href="/blog/formato-archivistico-isadg/">ISAD-G</a> cada unidad tiene un nivel
-(fondo, sección, serie, unidad documental) y ese nivel va codificado en
-el registro. Quien conoce el fondo decide si un conjunto es serie o
-sección. Collect pone el código que corresponde a esa decisión. No le
-pide el código al modelo.</p>
+(fondo, sección, serie, unidad documental) y ese nivel va codificado en el
+registro. Quien conoce el fondo decide si un conjunto es serie o sección,
+y Collect escribe el código que corresponde a esa decisión en lugar de
+pedírselo al modelo.</p>
 <h2>Límites</h2>
-<p>En Dewey, si el apellido no está en la tabla, queda la inicial. En LC el
-Cutter se puede calcular siempre; la marca de obra y el biografiado
-necesitan título y materia en el registro. El código ISAD-G se escribe
-cuando el nivel ya está decidido.</p>
-<p>Hay que seguir revisando. Lo que deja de variar de un lote a otro es el
-Cutter de un mismo autor y el código de nivel.</p>
+<p>El alcance de cada regla es distinto. En LC el Cutter se puede calcular
+siempre, mientras que la marca de obra y el Cutter del biografiado
+necesitan que el registro traiga título y materia, y en Dewey un apellido
+ausente de la tabla deja solo la inicial. El código ISAD-G se escribe
+cuando el nivel ya está decidido, no antes.</p>
+<p>Nada de esto ahorra la revisión del registro. Lo que deja de variar de un
+lote a otro es el Cutter de un mismo autor y el código de nivel.</p>
 <h2>Para continuar la conversación</h2>
 <p>Si catalogas en Dewey o LC, o describes fondos en ISAD-G, y quieres ver
 cómo quedan estas reglas con tus apellidos y tus convenciones, escríbenos

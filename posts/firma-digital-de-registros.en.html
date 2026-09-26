@@ -1,17 +1,18 @@
 <p>Janium Collect can sign the PDF that enters the cataloging flow. The
-signature is PKCS#7: a <code>.p7s</code> file next to the document. The PDF is not
-modified. It is checked with standard tools, without Janium software.</p>
+signature is PKCS#7, delivered as a <code>.p7s</code> file next to the document, so
+the PDF itself is not modified and the signature can be checked with
+standard tools, without Janium software.</p>
 <p>The calculation is this: a SHA-256 hash of the file is taken and
 encrypted with the institution’s certificate. If a time-stamping
 authority (TSA) is available, an RFC 3161 timestamp is added. Signature
 and timestamp are turned on per institution.</p>
 <h2>What the signature proves</h2>
-<p>If the PDF changes after it was signed, verification fails. The
-certificate identifies the institution that signed. A certain date exists
-only with the timestamp. Without a timestamp there is integrity and
-origin. There is no certain date.</p>
-<p>The signature does not say whether the content is true. It says the file
-did not change after it was signed.</p>
+<p>If the PDF changes after it was signed, verification fails, and the
+certificate identifies the institution that signed. A certain date, on the
+other hand, depends on the timestamp: without one there is still integrity
+and origin, but no certain date.</p>
+<p>What the signature attests is that the file did not change after it was
+signed; about the truth of the content it says nothing.</p>
 <h2>When it is used</h2>
 <p>It is used when the scan has to stand up to a third party: digitization
 with evidential value, contracts and minutes, archives of public bodies.
@@ -36,12 +37,12 @@ signature (QES) needs a qualified device, for example an HSM, and a
 certificate from a qualified trust service provider. The module does not
 supply that by itself.</p>
 <h2>Limits</h2>
-<p>Collect signs PDFs when the file will be kept or published. It does not
-sign a temporary PDF that is then deleted. It does not embed the
-signature in the PDF. It does not validate the content. Each operation is
-written to an audit log.</p>
-<p>Legal effect is assessed by whoever applies the rule. Collect delivers
-the technical elements.</p>
+<p>Collect signs the PDF when the file will be kept or published, and not
+when it is a temporary PDF that is then deleted. The signature stays in
+the <code>.p7s</code> rather than embedded in the document, and the content is not
+validated. Each operation is written to an audit log.</p>
+<p>Collect delivers the technical elements, and legal effect is assessed by
+whoever applies the rule.</p>
 <h2>To continue the conversation</h2>
 <p>If you digitize documents that have to stand up to a third party, and you
 want to see how this fits the certificate and the framework that apply to

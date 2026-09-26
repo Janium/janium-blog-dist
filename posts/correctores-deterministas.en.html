@@ -1,26 +1,27 @@
-<p>The Cutter in a Dewey call number comes from the Cutter-Sanborn table.
-The <a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> does not apply
-that table accurately. For Julián Rodríguez Fernández it may return <code>R63</code>
-or <code>R444</code>. In the table the value is <code>R696</code>. With a wrong Cutter the book
-is shelved in the wrong place.</p>
+<p>The Cutter in a Dewey call number comes from the Cutter-Sanborn table, and
+a <a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> does not apply
+that table accurately: for Julián Rodríguez Fernández it may return <code>R63</code>
+or <code>R444</code> when the value in the table is <code>R696</code>. With a wrong Cutter the
+book is shelved in the wrong place.</p>
 <p>Collect calculates the Cutter and the ISAD-G level code after extracting
-the record. It does not use what the model put in those fields. The model
-still proposes title, author and subjects.</p>
+the record, discarding whatever the model put in those two fields. The
+model still proposes the title, the author and the subjects.</p>
 <h2>Dewey Cutter</h2>
 <p>In Dewey the Cutter completes the call number (<code>082$b</code>; in UDC, <code>080$b</code>).
 Collect looks up the surname in the <strong>Cutter-Sanborn Three-Figure
 Revised</strong> table, about 12,000 public entries, by longest prefix. If it
 finds it, that code goes in the record and in holdings (<code>852</code>).</p>
 <p>If the surname is not in the table, Collect leaves the code for the
-initial. The surname can be added to the table. Until then the field
-needs review.</p>
+initial and that field needs review, until someone adds the surname to the
+table.</p>
 <h2>LC Cutter</h2>
 <p>In Library of Congress classification the Cutter (<code>050$b</code>) comes from an
-algorithm published by LC. There is a result for any word. Collect
-calculates that value and replaces whatever the model proposed.</p>
-<p>The full algorithm lengthens the Cutter letter by letter. <code>Rodriguez</code>
-would give <code>.R6375449</code>. In practice two or three digits are used. Collect
-cuts to the configured length, two by default, and leaves <code>.R63</code>. If the
+algorithm published by LC which, unlike the Cutter-Sanborn table, yields a
+result for any word. Collect calculates that value and replaces whatever
+the model proposed.</p>
+<p>The full algorithm lengthens the Cutter letter by letter, so <code>Rodriguez</code>
+would give <code>.R6375449</code>, whereas in practice two or three digits are used.
+Collect cuts to the configured length, two by default, and leaves <code>.R63</code>. If the
 record has the data, it can add:</p>
 <ul>
 <li>The work mark: the first significant letter of the title, to tell works
@@ -35,16 +36,17 @@ Which classes count as biographical is an institutional decision.</p>
 <h2>ISAD-G description level</h2>
 <p>In <a href="/en/blog/formato-archivistico-isadg/">ISAD-G</a> each unit has a level
 (fonds, section, series, item) and that level is coded in the record.
-Whoever knows the fonds decides whether a set is a series or a section.
-Collect writes the code that matches that decision. It does not ask the
-model for the code.</p>
+Whoever knows the fonds decides whether a set is a series or a section, and
+Collect writes the code that matches that decision instead of asking the
+model for it.</p>
 <h2>Limits</h2>
-<p>In Dewey, if the surname is not in the table, the initial remains. In LC
-the Cutter can always be calculated; work mark and biographee need title
-and subject on the record. The ISAD-G code is written when the level has
-already been decided.</p>
-<p>Records still need review. What stops changing from one batch to the next
-is the Cutter for the same author and the level code.</p>
+<p>Each rule reaches a different distance. In LC the Cutter can always be
+calculated, while the work mark and the biographee’s Cutter need the
+record to carry a title and a subject, and in Dewey a surname missing from
+the table leaves only the initial. The ISAD-G code is written once the
+level has been decided, not before.</p>
+<p>None of this saves the review of the record. What stops changing from one
+batch to the next is the Cutter for the same author and the level code.</p>
 <h2>To continue the conversation</h2>
 <p>If you catalog in Dewey or LC, or describe fonds in ISAD-G, and you want
 to see how these rules look with your surnames and your conventions,
