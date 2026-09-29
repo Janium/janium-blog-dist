@@ -1,0 +1,36 @@
+<p>Collect catalogs from a list or a spreadsheet. Each row is one piece of
+the collection and each column is a datum someone already wrote down.
+There are two jobs: carry into the record what the cell says, and complete
+the record when that row is only enough to recognize the work.</p>
+<h2>What is already written</h2>
+<p>In the column “Author”, the value is already the author, so there is no
+need, as on a PDF page, to decide which sentence is the title. The first
+time, someone says which column matches each field of the record, and
+later sheets that use the same column names reuse that match.</p>
+<p>If the cell says 1967, the record says 1967, because the
+<a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> does not change
+that datum: a wrong date in the sheet stays wrong until someone corrects
+it. Two authors on the same row remain two authors, and a name written
+“Cervantes, Miguel de” is not split into two people.</p>
+<h2>When the row only names the book</h2>
+<p>Author, title, publisher and year say which book it is, but not what it
+is about. From that name, Collect recognizes the work and completes the
+record: a summary, subjects and the other fields the format asks for. The
+<a href="/en/blog/caso-colegio-la-salle/">Colegio de La Salle</a> started from a
+four-column list of that kind.</p>
+<p>What the model adds can be told apart from what came in the cell. Names
+and subjects are checked against authorities and, when there is a match,
+they keep their source. If the record does not reach the level the
+institution asks for, it carries a note for review. That mark is described
+in
+<a href="/en/blog/confiar-en-catalogo-con-ia/">Why trust a catalog made with AI</a>.</p>
+<p>A call number nobody assigned, a measurement nobody took, or a row that
+only says “Book 1” stays empty, because the work has to be recognizable,
+and the empty field is filled later, when there is a datum to support it.</p>
+<h2>What the column already says is kept</h2>
+<p>What the column already contains goes into the record as written. A
+location or a tag the institution set for every record comes from that
+rule.</p>
+<h2>To continue the conversation</h2>
+<p>If the collection is in a spreadsheet and you want to see what record
+comes out of those columns, write to us at info@janium.com.</p>
