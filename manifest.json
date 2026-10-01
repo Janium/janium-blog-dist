@@ -1,7 +1,65 @@
 {
   "contract": 1,
-  "generated": "2026-09-29T09:41:53Z",
+  "generated": "2026-10-01T08:30:41Z",
   "posts": [
+    {
+      "slug": "constancia-de-no-adeudo",
+      "date": "2026-10-01",
+      "datetime": "2026-10-01T06:02:00Z",
+      "tags": [
+        "janium",
+        "circulacion"
+      ],
+      "translations": {
+        "es": {
+          "title": "Constancia de no adeudo en Word",
+          "description": "Janium 2027 puede emitir la constancia de no adeudo como documento Word, además del HTML. Hay una plantilla para todo el sistema y cada biblioteca puede usar la suya.",
+          "cover": "assets/constancia-de-no-adeudo-es-cover-adf1ca35.svg",
+          "html": "posts/constancia-de-no-adeudo.es.html"
+        },
+        "en": {
+          "title": "A certificate of no debt in Word",
+          "description": "Janium 2027 can issue the certificate of no debt as a Word document, in addition to HTML. One template covers the whole system, and each library can use its own.",
+          "cover": "assets/constancia-de-no-adeudo-en-cover-adf1ca35.svg",
+          "html": "posts/constancia-de-no-adeudo.en.html"
+        },
+        "pt": {
+          "title": "Declaração de não dívida em Word",
+          "description": "O Janium 2027 pode emitir a declaração de não dívida como documento Word, além do HTML. Há um modelo para todo o sistema e cada biblioteca pode usar o seu.",
+          "cover": "assets/constancia-de-no-adeudo-pt-cover-adf1ca35.svg",
+          "html": "posts/constancia-de-no-adeudo.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "avisos-de-prestamo-y-apartado",
+      "date": "2026-10-01",
+      "datetime": "2026-10-01T06:01:00Z",
+      "tags": [
+        "janium",
+        "circulacion"
+      ],
+      "translations": {
+        "es": {
+          "title": "Avisos de préstamo y apartado con el texto de la biblioteca",
+          "description": "En Janium 2027 la biblioteca redacta el saludo, la tabla y el cierre de tres avisos de circulación: vencimiento de préstamo, apartado listo y apartado prestado a otra persona. Si no escribe el suyo, sale el texto que trae el sistema.",
+          "cover": "assets/avisos-de-prestamo-y-apartado-es-cover-069e857c.svg",
+          "html": "posts/avisos-de-prestamo-y-apartado.es.html"
+        },
+        "en": {
+          "title": "Loan and hold notices in the library's own words",
+          "description": "In Janium 2027 the library writes the greeting, the table and the closing of three circulation notices: a loan about to fall due, a hold ready for pickup, and a hold lent to someone else. If the library does not write its own, the text that ships with the system is used.",
+          "cover": "assets/avisos-de-prestamo-y-apartado-en-cover-069e857c.svg",
+          "html": "posts/avisos-de-prestamo-y-apartado.en.html"
+        },
+        "pt": {
+          "title": "Avisos de empréstimo e reserva com o texto da biblioteca",
+          "description": "No Janium 2027 a biblioteca redige a saudação, a tabela e o fecho de três avisos de circulação: vencimento de empréstimo, reserva pronta e reserva emprestada a outra pessoa. Se não escrever o seu, sai o texto que o sistema traz.",
+          "cover": "assets/avisos-de-prestamo-y-apartado-pt-cover-069e857c.svg",
+          "html": "posts/avisos-de-prestamo-y-apartado.pt.html"
+        }
+      }
+    },
     {
       "slug": "catalogar-desde-listas-y-hojas-de-calculo",
       "date": "2026-09-29",
