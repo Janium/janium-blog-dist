@@ -1,12 +1,12 @@
 <p>In an index, &ldquo;García Márquez, Gabriel&rdquo;, &ldquo;G. García Márquez&rdquo; and &ldquo;Gabriel García
 Marquez&rdquo; are three different people. Anyone searching under one of those
 spellings does not find the books filed under the others.
-<a href="/en/blog/glosario/#control-de-autoridades">Authority control</a> exists so that
+<a href="/en/blog/glosario/#control-de-autoridades">Authority control</a> is what makes
 the three point to the same place: one form of the name, decided once, for the
 whole catalog.</p>
 <p>When Collect reads a document, the <a href="/en/blog/glosario/#modelo-de-lenguaje">model</a>
-proposes a form of the name from what it sees. That proposal is not taken as
-good on its own. It is checked against the lists the institution already uses,
+proposes a form of the name from what it sees. That proposal is not accepted
+at face value. It is checked against the lists the institution already uses,
 and the record states which of those lists the final form came from. That trail
 is what makes the name trustworthy without typing it again. Why a catalog built
 with AI can be trusted is in
@@ -19,7 +19,7 @@ With that clean form it looks up, in order:</p>
 <ul>
 <li><strong>The institution&rsquo;s authority file</strong> (the ILS: Janium, Alma, Sierra or Koha).
   If the house already fixed an authorized form for that author, that form wins.
-  It is the highest confidence, because it is the decision the institution
+  It has the highest confidence, because it is the decision the institution
   already made.</li>
 <li><strong>VIAF</strong>, the international file where national libraries record the
   authorized form of each author. Birth and death dates, when the record has
@@ -29,8 +29,8 @@ With that clean form it looks up, in order:</p>
   formed (family name first, without titles) but with no external backing and
   without that link.</li>
 </ul>
-<p>The cascade steps down only when the previous rung finds nothing. The order is
-also descending confidence, and the record keeps which rung resolved it.</p>
+<p>The cascade steps down only when the previous rung finds nothing. The rungs are
+also ordered by descending confidence, and the record keeps which rung resolved it.</p>
 <h2>Provenance is written in the record</h2>
 <p>What distinguishes a verified name from one that is only well written is not a
 promise: it is a piece of information in the record itself. A name resolved by VIAF arrives

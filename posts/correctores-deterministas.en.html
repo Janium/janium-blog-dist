@@ -11,7 +11,7 @@ model still proposes the title, the author and the subjects.</p>
 Collect looks up the surname in the <strong>Cutter-Sanborn Three-Figure
 Revised</strong> table, about 12,000 public entries, by longest prefix. If it
 finds it, that code goes in the record and in holdings (<code>852</code>).</p>
-<p>If the surname is not in the table, Collect leaves the code for the
+<p>If the surname is not in the table, Collect falls back to the code for the
 initial and that field needs review, until someone adds the surname to the
 table.</p>
 <h2>LC Cutter</h2>
@@ -40,12 +40,12 @@ Whoever knows the fonds decides whether a set is a series or a section, and
 Collect writes the code that matches that decision instead of asking the
 model for it.</p>
 <h2>Limits</h2>
-<p>Each rule reaches a different distance. In LC the Cutter can always be
+<p>Each rule has a different reach. In LC the Cutter can always be
 calculated, while the work mark and the biographee’s Cutter need the
 record to carry a title and a subject, and in Dewey a surname missing from
 the table leaves only the initial. The ISAD-G code is written once the
 level has been decided, not before.</p>
-<p>None of this saves the review of the record. What stops changing from one
+<p>None of this removes the need to review the record. What no longer varies from one
 batch to the next is the Cutter for the same author and the level code.</p>
 <h2>To continue the conversation</h2>
 <p>If you catalog in Dewey or LC, or describe fonds in ISAD-G, and you want

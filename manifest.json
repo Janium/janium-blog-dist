@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:28:41Z",
+  "generated": "2026-10-04T14:34:07Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -106,7 +106,7 @@
         },
         "en": {
           "title": "A batch inventory keeps going after the browser closes",
-          "description": "In Janium 2027 a batch inventory is not cancelled if the browser is closed or the connection drops. The job stays on the server, the page shows the phase, and another inventory cannot start until this one is finished.",
+          "description": "In Janium 2027 a batch inventory is not canceled if the browser is closed or the connection drops. The job stays on the server, the page shows the phase, and another inventory cannot start until this one is finished.",
           "cover": "assets/inventario-en-segundo-plano-en-cover-610d0ab5.svg",
           "html": "posts/inventario-en-segundo-plano.en.html"
         },
@@ -280,7 +280,7 @@
         },
         "en": {
           "title": "How to process documents with AI without exposing personal data",
-          "description": "How to process documents with AI without exposing personal data: catalog locally, with nothing leaving, or send to the cloud a version where person identifiers have already been replaced. Where that protection reaches and where it does not.",
+          "description": "How to process documents with AI without exposing personal data: catalog locally, with nothing leaving, or send to the cloud a version where personal identifiers have already been replaced. Where that protection reaches and where it does not.",
           "cover": "assets/procesar-sin-exponer-datos-personales-en-cover-afe3490a.svg",
           "html": "posts/procesar-sin-exponer-datos-personales.en.html"
         },
@@ -690,7 +690,7 @@
         },
         "en": {
           "title": "Collect marks AI-made metadata",
-          "description": "Collect meets Article 50.2 of the EU AI Act: cataloguing output carries a machine-readable mark, the catalog record does not change, and the proof stays with the institution.",
+          "description": "Collect meets Article 50.2 of the EU AI Act: cataloging output carries a machine-readable mark, the catalog record does not change, and the proof stays with the institution.",
           "cover": "assets/marcado-procedencia-ia-en-cover-94d11c24.svg",
           "html": "posts/marcado-procedencia-ia.en.html"
         },

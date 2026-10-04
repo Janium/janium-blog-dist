@@ -1,11 +1,11 @@
 <p>An audiovisual collection is hard to describe for a simple reason: you have to
 watch or listen to it to know what it contains. A sheet from a file is read at a
-glance; a half-hour newsreel or a recording of a session do not state their content
+glance; a half-hour newsreel or a recording of a session does not state its content
 until someone plays them in full. An archive of newsreels, a sound library of
-interviews, a collection of event video recordings: each one holds inside names,
+interviews, a collection of event video recordings: each one holds names,
 dates and topics spread across minutes of image and sound, not on a cover.</p>
 <p>That is why these collections are cataloged slowly, and often go uncataloged.
-Playing each file in full to describe it does not fit in the team&rsquo;s time, and
+Playing each file in full to describe it does not fit in the team&rsquo;s schedule, and
 meanwhile the material piles up, often already digitized but without a record that
 makes it findable. That is the case Janium Collect addresses when the collection is
 audiovisual.</p>
@@ -43,7 +43,7 @@ interventions for audio, into scenes for video) and catalogs each segment as a
 child references the parent with the field that matches the format
 (<code>dcterms:isPartOf</code> in Dublin Core, 773 in MARC), and the parent references its
 children without embedding them. Each segment stands as a record that can be
-consulted on its own, and at the same time it is known which recording it is part
+looked up on its own, and at the same time it is known which recording it is part
 of.</p>
 <p>Here a rule Collect applies throughout the process comes into play: do not fill a
 field with what it cannot support. A fragment in the middle of a recording rarely
@@ -68,15 +68,15 @@ feed the fixed fields for audiovisual material deterministically. The resource t
 decided by the model. That leaves the model only the part that requires reading the
 content, which is where it contributes.</p>
 <h2>Limits</h2>
-<p>Automatic transcription has error, and that error grows when the audio is poor:
+<p>Automatic transcription has errors, and they grow when the audio is poor:
 background noise, overlapping voices, a distant microphone produce text with flaws
-that carry over into the extraction. The description of the visual is done from
+that carry over into the extraction. Visual description is done from
 <strong>some frames</strong>, not the whole video: they capture the subject of each scene, not
-its nuances, and a brief shot or a gesture may go unreflected. Scene segmentation is
+its nuances, and a brief shot or a gesture may not be captured. Scene segmentation is
 heuristic (it is based on when the image changes, which approximates the thematic
 cuts but does not always coincide with them), so it serves as a starting point to
 navigate the material, not as a definitive editorial segmentation.</p>
-<p>When an audio has almost no speech (music, ambience), the system does not force a
+<p>When an audio file has almost no speech (music, ambience), the system does not force a
 description out of a poor transcription: it relies on the file&rsquo;s metadata and flags
 the case, so as not to fabricate content that is not there. And as in the rest of
 Collect, what comes out are proposed records that someone reviews. Transcription and

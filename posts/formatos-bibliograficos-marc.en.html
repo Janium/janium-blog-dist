@@ -1,6 +1,6 @@
 <p>How to generate a MARC21 or UNIMARC record with AI is decided by the standard
 the institution already uses, not by the model. A library cataloger does not
-choose the record format for taste: the institution’s cataloging standard, the
+choose the record format out of preference: the institution’s cataloging standard, the
 system where the catalog lives and, often, the tradition of the region fix it.
 The same book can be described in <a href="/en/blog/glosario/#marc">MARC21</a> or in
 UNIMARC: two different field schemes for the same work. Janium Collect produces
@@ -15,7 +15,7 @@ That granularity is what lets a catalog tell an author from a title and sort,
 search and share records among systems that speak MARC.</p>
 <p>Many libraries that catalog in MARC21 apply the <strong>RDA</strong> rules (<em>Resource
 Description and Access</em>), the cataloging standard that succeeds AACR2. RDA is
-not a record format: it is the set of rules with which MARC21 is filled. It
+not a record format: it is the set of rules with which MARC21 is filled in. It
 defines, among other things, the punctuation that separates and closes
 subfields (the spaces, hyphens, periods and slashes a cataloger recognizes at
 once in a well-formed record) and the content, media and carrier type fields.
@@ -24,7 +24,7 @@ in post-processing, after the model proposes the content. A fixed rule is
 better kept by a rule, not by asking a model that can get it right almost
 always but not always.</p>
 <h2>UNIMARC: the alternative in some regions</h2>
-<p><strong>UNIMARC</strong> is a bibliographic record format with the same vocation as MARC21
+<p><strong>UNIMARC</strong> is a bibliographic record format with the same purpose as MARC21
 (describing the resource with fields and subfields) but with its own field
 scheme and a different history. It was born as a universal exchange format
 driven by IFLA, and several national libraries and networks, especially in
@@ -67,12 +67,12 @@ catalog</a>.</p>
 UNIMARC. That choice is fixed by the cataloging standard and the system where
 the catalog lives; Collect adjusts to it. It also does not guarantee that RDA
 punctuation covers every edge case of the standard: it applies the punctuation
-rules in post-processing to the content the model proposes, and the particular
-cases a deterministic rule does not contemplate are left for the cataloger to
+rules in post-processing to the content the model proposes, and the special
+cases a deterministic rule does not cover are left for the cataloger to
 review.</p>
-<p>The model completes the record with what the source did not bring when it can
-sustain it, and marks what it inferred: an inferred value is not presented as
-verified, and what cannot be sustained is not filled in to satisfy the format.</p>
+<p>The model completes the record with what the source did not include when it can
+support it, and marks what it inferred: an inferred value is not presented as
+verified, and what cannot be supported is not filled in to satisfy the format.</p>
 <h2>To continue the conversation</h2>
 <p>If your library catalogs in MARC21 or in UNIMARC, and you have material waiting
 for description, we can review how your standard fits what Collect produces and

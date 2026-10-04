@@ -1,7 +1,7 @@
 <p>Someone searching <em>residencia</em> and someone searching <em>residencias</em> should not
 get two different lists. Someone typing <em>espanola</em> without an accent should
 still find the heading with one. In keyword search in many catalogs each
-spelling is another query, and the order follows the date of entry: what was
+spelling is a separate query, and the order follows the date of entry: what was
 cataloged last comes first. The reader gets an empty list or one that does not
 start with what they were looking for.</p>
 <p>In <a href="/en/blog/glosario/#janium">Janium</a> 2027 that search can rank by relevance,
@@ -9,8 +9,8 @@ recognize plurals and derived forms, and not distinguish accents when matching.
 If there are no exact hits, it can suggest the closest term. The version is in
 <a href="/en/blog/janium-2027/">Janium 2027 is now available</a>.</p>
 <h2>Rank by relevance</h2>
-<p>Relevance puts the most pertinent to the query first, not necessarily the last
-cataloged. It changes which record comes first. It is worth testing against the
+<p>Relevance puts the records most relevant to the query first, not necessarily
+the last one cataloged. It changes which record comes first. It is worth testing against the
 institution’s own holdings before leaving it as the default: an order that
 works for a book collection may not be the one expected by someone searching
 files.</p>
@@ -26,7 +26,7 @@ needs them. <em>Residencia</em> and <em>residencias</em> feed the same search. I
 not distinguish accents when matching: <em>espanola</em> finds the heading <em>española</em>.
 That does not replace <a href="/en/blog/control-de-autoridades-y-vocabularios/">authority
 control</a>: the authorized form
-remains the one in the authority file; keyword search is a match over indexes.</p>
+remains the one in the authority file; keyword search is a match against indexes.</p>
 <h2>When there is no exact hit</h2>
 <p>If there are no exact results, it can suggest the closest term: a typo or
 imperfect OCR. In the summary a snippet appears with the query words marked.
@@ -45,7 +45,7 @@ loads them into its indexes. A <a href="/en/blog/glosario/#rag">RAG</a> does not
 that catalog. The relationship is in <a href="/en/blog/puntos-de-acceso-texto-completo-y-rag/">Access points, full text and
 RAG</a>.</p>
 <h2>Limits</h2>
-<p>Relevance changes the order: it should be validated with catalogers and with
+<p>Relevance changes the order: it should be validated with catalogers and against
 how the public searches. If it does not fit, catalog order can be restored or
 the weights adjusted. When a language or a set of forms is added, the index is
 rebuilt so they enter the search. The closest-term suggestion appears when
@@ -53,5 +53,5 @@ there is no exact match; it does not rewrite the query if there were already
 results. If the engine is left off, the search already in use does not change.</p>
 <h2>To continue the conversation</h2>
 <p>If you want to see how relevance behaves with your holdings (plurals, accents,
-typos), write to us at info@janium.com. How you search today changes whether it
-is worth leaving the engine as the default or trying it first.</p>
+typos), write to us at info@janium.com. How you search today determines whether
+it is worth leaving the engine as the default or trying it first.</p>

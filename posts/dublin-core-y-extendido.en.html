@@ -4,7 +4,7 @@ record has to do, not by the model. Of all the formats a cataloger handles,
 elements (title, creator, subject, description, publisher, contributor,
 date, type, format, identifier, source, language, relation, coverage and
 rights) and none of them mandatory. That economy is not an oversight:
-Dublin Core was born so that resources described by different people, in
+Dublin Core was created so that resources described by different people, in
 different systems, could find one another and be understood. Fine-grained
 description is left to the format that belongs to the work; the common
 denominator is kept deliberately short.</p>
@@ -38,13 +38,13 @@ twelve and fills half of them by inertia.</p>
 it.</p>
 <p>For <strong>fine bibliographic description</strong> (authority control, access points,
 classification number, structured statement of responsibility)
-<a href="/en/blog/glosario/#marc">MARC21</a> exists. Dublin Core can carry an author
+<a href="/en/blog/glosario/#marc">MARC21</a> is the format built for that. Dublin Core can carry an author
 in the <code>creator</code> element, but it does not distinguish author from compiler
 from translator with the precision a library catalog takes for granted. How
 that record is produced is in <a href="/en/blog/formatos-bibliograficos-marc/">How to generate MARC21 and UNIMARC records
 with AI</a>.</p>
 <p>For <strong>archival description</strong> (where provenance, the context of production
-and the hierarchy of fonds, section and series matter) the indicated
+and the hierarchy of fonds, section and series matter) the appropriate
 format is <a href="/en/blog/glosario/#isad-g">ISAD-G</a>. Dublin Core describes the
 isolated item; it has no native way to say that a document is a piece
 inside a series inside a fonds. That description is in <a href="/en/blog/formato-archivistico-isadg/">How to describe an
@@ -59,7 +59,7 @@ the common use.</p>
 <p><a href="/en/blog/que-es-janium-collect/">Janium Collect</a> generates Dublin Core, in
 its simple form and in the extended one, from the same flow with which it
 produces the other formats: it reads the document, proposes the record and
-delivers it for review. Two cares are specific to this work.</p>
+delivers it for review. Two safeguards are specific to this work.</p>
 <p>The first is <strong>field protection</strong>. Values that must not be altered
 (identifiers, dates, proper names) are transferred; the reading of the
 document does not rewrite them. An identifier that changes is a broken
@@ -77,11 +77,11 @@ archival description, the correct format is another, and Collect produces
 that too.</p>
 <h2>Limits</h2>
 <p>Collect does not decide for the institution whether the working catalog is
-Dublin Core, MARC or ISAD-G. That choice is fixed by the use: exchange and
+Dublin Core, MARC or ISAD-G. That choice is set by how the catalog is used: exchange and
 discovery, or fine description. The extended version adds distinctions; it
 does not turn fifteen elements into a bibliographic format.</p>
 <p>The <a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> completes the
-record with what the source did not bring when it can support it, and
+record with what the source did not provide when it can support it, and
 leaves inferred data marked: an inferred fact is not presented as verified,
 and what cannot be supported is not filled in to satisfy the scheme.
 Dublin Core’s simplicity is not a reason to skip that mark.</p>

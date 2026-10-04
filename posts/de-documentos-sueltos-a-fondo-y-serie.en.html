@@ -1,5 +1,5 @@
 <p>In a library, the item is the natural unit of description: a book is cataloged as
-a book, complete in itself. In an archive the criterion is different. An isolated
+a book, complete in itself. In an archive the approach is different. An isolated
 file says little if there is no way to know which series it comes from, who
 produced it and under what function. The <strong>ISAD-G</strong> standard starts from there:
 description is by <strong>provenance</strong> and by <strong>hierarchy</strong> (Fonds, Section, Series,
@@ -21,7 +21,7 @@ exporter builds the tree: it groups the documents that hang from a single Series
 the Series that hang from a Section, and so on up to the Fonds. The levels it
 exports run from Fonds to Item, passing through Subfonds, Section, Series,
 Subseries, File and Document; the fixed upper levels (Country, Institution) are
-assumed from the context and are not emitted as records.</p>
+taken from the context and are not emitted as records.</p>
 <p>The origin of that structure is explicit. <strong>The hierarchy is generated from the
 classification scheme; it is not inferred by the language model.</strong> If the documents
 arrive without their archival location, there is nothing from which to build the
@@ -39,7 +39,7 @@ the children share. It does not raise just anything: only a bounded set of field
 where the principle makes archival sense: <strong>producer</strong>, administrative history,
 <strong>conditions of access</strong>, <strong>language</strong>, and the subject, geographic and corporate
 descriptors. A value is raised to a level when it is shared by a sufficient
-proportion of the documents that hang from it; that threshold is deliberately high (the great majority, not a simple majority): raising a value that in reality only
+proportion of the documents that hang from it; that threshold is deliberately high (the great majority, not a simple majority): raising a value that actually only
 half the children share would turn it into a false statement about the other half.</p>
 <p>The mechanism has a limit. <strong>It is a heuristic: a majority threshold, not a
 judgment about the meaning of the field.</strong> It may raise a value that statistically
@@ -55,7 +55,7 @@ the dates of the children, with outlier filtering, such as a biographical date
 that describes not the documentary production but a person mentioned. The
 <strong>extent</strong> is the count of documents under that node. Thus, a Fonds record may end
 up with &ldquo;1940 / 2020&rdquo; as its extreme date and &ldquo;9033 documents&rdquo; as its extent: two
-data that none of the individual documents contains, because they are properties
+values that none of the individual documents contains, because they are properties
 of the aggregate.</p>
 <p>Here a distinction from the life cycle comes into play. In a current/active
 records archive, which keeps receiving documents, those ranges are <strong>recomputed</strong>
@@ -72,7 +72,7 @@ raised to its level, the date range computed, the extent counted.</p>
 <p>That is not a deviation from the original data; it is what an archival description
 requires. The document record is still there, with what the model read from it.
 What is added on top is the context that makes it archivally legible: which series
-it comes from, who produced it, in which fonds it is inscribed. Without that layer,
+it comes from, who produced it, which fonds it belongs to. Without that layer,
 you would have an inventory of items; with it, a described classification scheme.</p>
 <p>The three limits, brought together. The hierarchy exists only if the documents
 carry their archival location. The <a href="/en/blog/glosario/#bubble-up">bubble-up</a> is a
