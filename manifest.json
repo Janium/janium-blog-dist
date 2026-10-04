@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:23:55Z",
+  "generated": "2026-10-04T14:28:41Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -344,7 +344,7 @@
         },
         "pt": {
           "title": "Como catalogar fichas noutra língua sem traduzir títulos nem nomes",
-          "description": "Como catalogar material noutra língua sem traduzir títulos nem nomes: o Collect traduz o vocabulário descritivo (tipo de objeto, técnica, assunto) e deixa intactos o título da obra, os nomes próprios, as datas, as inscrições e os identificadores. O título traduzido guarda-se como título alterno com a sua língua.",
+          "description": "Como catalogar material noutra língua sem traduzir títulos nem nomes: o Collect traduz o vocabulário descritivo (tipo de objeto, técnica, assunto) e deixa intactos o título da obra, os nomes próprios, as datas, as inscrições e os identificadores. O título traduzido guarda-se como título alternativo com a sua língua.",
           "cover": "assets/fichas-en-otro-idioma-pt-cover-360f43ea.svg",
           "html": "posts/fichas-en-otro-idioma.pt.html"
         }
@@ -665,7 +665,7 @@
         },
         "pt": {
           "title": "Catalogar um vídeo de acervo com IA: da gravação a registos ligados",
-          "description": "Um cinejornal ou uma sessão gravada não trazem o conteúdo escrito. O Collect propõe um registo do vídeo inteiro e, se faz falta, um registo por cena, ligado ao primeiro.",
+          "description": "Um cinejornal ou uma sessão gravada não trazem o conteúdo escrito. O Collect propõe um registo do vídeo inteiro e, se for necessário, um registo por cena, ligado ao primeiro.",
           "cover": "assets/de-un-video-a-registros-enlazados-pt-cover-d5c3b989.svg",
           "html": "posts/de-un-video-a-registros-enlazados.pt.html"
         }
@@ -786,7 +786,7 @@
         },
         "pt": {
           "title": "Porquê confiar num catálogo feito com IA",
-          "description": "Como um catálogo feito com IA se torna fiável: não negando que o modelo enriquece, mas sabendo de onde vem cada dado. Apoia-se na fonte que respalda cada um, na verificação contra autoridades, no cálculo determinístico dos campos com regra, na avaliação por registo e num filtro de qualidade que barra lotes degradados, com os limites explícitos.",
+          "description": "Como um catálogo feito com IA se torna fiável: não negando que o modelo enriquece, mas sabendo de onde vem cada dado. Apoia-se na fonte que sustenta cada um, na verificação contra autoridades, no cálculo determinístico dos campos com regra, na avaliação por registo e num filtro de qualidade que retém lotes degradados, com os limites explícitos.",
           "cover": "assets/confiar-en-catalogo-con-ia-pt-cover-4bc2c5d9.svg",
           "html": "posts/confiar-en-catalogo-con-ia.pt.html"
         }
@@ -996,7 +996,7 @@
         },
         "pt": {
           "title": "Genérico não basta: porque é que um catálogo de registo precisa de mais que um LLM que preenche campos",
-          "description": "Um LLM genérico já produz registos completos e verossímeis; enriquecer é o valor da IA na catalogação. O que um catálogo de registo precisa além disso é saber de onde vem cada dado: a fonte que respalda cada um, cálculo determinístico onde há regra, avaliação e marcação por registo, lógica da norma, multi-idioma. E os limites do enriquecimento a partir do conhecimento do modelo.",
+          "description": "Um LLM genérico já produz registos completos e verossímeis; enriquecer é o valor da IA na catalogação. O que um catálogo de registo precisa além disso é saber de onde vem cada dado: a fonte que sustenta cada um, cálculo determinístico onde há regra, avaliação e marcação por registo, lógica da norma, multi-idioma. E os limites do enriquecimento a partir do conhecimento do modelo.",
           "cover": "assets/generico-no-basta-pt-cover-76679e4c.svg",
           "html": "posts/generico-no-basta.pt.html"
         }
