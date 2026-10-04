@@ -1,13 +1,13 @@
 <p>Um acervo com áudio apresenta um problema que o papel não tem: o conteúdo não se
 pode ler de relance. Uma gravação de uma hora esconde o seu tema, os seus
 nomes e as suas datas dentro de sessenta minutos de fala que alguém precisa
-escutar para
-descrever. Uma coleção de entrevistas, atas orais ou registos sonoros se
-cataloga devagar por essa razão, e muitas vezes fica sem catalogar porque
-escutar cada ficheiro inteiro não cabe no tempo da equipa.</p>
+ouvir para
+descrever. Uma coleção de entrevistas, atas orais ou registos sonoros
+cataloga-se devagar por essa razão, e muitas vezes fica sem catalogar porque
+ouvir cada ficheiro inteiro não cabe no tempo da equipa.</p>
 <p>O Janium Collect trata o áudio com o mesmo destino que um documento: lê-lo e
-propor um registo de catálogo. A diferença está no primeiro passo. Antes de
-que um <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a> possa extrair metadados, a voz tem que se converter em
+propor um registo de catálogo. A diferença está no primeiro passo. Antes
+que um <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a> possa extrair metadados, a voz tem de se converter em
 texto. Esse passo é a <strong>transcrição automática</strong> (ASR), e daí em diante o
 áudio percorre o mesmo caminho que um PDF.</p>
 <h2>Da voz ao texto, e do texto ao registo</h2>
@@ -51,7 +51,7 @@ registo perde a estrutura que torna consultável o material.</p>
 <p>O Collect pode <strong>segmentar</strong> a gravação, como opção que se ativa por
 instituição. Com a segmentação ligada, além do registo global da
 gravação completa, o sistema divide a transcrição em intervenções ou temas e
-cataloga cada um como um <strong>registo filho vinculado ao pai</strong>. Cada filho leva o
+cataloga cada um como um <strong>registo filho ligado ao pai</strong>. Cada filho leva o
 seu próprio registo e uma referência explícita à gravação da qual faz parte
 (<code>dcterms:isPartOf</code> em Dublin Core, o campo 773 em MARC), de modo que o catálogo
 conserva a relação entre o todo e as suas partes.</p>
@@ -65,7 +65,7 @@ maneira determinista, não inventada.</p>
 <h2>Onde estão os limites</h2>
 <p>A transcrição automática <strong>tem erro</strong>, e o erro cresce com a qualidade do
 áudio. Uma gravação limpa transcreve-se bem; uma com ruído de fundo, vozes
-sobrepostas ou microfone distante produz texto com falhas, e essas falhas se arrastam à
+sobrepostas ou microfone distante produz texto com falhas, e essas falhas arrastam-se para a
 extração de metadados. Quando o sistema deteta que um ficheiro quase não tem
 fala (música ou ambiente em vez de voz), não força uma descrição a partir de uma
 transcrição pobre: prefere apoiar-se nos metadados do ficheiro e marcar o
@@ -74,11 +74,11 @@ caso, para não fabricar conteúdo que não está.</p>
 revê</strong>, não um catálogo terminado. A transcrição é um rascunho do conteúdo,
 não uma ata literal, e certos dados (uma cota, uma data da sessão, o
 nome exato de uma entidade) vêm dos metadados ou do critério do catalogador, não
-do áudio. O sistema encurta a escuta e a digitação; não substitui quem conhece o
+do áudio. O sistema encurta a audição e a introdução manual; não substitui quem conhece o
 acervo.</p>
 <h2>Para continuar a conversa</h2>
-<p>Se a sua instituição tem gravações sonoras esperando descrição (entrevistas,
-atas orais, fundos audiovisuais) e o gargalo é que é preciso escutar
+<p>Se a sua instituição tem gravações sonoras à espera de descrição (entrevistas,
+atas orais, fundos audiovisuais) e o ponto de bloqueio é que é preciso ouvir
 cada uma para catalogá-la, isso é o que o Collect tenta aliviar. Escreva-nos para
 info@janium.com; interessa-nos saber como é o seu material sonoro, em que formato o
 descreve e quão limpo é o áudio, porque isso muda o que se pode esperar.</p>

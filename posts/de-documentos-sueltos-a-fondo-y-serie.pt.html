@@ -1,15 +1,15 @@
-<p>Numa biblioteca, o item é a unidade natural de descrição: um livro se cataloga
-como um livro, completo em si mesmo. Num arquivo o critério é outro. Um dossiê
+<p>Numa biblioteca, o item é a unidade natural de descrição: um livro cataloga-se
+como um livro, completo em si mesmo. Num arquivo o critério é outro. Um processo
 isolado diz pouco se não se sabe de que série provém, quem o produziu e sob que
 função. A norma <strong>ISAD-G</strong> parte daí: descreve-se por <strong>proveniência</strong> e por
-<strong>hierarquia</strong> (Fundo, Secção, Série, Dossiê) e não pelo documento avulso.
+<strong>hierarquia</strong> (Fundo, Secção, Série, Processo) e não pelo documento avulso.
 Descrever mil documentos como mil fichas independentes não é uma descrição
 arquivística incompleta; é uma descrição de outra coisa.</p>
 <p>Isso coloca um problema concreto quando se extrai com IA. Um <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a>
-lê um documento por vez e produz um registo por documento. Nada nessa leitura,
+lê um documento de cada vez e produz um registo por documento. Nada nessa leitura,
 por melhor que seja, constrói o nível da Série nem o do Fundo, porque esses
 níveis não vivem em nenhum documento individual: emergem do conjunto. Alguém tem
-que criar esses nós e decidir que informação pertence a cada um. Esse é o
+de criar esses nós e decidir que informação pertence a cada um. Esse é o
 trabalho que faz o exportador hierárquico do Collect entre a extração e o ficheiro
 final.</p>
 <h2>De registos por documento a uma árvore</h2>
@@ -17,11 +17,11 @@ final.</p>
 um traz, além dos seus dados, a sua <strong>localização arquivística</strong>, ou seja, o lugar que ocupa
 no quadro de classificação da instituição. Com essa localização, o exportador
 monta a árvore: agrupa os documentos que pendem de uma mesma Série, as Séries que
-pendem de uma Secção, e assim até o Fundo. Os níveis que exporta vão de Fundo a
-Item, passando por Subfundo, Secção, Série, Subsérie, Dossiê e Documento; os níveis
+pendem de uma Secção, e assim até ao Fundo. Os níveis que exporta vão de Fundo a
+Item, passando por Subfundo, Secção, Série, Subsérie, Processo e Documento; os níveis
 fixos superiores (País, Instituição) assumem-se do contexto e não se emitem como
 registos.</p>
-<p>A origem dessa estrutura é explícita. <strong>A hierarquia se gera a partir do quadro de
+<p>A origem dessa estrutura é explícita. <strong>A hierarquia gera-se a partir do quadro de
 classificação, não a infere o modelo de linguagem.</strong> Se os documentos chegam
 sem a sua localização arquivística, não há de onde construir a árvore: o
 exportador pode
@@ -41,7 +41,7 @@ onde o princípio tem sentido arquivístico: <strong>produtor</strong>, históri
 corporativos. Um valor sobe a um nível quando o partilha uma proporção
 suficiente dos documentos que pendem dele; esse limiar é deliberadamente alto (a
 grande maioria, não uma simples maioria): subir um dado que na realidade só
-partilha a metade dos filhos o tornaria uma afirmação falsa sobre a outra
+partilha a metade dos filhos torná-lo-ia uma afirmação falsa sobre a outra
 metade.</p>
 <p>O mecanismo tem um limite. <strong>É uma heurística: um limiar de maioria, não um juízo
 sobre o significado do campo.</strong> Pode subir um valor que estatisticamente domina
@@ -58,12 +58,12 @@ produção documental e sim uma pessoa mencionada. O <strong>volume</strong> é 
 documentos sob esse nó. Assim, um registo de Fundo pode terminar com &ldquo;1940 /
 2020&rdquo; como data extrema e &ldquo;9033 documentos&rdquo; como volume: dois dados que nenhum dos
 documentos individuais contém, porque são propriedades do agregado.</p>
-<p>Aqui intervém uma distinção do ciclo de vida. Num arquivo corrente, que segue
-recebendo documentos, esses intervalos <strong>recalculam-se</strong> a cada exportação: o
+<p>Aqui intervém uma distinção do ciclo de vida. Num arquivo corrente, que continua
+a receber documentos, esses intervalos <strong>recalculam-se</strong> a cada exportação: o
 acervo está aberto e a sua data extrema muda conforme ingressa material. Num arquivo
 histórico, fechado, os intervalos <strong>congelam-se</strong>, de modo que uma correção menor a
 um documento não altere inadvertidamente o intervalo de uma secção inteira.</p>
-<h2>Por que a saída não é a do modelo</h2>
+<h2>Porque é que a saída não é a do modelo</h2>
 <p>De tudo isso decorre uma consequência: o ficheiro ISAD-G que o Collect entrega
 <strong>não coincide</strong> com a soma do que o modelo extraiu documento por documento. Entre
 a extração e a exportação há geração de estrutura (os nós de Fundo, Secção e Série
@@ -80,7 +80,7 @@ uma
 heurística de maioria, com um limiar configurável, e por isso o resultado passa
 por revisão antes de entrar no catálogo. E a agregação resume o que os documentos
 contêm: não completa uma série que o material deixou incompleta.</p>
-<p>Se a sua instituição descreve com ISAD-G e tem documentos digitalizados esperando
-organizar-se por proveniência e hierarquia, escreva-nos para info@janium.com;
+<p>Se a sua instituição descreve com ISAD-G e tem documentos digitalizados à espera de
+serem organizados por proveniência e hierarquia, escreva-nos para info@janium.com;
 interessa-nos entender como está montado o seu quadro de classificação e que
 informação de proveniência acompanha hoje os seus documentos.</p>

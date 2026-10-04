@@ -1,5 +1,5 @@
 <p>Num índice, &ldquo;García Márquez, Gabriel&rdquo;, &ldquo;G. García Márquez&rdquo; e &ldquo;Gabriel García
-Marquez&rdquo; são três pessoas distintas. Quem busca uma dessas grafias não
+Marquez&rdquo; são três pessoas distintas. Quem pesquisa uma dessas grafias não
 encontra os livros arquivados sob as outras. O
 <a href="/pt/blog/glosario/#control-de-autoridades">controlo de autoridade</a> existe para
 que as três apontem ao mesmo lugar: uma forma do nome, decidida uma vez, para
@@ -8,13 +8,13 @@ todo o catálogo.</p>
 propõe uma forma do nome a partir do que vê. Essa proposta não se dá por boa
 sozinha. Confere-se contra as listas que a instituição já usa, e no registo
 fica escrito de qual dessas listas saiu a forma final. Esse rastro é o que
-permite confiar no nome sem voltar a digitá-lo. O panorama de por que um
-catálogo assistido com IA é confiável está em
-<a href="/pt/blog/confiar-en-catalogo-con-ia/">Por que confiar num catálogo feito com IA</a>.</p>
+permite confiar no nome sem voltar a escrevê-lo. O panorama de porque é que um
+catálogo assistido com IA é fiável está em
+<a href="/pt/blog/confiar-en-catalogo-con-ia/">Porquê confiar num catálogo feito com IA</a>.</p>
 <h2>Primeiro o catálogo da casa, depois o mundo</h2>
 <p>Para um nome de pessoa, o Collect segue uma cascata e para no primeiro degrau
 que responde. Antes de consultar nada, normaliza a forma: passa o nome a
-&ldquo;sobrenome, nome&rdquo; e tira os tratamentos (&ldquo;Lic.&rdquo;, &ldquo;Dr.&rdquo;, &ldquo;Sr.&rdquo;). Com essa forma
+&ldquo;apelido, nome&rdquo; e tira os tratamentos (&ldquo;Lic.&rdquo;, &ldquo;Dr.&rdquo;, &ldquo;Sr.&rdquo;). Com essa forma
 limpa consulta, em ordem:</p>
 <ul>
 <li><strong>O catálogo de autoridades da instituição</strong> (o ILS: Janium, Alma, Sierra ou
@@ -23,9 +23,9 @@ limpa consulta, em ordem:</p>
 <li><strong>VIAF</strong>, o fichário internacional onde as bibliotecas nacionais registam a
   forma autorizada de cada autor. As datas de nascimento e morte, quando o
   registo as traz, servem para distinguir homónimos. Se o VIAF resolve o nome,
-  o registo leva além o vínculo a essa entrada (o identificador do VIAF).</li>
+  o registo leva também o vínculo a essa entrada (o identificador do VIAF).</li>
 <li><strong>O normalizador de nomes</strong>, se nenhuma lista teve o autor. Deixa o nome bem
-  formado (sobrenome primeiro, sem tratamentos), mas sem respaldo externo e
+  formado (apelido primeiro, sem tratamentos), mas sem respaldo externo e
   sem esse vínculo.</li>
 </ul>
 <p>A cascata desce de degrau só quando o anterior não encontra nada. A ordem é
@@ -57,7 +57,7 @@ como corresponde e não como uma cadeia literal com a razão social colada.</p>
 <h2>Assuntos: a lista correta para cada região</h2>
 <p>Os assuntos não se resolvem como os nomes. Um assunto costuma vir do
 vocabulário da Library of Congress, em inglês, e há que levá-lo ao vocabulário
-controlado da região. O Collect faz isso consultando o id.loc.gov, que vincula
+controlado da região. O Collect faz isso consultando o id.loc.gov, que liga
 cada assunto com o seu equivalente oficial em outras listas nacionais: <strong>EMBNE</strong>
 na Espanha, <strong>RAMEAU</strong> na França, <strong>GND</strong> na Alemanha, entre outras.</p>
 <p>Quando não há um vocabulário oficial para essa região, o Collect traduz o termo
@@ -69,22 +69,22 @@ assunto sai com o código da fonte contra a qual se resolveu.</p>
 <p>Um acervo de arte usa listas especializadas, as do Getty: <strong>ULAN</strong> para nomes
 de artistas, <strong>AAT</strong> para tipos de objeto e materiais, <strong>TGN</strong> para lugares. O
 Collect consulta-as para os registos de obra, e aqui a regra é mais estrita
-que no resto: <strong>só vincula quando há uma coincidência exata e sem
+que no resto: <strong>só liga quando há uma coincidência exata e sem
 ambiguidade</strong>.</p>
-<p>A razão é concreta. A busca por texto do Getty ordena por relevância, não por
+<p>A razão é concreta. A pesquisa por texto do Getty ordena por relevância, não por
 exatidão: &ldquo;Rivera Diego&rdquo; devolve primeiro &ldquo;Museo Diego Rivera&rdquo;, e &ldquo;Zamora&rdquo;
-devolve treze lugares distintos. Tomar o primeiro resultado vincularia a um
+devolve treze lugares distintos. Tomar o primeiro resultado ligaria a um
 conceito equivocado, e um vínculo equivocado é pior do que nenhum: aparenta
 precisão onde não a há. Se não existe exatamente um conceito cujo nome
-coincida com o termo, o Collect não vincula e deixa o termo sem marca.</p>
+coincida com o termo, o Collect não liga e deixa o termo sem marca.</p>
 <h2>Limites</h2>
 <ul>
 <li><strong>Os homónimos continuam a ser trabalho humano.</strong> Dois &ldquo;Juan Pérez&rdquo; nascidos na
   mesma década, sem datas que os separem, não os desambigua nenhuma lista. O
-  Collect deixa ambos em forma de catálogo; decidir se são a mesma pessoa o
-  faz quem conhece o fundo.</li>
+  Collect deixa ambos em forma de catálogo; decidir se são a mesma pessoa
+  fá-lo quem conhece o fundo.</li>
 <li><strong>Os nomes que nenhuma lista conhece</strong> (um funcionário local, uma empresa que
-  não está no VIAF nem no ISNI) igual entram bem escritos, sobrenome primeiro e
+  não está no VIAF nem no ISNI) mesmo assim entram bem escritos, apelido primeiro e
   sem tratamentos, mas sem o vínculo de autoridade. Sabe-se que não vêm
   respaldados justamente porque lhes falta essa marca.</li>
 <li><strong>Reunir variantes sob um só cabeçalho do fundo</strong> ainda não o faz o Collect.
@@ -95,8 +95,8 @@ coincida com o termo, o Collect não vincula e deixa o termo sem marca.</p>
   normalização do nome ocorre antes de consultar qualquer lista; o que a
   validação externa agrega é a procedência, não o bom formato.</li>
 </ul>
-<p>Nenhuma destas listas substitui quem cataloga: tira-lhe de cima a digitação
-repetida e o emparelhamento manual de grafias, e lhe deixa o juízo (os
+<p>Nenhuma destas listas substitui quem cataloga: tira-lhe de cima a escrita
+repetida e o emparelhamento manual de grafias, e deixa-lhe o juízo (os
 homónimos, as pessoas que nenhuma lista internacional regista), que é onde o
 seu critério faz falta.</p>
 <p>Se na sua instituição o trabalho se vai em reescrever nomes e emparelhar

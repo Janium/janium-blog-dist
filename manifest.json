@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:15:02Z",
+  "generated": "2026-10-04T14:23:55Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -636,7 +636,7 @@
         },
         "pt": {
           "title": "Controlo de autoridade: cada nome entra no catálogo de uma só forma",
-          "description": "O mesmo autor escrito de três maneiras são três pessoas no índice. O Collect confere cada nome e assunto contra as listas que a instituição já usa (seu catálogo, VIAF, ISNI, os vocabulários do Getty) e deixa escrito de que lista saiu a forma.",
+          "description": "O mesmo autor escrito de três maneiras são três pessoas no índice. O Collect confere cada nome e assunto contra as listas que a instituição já usa (o seu catálogo, VIAF, ISNI, os vocabulários do Getty) e deixa escrito de que lista saiu a forma.",
           "cover": "assets/control-de-autoridades-y-vocabularios-pt-cover-9cb88221.svg",
           "html": "posts/control-de-autoridades-y-vocabularios.pt.html"
         }
@@ -664,8 +664,8 @@
           "html": "posts/de-un-video-a-registros-enlazados.en.html"
         },
         "pt": {
-          "title": "Catalogar um vídeo de acervo com IA: da gravação a registos vinculados",
-          "description": "Um cinejornal ou uma sessão gravada não trazem o conteúdo escrito. O Collect propõe um registo do vídeo inteiro e, se faz falta, um registo por cena, vinculado ao primeiro.",
+          "title": "Catalogar um vídeo de acervo com IA: da gravação a registos ligados",
+          "description": "Um cinejornal ou uma sessão gravada não trazem o conteúdo escrito. O Collect propõe um registo do vídeo inteiro e, se faz falta, um registo por cena, ligado ao primeiro.",
           "cover": "assets/de-un-video-a-registros-enlazados-pt-cover-d5c3b989.svg",
           "html": "posts/de-un-video-a-registros-enlazados.pt.html"
         }
@@ -726,7 +726,7 @@
         },
         "pt": {
           "title": "Pontos de acesso, texto completo e RAG",
-          "description": "Um estudo recente mede até onde um modelo aproveita de verdade o contexto que se lhe injeta. O que isso implica para o RAG, e o que uma instituição obtém quando o Collect aflora pontos de acesso (também as extensões corporativas) para o Janium os procurar.",
+          "description": "Um estudo recente mede até onde um modelo aproveita de verdade o contexto que se lhe injeta. O que isso implica para o RAG, e o que uma instituição obtém quando o Collect faz emergir pontos de acesso (também as extensões corporativas) para o Janium os procurar.",
           "cover": "assets/puntos-de-acceso-texto-completo-y-rag-pt-cover-7debe6a4.svg",
           "html": "posts/puntos-de-acceso-texto-completo-y-rag.pt.html"
         }
@@ -756,7 +756,7 @@
         },
         "pt": {
           "title": "Glossário: os termos de IA e catalogação deste blog",
-          "description": "Definições breves dos termos que atravessam esta série: da IA (modelo de linguagem ou LLM, RAG, modelo de fronteira, on-premise, air-gapped, anonimização, OCR, ASR), da catalogação (MARC21, Dublin Core, ISAD-G, CDWA, controlo de autoridade) e do sistema Janium. Para quem vem de bibliotecas e arquivos e esbarra em jargão de IA, ou o contrário.",
+          "description": "Definições breves dos termos que atravessam esta série: da IA (modelo de linguagem ou LLM, RAG, modelo de fronteira, on-premise, air-gapped, anonimização, OCR, ASR), da catalogação (MARC21, Dublin Core, ISAD-G, CDWA, controlo de autoridade) e do sistema Janium. Para quem vem de bibliotecas e arquivos e depara com jargão de IA, ou o contrário.",
           "cover": "assets/glosario-pt-cover-d129439f.svg",
           "html": "posts/glosario.pt.html"
         }
@@ -785,8 +785,8 @@
           "html": "posts/confiar-en-catalogo-con-ia.en.html"
         },
         "pt": {
-          "title": "Por que confiar num catálogo feito com IA",
-          "description": "Como um catálogo feito com IA se torna confiável: não negando que o modelo enriquece, mas sabendo de onde vem cada dado. Apoia-se na fonte que respalda cada um, na verificação contra autoridades, no cálculo determinístico dos campos com regra, na avaliação por registo e num filtro de qualidade que barra lotes degradados, com os limites explícitos.",
+          "title": "Porquê confiar num catálogo feito com IA",
+          "description": "Como um catálogo feito com IA se torna fiável: não negando que o modelo enriquece, mas sabendo de onde vem cada dado. Apoia-se na fonte que respalda cada um, na verificação contra autoridades, no cálculo determinístico dos campos com regra, na avaliação por registo e num filtro de qualidade que barra lotes degradados, com os limites explícitos.",
           "cover": "assets/confiar-en-catalogo-con-ia-pt-cover-4bc2c5d9.svg",
           "html": "posts/confiar-en-catalogo-con-ia.pt.html"
         }
@@ -845,7 +845,7 @@
         },
         "pt": {
           "title": "De uma gravação sonora a um registo de catálogo",
-          "description": "Como o Janium Collect cataloga acervos com áudio (gravações sonoras, entrevistas, atas orais) transcrevendo a voz e produzindo um registo em Dublin Core, MARC ou ISAD-G, com a opção de segmentar por intervenção em registos filhos vinculados.",
+          "description": "Como o Janium Collect cataloga acervos com áudio (gravações sonoras, entrevistas, atas orais) transcrevendo a voz e produzindo um registo em Dublin Core, MARC ou ISAD-G, com a opção de segmentar por intervenção em registos filhos ligados.",
           "cover": "assets/de-una-grabacion-sonora-a-un-registro-pt-cover-7b832801.svg",
           "html": "posts/de-una-grabacion-sonora-a-un-registro.pt.html"
         }
@@ -904,7 +904,7 @@
         },
         "pt": {
           "title": "O que exigir de uma ferramenta de catalogação com IA",
-          "description": "Quase qualquer ferramenta de catalogação com IA parece boa numa demonstração. Estas são as perguntas que revelam se os seus registos são confiáveis no seu catálogo, para além dessa primeira impressão: de onde vem cada dado, contra quais autoridades verifica, o que calcula com regra, se está correto na norma, se avalia cada registo, se se ajusta ao seu acervo, se respeita a sua soberania e se é honesto sobre os seus limites. Servem para avaliar qualquer fornecedor.",
+          "description": "Quase qualquer ferramenta de catalogação com IA parece boa numa demonstração. Estas são as perguntas que revelam se os seus registos são fiáveis no seu catálogo, para além dessa primeira impressão: de onde vem cada dado, contra quais autoridades verifica, o que calcula com regra, se está correto na norma, se avalia cada registo, se se ajusta ao seu acervo, se respeita a sua soberania e se é honesto sobre os seus limites. Servem para avaliar qualquer fornecedor.",
           "cover": "assets/que-exigir-catalogacion-con-ia-pt-cover-afcc7a1e.svg",
           "html": "posts/que-exigir-catalogacion-con-ia.pt.html"
         }
@@ -995,7 +995,7 @@
           "html": "posts/generico-no-basta.en.html"
         },
         "pt": {
-          "title": "Genérico não basta: por que um catálogo de registo precisa de mais que um LLM que preenche campos",
+          "title": "Genérico não basta: porque é que um catálogo de registo precisa de mais que um LLM que preenche campos",
           "description": "Um LLM genérico já produz registos completos e verossímeis; enriquecer é o valor da IA na catalogação. O que um catálogo de registo precisa além disso é saber de onde vem cada dado: a fonte que respalda cada um, cálculo determinístico onde há regra, avaliação e marcação por registo, lógica da norma, multi-idioma. E os limites do enriquecimento a partir do conhecimento do modelo.",
           "cover": "assets/generico-no-basta-pt-cover-76679e4c.svg",
           "html": "posts/generico-no-basta.pt.html"
@@ -1025,7 +1025,7 @@
         },
         "pt": {
           "title": "Como descrever um arquivo em ISAD-G com IA",
-          "description": "O que distingue a descrição arquivística da bibliográfica, por que um arquivo precisa de ISAD-G, e como se produz descrição em ISAD-G com IA: por proveniência e hierarquia, não por item isolado.",
+          "description": "O que distingue a descrição arquivística da bibliográfica, porque é que um arquivo precisa de ISAD-G, e como se produz descrição em ISAD-G com IA: por proveniência e hierarquia, não por item isolado.",
           "cover": "assets/formato-archivistico-isadg-pt-cover-dc020629.svg",
           "html": "posts/formato-archivistico-isadg.pt.html"
         }
@@ -1056,7 +1056,7 @@
         },
         "pt": {
           "title": "Catalogar com IA sem que o material saia da instituição",
-          "description": "Há acervos que não podem sair da instituição: por residência de dados, política ou confidencialidade. Como o Collect cataloga com IA na própria infraestrutura, com um modelo local e até air-gapped; o modo híbrido com anonimização para os casos difíceis; e por que o raro não é a IA soberana nem a catalogação isoladas, mas as duas juntas. Com os limites de cada modo.",
+          "description": "Há acervos que não podem sair da instituição: por residência de dados, política ou confidencialidade. Como o Collect cataloga com IA na própria infraestrutura, com um modelo local e até air-gapped; o modo híbrido com anonimização para os casos difíceis; e porque é que o raro não é a IA soberana nem a catalogação isoladas, mas as duas juntas. Com os limites de cada modo.",
           "cover": "assets/soberania-de-datos-pt-cover-47994b20.svg",
           "html": "posts/soberania-de-datos.pt.html"
         }
