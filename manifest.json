@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T15:03:00Z",
+  "generated": "2026-10-04T15:04:37Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -564,19 +564,19 @@
       ],
       "translations": {
         "es": {
-          "title": "Catalogar acervos audiovisuales — noticiarios, grabaciones y video",
+          "title": "Catalogar acervos audiovisuales: noticiarios, grabaciones y video",
           "description": "Cómo Janium Collect ayuda a describir a escala un acervo audiovisual (noticiarios, grabaciones sonoras, registros en video de eventos) a partir de la transcripción y de los fotogramas por escena, produciendo un registro padre y segmentos hijos en el formato que usa la institución.",
           "cover": "assets/casos-audiovisual-es-cover-ce9b3863.svg",
           "html": "posts/casos-audiovisual.es.html"
         },
         "en": {
-          "title": "Cataloging audiovisual collections — newsreels, recordings and video",
+          "title": "Cataloging audiovisual collections: newsreels, recordings and video",
           "description": "How Janium Collect helps describe an audiovisual collection at scale (newsreels, sound recordings, video records of events) from the transcription and the per-scene frames, producing a parent record and child segments in the format the institution uses.",
           "cover": "assets/casos-audiovisual-en-cover-ce9b3863.svg",
           "html": "posts/casos-audiovisual.en.html"
         },
         "pt": {
-          "title": "Catalogar acervos audiovisuais — noticiários, gravações e vídeo",
+          "title": "Catalogar acervos audiovisuais: noticiários, gravações e vídeo",
           "description": "Como o Janium Collect ajuda a descrever em escala um acervo audiovisual (noticiários, gravações sonoras, registos em vídeo de eventos) a partir da transcrição e dos fotogramas por cena, produzindo um registo pai e segmentos filhos no formato que a instituição usa.",
           "cover": "assets/casos-audiovisual-pt-cover-ce9b3863.svg",
           "html": "posts/casos-audiovisual.pt.html"
@@ -803,19 +803,19 @@
       ],
       "translations": {
         "es": {
-          "title": "De documentos a registros de catálogo — qué es Janium Collect",
+          "title": "De documentos a registros de catálogo: qué es Janium Collect",
           "description": "Qué problema resuelve Janium Collect para una institución con acervo, cómo convierte documentos de distintos tipos en registros de catálogo en formatos estándar, y dónde están los límites de lo que hace.",
           "cover": "assets/que-es-janium-collect-es-cover-08144f1e.png",
           "html": "posts/que-es-janium-collect.es.html"
         },
         "en": {
-          "title": "From documents to catalog records — what Janium Collect is",
+          "title": "From documents to catalog records: what Janium Collect is",
           "description": "What problem Janium Collect solves for an institution with a collection, how it turns documents of different kinds into catalog records in standard formats, and where the limits of what it does lie.",
           "cover": "assets/que-es-janium-collect-en-cover-08144f1e.png",
           "html": "posts/que-es-janium-collect.en.html"
         },
         "pt": {
-          "title": "De documentos a registos de catálogo — o que é o Janium Collect",
+          "title": "De documentos a registos de catálogo: o que é o Janium Collect",
           "description": "Que problema resolve o Janium Collect para uma instituição com acervo, como converte documentos de diferentes tipos em registos de catálogo em formatos padrão, e onde estão os limites do que faz.",
           "cover": "assets/que-es-janium-collect-pt-cover-08144f1e.png",
           "html": "posts/que-es-janium-collect.pt.html"
