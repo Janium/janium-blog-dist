@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:45:58Z",
+  "generated": "2026-10-04T14:47:12Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -601,7 +601,7 @@
         },
         "en": {
           "title": "Keeping a degraded batch out of the catalog: quality gates",
-          "description": "How to keep a degraded batch out of the catalog: Collect checks cloud sources at start-up and stops the load if links to the original or a required record type were lost. Fail in the open; do not silently ship bad data.",
+          "description": "How to keep a degraded batch out of the catalog: Collect checks cloud sources at start-up and stops the load if links to the original or a required record type were lost. Fail visibly instead of silently shipping bad data.",
           "cover": "assets/confianza-operativa-en-cover-d4f0bf8a.svg",
           "html": "posts/confianza-operativa.en.html"
         },
