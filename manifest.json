@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:34:07Z",
+  "generated": "2026-10-04T14:37:31Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -839,7 +839,7 @@
         },
         "en": {
           "title": "From a sound recording to a catalog record",
-          "description": "How Janium Collect catalogs collections with audio (sound recordings, interviews, oral minutes) transcribing the voice and producing a record in Dublin Core, MARC or ISAD-G, with the option to segment by intervention into linked child records.",
+          "description": "How Janium Collect catalogs collections with audio (sound recordings, interviews, recorded proceedings) transcribing the voice and producing a record in Dublin Core, MARC or ISAD-G, with the option to segment by intervention into linked child records.",
           "cover": "assets/de-una-grabacion-sonora-a-un-registro-en-cover-7b832801.svg",
           "html": "posts/de-una-grabacion-sonora-a-un-registro.en.html"
         },
