@@ -1,9 +1,7 @@
 <p>Un <a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> admite, sobre el papel,
 cientos de miles o millones de tokens. En la práctica aprovecha muchos menos.
 Norman Paulsen lo midió de forma sistemática: define una <em>ventana de contexto
-máxima efectiva</em> (MECW, por las siglas en inglés) —el tramo de entrada a partir
-del cual añadir tokens ya no mejora la respuesta, y a menudo la empeora— y la
-compara con la ventana que anuncian los proveedores. En su muestra, la mayoría
+máxima efectiva</em> (MECW, por las siglas en inglés), que es el tramo de entrada a partir del cual añadir tokens ya no mejora la respuesta y a menudo la empeora, y la compara con la ventana que anuncian los proveedores. En su muestra, la mayoría
 de los modelos degradan con claridad hacia los mil tokens de contexto; algunos
 fallan con cientos. La distancia respecto al máximo arquitectónico llega a ser
 de más del 99 por ciento. El tipo de problema desplaza ese umbral: no hay un
@@ -14,7 +12,7 @@ conviene ponerle al modelo, y <em>cuándo</em>.</p>
 <p>El <a href="/blog/glosario/#rag">RAG</a> (generación aumentada por recuperación) parte de una idea sana: el
 modelo no tiene que memorizar el acervo. Se recupera un puñado de fragmentos
 cercanos a la consulta y se los entrega para que redacte una respuesta. Bien
-acotado —pocos fragmentos, relevantes, por debajo de la ventana efectiva— el
+acotado (pocos fragmentos, relevantes, por debajo de la ventana efectiva) el
 mismo estudio encuentra que la exactitud puede acercarse al ciento por ciento.
 Ese es el uso que vale la pena defender: una pregunta en lenguaje natural
 sobre un conjunto de documentos, con una respuesta sintetizada.</p>
@@ -27,16 +25,16 @@ atiende peor lo que queda en el medio del contexto
 troceo del documento decide qué se puede recuperar. Un fragmento demasiado
 grande diluye; uno demasiado chico corta la frase que importaba.</p>
 <p>Para preguntar «¿qué dice este expediente sobre la cláusula X?» eso se
-mitiga. Para <em>encontrar</em> en un catálogo —el autor, la materia, el título
+mitiga. Para <em>encontrar</em> en un catálogo (el autor, la materia, el título
 exacto, todas las obras de una persona, el volumen que empieza por una
-letra— el cuello de botella no es la redacción de una respuesta. Es tener
+letra) el cuello de botella no es la redacción de una respuesta. Es tener
 puntos de acceso estables sobre los que buscar y hojear.</p>
 <h2>Lo que Collect deja listo para buscar</h2>
 <p><a href="/blog/que-es-janium-collect/">Collect</a> usa el modelo en el momento de
-describir, no en el de cada consulta. Lee el material —un PDF, una imagen,
-una hoja, una grabación— e identifica la obra. Del documento <strong>aflora</strong> los
+describir, no en el de cada consulta. Lee el material (un PDF, una imagen,
+una hoja, una grabación) e identifica la obra. Del documento <strong>aflora</strong> los
 <a href="/blog/glosario/#punto-de-acceso">puntos de acceso</a>: los encabezamientos por
-los que se va a encontrar el registro —nombres, materias, títulos, fechas—
+los que se va a encontrar el registro (nombres, materias, títulos, fechas)
 y, cuando hay coincidencia, los deja en forma autorizada. No son un
 párrafo para el modelo: son las entradas que <a href="/blog/glosario/#janium">Janium</a>
 carga en sus índices.</p>
@@ -97,28 +95,28 @@ registro y alcanza el cuerpo. Sigue siendo un índice, no una generación: no
 hay ventana de contexto que se sature cuando el fondo pasa de miles a
 cientos de miles de páginas.</p>
 <p>El mismo markdown sirve, si la institución lo quiere, para <strong>embeddings</strong>.
-Ahí el RAG vuelve a tener sentido —como capa opcional, sobre un texto ya
-limpio y ya anclado a un registro— no como único camino para encontrar una
+Ahí el RAG vuelve a tener sentido, como capa opcional, sobre un texto ya
+limpio y ya anclado a un registro, no como único camino para encontrar una
 obra. Quien necesita una respuesta redactada («compara estas tres
 cláusulas») recupera pocos pasajes y se queda bajo la ventana efectiva.
 Quien necesita el autor o la signatura no tiene por qué pasar por ahí.</p>
 <h2>Tres capas, un solo acervo</h2>
 <p>No es Collect <em>o</em> RAG. Es un orden:</p>
 <ol>
-<li><strong>Puntos de acceso</strong> en el catálogo — lo que Collect aflora y Janium
+<li><strong>Puntos de acceso</strong> en el catálogo: lo que Collect aflora y Janium
    busca en alfabético, por palabra clave y, si hay extensiones
    corporativas, por monto, vencimiento, cláusula u obligación. Es la
    capa que un acervo tiene que sostener aunque nadie haga una pregunta
    en lenguaje natural.</li>
-<li><strong>Texto completo</strong> del markdown — cuando hace falta localizar una
+<li><strong>Texto completo</strong> del markdown: cuando hace falta localizar una
    frase, no solo la ficha.</li>
-<li><strong>Embeddings / RAG</strong> — cuando hace falta sintetizar o comparar, con
+<li><strong>Embeddings / RAG</strong>: cuando hace falta sintetizar o comparar, con
    pocos fragmentos y a sabiendas del umbral efectivo del modelo.</li>
 </ol>
 <p>El estudio de Paulsen no dice que el RAG esté agotado. Dice que el modelo
 deja de aprovechar el contexto mucho antes de lo que anuncia la ficha
 técnica, y que un RAG que ignora ese techo se perjudica solo. Collect
-usa el modelo donde rinde —identificar y completar un registro, una vez—
+usa el modelo donde rinde (identificar y completar un registro, una vez)
 y deja en Janium un catálogo que no depende de volver a caber en esa
 ventana.</p>
 <p>Si tu institución está evaluando si «poner el acervo en un RAG» sustituye

@@ -14,15 +14,15 @@ texto. Esse passo é a <strong>transcrição automática</strong> (ASR), e daí 
 <p>O Collect transcreve a gravação e usa essa transcrição como o &ldquo;conteúdo&rdquo; do
 ficheiro. Sobre esse texto, o modelo extrai os campos do registo: tema,
 descrição, pessoas mencionadas, cobertura. A saída sai no formato que o
-acervo usa —<strong>Dublin Core</strong> para uma descrição simples, <strong>MARC21</strong> para um
-catálogo de biblioteca, <strong>ISAD-G</strong> para um arquivo onde importa a procedência—.
+acervo usa: <strong>Dublin Core</strong> para uma descrição simples, <strong>MARC21</strong> para um
+catálogo de biblioteca, <strong>ISAD-G</strong> para um arquivo onde importa a procedência.
 Não há um fluxo à parte para áudio; é o processo de sempre com uma etapa inicial
 distinta.</p>
 <p>Nem todo o registo sai da fala. Alguns dados vêm dos <strong>metadados técnicos do
 ficheiro</strong>, não do conteúdo: a duração, o códec, a resolução de amostragem. Isso
 calcula-se de forma determinista, sem passar pelo modelo, porque são factos
 mensuráveis e não convém pedi-los a um sistema que poderia estimá-los mal. O tipo
-de recurso —que se trata de um registo sonoro— também se fixa assim, não o decide
+de recurso (que se trata de um registo sonoro) também se fixa assim, não o decide
 o modelo.</p>
 <h2>Transcrever local ou na nuvem</h2>
 <p>A transcrição pode ser feita de duas maneiras, e a escolha tem consequências
@@ -53,12 +53,12 @@ instituição. Com a segmentação ligada, além do registo global da
 gravação completa, o sistema divide a transcrição em intervenções ou temas e
 cataloga cada um como um <strong>registo filho vinculado ao pai</strong>. Cada filho leva o
 seu próprio registo e uma referência explícita à gravação da qual faz parte
-—<code>dcterms:isPartOf</code> em Dublin Core, o campo 773 em MARC—, de modo que o catálogo
+(<code>dcterms:isPartOf</code> em Dublin Core, o campo 773 em MARC), de modo que o catálogo
 conserva a relação entre o todo e as suas partes.</p>
 <p>O vínculo funciona nas duas direções. Um fragmento no meio da gravação
 muitas vezes não anuncia o seu próprio tema, então o sistema completa os campos
 vazios do filho com o que a segmentação já deduziu, e herda do pai a
-identidade comum —autor, data—. Ao contrário, o registo da gravação completa
+identidade comum (autor, data). Ao contrário, o registo da gravação completa
 pode descrever-se a partir dos seus filhos: o seu tema é a união dos temas dos
 segmentos, a sua descrição a soma dos seus resumos. É descrição derivada de
 maneira determinista, não inventada.</p>
@@ -67,18 +67,18 @@ maneira determinista, não inventada.</p>
 áudio. Uma gravação limpa transcreve-se bem; uma com ruído de fundo, vozes
 sobrepostas ou microfone distante produz texto com falhas, e essas falhas se arrastam à
 extração de metadados. Quando o sistema deteta que um ficheiro quase não tem
-fala —música ou ambiente em vez de voz—, não força uma descrição a partir de uma
+fala (música ou ambiente em vez de voz), não força uma descrição a partir de uma
 transcrição pobre: prefere apoiar-se nos metadados do ficheiro e marcar o
 caso, para não fabricar conteúdo que não está.</p>
 <p>Como no restante do Collect, o que sai são <strong>registos propostos que alguém
 revê</strong>, não um catálogo terminado. A transcrição é um rascunho do conteúdo,
-não uma ata literal, e certos dados —uma cota, uma data da sessão, o
-nome exato de uma entidade— vêm dos metadados ou do critério do catalogador, não
+não uma ata literal, e certos dados (uma cota, uma data da sessão, o
+nome exato de uma entidade) vêm dos metadados ou do critério do catalogador, não
 do áudio. O sistema encurta a escuta e a digitação; não substitui quem conhece o
 acervo.</p>
 <h2>Para continuar a conversa</h2>
-<p>Se a sua instituição tem gravações sonoras esperando descrição —entrevistas,
-atas orais, fundos audiovisuais— e o gargalo é que é preciso escutar
+<p>Se a sua instituição tem gravações sonoras esperando descrição (entrevistas,
+atas orais, fundos audiovisuais) e o gargalo é que é preciso escutar
 cada uma para catalogá-la, isso é o que o Collect tenta aliviar. Escreva-nos para
 info@janium.com; interessa-nos saber como é o seu material sonoro, em que formato o
 descreve e quão limpo é o áudio, porque isso muda o que se pode esperar.</p>

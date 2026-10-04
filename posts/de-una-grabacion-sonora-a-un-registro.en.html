@@ -13,14 +13,14 @@ travels the same path as a PDF.</p>
 <p>Collect transcribes the recording and uses that transcription as the &ldquo;content&rdquo; of
 the file. On top of that text, the model extracts the record&rsquo;s fields: subject,
 description, people mentioned, coverage. The output comes out in the format the
-collection uses —<strong>Dublin Core</strong> for a simple description, <strong>MARC21</strong> for a library
-catalog, <strong>ISAD-G</strong> for an archive where provenance matters—. There is no separate
+collection uses: <strong>Dublin Core</strong> for a simple description, <strong>MARC21</strong> for a library
+catalog, <strong>ISAD-G</strong> for an archive where provenance matters. There is no separate
 flow for audio; it is the usual process with a different initial stage.</p>
 <p>Not all of the record comes from speech. Some data comes from the <strong>file&rsquo;s
 technical metadata</strong>, not from the content: the duration, the codec, the sampling
 resolution. That is computed deterministically, without going through the model,
 because these are measurable facts and it is not advisable to ask a system that
-might estimate them wrong. The resource type —that it is a sound recording— is also
+might estimate them wrong. The resource type (that it is a sound recording) is also
 set this way; the model does not decide it.</p>
 <h2>Transcribing locally or in the cloud</h2>
 <p>Transcription can be done in two ways, and the choice has different cost and
@@ -51,13 +51,13 @@ structure that makes the material consultable.</p>
 segmentation on, in addition to the global record of the complete recording, the
 system divides the transcription into interventions or subjects and catalogs each
 one as a <strong>child record linked to the parent</strong>. Each child carries its own record
-and an explicit reference to the recording it is part of —<code>dcterms:isPartOf</code> in
-Dublin Core, field 773 in MARC—, so that the catalog preserves the relationship
+and an explicit reference to the recording it is part of (<code>dcterms:isPartOf</code> in
+Dublin Core, field 773 in MARC), so that the catalog preserves the relationship
 between the whole and its parts.</p>
 <p>The link works in both directions. A fragment in the middle of the recording often
 does not announce its own subject, so the system fills the child&rsquo;s empty fields
 with what the segmentation has already deduced, and inherits from the parent the
-common identity —author, date—. Conversely, the record of the complete recording
+common identity (author, date). Conversely, the record of the complete recording
 can be described from its children: its subject is the union of the subjects of the
 segments, its description the sum of their summaries. It is description derived
 deterministically, not invented.</p>
@@ -66,18 +66,18 @@ deterministically, not invented.</p>
 A clean recording transcribes well; one with background noise, overlapping voices
 or a distant microphone produces text with faults, and those faults carry over to
 the metadata extraction. When the system detects that a file has almost no speech
-—music or ambience instead of voice—, it does not force a description out of a poor
+(music or ambience instead of voice), it does not force a description out of a poor
 transcription: it prefers to rely on the file&rsquo;s metadata and flag the case, so as
 not to fabricate content that is not there.</p>
 <p>As with the rest of Collect, what comes out are <strong>proposed records that someone
 reviews</strong>, not a finished catalog. The transcription is a draft of the content, not
-literal oral minutes, and certain data —a call number, a date of the session, the
-exact name of an entity— come from the technical metadata or from the cataloger&rsquo;s
+literal oral minutes, and certain data (a call number, a date of the session, the
+exact name of an entity) come from the technical metadata or from the cataloger&rsquo;s
 judgment, not from the audio. The system shortens the listening and the typing; it
 does not replace the person who knows the collection.</p>
 <h2>To continue the conversation</h2>
-<p>If your institution has sound recordings waiting to be described —interviews, oral
-minutes, audiovisual holdings— and the bottleneck is that each one has to be
+<p>If your institution has sound recordings waiting to be described (interviews, oral
+minutes, audiovisual holdings) and the bottleneck is that each one has to be
 listened to in order to catalog it, this is what Collect tries to relieve. Write to
 us at info@janium.com; we are interested in knowing what your sound material is
 like, in what format you describe it and how clean the audio is, because that
