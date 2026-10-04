@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:41:14Z",
+  "generated": "2026-10-04T14:42:33Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -24,8 +24,8 @@
           "html": "posts/constancia-de-no-adeudo.en.html"
         },
         "pt": {
-          "title": "Declaração de não dívida em Word",
-          "description": "O Janium 2027 pode emitir a declaração de não dívida como documento Word, além do HTML. Há um modelo para todo o sistema e cada biblioteca pode usar o seu.",
+          "title": "Declaração de inexistência de dívidas em Word",
+          "description": "O Janium 2027 pode emitir a declaração de inexistência de dívidas como documento Word, além do HTML. Há um modelo para todo o sistema e cada biblioteca pode usar o seu.",
           "cover": "assets/constancia-de-no-adeudo-pt-cover-adf1ca35.svg",
           "html": "posts/constancia-de-no-adeudo.pt.html"
         }
