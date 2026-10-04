@@ -3,9 +3,7 @@ a book, complete in itself. In an archive the approach is different. An isolated
 file says little if there is no way to know which series it comes from, who
 produced it and under what function. The <strong>ISAD-G</strong> standard starts from there:
 description is by <strong>provenance</strong> and by <strong>hierarchy</strong> (Fonds, Section, Series,
-File) and not by the loose document. Describing a thousand documents as a thousand
-independent records is not an incomplete archival description; it is a description
-of something else.</p>
+File) and not by the loose document. A thousand independent records, one per document, describe the documents but not the archive.</p>
 <p>This raises a concrete problem when extraction is done with AI. A <a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a>
 reads one document at a time and produces one record per document. Nothing in that
 reading, however good it may be, builds the Series level or the Fonds level,
@@ -68,8 +66,7 @@ section.</p>
 document. Between extraction and export there is structure generation (the Fonds,
 Section and Series nodes that did not exist) and there is aggregation: the producer
 raised to its level, the date range computed, the extent counted.</p>
-<p>That is not a deviation from the original data; it is what an archival description
-requires. The document record is still there, with what the model read from it.
+<p>An archival description requires those values, and the original data does not change. The document record is still there, with what the model read from it.
 What is added on top is the context that makes it archivally legible: which series
 it comes from, who produced it, which fonds it belongs to. Without that layer,
 you would have an inventory of items; with it, a described classification scheme.</p>
