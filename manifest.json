@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:42:33Z",
+  "generated": "2026-10-04T14:43:43Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -140,7 +140,7 @@
           "html": "posts/codigo-al-correo-y-caducidad.en.html"
         },
         "pt": {
-          "title": "Código no correio e caducidade da palavra-passe no Janium",
+          "title": "Código por correio eletrónico e caducidade da palavra-passe no Janium",
           "description": "O Janium 2027 pode pedir um código de seis dígitos a quem tem correio no perfil, e uma palavra-passe nova quando vence o prazo. Sem correio, a entrada fica como até agora.",
           "cover": "assets/codigo-al-correo-y-caducidad-pt-cover-a3fc1304.svg",
           "html": "posts/codigo-al-correo-y-caducidad.pt.html"
