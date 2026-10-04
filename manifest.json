@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:52:11Z",
+  "generated": "2026-10-04T14:54:00Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -547,7 +547,7 @@
           "html": "posts/del-registro-al-catalogo.en.html"
         },
         "pt": {
-          "title": "Integrar a catalogação com IA ao seu catálogo (ILS)",
+          "title": "Integrar a catalogação com IA no seu catálogo (ILS)",
           "description": "Como os registos do Collect chegam ao catálogo ou ILS (lote de carga, SFTP, pasta) e o que essa integração não faz: o Collect não mantém uma cópia sincronizada de cada ficha. No ISAD-G hierárquico o catálogo envia ao Collect a árvore e as datas para o bubble-up.",
           "cover": "assets/del-registro-al-catalogo-pt-cover-66f77f59.svg",
           "html": "posts/del-registro-al-catalogo.pt.html"
