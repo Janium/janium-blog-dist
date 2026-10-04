@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:44:50Z",
+  "generated": "2026-10-04T14:45:58Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -780,7 +780,7 @@
         },
         "en": {
           "title": "Why trust a catalog made with AI",
-          "description": "How a catalog made with AI becomes trustworthy: not by denying that the model enriches, but by knowing where each piece of data comes from. It rests on the source that backs each one, verification against authorities, deterministic computation of rule-based fields, per-record evaluation and a quality gate that stops degraded batches, with the limits made explicit.",
+          "description": "How a catalog made with AI becomes trustworthy: not by denying that the model enriches, but by knowing where each value comes from. It rests on the source that backs each one, verification against authorities, deterministic computation of rule-based fields, per-record evaluation and a quality gate that stops degraded batches, with the limits made explicit.",
           "cover": "assets/confiar-en-catalogo-con-ia-en-cover-4bc2c5d9.svg",
           "html": "posts/confiar-en-catalogo-con-ia.en.html"
         },
