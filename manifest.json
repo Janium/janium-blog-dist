@@ -1,6 +1,6 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T14:05:39Z",
+  "generated": "2026-10-04T14:07:20Z",
   "posts": [
     {
       "slug": "constancia-de-no-adeudo",
@@ -862,19 +862,19 @@
       "translations": {
         "es": {
           "title": "De documentos sueltos a Fondo y Serie: generar la jerarquía ISAD-G automáticamente",
-          "description": "Cómo generar automáticamente la jerarquía ISAD-G —Fondo, Sección, Serie— al catalogar: el exportador arma el árbol desde el cuadro de clasificación, sube a los niveles superiores lo que la mayoría de los hijos comparte, y agrega rango de fechas y volumen.",
+          "description": "Cómo generar automáticamente la jerarquía ISAD-G (Fondo, Sección, Serie) al catalogar: el exportador arma el árbol desde el cuadro de clasificación, sube a los niveles superiores lo que la mayoría de los hijos comparte, y agrega rango de fechas y volumen.",
           "cover": "assets/de-documentos-sueltos-a-fondo-y-serie-es-cover-58c799d3.svg",
           "html": "posts/de-documentos-sueltos-a-fondo-y-serie.es.html"
         },
         "en": {
           "title": "From loose documents to Fonds and Series: generating the ISAD-G hierarchy automatically",
-          "description": "How to automatically generate the ISAD-G hierarchy —Fonds, Section, Series— while cataloging: the exporter builds the tree from the classification scheme, raises to the upper levels what most of the children share, and adds date range and extent.",
+          "description": "How to automatically generate the ISAD-G hierarchy (Fonds, Section, Series) while cataloging: the exporter builds the tree from the classification scheme, raises to the upper levels what most of the children share, and adds date range and extent.",
           "cover": "assets/de-documentos-sueltos-a-fondo-y-serie-en-cover-58c799d3.svg",
           "html": "posts/de-documentos-sueltos-a-fondo-y-serie.en.html"
         },
         "pt": {
           "title": "De documentos avulsos a Fundo e Série: gerar a hierarquia ISAD-G automaticamente",
-          "description": "Como gerar automaticamente a hierarquia ISAD-G —Fundo, Secção, Série— ao catalogar: o exportador monta a árvore a partir do quadro de classificação, sobe aos níveis superiores o que a maioria dos filhos partilha, e acrescenta intervalo de datas e volume.",
+          "description": "Como gerar automaticamente a hierarquia ISAD-G (Fundo, Secção, Série) ao catalogar: o exportador monta a árvore a partir do quadro de classificação, sobe aos níveis superiores o que a maioria dos filhos partilha, e acrescenta intervalo de datas e volume.",
           "cover": "assets/de-documentos-sueltos-a-fondo-y-serie-pt-cover-58c799d3.svg",
           "html": "posts/de-documentos-sueltos-a-fondo-y-serie.pt.html"
         }

@@ -2,8 +2,8 @@
 a book, complete in itself. In an archive the criterion is different. An isolated
 file says little if there is no way to know which series it comes from, who
 produced it and under what function. The <strong>ISAD-G</strong> standard starts from there:
-description is by <strong>provenance</strong> and by <strong>hierarchy</strong> —Fonds, Section, Series,
-File— and not by the loose document. Describing a thousand documents as a thousand
+description is by <strong>provenance</strong> and by <strong>hierarchy</strong> (Fonds, Section, Series,
+File) and not by the loose document. Describing a thousand documents as a thousand
 independent records is not an incomplete archival description; it is a description
 of something else.</p>
 <p>This raises a concrete problem when extraction is done with AI. A <a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a>
@@ -15,12 +15,12 @@ each one. That is the work Collect&rsquo;s hierarchical exporter does between ex
 and the final archive.</p>
 <h2>From per-document records to a tree</h2>
 <p>The starting point is the document records that extraction has already produced.
-Each one carries, besides its data, its <strong>archival location</strong> —the place it
-occupies in the institution&rsquo;s classification scheme—. With that location, the
+Each one carries, besides its data, its <strong>archival location</strong>, that is, the place it
+occupies in the institution&rsquo;s classification scheme. With that location, the
 exporter builds the tree: it groups the documents that hang from a single Series,
 the Series that hang from a Section, and so on up to the Fonds. The levels it
 exports run from Fonds to Item, passing through Subfonds, Section, Series,
-Subseries, File and Document; the fixed upper levels —Country, Institution— are
+Subseries, File and Document; the fixed upper levels (Country, Institution) are
 assumed from the context and are not emitted as records.</p>
 <p>The origin of that structure is explicit. <strong>The hierarchy is generated from the
 classification scheme; it is not inferred by the language model.</strong> If the documents
@@ -32,16 +32,14 @@ coming with the material.</p>
 <p>Once the tree is built, the question the standard answers with the principle of
 <strong>non-repetition</strong> (ISAD-G 2.4) appears: information that is common to all the
 documents of a Series is described once, at the Series level, not a thousand times
-in each document. The producer of a fonds, the conditions of access of a series,
-the language of the documentation —they are properties of the whole, and repeating
+in each document. The producer of a fonds, the conditions of access of a series and the language of the documentation are properties of the whole, and repeating
 them in each child hinders more than it helps.</p>
 <p>The exporter applies this by raising to the upper levels the fields that most of
 the children share. It does not raise just anything: only a bounded set of fields
-where the principle makes archival sense —<strong>producer</strong>, administrative history,
+where the principle makes archival sense: <strong>producer</strong>, administrative history,
 <strong>conditions of access</strong>, <strong>language</strong>, and the subject, geographic and corporate
-descriptors—. A value is raised to a level when it is shared by a sufficient
-proportion of the documents that hang from it; that threshold is deliberately high
-—the great majority, not a simple majority—: raising a value that in reality only
+descriptors. A value is raised to a level when it is shared by a sufficient
+proportion of the documents that hang from it; that threshold is deliberately high (the great majority, not a simple majority): raising a value that in reality only
 half the children share would turn it into a false statement about the other half.</p>
 <p>The mechanism has a limit. <strong>It is a heuristic: a majority threshold, not a
 judgment about the meaning of the field.</strong> It may raise a value that statistically
@@ -53,8 +51,8 @@ proposes a reasonable structure, not a definitive one.</p>
 <p>There are data that a parent node does not inherit from its children but rather
 summarizes. The <strong>date range</strong> of a Series is the one that spans from the oldest
 document to the most recent it contains; the exporter computes it by aggregating
-the dates of the children —with outlier filtering, such as a biographical date
-that describes not the documentary production but a person mentioned—. The
+the dates of the children, with outlier filtering, such as a biographical date
+that describes not the documentary production but a person mentioned. The
 <strong>extent</strong> is the count of documents under that node. Thus, a Fonds record may end
 up with &ldquo;1940 / 2020&rdquo; as its extreme date and &ldquo;9033 documents&rdquo; as its extent: two
 data that none of the individual documents contains, because they are properties
@@ -68,9 +66,9 @@ section.</p>
 <h2>Why the output is not the model&rsquo;s</h2>
 <p>From all of this a consequence follows: the ISAD-G archive that Collect delivers
 <strong>does not coincide</strong> with the sum of what the model extracted document by
-document. Between extraction and export there is structure generation —the Fonds,
-Section and Series nodes that did not exist— and there is aggregation —the producer
-raised to its level, the date range computed, the extent counted—.</p>
+document. Between extraction and export there is structure generation (the Fonds,
+Section and Series nodes that did not exist) and there is aggregation: the producer
+raised to its level, the date range computed, the extent counted.</p>
 <p>That is not a deviation from the original data; it is what an archival description
 requires. The document record is still there, with what the model read from it.
 What is added on top is the context that makes it archivally legible: which series

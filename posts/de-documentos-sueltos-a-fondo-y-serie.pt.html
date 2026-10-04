@@ -2,7 +2,7 @@
 como um livro, completo em si mesmo. Num arquivo o critério é outro. Um dossiê
 isolado diz pouco se não se sabe de que série provém, quem o produziu e sob que
 função. A norma <strong>ISAD-G</strong> parte daí: descreve-se por <strong>proveniência</strong> e por
-<strong>hierarquia</strong> —Fundo, Secção, Série, Dossiê— e não pelo documento avulso.
+<strong>hierarquia</strong> (Fundo, Secção, Série, Dossiê) e não pelo documento avulso.
 Descrever mil documentos como mil fichas independentes não é uma descrição
 arquivística incompleta; é uma descrição de outra coisa.</p>
 <p>Isso coloca um problema concreto quando se extrai com IA. Um <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a>
@@ -14,12 +14,12 @@ trabalho que faz o exportador hierárquico do Collect entre a extração e o fic
 final.</p>
 <h2>De registos por documento a uma árvore</h2>
 <p>O ponto de partida são os registos de documento que a extração já produziu. Cada
-um traz, além dos seus dados, a sua <strong>localização arquivística</strong> —o lugar que ocupa
-no quadro de classificação da instituição—. Com essa localização, o exportador
+um traz, além dos seus dados, a sua <strong>localização arquivística</strong>, ou seja, o lugar que ocupa
+no quadro de classificação da instituição. Com essa localização, o exportador
 monta a árvore: agrupa os documentos que pendem de uma mesma Série, as Séries que
 pendem de uma Secção, e assim até o Fundo. Os níveis que exporta vão de Fundo a
 Item, passando por Subfundo, Secção, Série, Subsérie, Dossiê e Documento; os níveis
-fixos superiores —País, Instituição— assumem-se do contexto e não se emitem como
+fixos superiores (País, Instituição) assumem-se do contexto e não se emitem como
 registos.</p>
 <p>A origem dessa estrutura é explícita. <strong>A hierarquia se gera a partir do quadro de
 classificação, não a infere o modelo de linguagem.</strong> Se os documentos chegam
@@ -32,16 +32,15 @@ material.</p>
 <p>Uma vez montada a árvore, aparece a pergunta que a norma responde com o princípio
 da <strong>não repetição</strong> (ISAD-G 2.4): um dado que é comum a todos os documentos de
 uma Série descreve-se uma vez, no nível da Série, não mil vezes em cada documento.
-O produtor de um fundo, as condições de acesso de uma série, a língua da
-documentação —são propriedades do conjunto, e repeti-las em cada filho atrapalha
+O produtor de um fundo, as condições de acesso de uma série e a língua da documentação são propriedades do conjunto, e repeti-las em cada filho atrapalha
 mais do que ajuda.</p>
 <p>O exportador aplica isso subindo aos níveis superiores os campos que a maioria dos
 filhos partilha. Não sobe qualquer coisa: apenas um conjunto restrito de campos
-onde o princípio tem sentido arquivístico —<strong>produtor</strong>, história institucional,
+onde o princípio tem sentido arquivístico: <strong>produtor</strong>, história institucional,
 <strong>condições de acesso</strong>, <strong>língua</strong>, e os descritores de tema, geográficos e
-corporativos—. Um valor sobe a um nível quando o partilha uma proporção
-suficiente dos documentos que pendem dele; esse limiar é deliberadamente alto —a
-grande maioria, não uma simples maioria—: subir um dado que na realidade só
+corporativos. Um valor sobe a um nível quando o partilha uma proporção
+suficiente dos documentos que pendem dele; esse limiar é deliberadamente alto (a
+grande maioria, não uma simples maioria): subir um dado que na realidade só
 partilha a metade dos filhos o tornaria uma afirmação falsa sobre a outra
 metade.</p>
 <p>O mecanismo tem um limite. <strong>É uma heurística: um limiar de maioria, não um juízo
@@ -53,9 +52,9 @@ razoável, não uma definitiva.</p>
 <h2>Agregar data e volume</h2>
 <p>Há dados que um nó pai não herda dos seus filhos, mas sim resume. O <strong>intervalo de
 datas</strong> de uma Série é o que abrange desde o documento mais antigo até o mais
-recente que contém; o exportador calcula-o agregando as datas dos filhos —com
+recente que contém; o exportador calcula-o agregando as datas dos filhos, com
 filtragem de valores atípicos, como uma data biográfica que não descreve a
-produção documental e sim uma pessoa mencionada—. O <strong>volume</strong> é a contagem de
+produção documental e sim uma pessoa mencionada. O <strong>volume</strong> é a contagem de
 documentos sob esse nó. Assim, um registo de Fundo pode terminar com &ldquo;1940 /
 2020&rdquo; como data extrema e &ldquo;9033 documentos&rdquo; como volume: dois dados que nenhum dos
 documentos individuais contém, porque são propriedades do agregado.</p>
@@ -67,9 +66,9 @@ um documento não altere inadvertidamente o intervalo de uma secção inteira.</
 <h2>Por que a saída não é a do modelo</h2>
 <p>De tudo isso decorre uma consequência: o ficheiro ISAD-G que o Collect entrega
 <strong>não coincide</strong> com a soma do que o modelo extraiu documento por documento. Entre
-a extração e a exportação há geração de estrutura —os nós de Fundo, Secção e Série
-que não existiam— e há agregação —o produtor subido ao seu nível, o intervalo de
-datas calculado, o volume contado—.</p>
+a extração e a exportação há geração de estrutura (os nós de Fundo, Secção e Série
+que não existiam) e há agregação: o produtor subido ao seu nível, o intervalo de
+datas calculado, o volume contado.</p>
 <p>Isso não é um desvio do dado original; é o que uma descrição arquivística requer.
 O registo de documento continua ali, com o que o modelo leu dele. O que se
 acrescenta em cima é o contexto que o torna arquivisticamente legível: de que
