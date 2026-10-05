@@ -1,0 +1,110 @@
+<p>Uma biblioteca universitária não descreve com a mesma norma tudo o que recebe,
+porque não tudo vai para o mesmo lugar. As aquisições que o serviço de compras
+faz entram no catálogo e descrevem-se em <a href="/pt/blog/glosario/#marc">MARC21</a>. Um
+trabalho de fim de licenciatura deposita-se no repositório institucional,
+descreve-se em Dublin Core qualificado e, em muitas universidades, nunca chega
+a ter registo no catálogo. Um relatório ou uma memória da própria instituição,
+se o arquivo universitário os guarda, descrevem-se pelo fundo e pela série em
+<a href="/pt/blog/glosario/#isad-g">ISAD-G</a>.</p>
+<p>Quando uma universidade pede ao Janium Collect que a ajude a catalogar, o que
+pede não é um registo genérico: é o registo do destino que já tem em operação.
+O Collect lê a linha de uma lista ou o PDF de um documento e produz o registo
+desse esquema. Quem cataloga revê-o antes de o carregar.</p>
+<h2>O catálogo bibliográfico</h2>
+<p>As listas de aquisições são o caso mais direto. O ficheiro do fornecedor já
+costuma trazer o autor, o título, o ISBN e o ano, e cada valor passa para o
+campo que a biblioteca indicou: uma célula que diz 2024 continua a dizer 2024
+no registo. Quando a linha só chega para identificar o livro — às vezes é
+pouco mais do que um ISBN e um título abreviado —, o Collect completa os
+assuntos e um resumo, e marca como acrescentado o que não vinha escrito na
+origem. Esse passo, da folha de cálculo ao registo, está em
+<a href="/pt/blog/catalogar-desde-listas-y-hojas-de-calculo/">Catalogar a partir de listas e folhas de cálculo</a>.</p>
+<p>O nome do autor confronta-se primeiro com o ficheiro de autoridades da própria
+biblioteca e depois com o VIAF e o ISNI, para que a mesma pessoa não acabe no
+índice com três grafias distintas; o problema e o seu tratamento estão em
+<a href="/pt/blog/control-de-autoridades-y-vocabularios/">O mesmo autor escrito de três maneiras</a>.
+A cota sai da regra que a biblioteca já aplica, seja CDU, LC ou Dewey, e o
+número Cutter, quando essa norma o pede, calcula-se pela tabela em vez de se
+estimar, como se explica em
+<a href="/pt/blog/correctores-deterministas/">O número Cutter e o nível ISAD-G</a>.</p>
+<p>A saída é MARC21, ou UNIMARC se essa for a norma da instituição, serializada
+em ficheiro plano (FLAT), ISO 2709 ou MarcEdit conforme o invólucro que o
+catálogo admita. O Collect não escreve dentro do Alma nem de nenhum outro
+<a href="/pt/blog/glosario/#ils">ILS</a>: entrega um lote e a biblioteca carrega-o pelo
+meio que já tenha configurado, seja uma carga a partir da interface, SFTP ou
+uma pasta vigiada. A entrega ao catálogo detalha-se em
+<a href="/pt/blog/del-registro-al-catalogo/">Do registo ao catálogo</a>.</p>
+<h2>O repositório institucional</h2>
+<p>O repositório funciona com outra lógica. Um trabalho de fim de licenciatura ou
+de mestrado chega como PDF, e a sua folha de rosto costuma trazer o título, o
+autor, o ano e muitas vezes o nome do orientador. O Collect lê a folha de
+rosto, os preliminares e o corpo do documento. O título e o autor passam para
+o registo tal como estão. O orientador, se a folha de rosto o declara, entra
+como contribuidor. O resumo dos preliminares alimenta a descrição, e um
+assunto que o modelo reconhece no corpo acrescenta-se ao registo marcado como
+acrescentado, à parte das palavras-chave que o próprio trabalho já declarava.</p>
+<p>O que a folha de rosto não diz não se deduz. O curso e o grau não se inferem
+do nome da universidade. O identificador que o repositório atribui no depósito
+e o URL do PDF ainda não existem quando o registo se produz, por isso esses
+campos saem vazios e é o depósito que os completa. A norma da universidade
+fixa a licença e o embargo, e o Collect não propõe nenhuma. Se o repositório
+espera o orientador ou o grau em elementos próprios, como
+<code>dc.contributor.advisor</code> ou <code>thesis.degree</code>, essa instalação configura-se para
+os emitir: o Dublin Core qualificado que sai de série não os inclui. Onde o
+esquema fica curto face a um catálogo está em
+<a href="/pt/blog/dublin-core-y-extendido/">Quando usar Dublin Core e onde fica curto</a>.</p>
+<p>O volume do ano está nos trabalhos de fim de licenciatura e de mestrado: são
+dezenas ou centenas em cada ano e chegam sem descrição. As teses de
+doutoramento são muito menos e costumam chegar já descritas com cuidado. Os
+artigos, os documentos de trabalho e as publicações da instituição tratam-se
+como os trabalhos: o registo sai do PDF.</p>
+<p>Ao lado do PDF fica também um markdown com o resumo, os capítulos e o texto do
+documento, e daí saem a descrição e a pesquisa que acompanham a ficha; o
+processo está em
+<a href="/pt/blog/de-cualquier-formato-a-un-registro/">De qualquer formato a um registo</a>.
+Consultar o repositório sobre esse texto, se a universidade o quiser mais
+tarde, é uma camada à parte:
+<a href="/pt/blog/puntos-de-acceso-texto-completo-y-rag/">Pontos de acesso, texto completo e RAG</a>.</p>
+<h2>Quando a mesma obra vai para os dois lugares</h2>
+<p>Que um trabalho se deposite no repositório e não tenha registo no catálogo é
+prática corrente em muitas universidades, e não uma falha do fluxo. Quando a
+biblioteca quer a obra nos dois lugares, o mesmo PDF lê-se uma vez por esquema
+e saem dois lotes. Cada processo emite um esquema, de modo que se o documento
+vai para um único destino produz-se apenas esse registo.</p>
+<p>Uma tese que entra no catálogo leva, quando o documento os sustenta, o autor e
+as menções secundárias (100 e 700), o título (245), a publicação (264), a
+descrição física (300), a nota de tese (502), o resumo (520) e os assuntos
+(650 e 653). Os campos que o documento não sustenta saem vazios. O 856 espera
+por um endereço: enquanto o repositório não tiver atribuído o handle, o campo
+fica sem valor. O nome da universidade que confere o grau, quando a folha de
+rosto não o declara, pode vir de um valor que a instituição fixou de antemão
+para todos os seus trabalhos, e não de uma leitura do documento.</p>
+<h2>As restantes coleções do campus</h2>
+<p>Um relatório, uma memória institucional, material didático ou uma coleção
+especial já digitalizados e sem ficha tratam-se como o trabalho de
+licenciatura: do PDF sai o registo no esquema que corresponde a essa coleção.
+Se o fundo é o arquivo institucional, a unidade descreve-se pelo fundo e pela
+série em ISAD-G, que é uma descrição hierárquica e não uma ficha solta;
+<a href="/pt/blog/formato-archivistico-isadg/">Descrever um arquivo, não um catálogo</a>
+entra nessa diferença.</p>
+<p>Num trabalho escrito noutra língua traduz-se o vocabulário da descrição,
+enquanto o título, os nomes, as datas e os identificadores ficam como no
+original. O critério completo está em
+<a href="/pt/blog/fichas-en-otro-idioma/">Fichas noutra língua</a>.</p>
+<p>Quando o PDF traz dados pessoais — e num campus trazem-nos as atas, os
+processos dos alunos e parte dos trabalhos —, o processamento pode fazer-se
+nos servidores da própria instituição:
+<a href="/pt/blog/procesar-sin-exponer-datos-personales/">Processar documentos sem expor dados pessoais</a>.</p>
+<h2>Antes de carregar</h2>
+<p>Quem cataloga recebe o registo com a sua procedência à vista: o que veio da
+linha ou da folha de rosto, o que o modelo acrescentou e o que ficou vazio
+porque o documento não o sustentava. Um campo vazio é uma tarefa pendente que
+alguém resolve com a fonte que falta, e por isso prefere-se ao dado plausível
+que ninguém declarou. O lote carrega-se no repositório ou no catálogo quando
+essa revisão lhe parecer suficiente.</p>
+<h2>Para continuar a conversa</h2>
+<p>Se na sua universidade o catálogo e o repositório convivem com critérios
+distintos, e quer ver que registo sai de uma lista de aquisições ou de um
+depósito de trabalhos do último ano, escreva-nos para info@janium.com.
+Interessa-nos saber como chegam as listas do fornecedor e em que estado
+chegam os trabalhos ao depósito.</p>

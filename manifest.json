@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-04T16:15:25Z",
+  "generated": "2026-10-05T04:30:13Z",
   "posts": [
+    {
+      "slug": "registros-de-una-biblioteca-universitaria",
+      "date": "2026-10-05",
+      "datetime": "2026-10-05T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Registros de una biblioteca universitaria",
+          "description": "Una novedad del proveedor entra al catálogo en MARC21. Un trabajo de fin de grado puede depositarse en Dublin Core y no entrar al catálogo. Collect propone el registro desde la fila o el PDF, y quien cataloga lo revisa antes de cargarlo.",
+          "cover": "assets/registros-de-una-biblioteca-universitaria-es-cover-26e5a785.svg",
+          "html": "posts/registros-de-una-biblioteca-universitaria.es.html"
+        },
+        "en": {
+          "title": "Records of a university library",
+          "description": "A new title on the vendor's list goes into the catalog in MARC21. A final-year project can be deposited in Dublin Core and stay out of the catalog. Collect proposes the record from the row or the PDF, and a cataloger reviews it before loading.",
+          "cover": "assets/registros-de-una-biblioteca-universitaria-en-cover-26e5a785.svg",
+          "html": "posts/registros-de-una-biblioteca-universitaria.en.html"
+        },
+        "pt": {
+          "title": "Registos de uma biblioteca universitária",
+          "description": "Uma aquisição do fornecedor entra no catálogo em MARC21. Um trabalho de fim de licenciatura pode depositar-se em Dublin Core e não entrar no catálogo. O Collect propõe o registo a partir da linha ou do PDF, e quem cataloga revê-o antes de o carregar.",
+          "cover": "assets/registros-de-una-biblioteca-universitaria-pt-cover-26e5a785.svg",
+          "html": "posts/registros-de-una-biblioteca-universitaria.pt.html"
+        }
+      }
+    },
     {
       "slug": "constancia-de-no-adeudo",
       "date": "2026-10-01",

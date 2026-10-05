@@ -1,0 +1,113 @@
+<p>A university library does not describe everything it receives under the same
+standard, because not everything ends up in the same place. The new titles
+acquisitions buys go into the catalog and are described in
+<a href="/en/blog/glosario/#marc">MARC21</a>. A final-year project is deposited in the
+institutional repository, described in qualified Dublin Core and, at many
+universities, never gets a catalog record at all. A report or a yearbook
+produced by the institution itself, when the university archives hold it, is
+described by fonds and series in <a href="/en/blog/glosario/#isad-g">ISAD-G</a>.</p>
+<p>When a university asks Janium Collect to help it catalog, what it asks for is
+not a generic record: it is the record for the destination it already runs.
+Collect reads a row from a list or the PDF of a document and produces the
+record for that schema. A cataloger reviews it before loading.</p>
+<h2>The bibliographic catalog</h2>
+<p>Acquisitions lists are the most direct case. The vendor&rsquo;s file usually
+carries the author, the title, the ISBN and the year already, and each value
+is moved into the field the library assigned: a cell that says 2024 still says
+2024 in the record. When the row is only enough to identify the book — at
+times it is little more than an ISBN and a shortened title — Collect completes
+the subjects and a summary, and marks as added whatever was not written down
+in the source. That path, from the spreadsheet to the record, is covered in
+<a href="/en/blog/catalogar-desde-listas-y-hojas-de-calculo/">Cataloging from lists and spreadsheets</a>.</p>
+<p>The author&rsquo;s name is checked first against the library&rsquo;s own authority file
+and then against VIAF and ISNI, so that the same person does not end up in the
+index under three different spellings; the problem and how it is handled are
+in
+<a href="/en/blog/control-de-autoridades-y-vocabularios/">The same author spelled three ways</a>.
+The call number comes from the scheme the library already applies, whether UDC,
+LC or Dewey, and the Cutter number, when that scheme calls for one, is taken
+from the table rather than estimated, as explained in
+<a href="/en/blog/correctores-deterministas/">The Cutter number and the ISAD-G level</a>.</p>
+<p>The output is MARC21, or UNIMARC when that is the institution&rsquo;s standard,
+serialized as a flat file (FLAT), ISO 2709 or MarcEdit depending on the
+wrapper the catalog accepts. Collect does not write inside Alma or any other
+<a href="/en/blog/glosario/#ils">ILS</a>: it hands over a batch and the library loads it
+by whatever means it already has configured, whether a load from the
+interface, SFTP or a watched folder. Delivery to the catalog is described in
+<a href="/en/blog/del-registro-al-catalogo/">From record to catalog</a>.</p>
+<h2>The institutional repository</h2>
+<p>The repository works on a different logic. A final-year project or a master&rsquo;s
+thesis arrives as a PDF, and its title page usually carries the title, the
+author, the year and often the supervisor&rsquo;s name. Collect reads the title
+page, the preliminaries and the body of the document. The title and the author
+are carried over as they stand. The supervisor, when the title page states the
+name, comes in as a contributor. The abstract in the preliminaries feeds the
+description, and a subject the model recognizes in the body is added to the
+record marked as added, kept apart from the keywords the work itself already
+declared.</p>
+<p>What the title page does not say is not inferred. The program and the degree
+are not deduced from the university&rsquo;s name. The identifier the repository
+assigns on deposit and the URL of the PDF do not yet exist when the record is
+produced, so those fields come out empty and the deposit fills them. The
+university&rsquo;s own rule sets the license and the embargo, and Collect proposes
+neither. If the repository expects the supervisor or the degree in elements of
+its own, such as <code>dc.contributor.advisor</code> or <code>thesis.degree</code>, that installation
+is configured to emit them: the qualified Dublin Core that comes out of the box
+does not include them. Where the schema falls short of a catalog is covered in
+<a href="/en/blog/dublin-core-y-extendido/">When to use Dublin Core and where it falls short</a>.</p>
+<p>The volume of the academic year sits in the final-year projects and the
+master&rsquo;s theses: there are dozens or hundreds each year and they arrive
+undescribed. Doctoral theses are far fewer and usually arrive already
+described with some care. Articles, working papers and the institution&rsquo;s own
+publications are handled like the projects: the record comes from the PDF.</p>
+<p>Beside the PDF there is also a markdown copy with the abstract, the chapters
+and the text of the document, and the description and the search that sit next
+to the record come from there; the process is in
+<a href="/en/blog/de-cualquier-formato-a-un-registro/">From any format to a catalog record</a>.
+Querying the repository over that text, if the university wants it later, is a
+separate layer:
+<a href="/en/blog/puntos-de-acceso-texto-completo-y-rag/">Access points, full text and RAG</a>.</p>
+<h2>When the same work goes to both places</h2>
+<p>That a project is deposited in the repository and has no catalog record is
+ordinary practice at many universities, not a gap in the workflow. When the
+library does want the work in both places, the same PDF is read once per
+schema and two batches come out. Each process emits one schema, so if the
+document goes to a single destination only that record is produced.</p>
+<p>A thesis that does enter the catalog carries, when the document states them,
+the author and added entries (100 and 700), the title (245), the publication
+(264), the physical description (300), the dissertation note (502), the
+summary (520) and the subjects (650 and 653). Fields the document does not
+state come out empty. The 856 waits for an address: as long as the repository
+has not assigned the handle, the field stays without a value. The name of the
+degree-granting university, when the title page does not state it, can come
+from a value the institution set in advance for all of its student work,
+rather than from a reading of the document.</p>
+<h2>The rest of the campus collections</h2>
+<p>A report, a yearbook, course material or a special collection that has already
+been digitized and has no record is handled like the student project: the PDF
+yields the record in the schema that collection uses. If the holding is the
+institutional archive, the unit is described by fonds and series in ISAD-G,
+which is a hierarchical description rather than a standalone card;
+<a href="/en/blog/formato-archivistico-isadg/">Describe an archive, not a catalog</a> goes
+into that difference.</p>
+<p>In a work written in another language, the vocabulary of the description is
+translated, while the title, the names, the dates and the identifiers stay as
+they are in the original. The full criterion is in
+<a href="/en/blog/fichas-en-otro-idioma/">Cards in another language</a>.</p>
+<p>When the PDF contains personal data — and on a campus the minutes, the student
+files and some of the theses do — the processing can run on the institution&rsquo;s
+own servers:
+<a href="/en/blog/procesar-sin-exponer-datos-personales/">Processing documents without exposing personal data</a>.</p>
+<h2>Before loading</h2>
+<p>The cataloger receives the record with its provenance in view: what came from
+the row or the title page, what the model added, and what stayed empty because
+the document did not support it. An empty field is a pending task that someone
+settles with the missing source, which is why it is preferred over a plausible
+value nobody declared. The batch is loaded into the repository or the catalog
+once that review is good enough.</p>
+<h2>To continue the conversation</h2>
+<p>If the catalog and the repository at your university live under different
+criteria, and you want to see what record comes out of an acquisitions list or
+of a deposit of student work from the last academic year, write to us at
+info@janium.com. We are interested in how the vendor&rsquo;s lists arrive and in
+what state the projects reach the deposit.</p>
