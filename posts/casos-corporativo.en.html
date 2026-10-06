@@ -1,0 +1,96 @@
+<p>A contract has parties, a subject matter, clauses, obligations, guarantees,
+amounts and dates; the minutes of a board meeting have attendees, resolutions
+and votes, and a management report has figures, people responsible and
+periods. The organization files the complete document, but to work with it,
+to know what expires, what binds whom and who is a party to what, it needs
+that data separately and in fields, not inside the body of the text.</p>
+<p>That work is usually done by hand: someone opens the PDF, finds the term clause,
+writes the date in a spreadsheet, copies the name of the counterparty and checks
+whether there is a penalty. With dozens of documents it is tedious, and with
+thousands it stops being done, so the data exists but nobody sees it until it is
+urgently needed. Janium Collect takes care of that first reading: it extracts
+the information into a structure of fields that a person then reviews.</p>
+<h2>What it extracts from a corporate document</h2>
+<p>Collect reads the document with a
+<a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> and produces a
+structured record. For corporate material, that record can include:</p>
+<ul>
+<li><strong>Parties</strong>, whether individuals or entities, with the role they play in the
+  document: who hires, who provides the service, who guarantees and who signs.</li>
+<li><strong>Obligations</strong>, both what a party must do and what it must refrain from
+  doing, which in a contract do not always appear together or worded the same
+  way.</li>
+<li><strong>Clauses</strong> on term, termination, confidentiality, penalties or jurisdiction,
+  identified by their function and not only by their number.</li>
+<li><strong>Guarantees</strong>, tied to an obligation or to a party.</li>
+<li><strong>Amounts</strong>, with the currency and, when the document states it, the item they
+  correspond to.</li>
+<li><strong>Dates</strong> of signing, entry into force, expiry and payment or delivery
+  milestones.</li>
+<li><strong>Relationships between entities</strong>: which party is linked to which, and under
+  what arrangement.</li>
+</ul>
+<p>Because the result is fields and not a summary in prose, it can be listed,
+filtered and queried. That makes it possible to answer &ldquo;which contracts
+expire this quarter&rdquo; or &ldquo;in which documents does this counterparty appear&rdquo;
+without reopening every file.</p>
+<h2>The same name written in several ways</h2>
+<p>When a batch of documents is processed, the same entity appears written in
+several ways: with and without the corporate form, with different
+abbreviations, with a typo or without accents. If each variant counts as a
+different entity, the index of parties fills up with duplicates and the
+relationships between documents stop being reliable.</p>
+<p>Collect <strong>normalizes the name</strong> of each entity (it removes the corporate form,
+acronyms in parentheses and differences in punctuation) and checks it against
+the institution&rsquo;s authorities and VIAF, so that the variants of the same
+organization or person come out in the same form in every record. Being able to
+state that two contracts have the same counterparty depends on this. The problem
+is the same one that authority control solves in a catalog, described in
+<a href="/en/blog/control-de-autoridades-y-vocabularios/">Authority control: each name enters the catalog in one
+form</a>.</p>
+<p>Normalization recognizes spelling variants of the same name, but not
+equivalences that require outside knowledge: a corporate name and a trade
+name are not unified on their own if the document does not present them
+together, and that reconciliation is done by someone who knows the entities.</p>
+<h2>What is interpreted is flagged</h2>
+<p>Extracting the parties, amounts and dates from a well-drafted document is mostly
+a reading problem. Deciding what a clause means, whether an obligation is
+enforceable or whether a guarantee covers a given case requires legal judgment,
+and there Collect proposes a reading that legal review confirms. When it flags a
+clause as a penalty clause or extracts an obligation, that proposal is marked so
+that a person confirms it, especially if decisions depend on it. How AI output
+is flagged is covered in <a href="/en/blog/marcado-procedencia-ia/">Collect marks AI-made
+metadata</a>.</p>
+<p>A contract is a unique document, and its amounts and dates do not appear in any
+prior knowledge the model could draw them from. When the contract does not set
+an expiry date, the field comes out empty and remains a visible task for the
+reviewer, who resolves it with the document or with whoever signed it. For the
+same reason, an ambiguous contract produces a record that keeps the ambiguity,
+and the quality of the extraction depends on the quality of the source document.</p>
+<h2>Documents with personal data</h2>
+<p>Corporate documents often contain personal data, such as names, job titles, tax
+ID numbers, email addresses, phone numbers or amounts associated with a person.
+When part of the analysis relies on a cloud model, Collect can first apply
+<a href="/en/blog/glosario/#anonimizacion">anonymization</a>: before the text leaves the
+server, it detects that data and replaces it with placeholders that say what
+kind of data it was (a person, an organization) but not its value. When the
+result comes back, it restores the original values, so the model works without
+seeing the direct identifiers.</p>
+<p>If the context would allow a person to be re-identified even with the name
+hidden, the document can be processed locally, with nothing leaving the
+server. Which of the two modes applies depends on the sensitivity of the
+collection and on the organization&rsquo;s compliance framework; what each one
+protects and what anonymization leaves out is explained in
+<a href="/en/blog/procesar-sin-exponer-datos-personales/">Processing documents without exposing personal data</a>.</p>
+<h2>Where it fits</h2>
+<p>Collect produces the records from the documents, and the organization decides
+what to do with them: load them into a repository, feed an expiry dashboard or
+integrate them into its management system. What changes compared with manual
+work is where the effort goes: instead of finding and typing each value, the
+person reviews what was extracted and resolves what is ambiguous, working from a
+record that is already filled in.</p>
+<h2>To continue the conversation</h2>
+<p>If your organization keeps contracts, minutes or reports from which you need
+specific data and today you extract it document by document, write to us at
+info@janium.com. We would like to know which data matters to you in that
+collection and how you query it today.</p>

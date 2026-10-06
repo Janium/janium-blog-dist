@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-05T12:22:44Z",
+  "generated": "2026-10-06T04:30:16Z",
   "posts": [
+    {
+      "slug": "casos-corporativo",
+      "date": "2026-10-06",
+      "datetime": "2026-10-06T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Los datos de un contrato, en campos",
+          "description": "Janium Collect lee contratos, actas e informes y extrae en campos las partes, las cláusulas, las obligaciones, las garantías, los montos y las fechas que vencen, con cada nombre escrito siempre de la misma forma. La lectura de una cláusula queda marcada para que la confirme alguien con criterio jurídico.",
+          "cover": "assets/casos-corporativo-es-cover-746ad48e.svg",
+          "html": "posts/casos-corporativo.es.html"
+        },
+        "en": {
+          "title": "The data in a contract, in fields",
+          "description": "Janium Collect reads contracts, minutes and reports and extracts into fields the parties, clauses, obligations, guarantees, amounts and expiring dates, with each name always written the same way. The reading of a clause is flagged so that someone with legal judgment can confirm it.",
+          "cover": "assets/casos-corporativo-en-cover-746ad48e.svg",
+          "html": "posts/casos-corporativo.en.html"
+        },
+        "pt": {
+          "title": "Os dados de um contrato, em campos",
+          "description": "O Janium Collect lê contratos, atas e relatórios e extrai em campos as partes, as cláusulas, as obrigações, as garantias, os montantes e as datas que vencem, com cada nome escrito sempre da mesma forma. A leitura de uma cláusula fica marcada para que a confirme alguém com critério jurídico.",
+          "cover": "assets/casos-corporativo-pt-cover-746ad48e.svg",
+          "html": "posts/casos-corporativo.pt.html"
+        }
+      }
+    },
     {
       "slug": "registros-de-una-biblioteca-universitaria",
       "date": "2026-10-05",

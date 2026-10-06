@@ -1,0 +1,97 @@
+<p>Un contrato tiene partes, un objeto, cláusulas, obligaciones, garantías, montos
+y fechas; un acta de consejo tiene asistentes, acuerdos y votaciones, y un
+informe de gestión tiene cifras, responsables y periodos. La organización
+archiva el documento completo, pero para operar con él, para saber qué vence,
+qué obliga a qué y quién es parte de qué, necesita esos datos por separado y en
+campos, no dentro del cuerpo del texto.</p>
+<p>Ese trabajo suele hacerse a mano: alguien abre el PDF, localiza la cláusula de
+vigencia, anota la fecha en una hoja, copia el nombre de la contraparte y
+comprueba si hay una penalización. Con decenas de documentos es tedioso, y con
+miles deja de hacerse, de modo que el dato existe pero nadie lo tiene a la
+vista hasta que hace falta con urgencia. Janium Collect se ocupa de esa primera
+lectura: extrae la información en una estructura de campos que después revisa
+una persona.</p>
+<h2>Qué extrae de un documento corporativo</h2>
+<p>Collect lee el documento con un
+<a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> y produce un registro
+estructurado. En material corporativo, ese registro puede incluir:</p>
+<ul>
+<li><strong>Partes</strong>, sean personas físicas o entidades, con el papel que cumplen en el
+  documento: quién contrata, quién presta el servicio, quién garantiza y quién
+  firma.</li>
+<li><strong>Obligaciones</strong>, tanto lo que una parte debe hacer como aquello de lo que
+  debe abstenerse, que en un contrato no siempre aparecen juntas ni redactadas
+  de la misma forma.</li>
+<li><strong>Cláusulas</strong> de vigencia, terminación, confidencialidad, penalización o
+  jurisdicción, identificadas por su función y no solo por su número.</li>
+<li><strong>Garantías</strong>, asociadas a una obligación o a una parte.</li>
+<li><strong>Montos</strong>, con la moneda y, cuando el documento lo declara, el concepto al
+  que corresponden.</li>
+<li><strong>Fechas</strong> de firma, entrada en vigor, vencimiento e hitos de pago o entrega.</li>
+<li><strong>Relaciones entre entidades</strong>: qué parte se vincula con cuál y bajo qué
+  figura.</li>
+</ul>
+<p>Como el resultado son campos y no un resumen en prosa, se puede listar, filtrar
+y consultar. Eso permite responder a «qué contratos vencen este trimestre» o
+«en qué documentos aparece esta contraparte» sin volver a abrir cada archivo.</p>
+<h2>Un mismo nombre escrito de varias formas</h2>
+<p>Al procesar un lote de documentos, la misma entidad aparece escrita de varias
+maneras: con y sin la forma societaria, con abreviaturas distintas, con una
+errata o sin acentos. Si cada variante cuenta como una entidad distinta, el
+índice de partes se llena de duplicados y las relaciones entre documentos dejan
+de ser fiables.</p>
+<p>Collect <strong>normaliza el nombre</strong> de cada entidad (quita la forma societaria, las
+siglas entre paréntesis y las diferencias de puntuación) y lo contrasta con las
+autoridades de la institución y con VIAF, de modo que las variantes de una misma
+organización o persona salen con la misma forma en todos los registros. De eso
+depende poder afirmar que dos contratos tienen la misma contraparte. El problema
+es el mismo que resuelve el control de autoridades en un catálogo, descrito en
+<a href="/blog/control-de-autoridades-y-vocabularios/">Control de autoridades: que cada nombre entre al catálogo de una sola
+forma</a>.</p>
+<p>La normalización reconoce variantes de escritura del mismo nombre, pero no
+equivalencias que requieren conocimiento externo: una razón social y su nombre
+comercial no se unifican solos si el documento no los presenta juntos, y esa
+conciliación la hace quien conoce las entidades.</p>
+<h2>Lo interpretado queda marcado</h2>
+<p>Extraer las partes, los montos y las fechas de un documento bien redactado es
+sobre todo un problema de lectura. Decidir qué significa una cláusula, si una
+obligación es exigible o si una garantía cubre un supuesto requiere criterio
+jurídico, y ahí Collect propone una lectura que la revisión legal confirma.
+Cuando marca una cláusula como de penalización o extrae una obligación, esa
+propuesta queda señalada para que la confirme una persona, sobre todo si de
+ella dependen decisiones. Cómo se marca lo que hizo la IA está en
+<a href="/blog/marcado-procedencia-ia/">Collect marca los metadatos hechos con IA</a>.</p>
+<p>Un contrato es un documento único, y sus montos y sus fechas no figuran en
+ningún conocimiento previo del que el modelo pueda tomarlos. Cuando el contrato
+no fija una fecha de vencimiento, el campo sale vacío y queda como una tarea
+visible para quien revisa, que la resuelve con el documento o con quien lo
+firmó. Por la misma razón, un contrato ambiguo produce un registro que conserva
+la ambigüedad, y la calidad de la extracción depende de la del documento de
+partida.</p>
+<h2>Documentos con datos personales</h2>
+<p>Los documentos corporativos suelen contener datos personales, como nombres,
+cargos, identificadores fiscales, correos, teléfonos o montos asociados a una
+persona. Cuando parte del análisis se apoya en un modelo en la nube, Collect
+puede aplicar antes la <a href="/blog/glosario/#anonimizacion">anonimización</a>: antes de
+que el texto salga del servidor, detecta esos datos y los sustituye por
+marcadores que indican qué clase de dato era (una persona, una organización)
+pero no su valor. Al volver el resultado, restaura los valores originales, de
+modo que el modelo trabaja sin ver los identificadores directos.</p>
+<p>Si el contexto permitiría reidentificar a una persona aunque el nombre esté
+oculto, el documento puede procesarse en local, sin que nada salga del servidor.
+Cuál de los dos modos corresponde depende de la sensibilidad del acervo y de las
+normas de protección de datos que debe cumplir la organización; qué protege cada
+uno y qué queda fuera de la anonimización se explica en <a href="/blog/procesar-sin-exponer-datos-personales/">Procesar documentos sin
+exponer datos personales</a>.</p>
+<h2>Dónde encaja</h2>
+<p>Collect produce los registros a partir de los documentos, y la organización
+decide qué hacer con ellos: cargarlos a un repositorio, alimentar un tablero de
+vencimientos o integrarlos a su sistema de gestión. Lo que cambia frente al
+trabajo manual es dónde se gasta el esfuerzo: en lugar de localizar y teclear
+cada dato, la persona revisa lo que se extrajo y resuelve lo ambiguo partiendo
+de un registro ya armado.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu organización guarda contratos, actas o informes de los que necesitas
+datos concretos y hoy los extraes documento por documento, escríbenos a
+info@janium.com. Nos interesa saber qué datos te importan de ese acervo y cómo
+los consultas hoy.</p>
