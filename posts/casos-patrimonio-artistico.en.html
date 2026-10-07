@@ -1,0 +1,92 @@
+<p>An art collection rarely arrives as a set of works waiting to be described. More
+often it arrives as a work, the photograph that reproduces it and the book or
+catalog where that photograph was published. A mural that never leaves its wall
+is known through its photographs, an easel painting comes back from an exhibition
+with a new photographic record, and a work on paper is almost always studied in
+reproduction. Describing the collection requires, first of all, keeping those
+layers separate.</p>
+<p>A bibliographic catalog describes publications, while a work of art has other
+data: a technique, a support, dimensions and a creator whose role matters,
+because in a print there can be one person who drew, one who engraved and one
+who printed. That is what <a href="/en/blog/glosario/#cdwa">CDWA</a> is for: the categories
+the Getty defined for works and cultural objects, and it is the format in which
+Janium Collect catalogs this type of collection. How CDWA models each data point
+is covered in <a href="/en/blog/soporte-cdwa/">Works of art in CDWA with the Getty
+vocabulary</a>, and what follows deals with the decisions
+the collection imposes.</p>
+<h2>The three layers of a published work</h2>
+<p>When describing a work that appears in an exhibition catalog, three things come
+up that are easy to reduce to one:</p>
+<ul>
+<li><strong>The work and who made it.</strong> An oil painting, a print or a fresco, with its
+  artist and the role they played. In a print, the draftsman and the printer can
+  be different people, each with their own dates.</li>
+<li><strong>The photograph and who took it.</strong> The image that reproduces the work has its
+  own author and its own rights, and the photographer who reproduces a mural is
+  not the muralist who painted it.</li>
+<li><strong>The book where it is published.</strong> The page of a catalog or a study is a
+  reference and does not indicate where the work is held.</li>
+</ul>
+<p>When these layers are mixed, the catalog ends up attributing to the photographer
+rights over the painting, or recording the book as if it were the location of
+the work. CDWA keeps each data point in its category, and Collect respects that
+separation when it extracts: the artist, the photographer and the reference to
+the book each go to their own field, which is what keeps the catalog from
+asserting something false about ownership or provenance.</p>
+<h2>The image and the catalog card</h2>
+<p>A digitized art collection usually comes with two sources per work: the image
+and some description, which may be a catalog card, an entry in an index of
+illustrations or a gallery handout. Collect reads both and takes from each what
+it can give. From the image comes the description of what is seen, such as the
+type of object, what is depicted and the composition. From the card come the
+documentary data that the image does not contain: the exact date, the
+measurements, the inventory number and the stated technique. The same division,
+applied to other materials, is explained in <a href="/en/blog/de-la-imagen-y-la-ficha-al-registro/">From the image and the catalog card
+to the record</a>.</p>
+<p>When both arrive together, the record is completed. When only the image arrives,
+the record comes out partial, with the documentary fields pending the card or the
+cataloger.</p>
+<h2>What the image does not allow us to assert</h2>
+<p>Three cases account for most of the errors when describing from a reproduction,
+and in all three Collect marks what was inferred instead of presenting it as a
+fact:</p>
+<ul>
+<li><strong>Attribution without a signature or a document.</strong> A work may closely resemble
+  the style of a known artist and be a copy, a workshop piece or the work of a
+  follower. Without a signature or a documentary mention, the probable
+  attribution is noted as a hypothesis and the creator field is not filled in by
+  resemblance.</li>
+<li><strong>The technique.</strong> Oil, tempera and encaustic cannot be told apart reliably in
+  a reproduction, even less in a mural photographed under the room&rsquo;s lighting.
+  If the card does not state the technique, the field is left for whoever knows
+  the work.</li>
+<li><strong>The culture of origin.</strong> A work that depicts a pre-Hispanic scene does not
+  therefore belong to a pre-Hispanic culture: what is depicted is the subject of
+  the work and not its origin. It is an error that is hard to detect later,
+  because the wrong value sounds reasonable.</li>
+</ul>
+<p>A record made from the image alone is completed when the card appears or when a
+cataloger reviews it. Collect leaves those fields visible as pending, because an
+empty field gets filled later, while a plausible but false data point goes into
+the catalog without anyone noticing. How AI contributions are marked is covered
+in <a href="/en/blog/marcado-procedencia-ia/">Collect marks AI-made metadata</a>.</p>
+<h2>The Getty vocabulary</h2>
+<p>CDWA relies on the Getty vocabularies: ULAN for creators, AAT for types and
+materials and TGN for places. After extraction, Collect links each term to its
+entry only when the match is exact and leaves no room for doubt. That is why
+many terms remain unlinked, which is the intended outcome, because a wrong
+identifier leads whoever consults the catalog to another work or another artist.
+The authority control used to resolve names is described in <a href="/en/blog/control-de-autoridades-y-vocabularios/">Authority control:
+each name enters the catalog in one
+form</a>.</p>
+<h2>The specialist&rsquo;s work</h2>
+<p>Collect proposes records that a specialist reviews, with the layers already
+separated, the documentary data in the place where the card supplied it and the
+gaps marked where the image fell short. Less time goes into typing each field and
+more into resolving doubtful attributions and the decisions that only someone who
+knows the work can make.</p>
+<h2>To continue the conversation</h2>
+<p>If your institution has a collection of paintings, murals or works on paper and
+you are thinking about how to describe it without losing the distinction between
+the work, its reproduction and the book, write to us at info@janium.com. We are
+interested in knowing how you resolve those decisions in your catalog today.</p>

@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-06T12:57:14Z",
+  "generated": "2026-10-07T04:30:16Z",
   "posts": [
+    {
+      "slug": "casos-patrimonio-artistico",
+      "date": "2026-10-07",
+      "datetime": "2026-10-07T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Un acervo artístico y sus tres capas: la obra, su reproducción y el libro",
+          "description": "En un acervo de pintura, mural y obra sobre papel, cada obra llega con la fotografía que la reproduce y el libro donde se publicó. Janium Collect describe la obra en CDWA a partir de la imagen y de la ficha, y guarda cada capa en su sitio.",
+          "cover": "assets/casos-patrimonio-artistico-es-cover-a173711b.svg",
+          "html": "posts/casos-patrimonio-artistico.es.html"
+        },
+        "en": {
+          "title": "An art collection and its three layers: the work, its reproduction and the book",
+          "description": "In a collection of paintings, murals and works on paper, each work arrives with the photograph that reproduces it and the book where it was published. Janium Collect describes the work in CDWA from the image and the catalog card, and keeps each layer in its place.",
+          "cover": "assets/casos-patrimonio-artistico-en-cover-a173711b.svg",
+          "html": "posts/casos-patrimonio-artistico.en.html"
+        },
+        "pt": {
+          "title": "Um acervo artístico e as suas três camadas: a obra, a sua reprodução e o livro",
+          "description": "Num acervo de pintura, mural e obra sobre papel, cada obra chega com a fotografia que a reproduz e o livro onde foi publicada. O Janium Collect descreve a obra em CDWA a partir da imagem e da ficha, e guarda cada camada no seu lugar.",
+          "cover": "assets/casos-patrimonio-artistico-pt-cover-a173711b.svg",
+          "html": "posts/casos-patrimonio-artistico.pt.html"
+        }
+      }
+    },
     {
       "slug": "casos-corporativo",
       "date": "2026-10-06",

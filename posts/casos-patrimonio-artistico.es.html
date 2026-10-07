@@ -1,0 +1,91 @@
+<p>Un acervo artístico llega pocas veces como un conjunto de obras por describir.
+Lo habitual es que llegue como una obra, la fotografía que la reproduce y el
+libro o catálogo donde esa fotografía se publicó. Un mural que no se mueve de
+su muro se conoce por sus tomas, una pintura de caballete vuelve de una
+exposición con un registro fotográfico nuevo y una obra sobre papel se estudia
+casi siempre en reproducción. Describir el acervo exige, antes que nada,
+mantener separadas esas capas.</p>
+<p>Un catálogo bibliográfico describe publicaciones, pero una obra de arte tiene
+otros datos: una técnica, un soporte, unas dimensiones y un creador cuyo papel
+importa, porque en un grabado puede haber quien dibujó, quien grabó y quien
+imprimió. Para eso existe <a href="/blog/glosario/#cdwa">CDWA</a>, las categorías que el
+Getty definió para obras y objetos culturales, y es el formato en el que Janium
+Collect cataloga este tipo de acervo. Cómo modela CDWA cada dato está en <a href="/blog/soporte-cdwa/">Obras
+de arte en CDWA con el vocabulario Getty</a>, y lo que sigue
+trata de las decisiones que impone el acervo.</p>
+<h2>Las tres capas de una obra publicada</h2>
+<p>Al describir una obra que aparece en un catálogo de exposición surgen tres
+cosas que es fácil reducir a una:</p>
+<ul>
+<li><strong>La obra y quién la hizo.</strong> Un óleo, un grabado o un fresco, con su autor y
+  el papel que tuvo. En un grabado, el dibujante y el impresor pueden ser
+  personas distintas, cada una con sus fechas.</li>
+<li><strong>La fotografía y quién la tomó.</strong> La imagen que reproduce la obra tiene su
+  propio autor y sus propios derechos, y el fotógrafo que reproduce un mural no
+  es su muralista.</li>
+<li><strong>El libro donde se publica.</strong> La página de un catálogo o de un estudio es
+  una referencia y no indica dónde se conserva la obra.</li>
+</ul>
+<p>Cuando estas capas se mezclan, el catálogo termina atribuyendo al fotógrafo
+derechos sobre la pintura, o registrando el libro como si fuera la ubicación de
+la obra. CDWA guarda cada dato en su categoría, y Collect respeta esa
+separación al extraer: el autor de la obra, el fotógrafo y la referencia del
+libro van cada uno a su campo, que es lo que impide que el catálogo afirme algo
+falso sobre la titularidad o la procedencia.</p>
+<h2>La imagen y la ficha</h2>
+<p>Un acervo artístico digitalizado suele traer dos fuentes por obra: la imagen y
+alguna descripción, que puede ser una ficha, una entrada de un índice de
+ilustraciones o una hoja de sala. Collect lee las dos y toma de cada una lo que
+puede dar. De la imagen sale la descripción de lo que se ve, como el tipo de
+objeto, lo representado y la composición. De la ficha salen los datos
+documentales que la imagen no contiene: la fecha exacta, las medidas, el número
+de inventario y la técnica declarada. El mismo reparto, aplicado a otros
+materiales, se explica en
+<a href="/blog/de-la-imagen-y-la-ficha-al-registro/">De la imagen y la ficha al registro</a>.</p>
+<p>Cuando llegan juntas, el registro se completa. Cuando llega solo la imagen, el
+registro sale parcial, con los campos documentales pendientes de la ficha o de
+quien cataloga.</p>
+<h2>Lo que la imagen no permite afirmar</h2>
+<p>Tres casos concentran la mayoría de los errores al describir desde una
+reproducción, y en los tres Collect marca lo inferido en lugar de presentarlo
+como un hecho:</p>
+<ul>
+<li><strong>La atribución sin firma ni documento.</strong> Una obra puede parecerse mucho al
+  estilo de un autor conocido y ser una copia, una obra de taller o de un
+  seguidor. Sin firma ni mención documental, la atribución probable se anota
+  como hipótesis y el campo de autor no se llena por parecido.</li>
+<li><strong>La técnica.</strong> El óleo, el temple y la encáustica no se distinguen de forma
+  fiable en una reproducción, y menos en un mural fotografiado con la luz de la
+  sala. Si la ficha no declara la técnica, el campo queda para quien conoce la
+  obra.</li>
+<li><strong>La cultura de origen.</strong> Una obra que representa una escena prehispánica no
+  pertenece por eso a una cultura prehispánica: lo representado es el tema de la
+  obra y no su origen. Es un error difícil de detectar después, porque el valor
+  equivocado suena razonable.</li>
+</ul>
+<p>Un registro hecho solo con la imagen se completa cuando aparece la ficha o
+cuando lo revisa quien cataloga. Collect deja esos campos a la vista como
+pendientes, porque un campo vacío se llena después y un dato plausible pero
+falso pasa al catálogo sin que nadie lo note. Cómo se marca lo que aportó la IA
+está en
+<a href="/blog/marcado-procedencia-ia/">Collect marca los metadatos hechos con IA</a>.</p>
+<h2>El vocabulario del Getty</h2>
+<p>CDWA se apoya en los vocabularios del Getty: ULAN para creadores, AAT para
+tipos y materiales y TGN para lugares. Después de la extracción, Collect enlaza
+cada término con su entrada solo cuando la coincidencia es exacta y no deja
+lugar a dudas. Por eso muchos términos quedan sin enlazar, y es lo que se
+busca, porque un identificador equivocado lleva a quien consulta a otra obra o
+a otro autor. El control de autoridades con el que se resuelven los nombres se
+describe en
+<a href="/blog/control-de-autoridades-y-vocabularios/">Control de autoridades: que cada nombre entre al catálogo de una sola forma</a>.</p>
+<h2>El trabajo del especialista</h2>
+<p>Collect propone registros que revisa un especialista, con las capas ya
+separadas, los datos documentales en el lugar donde la ficha los dio y los
+huecos marcados donde la imagen no alcanzó. El tiempo se va menos en teclear
+cada campo y más en resolver las atribuciones dudosas y las decisiones que solo
+puede tomar alguien que conoce la obra.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu institución tiene un acervo de pintura, mural u obra sobre papel y estás
+pensando cómo describirlo sin perder la distinción entre la obra, su
+reproducción y el libro, escríbenos a info@janium.com. Nos interesa saber cómo
+resuelves hoy esas decisiones en tu catálogo.</p>
