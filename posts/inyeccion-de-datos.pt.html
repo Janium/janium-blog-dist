@@ -1,0 +1,84 @@
+<p>A injeção de dados é a parte do registo que o Janium Collect não pede ao <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo
+de linguagem</a>. Há dados de um registo que
+não estão no documento que se lê, mas naquilo que a instituição sabe antes de o
+abrir: a que biblioteca pertence a peça, em que fundo entra, onde se guarda,
+quantos exemplares existem e que política de empréstimo se aplica. São dados
+conhecidos e estáveis, e pedi-los ao modelo só os tornaria incertos.</p>
+<p>O Collect introdu-los de forma determinista em cada registo depois da extração.
+São valores fixos que entram sempre da mesma maneira, e o modelo dedica-se ao
+que há a ler no documento.</p>
+<h2>O que se sabe e o que se lê</h2>
+<p>O modelo lê o documento e propõe o título, o autor, o resumo e os assuntos,
+que são o que o conteúdo traz. O código da biblioteca é outro tipo de dado:
+um valor que tem de ser idêntico em dez mil registos não deveria depender de o
+modelo o repetir igual dez mil vezes. Qualquer variação, como um acento, uma
+abreviatura diferente ou um campo que umas vezes aparece e outras não,
+converte-se em trabalho de revisão sobre um dado que nunca esteve em dúvida.</p>
+<p>A injeção fixa o que se conhece de antemão e deixa ao modelo o que há a
+interpretar no documento. A parte previsível do registo sai igual em todo o
+lote, e a revisão concentra-se no que realmente é preciso ver. É o mesmo
+princípio que o Collect aplica ao número Cutter, que se calcula pela tabela,
+como se explica em
+<a href="/pt/blog/correctores-deterministas/">O número Cutter e o nível ISAD-G</a>.</p>
+<h2>Três formas de introduzir um valor</h2>
+<p>O Collect usa um injetor diferente conforme a origem do dado fixo.</p>
+<p><strong>Existências e localização a partir de um inventário.</strong> O campo 852 do
+<a href="/pt/blog/glosario/#marc">MARC</a>, ou o 995 em UNIMARC, descreve o exemplar
+físico: em que biblioteca está, em que localização, de que tipo é, em que estado
+está e qual é o seu número de exemplar. Esse dado não está no documento
+catalogado, mas no inventário. Quando a instituição mantém o inventário num
+sistema externo, o Collect lê-o e compõe um 852 por exemplar. O inventário é a
+fonte do 852, pelo que o injetor substitui qualquer 852 que o modelo tivesse
+gerado por conta própria, e um número de exemplar errado ou um ISBN confundido
+com um código de barras não chega à saída. A cota que vai no 852 copia-se da
+classificação que o registo já traz, seja Dewey, LC, CDU ou local.</p>
+<p><strong>Etiquetas predefinidas por origem.</strong> Por vezes uma origem inteira partilha um
+valor constante e não há inventário a consultar, como os documentos que chegam
+por um canal sem dados de existências, para os quais a biblioteca quer um 852
+predefinido com o seu código, a sua localização e a sua política de empréstimo.
+Cada origem declara as etiquetas fixas que se acrescentam aos seus registos. Por
+predefinição acrescentam-se apenas se o registo ainda não trouxer essa etiqueta,
+para não substituir um dado real, como um 852 composto a partir do inventário.
+Quando o valor tem de se impor sempre, a origem configura-se para substituir. A
+decisão toma-se por origem, de modo que duas fontes do mesmo acervo podem
+introduzir valores distintos.</p>
+<p><strong>Valores predefinidos em Dublin Core.</strong> Numa coleção descrita em
+<a href="/pt/blog/glosario/#dublin-core">Dublin Core</a> há campos que costumam ser
+constantes: o editor responsável, a declaração de direitos, a cobertura
+espacial, a língua e as condições de acesso. Configuram-se uma vez por
+instituição e acrescentam-se apenas quando o registo não traz esse campo. Se a
+extração já produziu um valor, o valor predefinido não lhe toca. O que o Dublin
+Core cobre e onde fica curto está em
+<a href="/pt/blog/dublin-core-y-extendido/">Quando usar Dublin Core e onde fica curto</a>.</p>
+<h2>Quando a injeção substitui e quando só completa</h2>
+<p>Os três injetores não se comportam da mesma maneira, e a diferença é
+deliberada.</p>
+<p>Quando o dado pertence por inteiro à instituição, como as existências do 852,
+a injeção substitui. O modelo não pode ler no conteúdo um campo que descreve o
+exemplar físico, pelo que não faz sentido que dispute esse campo.</p>
+<p>Quando se trata de um valor predefinido que o documento poderia ter fornecido,
+como o editor em Dublin Core ou uma etiqueta que talvez venha do inventário, a
+injeção apenas completa o que falta. Um dado extraído do material vale mais do
+que um valor configurado de antemão, e conserva-se.</p>
+<p>Essa assimetria (substituir o que é só institucional e respeitar o que pôde sair
+do documento) evita que a introdução de valores fixos apague informação real por
+acidente.</p>
+<h2>Onde não se aplica</h2>
+<p>A injeção cobre os dados que a instituição conhece de antemão e que se mantêm
+estáveis. O título, o autor, as datas, os assuntos e o resumo, que são o que
+faz o registo descrever esse documento e não outro, continuam a sair da leitura
+do material. Aí vale o critério de sempre: o que se verifica sai com a sua
+fonte, e o que o modelo infere fica marcado para revisão, como se explica em
+<a href="/pt/blog/marcado-procedencia-ia/">O Collect marca os metadados feitos com IA</a>.</p>
+<p>Também não serve para dados que mudam de uma peça para outra. Um valor que
+varia por documento, forçado como constante, produz registos uniformes e
+errados, que são piores do que um campo vazio. A injeção usa-se quando o valor
+é o mesmo por instituição, por coleção ou por origem, como uma biblioteca, um
+fundo ou uma política de empréstimo.</p>
+<p>Assim, o modelo trabalha onde rende e o que nunca devia ter dependido dele
+já vem preenchido. O modo como o lote entra depois no catálogo detalha-se em
+<a href="/pt/blog/del-registro-al-catalogo/">Do registo ao catálogo</a>.</p>
+<h2>Para continuar a conversa</h2>
+<p>Se na sua instituição há campos que são iguais em todo um fundo ou em toda uma
+coleção, e hoje os revê registo a registo, escreva-nos para info@janium.com.
+Interessa-nos saber que dados são fixos no seu acervo e como os tem organizados.</p>

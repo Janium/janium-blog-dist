@@ -1,0 +1,85 @@
+<p>La inyección de datos es la parte del registro que Janium Collect no le pide al
+<a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a>. Hay datos de un
+registro que no están en el documento que se lee, sino en lo que la institución
+sabe antes de abrirlo: a qué biblioteca pertenece la pieza, en qué fondo entra,
+dónde se guarda, cuántos ejemplares hay y qué política de préstamo aplica. Son
+datos conocidos y estables, y pedírselos al modelo solo los volvería inciertos.</p>
+<p>Collect los siembra de forma determinista en cada registro después de la
+extracción. Son valores fijos que entran igual cada vez, y el modelo se dedica
+a lo que hay que leer del documento.</p>
+<h2>Lo que se sabe y lo que se lee</h2>
+<p>El modelo lee el documento y propone el título, el autor, el resumen y las
+materias, que son lo que el contenido trae. El código de la biblioteca es otra
+clase de dato: un valor que debe ser idéntico en diez mil registros no debería
+depender de que el modelo lo repita igual diez mil veces. Cualquier variación,
+como una tilde, una abreviatura distinta o un campo que unas veces sale y otras
+no, se convierte en trabajo de revisión sobre un dato que nunca estuvo en duda.</p>
+<p>La inyección fija lo que se conoce de antemano y deja al modelo lo que hay que
+interpretar del documento. La parte previsible del registro sale igual en todo
+el lote, y la revisión se concentra en lo que de verdad hay que mirar. Es el
+mismo principio que aplica Collect al número Cutter, que se calcula con la
+tabla, como se explica en
+<a href="/blog/correctores-deterministas/">El número Cutter y el nivel ISAD-G</a>.</p>
+<h2>Tres formas de sembrar un valor</h2>
+<p>Collect usa un inyector distinto según de dónde venga el dato fijo.</p>
+<p><strong>Existencias y ubicación desde un inventario.</strong> El campo 852 de
+<a href="/blog/glosario/#marc">MARC</a>, o el 995 en UNIMARC, describe el ejemplar físico:
+en qué biblioteca está, en qué ubicación, de qué tipo es, en qué estado y qué
+número de copia lleva. Ese dato no está en el documento catalogado, sino en el
+inventario. Cuando la institución lleva el inventario en un sistema externo,
+Collect lo lee y compone un 852 por ejemplar. El inventario es la fuente del
+852, así que el inyector sustituye cualquier 852 que el modelo hubiera generado
+por su cuenta, y un número de copia equivocado o un ISBN tomado por código
+de barras no llega a la salida. La signatura que va en el 852 se copia de la
+clasificación que ya trae el registro, sea Dewey, LC, CDU o local.</p>
+<p><strong>Etiquetas predefinidas por origen.</strong> A veces una fuente entera comparte un
+valor constante y no hay inventario que consultar, como los documentos que
+llegan por un canal sin datos de existencias para los que la biblioteca quiere
+un 852 por defecto con su código, su ubicación y su política de préstamo. Cada
+origen declara las etiquetas fijas que se añaden a sus registros. Por defecto se
+añaden solo si el registro no trae ya esa etiqueta, para no sustituir un dato
+real, como un 852 compuesto desde el inventario. Cuando el valor debe imponerse
+siempre, el origen se configura para reemplazar. La decisión se toma por origen,
+de modo que dos fuentes del mismo acervo pueden sembrar valores distintos.</p>
+<p><strong>Valores por defecto en Dublin Core.</strong> En una colección descrita en
+<a href="/blog/glosario/#dublin-core">Dublin Core</a> hay campos que suelen ser
+constantes: el editor responsable, la declaración de derechos, la cobertura
+espacial, el idioma y las condiciones de acceso. Se configuran una vez por
+institución y se añaden solo cuando el registro no trae ese campo. Si la
+extracción ya produjo un valor, el valor por defecto no lo toca. Qué cubre
+Dublin Core y dónde se queda corto está en
+<a href="/blog/dublin-core-y-extendido/">Cuándo usar Dublin Core y dónde se queda corto</a>.</p>
+<h2>Cuándo la inyección reemplaza y cuándo solo completa</h2>
+<p>Los tres inyectores no se comportan igual, y la diferencia es deliberada.</p>
+<p>Cuando el dato pertenece por completo a la institución, como las existencias
+del 852, la inyección reemplaza. El modelo no puede leer del contenido un
+campo que describe el ejemplar físico, así que no tiene sentido que compita por
+él.</p>
+<p>Cuando se trata de un valor por defecto que el documento podría haber aportado,
+como el editor en Dublin Core o una etiqueta que quizá venga del inventario, la
+inyección solo completa lo que falta. Un dato extraído del material vale más que
+un valor configurado de antemano, y se conserva.</p>
+<p>Esa asimetría (reemplazar lo que es solo institucional y respetar lo que pudo
+salir del documento) evita que la siembra de valores fijos borre información
+real por accidente.</p>
+<h2>Dónde no aplica</h2>
+<p>La inyección cubre los datos que la institución conoce de antemano y que se
+mantienen estables. El título, el autor, las fechas, las materias y el resumen,
+que son lo que hace que el registro describa ese documento y no otro, siguen
+saliendo de la lectura del material. Ahí rige el criterio de siempre: lo que se
+verifica sale con su fuente, y lo que el modelo infiere queda marcado para
+revisión, como se explica en
+<a href="/blog/marcado-procedencia-ia/">Collect marca los metadatos hechos con IA</a>.</p>
+<p>Tampoco sirve para datos que cambian de una pieza a otra. Un valor que varía
+por documento, forzado como constante, produce registros uniformes y
+equivocados, que son peores que un campo vacío. La inyección se usa cuando el
+valor es el mismo por institución, por colección o por origen, como una
+biblioteca, un fondo o una política de préstamo.</p>
+<p>Así, el modelo trabaja donde rinde y lo que nunca debió depender de él llega ya
+puesto. Cómo entra después el lote al catálogo se detalla en
+<a href="/blog/del-registro-al-catalogo/">Del registro al catálogo</a>.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si en tu institución hay campos que se repiten igual en todo un fondo o en
+toda una colección, y hoy los revisas registro por registro, escríbenos a
+info@janium.com. Nos interesa saber qué datos son fijos en tu acervo y cómo
+los tienes organizados.</p>

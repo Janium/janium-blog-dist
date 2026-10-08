@@ -1,0 +1,86 @@
+<p>Data injection is the part of the record that Janium Collect does not ask the
+<a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> for. Some of the data in
+a record is not in the document being read, but in what the institution knows
+before opening it: which library the item belongs to, which collection it goes
+into, where it is kept, how many copies there are and which lending policy
+applies. These are known, stable data, and asking the model for them would only
+make them uncertain.</p>
+<p>Collect seeds them deterministically into every record after extraction. They
+are fixed values that go in the same way every time, and the model concentrates
+on what has to be read from the document.</p>
+<h2>What is known and what is read</h2>
+<p>The model reads the document and proposes the title, the author, the summary and
+the subjects, which is what the content provides. The library code is a
+different kind of data: a value that must be identical across ten thousand
+records should not depend on the model repeating it the same way ten thousand
+times. Any variation, such as an accent mark, a different abbreviation or a
+field that appears sometimes and not others, becomes review work on a value that
+was never in doubt.</p>
+<p>Injection fixes what is known in advance and leaves to the model what has to be
+interpreted from the document. The predictable part of the record comes out the
+same across the whole batch, and the review concentrates on what really needs to
+be looked at. It is the same principle Collect applies to the Cutter number,
+which is calculated from the table, as explained in <a href="/en/blog/correctores-deterministas/">The Cutter number and the
+ISAD-G level</a>.</p>
+<h2>Three ways to seed a value</h2>
+<p>Collect uses a different injector depending on where the fixed value comes from.</p>
+<p><strong>Holdings and location from an inventory.</strong> Field 852 of
+<a href="/en/blog/glosario/#marc">MARC</a>, or 995 in UNIMARC, describes the physical copy:
+which library it is in, in which location, what type it is, what condition it is
+in and what its copy number is. That information is not in the cataloged
+document, but in the inventory. When the institution keeps its inventory in an
+external system, Collect reads it and builds one 852 per copy. The inventory is
+the source of the 852, so the injector replaces any 852 the model might have
+generated on its own, and a wrong copy number or an ISBN mistaken for a barcode
+does not reach the output. The call number that goes in the 852 is copied from
+the classification the record already carries, whether Dewey, LC, UDC or local.</p>
+<p><strong>Predefined tags by source.</strong> Sometimes an entire source shares a constant
+value and there is no inventory to consult, as with documents that arrive
+through a channel with no holdings data, for which the library wants a default
+852 with its code, its location and its lending policy. Each source declares the
+fixed tags that are added to its records. By default they are added only if the
+record does not already carry that tag, so as not to replace a real value, such
+as an 852 built from the inventory. When the value must always be imposed, the
+source is configured to replace. The decision is made per source, so two sources
+in the same collection can seed different values.</p>
+<p><strong>Default values in Dublin Core.</strong> In a collection described in
+<a href="/en/blog/glosario/#dublin-core">Dublin Core</a> there are fields that tend to be
+constant: the responsible publisher, the rights statement, the spatial
+coverage, the language and the access conditions. They are configured once per
+institution and added only when the record does not carry that field. If
+extraction already produced a value, the default does not touch it. What
+Dublin Core covers and where it falls short is in
+<a href="/en/blog/dublin-core-y-extendido/">When to use Dublin Core and where it falls short</a>.</p>
+<h2>When injection replaces and when it only completes</h2>
+<p>The three injectors do not behave the same way, and the difference is
+deliberate.</p>
+<p>When the data belongs entirely to the institution, as with the holdings in the
+852, injection replaces. The model cannot read from the content a field that
+describes the physical copy, so there is no point in having it compete for it.</p>
+<p>When it is a default value that the document could have supplied, such as the
+publisher in Dublin Core or a tag that may come from the inventory, injection
+only completes what is missing. A value extracted from the material is worth
+more than a value configured in advance, and it is kept.</p>
+<p>That asymmetry (replacing what is purely institutional and respecting what could
+have come from the document) keeps the seeding of fixed values from erasing real
+information by accident.</p>
+<h2>Where it does not apply</h2>
+<p>Injection covers the data the institution knows in advance and that stay stable.
+The title, the author, the dates, the subjects and the summary, which are what
+make the record describe that document and not another, keep coming from reading
+the material. There the usual rule applies: what is verified comes out with its
+source, and what the model infers is marked for review, as explained in <a href="/en/blog/marcado-procedencia-ia/">Collect
+marks AI-made metadata</a>.</p>
+<p>Nor is it suited to data that changes from one item to the next. A value that
+varies by document, forced as a constant, produces uniform and wrong records,
+which are worse than an empty field. Injection is used when the value is the
+same per institution, per collection or per source, such as a library, a
+collection or a lending policy.</p>
+<p>That way, the model works where it performs well, and what should never have
+depended on it arrives already in place. How the batch then enters the catalog
+is detailed in <a href="/en/blog/del-registro-al-catalogo/">From record to catalog</a>.</p>
+<h2>To continue the conversation</h2>
+<p>If at your institution there are fields that are the same across a whole
+collection, and today you review them record by record, write to us at
+info@janium.com. We are interested in knowing which data are fixed in your
+holdings and how you have them organized.</p>

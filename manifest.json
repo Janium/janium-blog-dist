@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-07T10:55:21Z",
+  "generated": "2026-10-08T04:30:16Z",
   "posts": [
+    {
+      "slug": "inyeccion-de-datos",
+      "date": "2026-10-08",
+      "datetime": "2026-10-08T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Inyección de datos: campos fijos, existencias y etiquetas que no pasan por el modelo",
+          "description": "La biblioteca, el fondo, las existencias del 852, las etiquetas fijas y los valores por defecto ya los conoce la institución antes de leer el documento. Janium Collect los siembra igual en cada registro, sin pedírselos al modelo de lenguaje, y deja al modelo lo que hay que leer del documento.",
+          "cover": "assets/inyeccion-de-datos-es-cover-3bee53c6.svg",
+          "html": "posts/inyeccion-de-datos.es.html"
+        },
+        "en": {
+          "title": "Data injection: fixed fields, holdings and tags that bypass the model",
+          "description": "The library, the collection, the 852 holdings, the fixed tags and the default values are already known to the institution before the document is read. Janium Collect seeds them the same way in every record, without asking the language model for them, and leaves to the model what has to be read from the document.",
+          "cover": "assets/inyeccion-de-datos-en-cover-3bee53c6.svg",
+          "html": "posts/inyeccion-de-datos.en.html"
+        },
+        "pt": {
+          "title": "Injeção de dados: campos fixos, existências e etiquetas que não passam pelo modelo",
+          "description": "A biblioteca, o fundo, as existências do 852, as etiquetas fixas e os valores predefinidos são dados que a instituição já conhece antes de ler o documento. O Janium Collect introdu-los da mesma forma em cada registo, sem os pedir ao modelo de linguagem, e deixa ao modelo o que há a ler no documento.",
+          "cover": "assets/inyeccion-de-datos-pt-cover-3bee53c6.svg",
+          "html": "posts/inyeccion-de-datos.pt.html"
+        }
+      }
+    },
     {
       "slug": "casos-patrimonio-artistico",
       "date": "2026-10-07",
