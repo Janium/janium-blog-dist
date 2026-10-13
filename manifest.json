@@ -1,7 +1,65 @@
 {
   "contract": 1,
-  "generated": "2026-10-11T15:55:51Z",
+  "generated": "2026-10-13T04:30:16Z",
   "posts": [
+    {
+      "slug": "canales-de-entrada",
+      "date": "2026-10-13",
+      "datetime": "2026-10-13T00:01:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Por dónde entra el material a Collect: carpetas, nube, correo y la app de captura",
+          "description": "Janium Collect cataloga lo que la institución deja en sus fuentes de entrada: una carpeta, un servidor SFTP, Google Drive, SharePoint, Zoho WorkDrive, un buzón de correo, un formulario web o la app de captura de Janium. Cada carpeta se asocia a un tipo de material, y desde la entrada todo sigue el mismo camino hasta el registro.",
+          "cover": "assets/canales-de-entrada-es-cover-b720c230.svg",
+          "html": "posts/canales-de-entrada.es.html"
+        },
+        "en": {
+          "title": "Where material enters Collect: folders, cloud, email and the capture app",
+          "description": "Janium Collect catalogs what the institution leaves in its input sources: a folder, an SFTP server, Google Drive, SharePoint, Zoho WorkDrive, a mailbox, a web form or the Janium capture app. Each folder is tied to a material type, and from the point of entry everything follows the same path to the record.",
+          "cover": "assets/canales-de-entrada-en-cover-b720c230.svg",
+          "html": "posts/canales-de-entrada.en.html"
+        },
+        "pt": {
+          "title": "Por onde entra o material no Collect: pastas, nuvem, correio eletrónico e a app de captura",
+          "description": "O Janium Collect cataloga o que a instituição deixa nas suas fontes de entrada: uma pasta, um servidor SFTP, o Google Drive, o SharePoint, o Zoho WorkDrive, uma caixa de correio eletrónico, um formulário web ou a app de captura da Janium. Cada pasta associa-se a um tipo de material e, desde a entrada, tudo segue o mesmo caminho até ao registo.",
+          "cover": "assets/canales-de-entrada-pt-cover-b720c230.svg",
+          "html": "posts/canales-de-entrada.pt.html"
+        }
+      }
+    },
+    {
+      "slug": "catalogar-desde-dispositivo-movil",
+      "date": "2026-10-13",
+      "datetime": "2026-10-13T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Catalogar frente al acervo con la app de captura de Janium",
+          "description": "La app de captura de Janium permite catalogar con la pieza delante, desde el teléfono, la tableta o el navegador de un equipo de escritorio. Se pueden tomar solo fotografías y crear las existencias después en Janium, o capturar también las existencias en la app; Janium Collect convierte cada envío en un registro.",
+          "cover": "assets/catalogar-desde-dispositivo-movil-es-cover-3e4fe9e8.svg",
+          "html": "posts/catalogar-desde-dispositivo-movil.es.html"
+        },
+        "en": {
+          "title": "Cataloging in front of the collection with the Janium capture app",
+          "description": "The Janium capture app lets you catalog with the item in front of you, from a phone, a tablet or the browser of a desktop computer. You can take only photographs and create the holdings later in Janium, or enter the holdings in the app as well; Janium Collect turns each submission into a record.",
+          "cover": "assets/catalogar-desde-dispositivo-movil-en-cover-3e4fe9e8.svg",
+          "html": "posts/catalogar-desde-dispositivo-movil.en.html"
+        },
+        "pt": {
+          "title": "Catalogar diante do acervo com a app de captura da Janium",
+          "description": "A app de captura da Janium permite catalogar com a peça à frente, a partir do telemóvel, do tablet ou do navegador de um computador de secretária. É possível tirar apenas fotografias e criar as existências depois no Janium, ou capturar também as existências na app; o Janium Collect converte cada envio num registo.",
+          "cover": "assets/catalogar-desde-dispositivo-movil-pt-cover-3e4fe9e8.svg",
+          "html": "posts/catalogar-desde-dispositivo-movil.pt.html"
+        }
+      }
+    },
     {
       "slug": "inyeccion-de-datos",
       "date": "2026-10-08",
