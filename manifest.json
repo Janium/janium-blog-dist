@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-13T04:30:16Z",
+  "generated": "2026-10-15T04:30:09Z",
   "posts": [
+    {
+      "slug": "casos-hemeroteca",
+      "date": "2026-10-15",
+      "datetime": "2026-10-15T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Catalogar una hemeroteca: prensa y publicaciones periódicas",
+          "description": "Janium Collect cataloga prensa histórica y revistas desde inventarios en hoja de cálculo, desde escaneos o desde las dos cosas a la vez, en ISAD-G con la jerarquía de la colección o en MARC21 como publicación seriada. Qué decide la institución y dónde hay que revisar.",
+          "cover": "assets/casos-hemeroteca-es-cover-bb119387.svg",
+          "html": "posts/casos-hemeroteca.es.html"
+        },
+        "en": {
+          "title": "Cataloging a periodicals collection: newspapers and serial publications",
+          "description": "Janium Collect catalogs historical newspapers and magazines from spreadsheet inventories, from scans or from both at once, in ISAD-G with the hierarchy of the collection or in MARC21 as a serial. What the institution decides and where to review.",
+          "cover": "assets/casos-hemeroteca-en-cover-bb119387.svg",
+          "html": "posts/casos-hemeroteca.en.html"
+        },
+        "pt": {
+          "title": "Catalogar uma hemeroteca: imprensa e publicações periódicas",
+          "description": "O Janium Collect cataloga imprensa histórica e revistas a partir de inventários em folha de cálculo, de digitalizações ou das duas coisas ao mesmo tempo, em ISAD-G com a hierarquia da coleção ou em MARC21 como publicação seriada. O que decide a instituição e onde é preciso rever.",
+          "cover": "assets/casos-hemeroteca-pt-cover-bb119387.svg",
+          "html": "posts/casos-hemeroteca.pt.html"
+        }
+      }
+    },
     {
       "slug": "canales-de-entrada",
       "date": "2026-10-13",
