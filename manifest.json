@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-15T04:30:09Z",
+  "generated": "2026-10-16T04:30:05Z",
   "posts": [
+    {
+      "slug": "casos-fototeca",
+      "date": "2026-10-16",
+      "datetime": "2026-10-16T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Catalogar una fototeca: la imagen, su soporte y su ficha",
+          "description": "Janium Collect cataloga fotografía histórica en ISAD-G o Dublin Core: describe lo que se ve, separa el soporte de lo retratado, incorpora los datos del inventario y, cuando no hay fecha documentada, la estima y la marca como aproximada.",
+          "cover": "assets/casos-fototeca-es-cover-cbc1274c.svg",
+          "html": "posts/casos-fototeca.es.html"
+        },
+        "en": {
+          "title": "Cataloging a photograph collection: the image, its physical support and its catalog card",
+          "description": "Janium Collect catalogs historical photographs in ISAD-G or Dublin Core: it describes what is seen, separates the physical support from what is pictured, incorporates the inventory data and, when there is no documented date, estimates it and marks it as approximate.",
+          "cover": "assets/casos-fototeca-en-cover-cbc1274c.svg",
+          "html": "posts/casos-fototeca.en.html"
+        },
+        "pt": {
+          "title": "Catalogar uma fototeca: a imagem, o suporte e a ficha",
+          "description": "O Janium Collect cataloga fotografia histórica em ISAD-G ou Dublin Core: descreve o que se vê, separa o suporte do que é retratado, incorpora os dados do inventário e, quando não há data documentada, estima-a e marca-a como aproximada.",
+          "cover": "assets/casos-fototeca-pt-cover-cbc1274c.svg",
+          "html": "posts/casos-fototeca.pt.html"
+        }
+      }
+    },
     {
       "slug": "casos-hemeroteca",
       "date": "2026-10-15",
