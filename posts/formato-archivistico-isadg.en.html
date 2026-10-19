@@ -8,10 +8,7 @@ little. Its meaning comes as much from its content as from its place within a
 whole.</p>
 <p>That difference is what separates bibliographic description from archival
 description, and it is the reason <strong>ISAD-G</strong> exists (the General International
-Standard Archival Description, from the International Council on Archives). This
-post covers what it is and why an archive needs it. The mechanism Collect uses
-to generate the upper levels is left for another post; here what matters is the
-principle.</p>
+Standard Archival Description, from the International Council on Archives). The mechanism Collect uses to generate the upper levels is explained in <a href="/en/blog/de-documentos-sueltos-a-fondo-y-serie/">From loose documents to Fonds and Series: generating the ISAD-G hierarchy automatically</a>.</p>
 <h2>Provenance and original order</h2>
 <p>Two ideas hold up all of archival practice.</p>
 <p>The first is the <strong>principle of provenance</strong>: the documents of a single producer
@@ -49,28 +46,9 @@ legible.</p>
 <p>Janium Collect reads the documents of a holding and produces records in the format
 the institution uses. For archives, that format is <strong>ISAD-G</strong>, with its levels and
 its logic of provenance.</p>
-<p>Collect describes in a specific order. First the items (what is in plain sight
-in each document) and, from them, its hierarchical exporter <strong>generates the upper
-levels</strong>: it recognizes which series, section and fonds each item belongs to,
-builds the tree and raises the data the items share to the level where they
-belong. The result is a description that runs from the fonds to the piece, built
-from the piece upward.</p>
-<p>The hierarchy is not invented, but neither does it require that provenance be
-declared in advance. Collect builds it from the signals it finds in the material.
-When they are explicit (a classification, a folder structure, data that say which
-series and fonds each item belongs to), it builds the tree directly. When there
-are none, it leans on <strong>patterns in the content itself</strong>: if it recognizes that a
-document is an invoice and identifies its issuer, it infers which section it
-corresponds to; by grouping those inferences it proposes an organization that was
-not given. That proposal is a starting point for an archivist to review and
-correct, not a verdict.</p>
-<p>The limit is where there is no signal left to read. A set of loose scans, with no
-classification, no structure and no recognizable patterns in their content, gives
-nothing from which to deduce a hierarchy, and forcing one would be inventing it.
-There the organization is prior human work, and Collect describes what already has
-an order. That is also the criterion for when it adds value on the hierarchical
-side: when there is provenance to respect or clues to start from, not when none
-remains.</p>
+<p>Collect describes in a specific order. First the items (what is in plain sight in each document) and, from them, its hierarchical exporter <strong>generates the upper levels</strong>: it builds the tree from the location of each item and raises the data the items share to the level where they belong. The result is a description that runs from the fonds to the piece, built from the piece upward.</p>
+<p>The classification scheme, that is, which fonds, sections and series exist, is defined by the institution when it prepares the collection, and Collect works out where each document goes within that scheme. If the material arrives with an inventory, a column says which series each row belongs to. If it arrives in folders arranged according to the scheme, the path of each file gives its location. If it arrives with neither, the <a href="/en/blog/glosario/#modelo-de-lenguaje">language model</a> reads the document and places it in the section that corresponds to its type, from among those the profile lists: board minutes go to the minutes section and a contract to the contracts section. That placement is the first thing worth reviewing.</p>
+<p>The sections and series are always those of the institution&rsquo;s scheme. A set of scans with no inventory, no folders and no defined scheme first needs that organizing work, which the archivist does, and afterward Collect describes what already has an order.</p>
 <h2>To continue the conversation</h2>
 <p>ISAD-G is the way to
 describe when what matters is where a document comes from and which others it goes

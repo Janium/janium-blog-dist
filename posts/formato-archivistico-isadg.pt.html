@@ -7,9 +7,7 @@ produziu, em que processo estava nem o que o antecede, diz pouco. O seu sentido 
 tanto do seu conteúdo como do seu lugar dentro de um conjunto.</p>
 <p>Essa diferença é a que separa a descrição bibliográfica da arquivística, e
 é a razão pela qual existe a <strong>ISAD-G</strong> (a Norma Internacional Geral de
-Descrição Arquivística, do Conselho Internacional de Arquivos). Este texto trata
-do que ela é e porque é que um arquivo precisa dela. O mecanismo com o qual o Collect gera
-os níveis superiores fica para outro post; aqui interessa o princípio.</p>
+Descrição Arquivística, do Conselho Internacional de Arquivos). O mecanismo com o qual o Collect gera os níveis superiores explica-se em <a href="/pt/blog/de-documentos-sueltos-a-fondo-y-serie/">De documentos avulsos a Fundo e Série: gerar a hierarquia ISAD-G automaticamente</a>.</p>
 <h2>Proveniência e ordem original</h2>
 <p>Duas ideias sustentam toda a prática arquivística.</p>
 <p>A primeira é o <strong>princípio da proveniência</strong>: os documentos de um mesmo produtor
@@ -46,26 +44,9 @@ mais trabalho: perde a estrutura que tornava o conjunto legível.</p>
 <p>O Janium Collect lê os documentos de um acervo e produz registos no formato que
 a instituição usa. Para arquivos, esse formato é a <strong>ISAD-G</strong>, com os seus
 níveis e a sua lógica de proveniência.</p>
-<p>O Collect descreve numa ordem particular. Primeiro os documentos simples (o que
-está à vista em cada documento) e, a partir deles, o seu exportador hierárquico
-<strong>gera os níveis superiores</strong>: reconhece a que
-série, secção e fundo pertence cada item, monta a árvore e sobe os dados que os itens
-partilham ao nível que lhes corresponde. O resultado é uma descrição
-que vai do fundo à peça, construída da peça para cima.</p>
-<p>A hierarquia não se inventa, mas também não exige que a proveniência venha declarada de
-antemão. O Collect constrói-a com os sinais que encontra no material. Quando
-são explícitos (uma classificação, uma estrutura de pastas, dados que dizem a que
-série e fundo pertence cada item), monta a árvore diretamente. Quando não os há,
-apoia-se em <strong>padrões do próprio conteúdo</strong>: se reconhece que um documento é uma
-fatura e identifica o seu emitente, infere a que secção corresponde; ao agrupar essas
-inferências propõe uma organização que não vinha dada. Essa proposta é um ponto de
-partida para que um arquivista a reveja e corrija, não um veredicto.</p>
-<p>O limite está onde não resta sinal a ler. Um conjunto de digitalizações avulsas, sem
-classificação, sem estrutura e sem padrões reconhecíveis no seu conteúdo, não permite
-deduzir uma hierarquia, e forçá-la seria inventá-la. Aí a organização é
-trabalho humano prévio, e o Collect descreve o que já tem uma ordem. Esse é também o
-critério de quando ele acrescenta valor na parte hierárquica: quando há proveniência a respeitar
-ou pistas das quais partir, não quando não resta nenhuma.</p>
+<p>O Collect descreve numa ordem particular. Primeiro os documentos simples (o que está à vista em cada documento) e, a partir deles, o seu exportador hierárquico <strong>gera os níveis superiores</strong>: monta a árvore com a localização de cada item e sobe ao nível que lhe corresponde os dados que os itens partilham. O resultado é uma descrição que vai do fundo à peça, construída da peça para cima.</p>
+<p>O quadro de classificação, isto é, que fundos, secções e séries existem, é definido pela instituição ao preparar a coleção, e o Collect resolve onde fica cada documento dentro desse quadro. Se o material chega com um inventário, uma coluna indica a que série pertence cada linha. Se chega em pastas ordenadas segundo o quadro, o caminho de cada ficheiro dá a sua localização. Se chega sem nenhuma das duas coisas, o <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a> lê o documento e coloca-o na secção que corresponde ao seu tipo, de entre as que o perfil enumera: uma ata de conselho vai para a secção de atas e um contrato para a de contratos. Essa localização é a primeira coisa que convém rever.</p>
+<p>As secções e as séries são sempre as do quadro da instituição. Um conjunto de digitalizações sem inventário, sem pastas e sem um quadro definido precisa primeiro desse trabalho de organização, que é feito pelo arquivista, e depois o Collect descreve o que já tem uma ordem.</p>
 <h2>Para continuar a conversa</h2>
 <p>A ISAD-G é a forma de descrever quando
 o que importa é de onde vem um documento e com quais outros ele vai. Se a sua instituição

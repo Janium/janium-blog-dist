@@ -20,8 +20,7 @@ the Series that hang from a Section, and so on up to the Fonds. The levels it
 exports run from Fonds to Item, passing through Subfonds, Section, Series,
 Subseries, File and Document; the fixed upper levels (Country, Institution) are
 taken from the context and are not emitted as records.</p>
-<p>The origin of that structure is explicit. <strong>The hierarchy is generated from the
-classification scheme; it is not inferred by the language model.</strong> If the documents
+<p>The origin of that structure is explicit. <strong>The hierarchy is generated from the institution&rsquo;s classification scheme.</strong> The location of each document in that scheme comes from an inventory column, from the folder it sits in or, if the profile provides for it, from the language model, which places the document in the section that corresponds to its type from among those the scheme lists. If the documents
 arrive without their archival location, there is nothing from which to build the
 tree: the exporter can emit the document records, but not the parent nodes that
 organize them. The quality of the hierarchy depends on that provenance information

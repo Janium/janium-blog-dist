@@ -7,9 +7,7 @@ produjo, en qué expediente estaba ni qué lo antecede, dice poco. Su sentido vi
 tanto de su contenido como de su lugar dentro de un conjunto.</p>
 <p>Esa diferencia es la que separa la descripción bibliográfica de la archivística, y
 es la razón por la que existe <strong>ISAD-G</strong> (la Norma Internacional General de
-Descripción Archivística, del Consejo Internacional de Archivos). Este texto trata
-de qué es y por qué un archivo la necesita. El mecanismo con el que Collect genera
-los niveles superiores queda para otro post; aquí interesa el principio.</p>
+Descripción Archivística, del Consejo Internacional de Archivos). El mecanismo con el que Collect genera los niveles superiores se explica en <a href="/blog/de-documentos-sueltos-a-fondo-y-serie/">De documentos sueltos a Fondo y Serie</a>.</p>
 <h2>Procedencia y orden original</h2>
 <p>Dos ideas sostienen toda la práctica archivística.</p>
 <p>La primera es el <strong>principio de procedencia</strong>: los documentos de un mismo productor
@@ -43,26 +41,9 @@ más trabajo: pierde la estructura que hacía legible al conjunto.</p>
 <p>Janium Collect lee los documentos de un acervo y produce registros en el formato que
 la institución usa. Para archivos, ese formato es <strong>ISAD-G</strong>, con sus niveles y su
 lógica de procedencia.</p>
-<p>Collect describe en un orden particular. Primero las unidades documentales (lo que
-está a la vista en cada documento) y, a partir de ellas, su exportador jerárquico
-<strong>genera los niveles superiores</strong>: reconoce a qué
-serie, sección y fondo pertenece cada unidad, arma el árbol y sube al nivel que
-corresponde los datos que las unidades comparten. El resultado es una descripción
-que va del fondo a la pieza, construida desde la pieza hacia arriba.</p>
-<p>La jerarquía no se inventa, pero tampoco exige que la procedencia venga declarada de
-antemano. Collect la construye con las señales que encuentra en el material. Cuando
-son explícitas (una clasificación, una estructura de carpetas, datos que dicen a qué
-serie y fondo pertenece cada unidad), arma el árbol directamente. Cuando no las hay,
-se apoya en <strong>patrones del propio contenido</strong>: si reconoce que un documento es una
-factura e identifica a su emisor, infiere a qué sección corresponde; al agrupar esas
-inferencias propone una organización que no venía dada. Esa propuesta es un punto de
-partida para que un archivista la revise y corrija, no un veredicto.</p>
-<p>El límite está donde no queda señal que leer. Un conjunto de escaneos sueltos, sin
-clasificación, sin estructura y sin patrones reconocibles en su contenido, no da de
-dónde deducir una jerarquía, y forzarla sería inventarla. Ahí la organización es
-trabajo humano previo, y Collect describe lo que ya tiene un orden. Ese es también el
-criterio de cuándo aporta en la parte jerárquica: cuando hay procedencia que respetar
-o pistas de las cuales partir, no cuando no queda ninguna.</p>
+<p>Collect describe en un orden particular. Primero las unidades documentales (lo que está a la vista en cada documento) y, a partir de ellas, su exportador jerárquico <strong>genera los niveles superiores</strong>: arma el árbol con la ubicación de cada unidad y sube al nivel que corresponde los datos que las unidades comparten. El resultado es una descripción que va del fondo a la pieza, construida desde la pieza hacia arriba.</p>
+<p>El cuadro de clasificación, es decir, qué fondos, secciones y series existen, lo define la institución al preparar la colección, y Collect resuelve dónde va cada documento dentro de ese cuadro. Si el material llega con un inventario, una columna indica a qué serie pertenece cada fila. Si llega en carpetas ordenadas según el cuadro, la ruta de cada archivo da su ubicación. Si llega sin ninguna de las dos cosas, el <a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> lee el documento y lo coloca en la sección que corresponde a su tipo, de entre las que enumera el perfil: un acta de consejo va a la sección de actas y un contrato a la de contratos. Esa ubicación es lo primero que conviene revisar.</p>
+<p>Las secciones y las series son siempre las del cuadro de la institución. Un conjunto de escaneos sin inventario, sin carpetas y sin un cuadro definido necesita primero ese trabajo de organización, que hace el archivista, y después Collect describe lo que ya tiene un orden.</p>
 <h2>Para continuar la conversación</h2>
 <p>ISAD-G es la forma de describir cuando
 lo que importa es de dónde viene un documento y con qué otros va. Si tu institución
