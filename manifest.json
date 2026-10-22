@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-19T15:31:47Z",
+  "generated": "2026-10-22T04:30:30Z",
   "posts": [
+    {
+      "slug": "casos-numismatica-valores",
+      "date": "2026-10-22",
+      "datetime": "2026-10-22T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Numismática y valores: catalogar billetes, monedas y títulos desde el inventario",
+          "description": "Janium Collect convierte el inventario de una colección numismática, en CSV o Excel, en un registro ISAD-G por pieza: conserva lo que el especialista ya anotó, arma con eso el título y la fecha, y añade el contexto de la emisión marcado como texto generado.",
+          "cover": "assets/casos-numismatica-valores-es-cover-4f0cd2b3.svg",
+          "html": "posts/casos-numismatica-valores.es.html"
+        },
+        "en": {
+          "title": "Numismatics and securities: cataloging banknotes, coins, bonds and shares from the inventory",
+          "description": "Janium Collect turns the inventory of a numismatic collection, in CSV or Excel, into one ISAD-G record per piece: it keeps what the specialist already noted, builds the title and the date from it, and adds the context of the issue marked as generated text.",
+          "cover": "assets/casos-numismatica-valores-en-cover-4f0cd2b3.svg",
+          "html": "posts/casos-numismatica-valores.en.html"
+        },
+        "pt": {
+          "title": "Numismática e valores: catalogar notas, moedas e títulos a partir do inventário",
+          "description": "O Janium Collect converte o inventário de uma coleção numismática, em CSV ou Excel, num registo ISAD-G por peça: conserva o que o especialista já anotou, monta com isso o título e a data, e acrescenta o contexto da emissão marcado como texto gerado.",
+          "cover": "assets/casos-numismatica-valores-pt-cover-4f0cd2b3.svg",
+          "html": "posts/casos-numismatica-valores.pt.html"
+        }
+      }
+    },
     {
       "slug": "casos-fototeca",
       "date": "2026-10-16",
