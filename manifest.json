@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-22T04:30:30Z",
+  "generated": "2026-10-27T04:30:28Z",
   "posts": [
+    {
+      "slug": "casos-gobierno-documental",
+      "date": "2026-10-27",
+      "datetime": "2026-10-27T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Actas e informes de consejo, ordenados por quién los produjo",
+          "description": "Un archivo con décadas de informes y actas de consejo suele tenerlos en una lista o en carpetas. Janium Collect convierte esa lista en registros consultables, agrupados por la institución o el órgano que produjo cada documento, y marca qué parte de cada registro escribió la IA.",
+          "cover": "assets/casos-gobierno-documental-es-cover-39d730e9.svg",
+          "html": "posts/casos-gobierno-documental.es.html"
+        },
+        "en": {
+          "title": "Board minutes and reports, organized by who produced them",
+          "description": "An archive with decades of board reports and minutes usually keeps them in a list or in folders. Janium Collect turns that list into searchable records, grouped by the institution or body that produced each document, and marks which part of each record the AI wrote.",
+          "cover": "assets/casos-gobierno-documental-en-cover-39d730e9.svg",
+          "html": "posts/casos-gobierno-documental.en.html"
+        },
+        "pt": {
+          "title": "Atas e relatórios de conselho, ordenados por quem os produziu",
+          "description": "Um arquivo com décadas de relatórios e atas de conselho costuma tê-los numa lista ou em pastas. O Janium Collect converte essa lista em registos pesquisáveis, agrupados pela instituição ou pelo órgão que produziu cada documento, e assinala que parte de cada registo foi escrita pela IA.",
+          "cover": "assets/casos-gobierno-documental-pt-cover-39d730e9.svg",
+          "html": "posts/casos-gobierno-documental.pt.html"
+        }
+      }
+    },
     {
       "slug": "casos-numismatica-valores",
       "date": "2026-10-22",
