@@ -1,7 +1,35 @@
 {
   "contract": 1,
-  "generated": "2026-10-27T10:01:49Z",
+  "generated": "2026-10-29T04:30:29Z",
   "posts": [
+    {
+      "slug": "isadg-antes-de-configurar",
+      "date": "2026-10-29",
+      "datetime": "2026-10-29T00:00:00Z",
+      "tags": [
+        "fundamentos"
+      ],
+      "translations": {
+        "es": {
+          "title": "ISAD-G en un sistema digital: lo que se decide antes de configurarlo",
+          "description": "La norma ISAD-G dice qué describir en un archivo, pero no cuántos niveles configurar en el sistema, cómo guardar una fecha aproximada, cómo buscar por tema sin alterar la jerarquía ni qué hacer con las condiciones de acceso. Son decisiones que conviene que el archivista y quien configura el sistema tomen juntos, antes de empezar.",
+          "cover": "assets/isadg-antes-de-configurar-es-cover-5bc8d9d0.svg",
+          "html": "posts/isadg-antes-de-configurar.es.html"
+        },
+        "en": {
+          "title": "ISAD-G in a digital system: what to decide before configuring it",
+          "description": "ISAD-G says what to describe in an archive, but it does not say how many levels to configure in the system, how to store an approximate date, how to search by subject without altering the hierarchy, or what to do about access conditions. These are decisions the archivist and whoever configures the system should make together, before starting.",
+          "cover": "assets/isadg-antes-de-configurar-en-cover-5bc8d9d0.svg",
+          "html": "posts/isadg-antes-de-configurar.en.html"
+        },
+        "pt": {
+          "title": "ISAD-G num sistema digital: o que se decide antes de o configurar",
+          "description": "A norma ISAD-G diz o que descrever num arquivo, mas não diz quantos níveis configurar no sistema, como guardar uma data aproximada, como pesquisar por assunto sem alterar a hierarquia nem o que fazer com as condições de acesso. São decisões que convém que o arquivista e quem configura o sistema tomem em conjunto, antes de começar.",
+          "cover": "assets/isadg-antes-de-configurar-pt-cover-5bc8d9d0.svg",
+          "html": "posts/isadg-antes-de-configurar.pt.html"
+        }
+      }
+    },
     {
       "slug": "casos-gobierno-documental",
       "date": "2026-10-27",
