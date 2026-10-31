@@ -1,0 +1,118 @@
+<p>The <a href="https://www.utrivieramaya.edu.mx">Universidad Tecnológica de la Riviera Maya</a>
+(UTRM), in Playa del Carmen, Quintana Roo, is part of the model of bilingual,
+international and sustainable universities (BIS). Its library serves 3,773
+registered users with a collection of 5,744 titles and 10,353 copies. It operated
+inside the SADBIBF consortium system (formerly SIBISUT), the network of libraries of
+the technological universities, which ran on <a href="/en/blog/glosario/#janium">Janium</a>.
+When the network shut down, the library needed a system of its own to keep
+providing service, and in September 2026 it moved to an instance on JaniumNet,
+Janium&rsquo;s cloud service. Six calendar days passed between sending the quote and the
+first day in production.</p>
+<h2>Leaving a shared system</h2>
+<p>In a consortium system, several libraries share a single installation: each one has
+its own records, copies and users, but everything lives in the same database. With
+the network&rsquo;s closure, the UTRM had to separate its own content from the rest
+and take it over in full, leaving nothing out of its operation and carrying over no
+data from other libraries.</p>
+<p>That the source and the destination were both Janium explains much of the speed. The
+catalog was already in the format the new system expects, and the loans and fines did
+not have to be translated from another circulation model. The work consisted of
+extracting the UTRM&rsquo;s portion, loading it into its instance and checking that every
+transaction still pointed to its user and its copy.</p>
+<h2>Six days, with a test in the middle</h2>
+<p>The quote went out on Wednesday, September 9. On Friday the 11th the university&rsquo;s
+purchase requisition arrived, and that same day the service was activated and a test
+migration was run with the real data. The test serves to review the result before
+committing to it: if a loan cannot find its user, it is fixed in the extraction and
+not in the system that is already serving the students.</p>
+<p>With the test validated, the final migration took place on Monday the 14th and the
+system went into production that same day. The weekend in between left the cutover
+outside the library&rsquo;s service hours.</p>
+<h2>What was moved</h2>
+<p>The migration included the catalog and also the library&rsquo;s operations: who is
+registered, what is checked out and what is owed.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Figure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bibliographic records</td>
+<td>5,744</td>
+</tr>
+<tr>
+<td>Copies</td>
+<td>10,353</td>
+</tr>
+<tr>
+<td>Users</td>
+<td>3,773</td>
+</tr>
+<tr>
+<td>Active loans at the time of cutover</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Returns (history)</td>
+<td>20,020</td>
+</tr>
+<tr>
+<td>Fines</td>
+<td>2,503 (2,195 paid and 308 pending)</td>
+</tr>
+</tbody>
+</table>
+<p>According to the project&rsquo;s closing report, 100% of the information was migrated.
+The transactions add up to 22,583, and each group serves a different function in the
+new system. The 60 loans that were in progress remain open, so those books are
+returned in the new instance with no additional steps. The 308 pending fines keep
+the debt, and a student who owed before the cutover still owes afterward. The
+history of 20,020 returns maintains the collection&rsquo;s usage statistics, which
+otherwise would start from zero on September 14.</p>
+<h2>What it runs now</h2>
+<p>The UTRM subscribes to Janium as an annual service on JaniumNet: Janium hosts the system on
+a high-availability server, administers it and delivers the new versions released
+during the year. Library staff work from the browser with eight concurrent licenses,
+on these modules:</p>
+<ul>
+<li><strong>Cataloging</strong>, with label and barcode printing.</li>
+<li><strong>Public catalog</strong> at <code>utrivieramaya.janium.net/opac</code>, with unlimited searches.</li>
+<li><strong>Circulation</strong>, with user services and chat: loans, returns and fines.</li>
+<li><strong>Inventory</strong>, which makes it possible to take the physical inventory without
+  suspending lending.</li>
+<li><strong>Digital objects</strong>, for images, text, audio and video, with a full-text index and
+  a progressive zoom viewer.</li>
+</ul>
+<p>The service includes security, administration and reports, remote technical support
+Monday through Friday during office hours and access to Janium Academy for six
+members of the team.</p>
+<h2>What the library says</h2>
+<p>Araceli Fonseca Sanchez, head of the library at the UTRM, described the project this way:</p>
+<blockquote>
+<p>The project was developed with the necessary support at every stage. The Janium
+team showed willingness to address our needs and provide timely guidance, allowing
+the implementation to be carried out with favorable results for the UTRM&rsquo;s library
+services.</p>
+</blockquote>
+<p>And on communication after the go-live:</p>
+<blockquote>
+<p>I especially highlight the team&rsquo;s willingness and patience in resolving
+questions, handling technical requests and providing support during the process of
+implementing and operating the system.</p>
+</blockquote>
+<h2>What this case shows</h2>
+<p>When the shared system a library depends on shuts down, the library can move
+to one of its own without losing what makes it work day to day: the loans in
+progress, the fines to be collected and the usage history. In the UTRM&rsquo;s case it
+helped that the source and the destination were the same system, and the order of
+the steps did the rest, with a test on the real data before the cutover and the final
+migration outside service hours.</p>
+<!--
+Compuerta de consentimiento: aprobados por la UTRM el nombre, la mención del
+SADBIBF (antes SIBISUT), las cifras y la cronología, el alcance funcional y las
+citas de Araceli Fonseca Sanchez; visto bueno comercial interno dado (2026-10-31).
+Sin banda de costo.
+-->

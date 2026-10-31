@@ -1,0 +1,119 @@
+<p>A <a href="https://www.utrivieramaya.edu.mx">Universidad Tecnológica de la Riviera Maya</a>
+(UTRM), em Playa del Carmen, Quintana Roo, faz parte do modelo de universidades
+bilingues, internacionais e sustentáveis (BIS). A sua biblioteca serve 3.773
+utilizadores registados, com um acervo de 5.744 títulos e 10.353 exemplares.
+Funcionava dentro do sistema consorcial SADBIBF (antes SIBISUT), a rede de
+bibliotecas das universidades tecnológicas, que operava sobre o
+<a href="/pt/blog/glosario/#janium">Janium</a>. Quando a rede deixou de operar, a biblioteca
+precisou de um sistema próprio para continuar a prestar serviço, e em setembro de
+2026 passou para uma instância no JaniumNet, o serviço do Janium na nuvem. Entre o
+envio da cotação e o primeiro dia em produção passaram seis dias de calendário.</p>
+<h2>Sair de um sistema partilhado</h2>
+<p>Num sistema consorcial, várias bibliotecas partilham uma mesma instalação: cada uma
+tem os seus registos, exemplares e utilizadores, mas tudo vive na mesma base de
+dados. Com o encerramento da rede, a UTRM tinha de separar o que era seu do resto e
+levá-lo por completo, sem deixar de fora nada da sua operação e sem arrastar dados
+de outras bibliotecas.</p>
+<p>O facto de a origem e o destino serem Janium explica boa parte da rapidez. O
+catálogo já estava no formato que o sistema novo espera, e os empréstimos e as
+multas não tiveram de ser traduzidos de outro modelo de circulação. O trabalho
+consistiu em extrair a parte da UTRM, carregá-la na sua instância e verificar que
+cada transação continuasse a apontar para o seu utilizador e para o seu exemplar.</p>
+<h2>Seis dias, com um teste pelo meio</h2>
+<p>A cotação saiu na quarta-feira, 9 de setembro. Na sexta-feira, dia 11, chegou a
+requisição da universidade, e nesse mesmo dia ativou-se o serviço e fez-se um teste
+de migração com os dados reais. O teste serve para rever o resultado antes de se
+comprometer com ele: se um empréstimo não encontra o seu utilizador, corrige-se na
+extração e não no sistema que já atende os alunos.</p>
+<p>Com o teste validado, a migração definitiva fez-se na segunda-feira, dia 14, e o
+sistema entrou em produção nesse mesmo dia. O fim de semana pelo meio deixou o corte
+fora do horário de atendimento da biblioteca.</p>
+<h2>O que se levou</h2>
+<p>A migração incluiu o catálogo e também a operação da biblioteca: quem está
+registado, o que tem emprestado e o que deve.</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Registos bibliográficos</td>
+<td>5.744</td>
+</tr>
+<tr>
+<td>Exemplares</td>
+<td>10.353</td>
+</tr>
+<tr>
+<td>Utilizadores</td>
+<td>3.773</td>
+</tr>
+<tr>
+<td>Empréstimos ativos no momento do corte</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Devoluções (histórico)</td>
+<td>20.020</td>
+</tr>
+<tr>
+<td>Multas</td>
+<td>2.503 (2.195 pagas e 308 pendentes)</td>
+</tr>
+</tbody>
+</table>
+<p>Segundo o relatório de encerramento do projeto, migrou-se 100% da informação. As
+transações somam 22.583, e cada grupo cumpre uma função distinta no sistema novo. Os
+60 empréstimos que estavam em curso continuam abertos, pelo que esses livros se
+devolvem na instância nova sem trâmite adicional. As 308 multas pendentes mantêm a
+dívida, e o aluno que devia antes do corte continua a dever depois. O histórico de
+20.020 devoluções mantém a estatística de utilização do acervo, que de outro modo
+começaria do zero a 14 de setembro.</p>
+<h2>O que funciona agora</h2>
+<p>A UTRM contrata o Janium como serviço anual no JaniumNet: a Janium aloja o sistema
+num servidor de alta disponibilidade, administra-o e entrega as versões novas que se
+lançam ao longo do ano. O pessoal da biblioteca trabalha a partir do navegador com
+oito licenças simultâneas, sobre estes módulos:</p>
+<ul>
+<li><strong>Catalogação</strong>, com impressão de etiquetas e códigos de barras.</li>
+<li><strong>Catálogo ao público</strong> em <code>utrivieramaya.janium.net/opac</code>, com consultas
+  ilimitadas.</li>
+<li><strong>Circulação</strong>, com serviços ao utilizador e chat: empréstimos, devoluções e
+  multas.</li>
+<li><strong>Inventário</strong>, que permite fazer o inventário físico sem suspender o empréstimo.</li>
+<li><strong>Objetos digitais</strong>, para imagens, texto, áudio e vídeo, com índice de texto
+  integral e visualizador de aproximação progressiva.</li>
+</ul>
+<p>O serviço inclui segurança, administração e relatórios, suporte técnico remoto de
+segunda a sexta-feira em horário de expediente e acesso à Janium Academy para seis
+pessoas da equipa.</p>
+<h2>O que diz a biblioteca</h2>
+<p>Araceli Fonseca Sanchez, responsável pela biblioteca da UTRM, descreveu assim o projeto:</p>
+<blockquote>
+<p>O projeto desenvolveu-se com o acompanhamento necessário em cada etapa. A equipa
+da Janium mostrou disponibilidade para atender às nossas necessidades e prestar
+orientação oportuna, permitindo que a implementação se realizasse com resultados
+favoráveis para os serviços bibliotecários da UTRM.</p>
+</blockquote>
+<p>E sobre a comunicação depois da entrada em funcionamento:</p>
+<blockquote>
+<p>Destaco especialmente a disponibilidade da equipa pela sua paciência para
+resolver dúvidas, atender a requisitos técnicos e prestar acompanhamento durante o
+processo de implementação e operação do sistema.</p>
+</blockquote>
+<h2>O que este caso deixa</h2>
+<p>Quando o sistema partilhado de que uma biblioteca depende deixa de operar, ela pode
+passar para um sistema próprio sem perder o que a faz funcionar no dia a dia: os
+empréstimos em curso, as multas por cobrar e o histórico de utilização. No caso da
+UTRM ajudou o facto de origem e destino serem o mesmo sistema, e a ordem dos passos
+fez o resto, com um teste sobre os dados reais antes do corte e a migração
+definitiva fora do horário de atendimento.</p>
+<!--
+Compuerta de consentimiento: aprobados por la UTRM el nombre, la mención del
+SADBIBF (antes SIBISUT), las cifras y la cronología, el alcance funcional y las
+citas de Araceli Fonseca Sanchez; visto bueno comercial interno dado (2026-10-31).
+Sin banda de costo.
+-->
