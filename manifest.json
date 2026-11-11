@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-10-31T09:47:31Z",
+  "generated": "2026-11-11T10:00:02Z",
   "posts": [
+    {
+      "slug": "caso-ut-puebla",
+      "date": "2026-11-11",
+      "datetime": "2026-11-11T09:50:00Z",
+      "tags": [
+        "caso_exito",
+        "janium"
+      ],
+      "translations": {
+        "es": {
+          "title": "UT Puebla: del convenio SADBIBF a un contrato propio de Janium en la nube",
+          "description": "Cuando el convenio que daba acceso al sistema consorcial SADBIBF llegó a su fin, la Universidad Tecnológica de Puebla tuvo que contratar Janium por su cuenta, dentro del presupuesto y los trámites de una universidad pública estatal. En julio de 2026 su biblioteca pasó a JaniumNet con 9,290 registros, 28,603 ejemplares, 7,213 usuarios y su historial de préstamos y multas.",
+          "cover": "assets/caso-ut-puebla-es-cover-b8a25cf3.svg",
+          "html": "posts/caso-ut-puebla.es.html"
+        },
+        "en": {
+          "title": "UT Puebla: from the SADBIBF agreement to its own cloud contract with Janium",
+          "description": "When the agreement that gave access to the SADBIBF consortium system came to an end, the Universidad Tecnológica de Puebla had to subscribe to Janium on its own, within the budget and procedures of a state public university. In July 2026 its library moved to JaniumNet with 9,290 records, 28,603 copies, 7,213 users and its history of loans and fines.",
+          "cover": "assets/caso-ut-puebla-en-cover-11fe52d4.svg",
+          "html": "posts/caso-ut-puebla.en.html"
+        },
+        "pt": {
+          "title": "UT Puebla: do convénio SADBIBF a um contrato próprio com a Janium na nuvem",
+          "description": "Quando o convénio que dava acesso ao sistema consorcial SADBIBF chegou ao fim, a Universidad Tecnológica de Puebla teve de contratar o Janium por conta própria, dentro do orçamento e dos trâmites de uma universidade pública estatal. Em julho de 2026 a sua biblioteca passou para o JaniumNet com 9.290 registos, 28.603 exemplares, 7.213 utilizadores e o seu histórico de empréstimos e multas.",
+          "cover": "assets/caso-ut-puebla-pt-cover-848ee0de.svg",
+          "html": "posts/caso-ut-puebla.pt.html"
+        }
+      }
+    },
     {
       "slug": "caso-utrm",
       "date": "2026-10-31",
