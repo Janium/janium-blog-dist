@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-11-11T11:13:36Z",
+  "generated": "2026-11-17T04:30:25Z",
   "posts": [
+    {
+      "slug": "casos-bibliotecas",
+      "date": "2026-11-17",
+      "datetime": "2026-11-17T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Libros, fondo antiguo, ebooks y tesis: de dónde sale cada dato del registro y dónde se revisa",
+          "description": "El libro de compra, el libro antiguo, el ebook y la tesis acaban en el mismo catálogo, pero cada uno llega a Janium Collect con fuentes distintas. Qué dato se transcribe, cuál completa el modelo, cuál calcula una regla y cuál se describe con el libro delante, y por qué la revisión se concentra en sitios distintos según el material.",
+          "cover": "assets/casos-bibliotecas-es-cover-93755c7b.svg",
+          "html": "posts/casos-bibliotecas.es.html"
+        },
+        "en": {
+          "title": "Books, rare books, ebooks and theses: where each value in the record comes from and where it is reviewed",
+          "description": "The purchased book, the rare book, the ebook and the thesis end up in the same catalog, but each reaches Janium Collect from different sources. Which value is transcribed, which one the model completes, which one a rule calculates and which one is described with the book in hand, and why review concentrates in different places depending on the material.",
+          "cover": "assets/casos-bibliotecas-en-cover-93755c7b.svg",
+          "html": "posts/casos-bibliotecas.en.html"
+        },
+        "pt": {
+          "title": "Livros, fundo antigo, ebooks e teses: de onde sai cada dado do registo e onde se revê",
+          "description": "O livro de aquisição, o livro antigo, o ebook e a tese acabam no mesmo catálogo, mas cada um chega ao Janium Collect com fontes distintas. Que dado se transcreve, qual completa o modelo, qual calcula uma regra e qual se descreve com o livro à frente, e porque é que a revisão se concentra em sítios distintos consoante o material.",
+          "cover": "assets/casos-bibliotecas-pt-cover-93755c7b.svg",
+          "html": "posts/casos-bibliotecas.pt.html"
+        }
+      }
+    },
     {
       "slug": "caso-ut-puebla",
       "date": "2026-11-11",
