@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-11-17T04:30:25Z",
+  "generated": "2026-11-18T04:30:29Z",
   "posts": [
+    {
+      "slug": "indice-del-libro-en-el-catalogo",
+      "date": "2026-11-18",
+      "datetime": "2026-11-18T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "El índice del libro en la ficha del catálogo",
+          "description": "Con la app de captura de Janium, quien cataloga fotografía por separado la portada, la página legal y la tabla de contenido. Janium Collect usa cada foto según su función y puede publicar solo las páginas del índice como documento del registro, para que el lector vea el contenido del libro desde la ficha.",
+          "cover": "assets/indice-del-libro-en-el-catalogo-es-cover-3e4fe9e8.svg",
+          "html": "posts/indice-del-libro-en-el-catalogo.es.html"
+        },
+        "en": {
+          "title": "The book's table of contents on the catalog card",
+          "description": "With the Janium capture app, the cataloger photographs the cover, the copyright page and the table of contents separately. Janium Collect uses each photo for its function and can publish only the table of contents pages as a document of the record, so readers see the book's contents from the catalog card.",
+          "cover": "assets/indice-del-libro-en-el-catalogo-en-cover-3e4fe9e8.svg",
+          "html": "posts/indice-del-libro-en-el-catalogo.en.html"
+        },
+        "pt": {
+          "title": "O índice do livro na ficha do catálogo",
+          "description": "Com a app de captura da Janium, quem cataloga fotografa em separado a capa, a ficha técnica e o índice. O Janium Collect usa cada fotografia consoante a sua função e pode publicar apenas as páginas do índice como documento do registo, para que o leitor veja o conteúdo do livro a partir da ficha.",
+          "cover": "assets/indice-del-libro-en-el-catalogo-pt-cover-3e4fe9e8.svg",
+          "html": "posts/indice-del-libro-en-el-catalogo.pt.html"
+        }
+      }
+    },
     {
       "slug": "casos-bibliotecas",
       "date": "2026-11-17",
