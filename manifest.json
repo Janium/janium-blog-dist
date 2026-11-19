@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-11-18T04:30:29Z",
+  "generated": "2026-11-19T04:30:26Z",
   "posts": [
+    {
+      "slug": "duplicados-por-contenido",
+      "date": "2026-11-19",
+      "datetime": "2026-11-19T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "El mismo documento dos veces: duplicados por firma y por texto",
+          "description": "Janium Collect reconoce el mismo archivo aunque llegue con otro nombre o en otra carpeta, y dos escaneos del mismo documento por el parecido de su texto. Por omisión solo los reporta en el lote; omitir la copia es una decisión de la institución.",
+          "cover": "assets/duplicados-por-contenido-es-cover-d4f0bf8a.svg",
+          "html": "posts/duplicados-por-contenido.es.html"
+        },
+        "en": {
+          "title": "The same document twice: duplicates by signature and by text",
+          "description": "Janium Collect recognizes the same file even when it arrives under another name or in another folder, and two scans of the same document by how similar their text is. By default it only reports them in the batch; skipping the copy is a decision for the institution.",
+          "cover": "assets/duplicados-por-contenido-en-cover-d4f0bf8a.svg",
+          "html": "posts/duplicados-por-contenido.en.html"
+        },
+        "pt": {
+          "title": "O mesmo documento duas vezes: duplicados por assinatura e por texto",
+          "description": "O Janium Collect reconhece o mesmo ficheiro ainda que chegue com outro nome ou noutra pasta, e duas digitalizações do mesmo documento pela semelhança do seu texto. Por predefinição só os assinala no lote; omitir a cópia é uma decisão da instituição.",
+          "cover": "assets/duplicados-por-contenido-pt-cover-d4f0bf8a.svg",
+          "html": "posts/duplicados-por-contenido.pt.html"
+        }
+      }
+    },
     {
       "slug": "indice-del-libro-en-el-catalogo",
       "date": "2026-11-18",
