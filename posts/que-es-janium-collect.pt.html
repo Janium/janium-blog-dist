@@ -1,69 +1,36 @@
-<p>Toda a instituição com acervo chega, mais cedo ou mais tarde, ao mesmo
-estrangulamento: o material existe, mas para o encontrar e utilizar é preciso
-descrevê-lo. Um livro, um processo, uma fotografia, uma gravação, um contrato:
-cada um precisa de um registo de catálogo num formato padrão, feito por alguém que
-sabe catalogar. Esse trabalho leva tempo, e as pessoas que o fazem bem não abundam.
-Entretanto, o material acumula-se, muitas vezes já digitalizado mas sem descrição,
-repartido entre uma pasta na nuvem, um servidor e caixas de digitalizações.</p>
-<p>O Janium Collect ocupa-se da primeira parte desse trabalho. Vigia os lugares onde a
-instituição guarda os seus documentos, lê-os com a ajuda de um modelo de linguagem,
-e produz um registo de catálogo no formato que a instituição usa. Quem cataloga
-deixa de escrever cada registo de raiz e passa a rever os que o sistema propõe.</p>
-<h2>O que produz</h2>
-<p>O resultado do Collect é um registo estruturado, não um texto livre. Consoante o
-tipo de acervo, esse registo sai no formato correspondente:</p>
+<p>Toda a instituição com acervo chega, mais cedo ou mais tarde, ao mesmo estrangulamento: o material existe, mas para o encontrar e utilizar é preciso descrevê-lo. Um livro, uma tese, um processo, uma fotografia, uma gravação, um contrato: cada um precisa de um registo de catálogo num formato padrão, feito por alguém que sabe catalogar. Entretanto, o material acumula-se, muitas vezes já digitalizado mas sem descrição.</p>
+<p>O Janium Collect é o serviço com que a Janium cataloga esse material com inteligência artificial. A instituição não compra nem instala um programa: contrata a catalogação. A Janium recebe os documentos onde a instituição já os tem, cataloga-os com o Collect e entrega os registos no formato e no catálogo que a instituição usa. Quem cataloga deixa de escrever cada registo de raiz e passa a rever os que recebe.</p>
+<h2>O que se contrata</h2>
+<p>Contrata-se o resultado: registos de catálogo de um acervo ou de um fluxo constante de documentos. O serviço é orçamentado de acordo com o acervo: o tipo de material, o volume, o formato de descrição e o nível de revisão de que a instituição precisa.</p>
+<p>Antes de começar, a equipa da Janium define com a instituição como se descreve cada coleção: o formato, o perfil de catalogação, os campos que o seu catálogo espera e os vocabulários que usa. Essa configuração é o que faz com que os registos saiam como a própria instituição os faria, e afina-se com os primeiros lotes, que a instituição revê antes de o carregamento no catálogo passar a ser automático.</p>
+<h2>O que entrega</h2>
+<p>Cada registo sai no formato da instituição:</p>
 <ul>
-<li><strong>Dublin Core</strong> para uma descrição simples e interoperável.</li>
-<li><strong>MARC21</strong> e <strong>UNIMARC</strong> para catálogos de biblioteca.</li>
-<li><strong>ISAD-G</strong> para arquivos, onde a proveniência e a hierarquia (fundo, secção, série)
-  importam mais do que o item isolado.</li>
-<li><strong>CDWA</strong> para obras de arte e objetos culturais, com o vocabulário do Getty.</li>
+<li><strong><a href="/pt/blog/formatos-bibliograficos-marc/">MARC21 e UNIMARC</a></strong> para catálogos de biblioteca.</li>
+<li><strong><a href="/pt/blog/formato-archivistico-isadg/">ISAD-G</a></strong> para arquivos, com a hierarquia de fundo, secção e série.</li>
+<li><strong><a href="/pt/blog/dublin-core-y-extendido/">Dublin Core</a></strong> para repositórios e descrições simples.</li>
+<li><strong><a href="/pt/blog/soporte-cdwa/">CDWA</a></strong> para obras de arte e objetos culturais, com o vocabulário do Getty.</li>
 </ul>
-<p>A instituição não muda o seu catálogo nem a sua norma de descrição para usar o
-Collect; o sistema ajusta-se ao formato que já usa.</p>
+<p>Com os registos chegam um relatório de qualidade, com uma pontuação e os problemas detetados em cada registo, e a <a href="/pt/blog/marcado-procedencia-ia/">proveniência</a> de cada valor: se foi transcrito do documento, deduzido ou redigido pela IA, traduzido ou calculado por uma regra. Os registos são entregues <a href="/pt/blog/del-registro-al-catalogo/">ao catálogo</a> da instituição, seja a Janium ou outro, num lote pronto a carregar.</p>
 <h2>De que material parte</h2>
-<p>O acervo raramente é homogéneo, e o Collect lê vários tipos de fonte com o mesmo
-destino, um registo:</p>
+<p>O material chega pelos <a href="/pt/blog/canales-de-entrada/">canais</a> que a instituição já usa: uma pasta na nuvem ou no seu servidor, o correio eletrónico, uma folha de cálculo ou a <a href="/pt/blog/catalogar-desde-dispositivo-movil/">app de captura da Janium</a>, com fotografias tiradas diante da peça. O Collect cataloga:</p>
 <ul>
-<li>Documentos de texto, em PDF ou num dos mais de trinta formatos de escritório e
-  publicação que converte para os processar.</li>
-<li>Imagens e documentos digitalizados, com reconhecimento de texto quando é preciso,
-  ou lendo a imagem diretamente quando o texto não basta.</li>
-<li>Dados já estruturados (uma folha de cálculo, uma lista de inventário) convertidos
-  em registos sem os voltar a capturar.</li>
-<li>Áudio e vídeo, transcrevendo a voz e, no vídeo, tomando fotogramas por cena para
-  descrever o conteúdo.</li>
+<li>livros, teses, revistas e documentos em PDF, nascidos digitais ou digitalizados;</li>
+<li>fotografias de capas, fichas técnicas e índices;</li>
+<li>listas e inventários em <a href="/pt/blog/catalogar-desde-listas-y-hojas-de-calculo/">folhas de cálculo</a>;</li>
+<li>fotografias, obras e objetos a partir da <a href="/pt/blog/de-la-imagen-y-la-ficha-al-registro/">imagem e da sua ficha</a>;</li>
+<li>áudio e vídeo, a partir da <a href="/pt/blog/de-una-grabacion-sonora-a-un-registro/">gravação</a>.</li>
 </ul>
+<p>Há artigos por tipo de acervo: <a href="/pt/blog/casos-bibliotecas/">bibliotecas</a>, <a href="/pt/blog/casos-hemeroteca/">hemerotecas</a>, <a href="/pt/blog/casos-fototeca/">fototecas</a>, <a href="/pt/blog/casos-audiovisual/">acervos audiovisuais</a>, <a href="/pt/blog/casos-patrimonio-artistico/">património artístico</a>, <a href="/pt/blog/casos-gobierno-documental/">arquivos governamentais</a>, <a href="/pt/blog/casos-corporativo/">documentação empresarial</a> e <a href="/pt/blog/casos-numismatica-valores/">numismática</a>.</p>
+<h2>Como se revê</h2>
+<p>A pessoa que cataloga continua no centro, e o que muda é onde põe a sua atenção. Os registos chegam ao catálogo da instituição, onde se revêm e se corrigem como qualquer outro registo. O relatório de qualidade indica por onde começar: um registo com pontuação baixa chega com uma nota que pede revisão, e um lote incompleto ou alterado não é carregado.</p>
+<p>Uma biblioteca com catalogadores pode rever registo a registo. Um arquivo ou um escritório que descreve milhares de documentos revê por exceção, começando pelo que o relatório assinala. A proveniência de cada valor indica o que convém verificar: o que foi transcrito do documento pede menos atenção do que o que a IA deduziu.</p>
+<h2>Onde se processa</h2>
+<p>O Collect processa na nuvem com um fornecedor comercial de IA. Quando os documentos não podem sair da instituição, o processamento pode correr na sua própria infraestrutura, com ou sem uma consulta <a href="/pt/blog/procesar-sin-exponer-datos-personales/">anonimizada</a> à nuvem; as opções estão em <a href="/pt/blog/soberania-de-datos/">soberania de dados</a>.</p>
 <h2>O critério que sustenta a confiança</h2>
-<p>O Collect não se limita a transcrever: identifica o material e completa o registo com
-dados que a fonte não trazia (assuntos, uma data, às vezes o ISBN), tirados do
-conhecimento do modelo. Esse enriquecimento é o valor. O risco é que um dado que soa
-razoável mas está errado fique no catálogo com aparência de correto.</p>
-<p>A confiança está em saber de onde vem cada dado. O que
-se pode verificar, verifica-se e atribui-se: nomes e assuntos podem contrastar-se com ficheiros de autoridade e vocabulários controlados, consoante o que cada instituição ativa, e saem com a sua fonte anotada; o que a IA contribui fica marcado como inferido ou gerado, nunca sem marca, e cada registo é acompanhado de um registo à parte que indica, campo a campo, de onde saiu o dado. Os campos com regra fixa (o Cutter da cota, por exemplo) são calculados por regras, não se estimam. E cada registo passa por uma avaliação que o classifica; se a classificação for baixa, o registo é entregue com uma nota que pede revisão, de modo que a revisão se concentre no que o sistema assinala.</p>
-<h2>Onde se encaixa</h2>
-<p>O Collect produz os registos; o catálogo recebe-os. Integra-se com o sistema da
-instituição, Janium ou outro, por entrega (lote de carga, SFTP, pasta), não
-mantendo uma cópia de cada ficha alinhada com o ILS. Num fundo ISAD-G hierárquico,
-o catálogo envia ao Collect as mudanças de árvore e as datas de unidade: o
-<a href="/pt/blog/glosario/#bubble-up">bubble-up</a> calcula os intervalos dos pais com
-essas datas. Isso não é um espelho de cada ficha. A pessoa que cataloga continua
-no centro do processo; o que muda é em que gasta o seu tempo.</p>
+<p>O Collect não se limita a transcrever: identifica o material e completa o registo com valores que a fonte não trazia, como os assuntos ou a classificação. Esse enriquecimento é o valor, e também o risco: um valor que soa razoável mas é falso pode ficar anos no catálogo com aparência de correto.</p>
+<p>Por isso cada valor leva a sua proveniência. O que se pode verificar, verifica-se: os nomes e os assuntos podem contrastar-se com as <a href="/pt/blog/control-de-autoridades-y-vocabularios/">autoridades e vocabulários</a> que a instituição use, e saem com a sua fonte anotada. O que tem uma regra, como o Cutter da cota, calculam-no <a href="/pt/blog/correctores-deterministas/">regras</a>, não a IA. E o que a IA contribui fica marcado como inferido ou gerado, nunca sem marca. O porquê está em <a href="/pt/blog/confiar-en-catalogo-con-ia/">confiar num catálogo feito com IA</a>.</p>
 <h2>O que não faz</h2>
-<p>O Collect enriquece, mas não fabrica. Completa a partir do conhecimento do modelo
-o que reconhece, e deixa marcado o que inferiu face ao que verificou; mas um
-dado que o documento não traz e que também não tem de onde deduzir-se, como uma
-medida que ninguém tomou, não se preenche com uma suposição. A qualidade do
-resultado depende da do material de partida, e o sistema não substitui o critério
-de quem conhece o acervo.</p>
-<p>O que muda é quanta atenção humana é precisa, e onde. Cada registo passa por uma
-avaliação que o classifica, e os que não chegam ao mínimo são entregues com uma nota que pede revisão; um lote incompleto ou alterado não é carregado no catálogo. Essa classificação permite calibrar a revisão conforme o
-contexto: uma biblioteca com catalogadores pode rever registo a registo; um
-escritório que processa milhares de contratos, ou um arquivo que descreve em ISAD-G
-em grande escala, não tem uma pessoa por registo e revê por exceção, atendendo ao que a classificação assinala e confiando no resto. A qualidade alcançada torna praticável
-esse modo onde rever tudo não o é.</p>
+<p>O Collect enriquece, mas não fabrica: um valor que o documento não traz e que não tem de onde deduzir-se, como uma medida que ninguém tomou, não se preenche com uma suposição. Não organiza o arquivo pela instituição: a hierarquia sai do inventário, das pastas ou das secções que a instituição define. E não substitui o critério de quem conhece o acervo: a qualidade dos registos depende da do material de partida e da revisão que a instituição decide fazer.</p>
 <h2>Para continuar a conversa</h2>
-<p>Se a sua instituição tem material digitalizado à espera de descrição, ou um fluxo
-constante de documentos para catalogar, o estrangulamento deixa de ser escrever cada
-registo e passa a ser revê-los. Se esse é o seu problema, escreva-nos para
-info@janium.com; interessa-nos perceber como é o seu acervo e como o descreve hoje.</p>
+<p>Se a sua instituição tem material à espera de descrição, ou um fluxo constante de documentos para catalogar, a melhor forma de avaliar o Collect é com o seu próprio material: definimos consigo uma amostra e as regras com que vai julgar os registos, e revê-los no seu catálogo. Escreva-nos para info@janium.com e conte-nos como é o seu acervo e como o descreve hoje.</p>

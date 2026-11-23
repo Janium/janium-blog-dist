@@ -1,69 +1,36 @@
-<p>Toda institución con acervo llega tarde o temprano al mismo cuello de botella: el
-material existe, pero para encontrarlo y usarlo hay que describirlo. Un libro, un
-expediente, una fotografía, una grabación, un contrato: cada uno necesita un
-registro de catálogo en un formato estándar, hecho por alguien que sabe catalogar.
-Ese trabajo toma tiempo, y las personas que lo hacen bien no abundan. Mientras
-tanto el material se acumula, muchas veces ya digitalizado pero sin describir,
-repartido entre una carpeta en la nube, un servidor y cajas de escaneos.</p>
-<p>Janium Collect se ocupa de la primera parte de ese trabajo. Vigila los lugares
-donde la institución guarda sus documentos, los lee con ayuda de un modelo de
-lenguaje, y produce un registro de catálogo en el formato que la institución usa.
-Quien cataloga deja de teclear cada registro desde cero y pasa a revisar los que
-el sistema propone.</p>
-<h2>Qué produce</h2>
-<p>La salida de Collect es un registro estructurado, no un texto libre. Según el tipo
-de acervo, ese registro sale en el formato correspondiente:</p>
+<p>Toda institución con acervo llega tarde o temprano al mismo cuello de botella: el material existe, pero para encontrarlo y usarlo hay que describirlo. Un libro, una tesis, un expediente, una fotografía, una grabación, un contrato: cada uno necesita un registro de catálogo en un formato estándar, hecho por alguien que sabe catalogar. Mientras tanto el material se acumula, muchas veces ya digitalizado pero sin describir.</p>
+<p>Janium Collect es el servicio con el que Janium cataloga ese material con inteligencia artificial. La institución no compra ni instala un programa: contrata la catalogación. Janium recibe los documentos donde la institución ya los tiene, los cataloga con Collect y entrega los registros en el formato y el catálogo que la institución usa. Quien cataloga deja de teclear cada registro desde cero y pasa a revisar los que recibe.</p>
+<h2>Qué se contrata</h2>
+<p>Se contrata el resultado: registros de catálogo de un acervo o de un flujo constante de documentos. El servicio se cotiza según el acervo: el tipo de material, el volumen, el formato de descripción y el nivel de revisión que la institución necesita.</p>
+<p>Antes de empezar, el equipo de Janium define con la institución cómo se describe cada colección: el formato, el perfil de catalogación, los campos que espera su catálogo y los vocabularios que usa. Esa configuración es lo que hace que los registros salgan como los haría la propia institución, y se afina con los primeros lotes, que la institución revisa antes de que la carga al catálogo sea automática.</p>
+<h2>Qué entrega</h2>
+<p>Cada registro sale en el formato de la institución:</p>
 <ul>
-<li><strong>Dublin Core</strong> para una descripción simple e interoperable.</li>
-<li><strong>MARC21</strong> y <strong>UNIMARC</strong> para catálogos de biblioteca.</li>
-<li><strong>ISAD-G</strong> para archivos, donde importa la procedencia y la jerarquía (fondo,
-  sección, serie) más que el ítem aislado.</li>
-<li><strong>CDWA</strong> para obras de arte y objetos culturales, con el vocabulario del Getty.</li>
+<li><strong><a href="/blog/formatos-bibliograficos-marc/">MARC21 y UNIMARC</a></strong> para catálogos de biblioteca.</li>
+<li><strong><a href="/blog/formato-archivistico-isadg/">ISAD-G</a></strong> para archivos, con la jerarquía de fondo, sección y serie.</li>
+<li><strong><a href="/blog/dublin-core-y-extendido/">Dublin Core</a></strong> para repositorios y descripciones simples.</li>
+<li><strong><a href="/blog/soporte-cdwa/">CDWA</a></strong> para obras de arte y objetos culturales, con el vocabulario del Getty.</li>
 </ul>
-<p>La institución no cambia su catálogo ni su norma de descripción para usar Collect;
-el sistema se ajusta al formato que ya usa.</p>
+<p>Con los registros llegan un reporte de calidad, con una calificación y los problemas detectados en cada registro, y la <a href="/blog/marcado-procedencia-ia/">procedencia</a> de cada dato: si se transcribió del documento, lo dedujo o lo redactó la IA, se tradujo o lo calculó una regla. Los registros se entregan <a href="/blog/del-registro-al-catalogo/">al catálogo</a> de la institución, sea Janium u otro, en un lote listo para cargar.</p>
 <h2>De qué material parte</h2>
-<p>El acervo rara vez es homogéneo. Collect lee varios tipos de fuente y de todos
-produce un registro:</p>
+<p>El material llega por los <a href="/blog/canales-de-entrada/">canales</a> que la institución ya usa: una carpeta en la nube o en su servidor, el correo, una hoja de cálculo o la <a href="/blog/catalogar-desde-dispositivo-movil/">app de captura de Janium</a>, con fotos tomadas frente a la pieza. Collect cataloga:</p>
 <ul>
-<li>Documentos de texto, en PDF o en alguno de los más de treinta formatos de oficina
-  y publicación que convierte para procesarlos.</li>
-<li>Imágenes y documentos escaneados, con reconocimiento de texto cuando hace falta,
-  o leyendo la imagen directamente cuando el texto no basta.</li>
-<li>Datos ya estructurados (una hoja de cálculo, una lista de inventario) que se
-  convierten en registros sin volver a capturarlos.</li>
-<li>Audio y video, transcribiendo la voz y, en el video, tomando fotogramas por
-  escena para describir el contenido.</li>
+<li>libros, tesis, revistas y documentos en PDF, nacidos digitales o escaneados;</li>
+<li>fotografías de portadas, páginas legales e índices;</li>
+<li>listas e inventarios en <a href="/blog/catalogar-desde-listas-y-hojas-de-calculo/">hojas de cálculo</a>;</li>
+<li>fotografías, obras y objetos a partir de <a href="/blog/de-la-imagen-y-la-ficha-al-registro/">la imagen y su ficha</a>;</li>
+<li>audio y video, a partir de la <a href="/blog/de-una-grabacion-sonora-a-un-registro/">grabación</a>.</li>
 </ul>
+<p>Hay artículos por tipo de acervo: <a href="/blog/casos-bibliotecas/">bibliotecas</a>, <a href="/blog/casos-hemeroteca/">hemerotecas</a>, <a href="/blog/casos-fototeca/">fototecas</a>, <a href="/blog/casos-audiovisual/">acervos audiovisuales</a>, <a href="/blog/casos-patrimonio-artistico/">patrimonio artístico</a>, <a href="/blog/casos-gobierno-documental/">archivos de gobierno</a>, <a href="/blog/casos-corporativo/">documentación corporativa</a> y <a href="/blog/casos-numismatica-valores/">numismática</a>.</p>
+<h2>Cómo se revisa</h2>
+<p>La persona que cataloga sigue en el centro, y lo que cambia es dónde pone su atención. Los registros llegan al catálogo de la institución, donde se revisan y se corrigen como cualquier otro registro. El reporte de calidad dice por dónde empezar: un registro con calificación baja llega con una nota que pide revisarlo, y un lote incompleto o alterado no se carga.</p>
+<p>Una biblioteca con catalogadores puede revisar registro por registro. Un archivo o un despacho que describe miles de documentos revisa por excepción, empezando por lo que el reporte señala. La procedencia de cada dato dice qué conviene comprobar: lo transcrito del documento pide menos atención que lo que dedujo la IA.</p>
+<h2>Dónde se procesa</h2>
+<p>Collect procesa en la nube con un proveedor comercial de IA. Cuando los documentos no pueden salir de la institución, el procesamiento puede correr en su propia infraestructura, con o sin una consulta <a href="/blog/procesar-sin-exponer-datos-personales/">anonimizada</a> a la nube; las opciones están en <a href="/blog/soberania-de-datos/">soberanía de datos</a>.</p>
 <h2>El criterio que sostiene la confianza</h2>
-<p>Collect no se limita a transcribir: identifica el material y completa el registro con
-datos que la fuente no traía (materias, fecha, a veces el ISBN), tomados del
-conocimiento del modelo. Ese enriquecimiento es el valor. El riesgo es que un dato
-que suena razonable pero es falso se quede en el catálogo con aspecto de correcto.</p>
-<p>La confianza está en saber de dónde viene cada dato. Lo
-verificable se verifica y se atribuye: nombres y materias pueden contrastarse contra autoridades y vocabularios controlados, según lo que active cada institución, y salen con su fuente anotada; lo que aporta la IA queda marcado como inferido o generado, nunca sin marca, y cada registro va acompañado de un registro aparte que indica, campo por campo, de dónde salió el dato. Los campos con regla fija (el Cutter de la signatura, por ejemplo) los calculan reglas, no se estiman. Y cada registro pasa por una evaluación que lo califica; si la calificación es baja, el registro se entrega con una nota que pide revisarlo, de modo que la revisión se enfoque en lo que el sistema señala.</p>
-<h2>Dónde encaja</h2>
-<p>Collect produce los registros; el catálogo los recibe. Se integra con el sistema de
-la institución, Janium u otro, por entrega (lote de carga, SFTP, carpeta), no
-manteniendo una copia de cada ficha alineada con el ILS. En un fondo ISAD-G
-jerárquico, el catálogo envía a Collect los cambios de árbol y las fechas de
-unidad: el <a href="/blog/glosario/#bubble-up">bubble-up</a> calcula los rangos de los padres
-con esas fechas. Eso no es un espejo de cada ficha. La persona que
-cataloga sigue en el centro del proceso; lo que cambia es en qué gasta su tiempo.</p>
+<p>Collect no se limita a transcribir: identifica el material y completa el registro con datos que la fuente no traía, como las materias o la clasificación. Ese enriquecimiento es el valor, y también el riesgo: un dato que suena razonable pero es falso puede quedarse años en el catálogo con aspecto de correcto.</p>
+<p>Por eso cada dato lleva su procedencia. Lo que se puede verificar se verifica: los nombres y las materias pueden contrastarse con las <a href="/blog/control-de-autoridades-y-vocabularios/">autoridades y vocabularios</a> que la institución use, y salen con su fuente anotada. Lo que tiene una regla, como el Cutter de la signatura, lo calculan <a href="/blog/correctores-deterministas/">reglas</a>, no la IA. Y lo que aporta la IA queda marcado como inferido o generado, nunca sin marca. El porqué está en <a href="/blog/confiar-en-catalogo-con-ia/">confiar en un catálogo hecho con IA</a>.</p>
 <h2>Lo que no hace</h2>
-<p>Collect enriquece, pero no fabrica. Completa desde el conocimiento del modelo lo que
-reconoce, y deja marcado lo que infirió frente a lo que verificó; pero un dato que el
-documento no trae y que tampoco tiene de dónde deducirse, como una medida que nadie
-tomó, no se rellena con una suposición. La calidad de la salida depende de la del
-material de partida, y el sistema no reemplaza el criterio de quien conoce el acervo.</p>
-<p>Lo que cambia es cuánta atención humana hace falta y dónde. Cada registro pasa por
-una evaluación que lo califica, y los que no llegan al mínimo se entregan con una nota que pide revisarlos; un lote incompleto o alterado no se carga en el catálogo. Esa calificación permite calibrar la revisión según el
-contexto: una biblioteca con catalogadores puede revisar registro por registro; un
-despacho que procesa miles de contratos, o un archivo que describe en ISAD-G a gran
-escala, no tiene una persona por registro y revisa por excepción, atendiendo lo que la calificación señala y confiando en el resto. La calidad alcanzada vuelve practicable
-ese modo donde revisar todo no lo es.</p>
+<p>Collect enriquece, pero no fabrica: un dato que el documento no trae y que no tiene de dónde deducirse, como una medida que nadie tomó, no se rellena con una suposición. No organiza el archivo por la institución: la jerarquía sale del inventario, de las carpetas o de las secciones que la institución define. Y no sustituye el criterio de quien conoce el acervo: la calidad de los registros depende de la del material de partida y de la revisión que la institución decide hacer.</p>
 <h2>Para continuar la conversación</h2>
-<p>Si tu institución tiene material digitalizado esperando descripción, o un flujo
-constante de documentos que catalogar, el cuello de botella deja de ser teclear cada
-registro y pasa a ser revisarlos. Si ese es tu problema, escríbenos a
-info@janium.com; nos interesa entender cómo es tu acervo y cómo lo describes hoy.</p>
+<p>Si tu institución tiene material esperando descripción, o un flujo constante de documentos que catalogar, la mejor forma de evaluar Collect es con tu propio material: definimos contigo una muestra y los criterios con los que vas a juzgar los registros, y los revisas en tu catálogo. Escríbenos a info@janium.com y cuéntanos cómo es tu acervo y cómo lo describes hoy.</p>

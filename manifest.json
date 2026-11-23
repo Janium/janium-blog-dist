@@ -1,7 +1,37 @@
 {
   "contract": 1,
-  "generated": "2026-11-23T08:48:58Z",
+  "generated": "2026-11-23T09:00:04Z",
   "posts": [
+    {
+      "slug": "que-es-janium-collect",
+      "date": "2026-11-23",
+      "datetime": "2026-11-23T08:50:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia",
+        "fundamentos"
+      ],
+      "translations": {
+        "es": {
+          "title": "De documentos a registros de catálogo: qué es Janium Collect",
+          "description": "Janium Collect es el servicio con el que Janium cataloga con IA el acervo de una institución: recibe los documentos donde ya están, entrega registros en el formato del catálogo con la procedencia de cada dato y un reporte de calidad, y se cotiza según el acervo. Qué produce, de qué material parte, cómo se revisa y qué no hace.",
+          "cover": "assets/que-es-janium-collect-es-cover-08144f1e.png",
+          "html": "posts/que-es-janium-collect.es.html"
+        },
+        "en": {
+          "title": "From documents to catalog records: what Janium Collect is",
+          "description": "Janium Collect is the service with which Janium catalogs an institution's collection using AI: it receives the documents where they already are and delivers records in the catalog's format, with the provenance of each value and a quality report, and it is quoted according to the collection. What it produces, what material it starts from, how it is reviewed, and what it does not do.",
+          "cover": "assets/que-es-janium-collect-en-cover-08144f1e.png",
+          "html": "posts/que-es-janium-collect.en.html"
+        },
+        "pt": {
+          "title": "De documentos a registos de catálogo: o que é o Janium Collect",
+          "description": "O Janium Collect é o serviço com que a Janium cataloga com IA o acervo de uma instituição: recebe os documentos onde já estão, entrega registos no formato do catálogo com a proveniência de cada valor e um relatório de qualidade, e é orçamentado de acordo com o acervo. O que produz, de que material parte, como se revê e o que não faz.",
+          "cover": "assets/que-es-janium-collect-pt-cover-08144f1e.png",
+          "html": "posts/que-es-janium-collect.pt.html"
+        }
+      }
+    },
     {
       "slug": "duplicados-por-contenido",
       "date": "2026-11-19",
@@ -1252,36 +1282,6 @@
           "description": "Como um catálogo feito com IA se torna fiável: não negando que o modelo enriquece, mas sabendo de onde vem cada dado. Apoia-se na fonte que sustenta cada um, na verificação contra autoridades, no cálculo dos campos com regra, na avaliação por registo e num filtro de qualidade que retém lotes degradados, com os limites explícitos.",
           "cover": "assets/confiar-en-catalogo-con-ia-pt-cover-4bc2c5d9.svg",
           "html": "posts/confiar-en-catalogo-con-ia.pt.html"
-        }
-      }
-    },
-    {
-      "slug": "que-es-janium-collect",
-      "date": "2026-08-15",
-      "datetime": "2026-08-15T06:00:00Z",
-      "tags": [
-        "janiumcollect",
-        "ia",
-        "fundamentos"
-      ],
-      "translations": {
-        "es": {
-          "title": "De documentos a registros de catálogo: qué es Janium Collect",
-          "description": "Qué problema resuelve Janium Collect para una institución con acervo, cómo convierte documentos de distintos tipos en registros de catálogo en formatos estándar, y dónde están los límites de lo que hace.",
-          "cover": "assets/que-es-janium-collect-es-cover-08144f1e.png",
-          "html": "posts/que-es-janium-collect.es.html"
-        },
-        "en": {
-          "title": "From documents to catalog records: what Janium Collect is",
-          "description": "What problem Janium Collect solves for an institution with a collection, how it turns documents of different kinds into catalog records in standard formats, and where the limits of what it does lie.",
-          "cover": "assets/que-es-janium-collect-en-cover-08144f1e.png",
-          "html": "posts/que-es-janium-collect.en.html"
-        },
-        "pt": {
-          "title": "De documentos a registos de catálogo: o que é o Janium Collect",
-          "description": "Que problema resolve o Janium Collect para uma instituição com acervo, como converte documentos de diferentes tipos em registos de catálogo em formatos padrão, e onde estão os limites do que faz.",
-          "cover": "assets/que-es-janium-collect-pt-cover-08144f1e.png",
-          "html": "posts/que-es-janium-collect.pt.html"
         }
       }
     },

@@ -1,72 +1,36 @@
-<p>Every institution with a collection reaches the same bottleneck sooner or later:
-the material exists, but to find it and use it, it has to be described. A book, a
-file, a photograph, a recording, a contract: each one needs a catalog record in a
-standard format, produced by someone who knows how to catalog. That work takes
-time, and the people who do it well are scarce. Meanwhile the material piles up,
-often already digitized but undescribed, scattered across a cloud folder, a server
-and boxes of scans.</p>
-<p>Janium Collect takes on the first part of that work. It watches the places where
-the institution keeps its documents, reads them with the help of a language model,
-and produces a catalog record in the format the institution uses. Whoever catalogs
-stops typing every record from scratch and moves to reviewing the ones the system
-proposes.</p>
-<h2>What it produces</h2>
-<p>Collect&rsquo;s output is a structured record, not free text. Depending on the type of
-collection, that record comes out in the corresponding format:</p>
+<p>Every institution with a collection reaches the same bottleneck sooner or later: the material exists, but to find it and use it, it has to be described. A book, a thesis, a case file, a photograph, a recording, a contract: each one needs a catalog record in a standard format, produced by someone who knows how to catalog. Meanwhile the material piles up, often already digitized but undescribed.</p>
+<p>Janium Collect is the service with which Janium catalogs that material using artificial intelligence. The institution does not buy or install a program: it hires the cataloging. Janium receives the documents where the institution already keeps them, catalogs them with Collect, and delivers the records in the format and the catalog the institution uses. Whoever catalogs stops typing every record from scratch and moves to reviewing the ones they receive.</p>
+<h2>What you hire</h2>
+<p>You hire the result: catalog records for a collection or for a steady flow of documents. The service is quoted according to the collection: the type of material, the volume, the description format, and the level of review the institution needs.</p>
+<p>Before starting, the Janium team defines with the institution how each collection is described: the format, the cataloging profile, the fields its catalog expects, and the vocabularies it uses. That configuration is what makes the records come out the way the institution itself would produce them, and it is refined with the first batches, which the institution reviews before loading into the catalog becomes automatic.</p>
+<h2>What it delivers</h2>
+<p>Each record comes out in the institution&rsquo;s format:</p>
 <ul>
-<li><strong>Dublin Core</strong> for a simple, interoperable description.</li>
-<li><strong>MARC21</strong> and <strong>UNIMARC</strong> for library catalogs.</li>
-<li><strong>ISAD-G</strong> for archives, where provenance and hierarchy (fonds, section, series)
-  matter more than the isolated item.</li>
-<li><strong>CDWA</strong> for works of art and cultural objects, with the Getty vocabulary.</li>
+<li><strong><a href="/en/blog/formatos-bibliograficos-marc/">MARC21 and UNIMARC</a></strong> for library catalogs.</li>
+<li><strong><a href="/en/blog/formato-archivistico-isadg/">ISAD-G</a></strong> for archives, with the hierarchy of fonds, section, and series.</li>
+<li><strong><a href="/en/blog/dublin-core-y-extendido/">Dublin Core</a></strong> for repositories and simple descriptions.</li>
+<li><strong><a href="/en/blog/soporte-cdwa/">CDWA</a></strong> for works of art and cultural objects, with the Getty vocabulary.</li>
 </ul>
-<p>The institution doesn&rsquo;t change its catalog or its descriptive standard to use
-Collect; the system adapts to the format it already uses.</p>
+<p>The records arrive with a quality report, which gives a score and the problems detected in each record, and with the <a href="/en/blog/marcado-procedencia-ia/">provenance</a> of each value: whether it was transcribed from the document, deduced or written by the AI, translated, or calculated by a rule. The records are delivered <a href="/en/blog/del-registro-al-catalogo/">to the catalog</a> of the institution, whether Janium or another, in a batch ready to load.</p>
 <h2>What material it starts from</h2>
-<p>Collections are rarely homogeneous, and Collect reads several kinds of source with
-the same destination, a record:</p>
+<p>The material arrives through the <a href="/en/blog/canales-de-entrada/">channels</a> the institution already uses: a folder in the cloud or on its server, email, a spreadsheet, or the <a href="/en/blog/catalogar-desde-dispositivo-movil/">Janium capture app</a>, with photos taken in front of the item. Collect catalogs:</p>
 <ul>
-<li>Text documents, in PDF or in one of the thirty-plus office and publishing formats
-  it converts for processing.</li>
-<li>Images and scanned documents, with text recognition when needed, or by reading
-  the image directly when text isn&rsquo;t enough.</li>
-<li>Already-structured data (a spreadsheet, an inventory list) turned into records
-  without recapturing them.</li>
-<li>Audio and video, transcribing the speech and, in video, taking keyframes per scene
-  to describe the content.</li>
+<li>books, theses, journals, and documents in PDF, born digital or scanned;</li>
+<li>photographs of covers, copyright pages, and indexes;</li>
+<li>lists and inventories in <a href="/en/blog/catalogar-desde-listas-y-hojas-de-calculo/">spreadsheets</a>;</li>
+<li>photographs, artworks, and objects from <a href="/en/blog/de-la-imagen-y-la-ficha-al-registro/">the image and its catalog card</a>;</li>
+<li>audio and video, from the <a href="/en/blog/de-una-grabacion-sonora-a-un-registro/">recording</a>.</li>
 </ul>
+<p>There are articles by type of collection: <a href="/en/blog/casos-bibliotecas/">libraries</a>, <a href="/en/blog/casos-hemeroteca/">periodicals collections</a>, <a href="/en/blog/casos-fototeca/">photo archives</a>, <a href="/en/blog/casos-audiovisual/">audiovisual collections</a>, <a href="/en/blog/casos-patrimonio-artistico/">artistic heritage</a>, <a href="/en/blog/casos-gobierno-documental/">government archives</a>, <a href="/en/blog/casos-corporativo/">corporate documentation</a>, and <a href="/en/blog/casos-numismatica-valores/">numismatics</a>.</p>
+<h2>How it is reviewed</h2>
+<p>The person who catalogs stays at the center, and what changes is where they put their attention. The records arrive in the institution&rsquo;s catalog, where they are reviewed and corrected like any other record. The quality report says where to start: a record with a low score arrives with a note asking for review, and an incomplete or altered batch is not loaded.</p>
+<p>A library with catalogers can review record by record. An archive or a firm that describes thousands of documents reviews by exception, starting with what the report flags. The provenance of each value says what is worth checking: what was transcribed from the document needs less attention than what the AI deduced.</p>
+<h2>Where it is processed</h2>
+<p>Collect processes in the cloud with a commercial AI provider. When the documents cannot leave the institution, the processing can run on its own infrastructure, with or without an <a href="/en/blog/procesar-sin-exponer-datos-personales/">anonymized</a> query to the cloud; the options are covered in <a href="/en/blog/soberania-de-datos/">data sovereignty</a>.</p>
 <h2>The principle that underpins trust</h2>
-<p>Collect doesn&rsquo;t just transcribe: it identifies the material and completes the record
-with data the source didn&rsquo;t carry (subjects, a date, sometimes the ISBN), drawn from
-the model&rsquo;s knowledge. That enrichment is the value. The risk is that a value that
-sounds reasonable but is wrong stays in the catalog looking correct.</p>
-<p>Trust lies in knowing where each value comes from. What
-can be verified is verified and attributed: names and subjects can be checked against authority files and controlled vocabularies, depending on what each institution activates, and carry their source; what the AI contributes is marked as inferred or generated, never unmarked, and each record comes with a separate record that states, field by field, where the value came from. Fields with a fixed rule (the Cutter of the call number, for instance) are calculated by rules, not estimated. And each record goes through an evaluation that scores it; if the score is low, the record is delivered with a note asking for review, so review focuses on what the system points to.</p>
-<h2>Where it fits</h2>
-<p>Collect produces the records; the catalog receives them. It integrates with the
-institution&rsquo;s system, Janium or another, as a delivery (load batch, SFTP,
-folder), not by keeping a field-by-field copy of every record in line with the ILS.
-On a hierarchical ISAD-G fonds, the catalog sends Collect tree changes and unit
-dates: <a href="/en/blog/glosario/#bubble-up">bubble-up</a> computes parent date ranges from
-those dates. That is not a mirror of every record. The person who catalogs stays at
-the center of the process; what changes is where their time goes.</p>
-<h2>What it doesn&rsquo;t do</h2>
-<p>Collect enriches, but it does not fabricate. It completes from the model&rsquo;s
-knowledge what it can identify, and leaves marked what it inferred versus what
-it verified; but a value the document does not carry and that there is no
-basis to deduce (a measurement nobody took, for instance) is not filled in
-with a guess. The quality of the output depends on that of the source
-material, and the system does not replace the judgment of someone who knows
-the collection.</p>
-<p>What changes is how much human attention is needed, and where. Each record goes
-through an evaluation that scores it, and those that fall below the minimum are delivered with a note asking for review; an incomplete or altered batch is not loaded into the catalog. That score lets each context calibrate how
-much to review: a library with catalogers can review record by record; a firm
-processing thousands of contracts, or an archive describing in ISAD-G at scale, has
-no one person per record and reviews by exception, addressing what the score flags and trusting the rest. The quality reached makes that mode workable where reviewing
-everything isn&rsquo;t.</p>
+<p>Collect does not just transcribe: it identifies the material and completes the record with values the source did not carry, such as subjects or classification. That enrichment is the value, and also the risk: a value that sounds reasonable but is wrong can stay in the catalog for years looking correct.</p>
+<p>That is why each value carries its provenance. What can be verified is verified: names and subjects can be checked against the <a href="/en/blog/control-de-autoridades-y-vocabularios/">authority files and vocabularies</a> the institution uses, and they come out with their source noted. What has a rule, such as the Cutter number of the call number, is calculated by <a href="/en/blog/correctores-deterministas/">rules</a>, not by the AI. And what the AI contributes is marked as inferred or generated, never unmarked. The reasoning is in <a href="/en/blog/confiar-en-catalogo-con-ia/">trusting a catalog made with AI</a>.</p>
+<h2>What it does not do</h2>
+<p>Collect enriches, but it does not fabricate: a value the document does not carry and that has nothing to be deduced from, such as a measurement nobody took, is not filled in with a guess. It does not organize the archive for the institution: the hierarchy comes from the inventory, the folders, or the sections the institution defines. And it does not replace the judgment of whoever knows the collection: the quality of the records depends on that of the source material and on the review the institution decides to do.</p>
 <h2>To continue the conversation</h2>
-<p>If your institution has digitized material waiting to be described, or a steady flow
-of documents to catalog, the bottleneck stops being typing every record and becomes
-reviewing them. If that&rsquo;s your problem, write to us at info@janium.com; we&rsquo;re
-interested in understanding what your collection looks like and how you describe it
-today.</p>
+<p>If your institution has material waiting to be described, or a steady flow of documents to catalog, the best way to evaluate Collect is with your own material: we define a sample with you and the rules you will use to judge the records, and you review them in your catalog. Write to us at info@janium.com and tell us what your collection looks like and how you describe it today.</p>
