@@ -19,8 +19,7 @@ the set of rules with which MARC21 is filled in, not a record format. It
 defines, among other things, the punctuation that separates and closes
 subfields (the spaces, hyphens, periods and slashes a cataloger recognizes at
 once in a well-formed record) and the content, media and carrier type fields.
-That punctuation is not decided by the model: it is applied deterministically
-in post-processing, after the model proposes the content. A fixed rule is
+That punctuation is not decided by the model: it is applied by rules, after the model proposes the content. A fixed rule is
 better kept by a rule, not by asking a model that can get it right almost
 always but not always.</p>
 <h2>UNIMARC: the alternative in some regions</h2>
@@ -56,8 +55,7 @@ catalog is another decision. The exporter delivers the wrapper that fits:</p>
 </ul>
 <p>A MARC21 record and a UNIMARC record can leave in any of those wrappers,
 according to what the receiver accepts. Before delivering the batch, Collect
-checks its integrity and stops it if it detects degradation, so damaged
-material is not loaded into the catalog. How that file reaches the ILS (load
+checks its integrity: an incomplete or altered batch is not loaded into the catalog. How that file reaches the ILS (load
 batch, SFTP, folder) is in <a href="/en/blog/del-registro-al-catalogo/">Integrating AI cataloging with your
 catalog</a>.</p>
 <p>Archival description, by provenance and hierarchy, is another format:
@@ -66,9 +64,7 @@ catalog</a>.</p>
 <p>Collect does not decide for the institution whether the catalog is MARC21 or
 UNIMARC. That choice is fixed by the cataloging standard and the system where
 the catalog lives; Collect adjusts to it. It also does not guarantee that RDA
-punctuation covers every edge case of the standard: it applies the punctuation
-rules in post-processing to the content the model proposes, and the special
-cases a deterministic rule does not cover are left for the cataloger to
+punctuation covers every edge case of the standard: the special cases the rules do not cover are left for the cataloger to
 review.</p>
 <p>The model completes the record with what the source did not include when it can
 support it, and marks what it inferred: an inferred value is not presented as

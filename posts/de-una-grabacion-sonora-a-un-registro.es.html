@@ -19,29 +19,23 @@ No hay un flujo aparte para audio; es el proceso de siempre con una etapa inicia
 distinta.</p>
 <p>No todo el registro sale del habla. Algunos datos vienen de la <strong>ficha técnica del
 archivo</strong>, no del contenido: la duración, el códec, la resolución de muestreo. Eso
-se calcula de forma determinista, sin pasar por el modelo, porque son hechos
+se toma del propio archivo, sin pasar por el modelo, porque son hechos
 medibles y no conviene pedírselos a un sistema que podría estimarlos mal. El tipo
 de recurso (que se trata de un registro sonoro) también se fija así, no lo decide
 el modelo.</p>
 <h2>Transcribir en local o en la nube</h2>
 <p>La transcripción se puede hacer de dos maneras, y la elección tiene consecuencias
-de costo y de operación distintas.</p>
+distintas.</p>
 <ul>
 <li><strong>Local.</strong> El audio se transcribe en la propia máquina, sin salir de la
-  institución. Procesa grabaciones largas, de horas, pero es <strong>lento en CPU</strong>: la
-  transcripción tarda. Es la opción cuando el material no debe salir del entorno o
+  institución. Procesa grabaciones largas, de horas, aunque tarda más. Es la opción cuando el material no debe salir del entorno o
   cuando no se quiere depender de un servicio externo.</li>
 <li><strong>En la nube.</strong> La transcripción se delega a un servicio, más rápido y sin carga
-  para el hardware local. Aquí aparece una palanca de costo útil: la transcripción
-  no necesita el mismo modelo caro que hace la extracción de metadatos. Se puede
-  usar un modelo económico solo para transcribir, y reservar el modelo bueno para
-  el paso de catalogación. En pruebas internas, separar esa palanca y limitar el
-  razonamiento del modelo redujo el costo de forma apreciable sin que la calidad de
-  los registros cayera en la muestra.</li>
+  para el hardware local.</li>
 </ul>
 <p>Ninguna de las dos es &ldquo;la correcta&rdquo; en abstracto. El local protege el dato y evita
-dependencias externas a cambio de tiempo; la nube da velocidad y menor costo por
-registro a cambio de que el audio salga de la institución. La decisión depende del
+dependencias externas a cambio de tiempo; la nube da velocidad
+a cambio de que el audio salga de la institución. La decisión depende del
 acervo y de sus restricciones, no de una preferencia técnica.</p>
 <h2>Cuando la grabación no es una sola cosa</h2>
 <p>Una entrevista tiene turnos. Un acta oral tiene puntos del orden del día. Una
@@ -60,9 +54,9 @@ vacíos del hijo con lo que la segmentación ya dedujo, y hereda del padre la
 identidad común (autor, fecha). A la inversa, el registro de la grabación completa
 puede describirse a partir de sus hijos: su tema es la unión de los temas de los
 segmentos, su descripción la suma de sus resúmenes. Es descripción derivada de
-manera determinista, no inventada.</p>
+los segmentos, no inventada.</p>
 <h2>Dónde están los límites</h2>
-<p>La transcripción automática <strong>tiene error</strong>, y el error crece con la calidad del
+<p>La transcripción automática <strong>tiene error</strong>, y el error crece cuanto peor es el
 audio. Una grabación limpia se transcribe bien; una con ruido de fondo, voces
 solapadas o micrófono lejano produce texto con fallos, y esos fallos se arrastran a
 la extracción de metadatos. Cuando el sistema detecta que un archivo casi no tiene

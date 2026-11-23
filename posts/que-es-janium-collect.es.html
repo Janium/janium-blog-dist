@@ -41,12 +41,7 @@ datos que la fuente no traía (materias, fecha, a veces el ISBN), tomados del
 conocimiento del modelo. Ese enriquecimiento es el valor. El riesgo es que un dato
 que suena razonable pero es falso se quede en el catálogo con aspecto de correcto.</p>
 <p>La confianza está en saber de dónde viene cada dato. Lo
-verificable se verifica y se atribuye: nombres y materias se contrastan contra
-autoridades y vocabularios controlados y salen con su fuente anotada; lo que viene
-solo del conocimiento del modelo queda sin esa marca. Los campos con regla fija (el
-número de clasificación, por ejemplo) se computan, no se estiman. Y cada registro
-pasa por una evaluación que lo califica y lo marca para revisión cuando cae por debajo
-del umbral, de modo que la revisión se enfoque en lo que el sistema señala.</p>
+verificable se verifica y se atribuye: nombres y materias pueden contrastarse contra autoridades y vocabularios controlados, según lo que active cada institución, y salen con su fuente anotada; lo que aporta la IA queda marcado como inferido o generado, nunca sin marca, y cada registro va acompañado de un registro aparte que indica, campo por campo, de dónde salió el dato. Los campos con regla fija (el Cutter de la signatura, por ejemplo) los calculan reglas, no se estiman. Y cada registro pasa por una evaluación que lo califica; si la calificación es baja, el registro se entrega con una nota que pide revisarlo, de modo que la revisión se enfoque en lo que el sistema señala.</p>
 <h2>Dónde encaja</h2>
 <p>Collect produce los registros; el catálogo los recibe. Se integra con el sistema de
 la institución, Janium u otro, por entrega (lote de carga, SFTP, carpeta), no
@@ -62,8 +57,7 @@ documento no trae y que tampoco tiene de dónde deducirse, como una medida que n
 tomó, no se rellena con una suposición. La calidad de la salida depende de la del
 material de partida, y el sistema no reemplaza el criterio de quien conoce el acervo.</p>
 <p>Lo que cambia es cuánta atención humana hace falta y dónde. Cada registro pasa por
-una evaluación que lo califica, y el sistema frena los que no llegan al mínimo antes
-de que entren al catálogo. Esa calificación permite calibrar la revisión según el
+una evaluación que lo califica, y los que no llegan al mínimo se entregan con una nota que pide revisarlos; un lote incompleto o alterado no se carga en el catálogo. Esa calificación permite calibrar la revisión según el
 contexto: una biblioteca con catalogadores puede revisar registro por registro; un
 despacho que procesa miles de contratos, o un archivo que describe en ISAD-G a gran
 escala, no tiene una persona por registro y revisa por excepción, atendiendo lo que la calificación señala y confiando en el resto. La calidad alcanzada vuelve practicable

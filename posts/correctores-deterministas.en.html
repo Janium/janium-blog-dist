@@ -9,8 +9,7 @@ model still proposes the title, the author and the subjects.</p>
 <h2>Dewey Cutter</h2>
 <p>In Dewey the Cutter completes the call number (<code>082$b</code>; in UDC, <code>080$b</code>).
 Collect looks up the surname in the <strong>Cutter-Sanborn Three-Figure
-Revised</strong> table, about 12,000 public entries, by longest prefix. If it
-finds it, that code goes in the record and in holdings (<code>852</code>).</p>
+Revised</strong> table. If it finds it, that code goes in the record and in holdings (<code>852</code>).</p>
 <p>If the surname is not in the table, Collect falls back to the code for the
 initial and that field needs review, until someone adds the surname to the
 table.</p>
@@ -19,10 +18,7 @@ table.</p>
 algorithm published by LC which, unlike the Cutter-Sanborn table, yields a
 result for any word. Collect calculates that value and replaces whatever
 the model proposed.</p>
-<p>The full algorithm lengthens the Cutter letter by letter, so <code>Rodriguez</code>
-would give <code>.R6375449</code>, whereas in practice two or three digits are used.
-Collect cuts to the configured length, two by default, and leaves <code>.R63</code>. If the
-record has the data, it can add:</p>
+<p>Collect applies the Cutter length the library uses: <code>Rodriguez</code>, for example, becomes <code>.R63</code>. If the record has the data, it can add:</p>
 <ul>
 <li>The work mark: the first significant letter of the title, to tell works
   by the same author apart.</li>

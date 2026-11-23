@@ -20,9 +20,7 @@ las Series que cuelgan de una Sección, y así hasta el Fondo. Los niveles que
 exporta van de Fondo a Pieza, pasando por Subfondo, Sección, Serie, Subserie,
 Expediente y Documento; los niveles fijos superiores (País, Institución) se
 asumen del contexto y no se emiten como registros.</p>
-<p>El origen de esa estructura es explícito. <strong>La jerarquía se genera a partir del cuadro de clasificación de la institución.</strong> La ubicación de cada documento en ese cuadro sale de una columna del inventario, de la carpeta en que está o, si el perfil lo prevé, del modelo de lenguaje, que coloca el documento en la sección que corresponde a su tipo de entre las que el cuadro enumera. Si los
-documentos llegan sin su ubicación archivística, no hay de dónde construir el
-árbol: el exportador puede emitir los registros de documento, pero no los nodos
+<p>El origen de esa estructura es explícito. <strong>La jerarquía se genera a partir del cuadro de clasificación de la institución.</strong> La ubicación de cada documento en ese cuadro sale del inventario o de la carpeta en que está o, si el documento no llega con ella, la IA lo asigna a una de las secciones que la institución definió en su perfil. Si el perfil no define esas secciones, el documento se entrega sin niveles superiores: el exportador puede emitir los registros de documento, pero no los nodos
 padre que los organizan. La calidad de la jerarquía depende de que esa
 información de procedencia venga con el material.</p>
 <h2>Subir lo que se comparte</h2>
@@ -32,17 +30,13 @@ documentos de una Serie se describe una vez, en el nivel de la Serie, no mil vec
 en cada documento. El productor de un fondo, las condiciones de acceso de una
 serie y la lengua de la documentación son propiedades del conjunto, y repetirlas
 en cada hijo estorba más de lo que ayuda.</p>
-<p>El exportador aplica esto subiendo a los niveles superiores los campos que la
-mayoría de los hijos comparten. No sube cualquier cosa: solo un conjunto acotado
+<p>El exportador aplica esto subiendo a los niveles superiores los campos que los hijos comparten. No sube cualquier cosa: solo un conjunto acotado
 de campos donde el principio tiene sentido archivístico: <strong>productor</strong>, historia
 institucional, <strong>condiciones de acceso</strong>, <strong>lengua</strong>, y los descriptores de tema,
-geográficos y corporativos. Un valor sube a un nivel cuando lo comparte una
-proporción suficiente de los documentos que cuelgan de él; ese umbral es
-deliberadamente alto (la gran mayoría, no una simple mayoría): subir un dato que en
+geográficos y corporativos. Un valor sube a un nivel solo cuando lo comparten casi todos los documentos que cuelgan de él: subir un dato que en
 realidad solo comparte la mitad de los hijos lo convertiría en una afirmación falsa
 sobre la otra mitad.</p>
-<p>El mecanismo tiene un límite. <strong>Es una heurística: un umbral de mayoría, no un
-juicio sobre el significado del campo.</strong> Puede subir
+<p>El mecanismo tiene un límite. <strong>Decide por lo que los documentos tienen en común, no por el significado del campo.</strong> Puede subir
 un valor que estadísticamente domina pero que un archivista, mirando el fondo,
 matizaría; y puede dejar abajo un dato que sí correspondía al nivel superior
 porque unos pocos documentos lo traían distinto. Por eso el resultado se revisa:
@@ -50,16 +44,14 @@ la agregación propone una estructura razonable, no una definitiva.</p>
 <h2>Agregar fecha y volumen</h2>
 <p>Hay datos que un nodo padre no hereda de sus hijos sino que resume. El <strong>rango de
 fechas</strong> de una Serie es el que abarca desde el documento más antiguo hasta el más
-reciente que contiene; el exportador lo calcula agregando las fechas de los hijos, con filtrado de valores atípicos, como una fecha biográfica que no describe la
-producción documental sino a una persona mencionada. El <strong>volumen</strong> es el conteo
+reciente que contiene; el exportador lo calcula agregando las fechas de los hijos. El <strong>volumen</strong> es el conteo
 de documentos bajo ese nodo. Así, un registro de Fondo puede terminar con &ldquo;1940 /
 2020&rdquo; como fecha extrema y &ldquo;9033 documentos&rdquo; como volumen: dos datos que ninguno
 de los documentos individuales contiene, porque son propiedades del agregado.</p>
 <p>Aquí interviene una distinción del ciclo de vida. En un archivo de trámite, que
 sigue recibiendo documentos, esos rangos se <strong>recalculan</strong> en cada exportación:
 el acervo está abierto y su fecha extrema cambia conforme ingresa material. En un
-archivo histórico, cerrado, los rangos se <strong>congelan</strong>, de modo que una corrección
-menor a un documento no altere inadvertidamente el rango de una sección entera.</p>
+archivo histórico, cerrado, los rangos pueden quedar <strong>fijos</strong> y solo se vuelven a calcular cuando alguien corrige una fecha en el catálogo, de modo que cualquier otra corrección a un documento no altere inadvertidamente el rango de una sección entera.</p>
 <h2>Por qué la salida no es la del modelo</h2>
 <p>De todo esto se sigue una consecuencia: el archivo ISAD-G que Collect
 entrega <strong>no coincide</strong> con la suma de lo que el modelo extrajo documento por
@@ -70,9 +62,7 @@ modelo leyó de él. Lo que se añade encima es el contexto que lo vuelve
 archivísticamente legible: de qué serie proviene, quién lo produjo, en qué fondo
 se inscribe. Sin esa capa, se tendría un inventario de piezas; con ella, un
 cuadro de clasificación descrito.</p>
-<p>Los tres límites, reunidos. La jerarquía existe
-solo si los documentos traen su ubicación archivística. El <a href="/blog/glosario/#bubble-up">bubble-up</a> es una
-heurística de mayoría, con un umbral configurable, y por eso el resultado pasa por
+<p>Los tres límites, reunidos. Los niveles superiores salen de la ubicación archivística de los documentos, que viene con el material o la asigna la IA entre las secciones del perfil. El <a href="/blog/glosario/#bubble-up">bubble-up</a> sube lo que casi todos los documentos comparten, y por eso el resultado pasa por
 revisión antes de entrar al catálogo. Y la agregación resume lo que los documentos
 contienen: no completa una serie que el material dejó incompleta.</p>
 <p>Si tu institución describe con ISAD-G y tiene documentos digitalizados esperando

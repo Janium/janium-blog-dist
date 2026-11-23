@@ -8,8 +8,7 @@ registo, e descarta o que o modelo tiver posto nesses dois campos. O
 modelo continua a propor o título, o autor e os assuntos.</p>
 <h2>Cutter Dewey</h2>
 <p>Em Dewey o Cutter completa a cota (<code>082$b</code>; em CDU, <code>080$b</code>). O Collect
-procura o apelido na tabela <strong>Cutter-Sanborn Three-Figure Revised</strong>, com
-umas 12.000 entradas públicas, pelo prefixo mais longo. Se o encontra,
+procura o apelido na tabela <strong>Cutter-Sanborn Three-Figure Revised</strong>. Se o encontra,
 esse código fica no registo e nas existências (<code>852</code>).</p>
 <p>Se o apelido não está na tabela, fica o código da inicial e esse campo tem
 de ser revisto, até que alguém acrescente o apelido à tabela.</p>
@@ -18,10 +17,7 @@ de ser revisto, até que alguém acrescente o apelido à tabela.</p>
 algoritmo publicado pela LC que, ao contrário da tabela Cutter-Sanborn, dá
 resultado para qualquer palavra. O Collect calcula esse valor e substitui
 o que o modelo tivesse proposto.</p>
-<p>O algoritmo completo alonga o Cutter letra a letra, de modo que
-<code>Rodriguez</code> daria <code>.R6375449</code>, enquanto na prática se usam dois ou três
-algarismos. O Collect corta ao número configurado, dois por omissão, e
-deixa <code>.R63</code>. Se o registo
+<p>O Collect aplica o comprimento de Cutter que a biblioteca usa: <code>Rodriguez</code>, por exemplo, fica <code>.R63</code>. Se o registo
 trouxer os dados, pode acrescentar:</p>
 <ul>
 <li>A marca de obra: a primeira letra significativa do título, para

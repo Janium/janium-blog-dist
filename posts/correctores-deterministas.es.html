@@ -9,8 +9,7 @@ El modelo sigue proponiendo el título, el autor y las materias.</p>
 <h2>Cutter Dewey</h2>
 <p>En Dewey el Cutter completa la signatura (<code>082$b</code>; en CDU, <code>080$b</code>).
 Collect busca el apellido en la tabla <strong>Cutter-Sanborn Three-Figure
-Revised</strong>, de unas 12.000 entradas públicas, por el prefijo más largo. Si
-lo encuentra, ese código queda en el registro y en existencias (<code>852</code>).</p>
+Revised</strong>. Si lo encuentra, ese código queda en el registro y en existencias (<code>852</code>).</p>
 <p>Si el apellido no está en la tabla, queda el código de la inicial y ese
 campo hay que revisarlo, hasta que alguien añada el apellido a la tabla.</p>
 <h2>Cutter LC</h2>
@@ -18,10 +17,7 @@ campo hay que revisarlo, hasta que alguien añada el apellido a la tabla.</p>
 obtiene con un algoritmo publicado por LC que, a diferencia de la tabla
 Cutter-Sanborn, da resultado para cualquier palabra. Collect calcula ese
 valor y sustituye el que hubiera propuesto el modelo.</p>
-<p>El algoritmo completo alarga el Cutter letra a letra, de modo que
-<code>Rodriguez</code> daría <code>.R6375449</code>, mientras que en la práctica se usan dos o
-tres dígitos. Collect recorta al número configurado, dos por defecto, y
-deja <code>.R63</code>. Si el registro
+<p>Collect aplica la longitud de Cutter que usa la biblioteca: <code>Rodriguez</code>, por ejemplo, queda <code>.R63</code>. Si el registro
 trae los datos, puede añadir:</p>
 <ul>
 <li>La marca de obra: la primera letra significativa del título, para

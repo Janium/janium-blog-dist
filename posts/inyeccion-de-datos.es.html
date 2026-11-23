@@ -4,7 +4,7 @@ registro que no están en el documento que se lee, sino en lo que la institució
 sabe antes de abrirlo: a qué biblioteca pertenece la pieza, en qué fondo entra,
 dónde se guarda, cuántos ejemplares hay y qué política de préstamo aplica. Son
 datos conocidos y estables, y pedírselos al modelo solo los volvería inciertos.</p>
-<p>Collect los siembra de forma determinista en cada registro después de la
+<p>Collect los siembra en cada registro después de la
 extracción. Son valores fijos que entran igual cada vez, y el modelo se dedica
 a lo que hay que leer del documento.</p>
 <h2>Lo que se sabe y lo que se lee</h2>
@@ -17,8 +17,8 @@ no, se convierte en trabajo de revisión sobre un dato que nunca estuvo en duda.
 <p>La inyección fija lo que se conoce de antemano y deja al modelo lo que hay que
 interpretar del documento. La parte previsible del registro sale igual en todo
 el lote, y la revisión se concentra en lo que de verdad hay que mirar. Es el
-mismo principio que aplica Collect al número Cutter, que se calcula con la
-tabla, como se explica en
+mismo principio que aplica Collect al número Cutter, que calculan reglas con el formato de
+signatura de la biblioteca, como se explica en
 <a href="/blog/correctores-deterministas/">El número Cutter y el nivel ISAD-G</a>.</p>
 <h2>Tres formas de sembrar un valor</h2>
 <p>Collect usa un inyector distinto según de dónde venga el dato fijo.</p>
@@ -68,8 +68,7 @@ mantienen estables. El título, el autor, las fechas, las materias y el resumen,
 que son lo que hace que el registro describa ese documento y no otro, siguen
 saliendo de la lectura del material. Ahí rige el criterio de siempre: lo que se
 verifica sale con su fuente, y lo que el modelo infiere queda marcado para
-revisión, como se explica en
-<a href="/blog/marcado-procedencia-ia/">Collect marca los metadatos hechos con IA</a>.</p>
+revisión, como se explica en <a href="/blog/marcado-procedencia-ia/">Collect marca los metadatos hechos con IA</a>.</p>
 <p>Tampoco sirve para datos que cambian de una pieza a otra. Un valor que varía
 por documento, forzado como constante, produce registros uniformes y
 equivocados, que son peores que un campo vacío. La inyección se usa cuando el

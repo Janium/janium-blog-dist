@@ -41,12 +41,7 @@ with data the source didn&rsquo;t carry (subjects, a date, sometimes the ISBN), 
 the model&rsquo;s knowledge. That enrichment is the value. The risk is that a value that
 sounds reasonable but is wrong stays in the catalog looking correct.</p>
 <p>Trust lies in knowing where each value comes from. What
-can be verified is verified and attributed: names and subjects are checked against
-authority files and controlled vocabularies and carry their source; what comes only
-from the model&rsquo;s knowledge stays unmarked. Fields with a fixed rule (the
-classification number, for instance) are computed, not estimated. And each record
-goes through an evaluation that scores it and flags it for review when it falls below
-the threshold, so review focuses on what the system points to.</p>
+can be verified is verified and attributed: names and subjects can be checked against authority files and controlled vocabularies, depending on what each institution activates, and carry their source; what the AI contributes is marked as inferred or generated, never unmarked, and each record comes with a separate record that states, field by field, where the value came from. Fields with a fixed rule (the Cutter of the call number, for instance) are calculated by rules, not estimated. And each record goes through an evaluation that scores it; if the score is low, the record is delivered with a note asking for review, so review focuses on what the system points to.</p>
 <h2>Where it fits</h2>
 <p>Collect produces the records; the catalog receives them. It integrates with the
 institution&rsquo;s system, Janium or another, as a delivery (load batch, SFTP,
@@ -64,8 +59,7 @@ with a guess. The quality of the output depends on that of the source
 material, and the system does not replace the judgment of someone who knows
 the collection.</p>
 <p>What changes is how much human attention is needed, and where. Each record goes
-through an evaluation that scores it, and the system stops those that fall below the
-minimum before they enter the catalog. That score lets each context calibrate how
+through an evaluation that scores it, and those that fall below the minimum are delivered with a note asking for review; an incomplete or altered batch is not loaded into the catalog. That score lets each context calibrate how
 much to review: a library with catalogers can review record by record; a firm
 processing thousands of contracts, or an archive describing in ISAD-G at scale, has
 no one person per record and reviews by exception, addressing what the score flags and trusting the rest. The quality reached makes that mode workable where reviewing

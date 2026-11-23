@@ -12,8 +12,7 @@ vista hasta que hace falta con urgencia. Janium Collect se ocupa de esa primera
 lectura: extrae la información en una estructura de campos que después revisa
 una persona.</p>
 <h2>Qué extrae de un documento corporativo</h2>
-<p>Collect lee el documento con un
-<a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> y produce un registro
+<p>Collect lee el documento con un <a href="/blog/glosario/#modelo-de-lenguaje">modelo de lenguaje</a> y produce un registro
 estructurado. En material corporativo, ese registro puede incluir:</p>
 <ul>
 <li><strong>Partes</strong>, sean personas físicas o entidades, con el papel que cumplen en el
@@ -40,10 +39,7 @@ maneras: con y sin la forma societaria, con abreviaturas distintas, con una
 errata o sin acentos. Si cada variante cuenta como una entidad distinta, el
 índice de partes se llena de duplicados y las relaciones entre documentos dejan
 de ser fiables.</p>
-<p>Collect <strong>normaliza el nombre</strong> de cada entidad (quita la forma societaria, las
-siglas entre paréntesis y las diferencias de puntuación) y lo contrasta con las
-autoridades de la institución y con VIAF, de modo que las variantes de una misma
-organización o persona salen con la misma forma en todos los registros. De eso
+<p>Collect <strong>normaliza el nombre</strong> de cada entidad a una forma de encabezamiento coherente (las personas, con el apellido primero y sin tratamientos; las organizaciones, sin la forma societaria) y puede contrastarlo con el catálogo de la institución y con VIAF. Reunir las variantes de una misma organización o persona bajo una forma autorizada se hace con el control de autoridades, y los casos dudosos quedan para la revisión de quien cataloga. De eso
 depende poder afirmar que dos contratos tienen la misma contraparte. El problema
 es el mismo que resuelve el control de autoridades en un catálogo, descrito en
 <a href="/blog/control-de-autoridades-y-vocabularios/">Control de autoridades: que cada nombre entre al catálogo de una sola
@@ -78,7 +74,7 @@ marcadores que indican qué clase de dato era (una persona, una organización)
 pero no su valor. Al volver el resultado, restaura los valores originales, de
 modo que el modelo trabaja sin ver los identificadores directos.</p>
 <p>Si el contexto permitiría reidentificar a una persona aunque el nombre esté
-oculto, el documento puede procesarse en local, sin que nada salga del servidor.
+oculto, el documento puede procesarse en la infraestructura de la institución.
 Cuál de los dos modos corresponde depende de la sensibilidad del acervo y de las
 normas de protección de datos que debe cumplir la organización; qué protege cada
 uno y qué queda fuera de la anonimización se explica en <a href="/blog/procesar-sin-exponer-datos-personales/">Procesar documentos sin

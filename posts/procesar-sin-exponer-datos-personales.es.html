@@ -13,25 +13,26 @@ suele significar enviar texto a un servicio en la nube. La nube rinde
 mejor en muchos casos difíciles; enviar datos personales a un tercero es
 lo que el marco de protección busca evitar.</p>
 <h2>Local o híbrido</h2>
-<p>Collect trabaja con dos modos. La diferencia es qué sale del servidor de
+<p>Cuando el material no puede salir de la institución, Collect trabaja con dos
+modos. La diferencia es qué sale del servidor de
 la institución.</p>
 <ul>
 <li><strong>Local.</strong> El procesamiento ocurre por completo en el servidor. No sale
   nada. Es el modo para documentos donde el riesgo de que un tercero vea
   el contenido es inaceptable: expedientes judiciales, datos médicos,
-  documentos clasificados. La calidad depende del modelo local de esa
-  instalación.</li>
-<li><strong>Híbrido.</strong> Un modelo local hace una primera lectura. Si hace falta
-  refinar, a la nube va una versión donde los identificadores directos
-  (nombres, correos, teléfonos, identificadores documentales, montos) ya se
-  sustituyeron por <a href="/blog/glosario/#anonimizacion">marcadores</a>. Al volver,
-  se restauran. Cubre la mayoría de acervos institucionales, donde los
+  documentos clasificados. La calidad depende del modelo que corre en la
+  infraestructura de la institución.</li>
+<li><strong>Híbrido.</strong> El procesamiento corre en la infraestructura de la institución,
+  y lo que se consulta a la nube va en una versión donde los identificadores
+  directos (nombres, correos, teléfonos, identificadores documentales, montos)
+  ya se sustituyeron por <a href="/blog/glosario/#anonimizacion">marcadores</a>. Al
+  volver, se restauran. Cubre la mayoría de acervos institucionales, donde los
   documentos mencionan funcionarios, organizaciones y fechas.</li>
 </ul>
 <p>La elección es de quien conoce el material. Un mismo acervo puede tener
 series que admiten el híbrido y otras que exigen el local. Conviene
-decidirlo por tipo de documento antes de configurar, no después.</p>
-<p>En algunas instalaciones la imagen del documento se lee en el servidor y
+decidirlo por tipo de documento antes de empezar, no después.</p>
+<p>En algunos casos la imagen del documento se lee en el servidor y
 no sale. A la nube puede ir el texto de catálogo ya extraído, con los
 identificadores sustituidos. Si tampoco puede salir el registro, el
 procesamiento se queda en local.</p>

@@ -12,10 +12,9 @@ permite confiar no nome sem voltar a escrevê-lo. O panorama de porque é que um
 catálogo assistido com IA é fiável está em
 <a href="/pt/blog/confiar-en-catalogo-con-ia/">Porquê confiar num catálogo feito com IA</a>.</p>
 <h2>Primeiro o catálogo da casa, depois o mundo</h2>
-<p>Para um nome de pessoa, o Collect segue uma cascata e para no primeiro degrau
-que responde. Antes de consultar nada, normaliza a forma: passa o nome a
+<p>Para um nome de pessoa, o Collect começa por normalizar a forma: passa o nome a
 &ldquo;apelido, nome&rdquo; e tira os tratamentos (&ldquo;Lic.&rdquo;, &ldquo;Dr.&rdquo;, &ldquo;Sr.&rdquo;). Com essa forma
-limpa consulta, em ordem:</p>
+limpa consulta:</p>
 <ul>
 <li><strong>O catálogo de autoridades da instituição</strong> (o ILS: Janium, Alma, Sierra ou
   Koha). Se a casa já fixou uma forma autorizada para esse autor, essa ganha. É
@@ -23,13 +22,12 @@ limpa consulta, em ordem:</p>
 <li><strong>VIAF</strong>, o fichário internacional onde as bibliotecas nacionais registam a
   forma autorizada de cada autor. As datas de nascimento e morte, quando o
   registo as traz, servem para distinguir homónimos. Se o VIAF resolve o nome,
-  o registo leva também o vínculo a essa entrada (o identificador do VIAF).</li>
+  o registo leva também o vínculo a essa entrada (o identificador do VIAF).
+  Estas consultas ativam-se por instituição.</li>
 <li><strong>O normalizador de nomes</strong>, se nenhuma lista teve o autor. Deixa o nome bem
   formado (apelido primeiro, sem tratamentos), mas sem sustentação externa e
   sem esse vínculo.</li>
 </ul>
-<p>A cascata desce de degrau só quando o anterior não encontra nada. A ordem é
-também de confiança descendente, e o registo conserva que degrau o resolveu.</p>
 <h2>A procedência vai escrita no registo</h2>
 <p>O que distingue um nome verificado de um só bem escrito é
 um dado no próprio registo. Um nome resolvido pelo VIAF chega com o vínculo a
@@ -45,11 +43,11 @@ esse código não se contrastou contra nenhuma lista.</p>
 sustentados por uma autoridade e quais convém rever, sem ter de conferi-los
 todos. Nenhum nome inferido se apresenta como se estivesse verificado.</p>
 <h2>Entidades: empresas, organismos, instituições</h2>
-<p>Os nomes de entidade (uma editora, um ministério, uma empresa) seguem uma
-cascata própria, porque as listas que melhor os cobrem não são as mesmas que
-para as pessoas: o catálogo local primeiro; o <strong>ISNI</strong> quando a instituição o
-tem ativo, porque cobre melhor organizações; o VIAF como apoio; e por último
-o normalizador de entidades.</p>
+<p>Os nomes de entidade (uma editora, um ministério, uma empresa) conferem-se
+com listas próprias, porque as que melhor os cobrem não são as mesmas que
+para as pessoas: o catálogo local; o <strong>ISNI</strong> quando a instituição o
+tem ativo, porque cobre melhor organizações; o VIAF; e o
+normalizador de entidades.</p>
 <p>Esse normalizador faz um trabalho que os nomes de empresa costumam precisar:
 tira a forma legal (&ldquo;S.A. de C.V.&rdquo;, &ldquo;S. de R.L.&rdquo;) e coloca a unidade
 subordinada no seu lugar, de modo que &ldquo;Editorial Planeta, S.A.&rdquo; entre no índice
@@ -76,7 +74,7 @@ exatidão: &ldquo;Rivera Diego&rdquo; devolve primeiro &ldquo;Museo Diego Rivera
 devolve treze lugares distintos. Tomar o primeiro resultado ligaria a um
 conceito errado, e um vínculo errado é pior do que nenhum: aparenta
 precisão onde não a há. Se não existe exatamente um conceito cujo nome
-coincida com o termo, o Collect não liga e deixa o termo sem marca.</p>
+coincida com o termo, o Collect não liga e deixa o termo sem ligação.</p>
 <h2>Limites</h2>
 <ul>
 <li><strong>Os homónimos continuam a ser trabalho humano.</strong> Dois &ldquo;Juan Pérez&rdquo; nascidos na
@@ -84,13 +82,13 @@ coincida com o termo, o Collect não liga e deixa o termo sem marca.</p>
   Collect deixa ambos em forma de catálogo; decidir se são a mesma pessoa
   fá-lo quem conhece o fundo.</li>
 <li><strong>Os nomes que nenhuma lista conhece</strong> (um funcionário local, uma empresa que
-  não está no VIAF nem no ISNI) mesmo assim entram bem escritos, apelido primeiro e
-  sem tratamentos, mas sem o vínculo de autoridade. Sabe-se que não vêm
-  sustentados justamente porque lhes falta essa marca.</li>
-<li><strong>Reunir variantes sob um só cabeçalho do fundo</strong> ainda não o faz o Collect.
-  Hoje deixa cada nome na sua forma autorizada; unificar as grafias de um mesmo
-  autor num único cabeçalho do acervo é uma extensão prevista, e contaremos
-  quando estiver pronta.</li>
+  não está no VIAF nem no ISNI) mesmo assim entram bem escritos (as pessoas, com o
+  apelido primeiro e sem tratamentos), mas sem o vínculo de autoridade. Sabe-se que
+  não vêm sustentados justamente porque lhes falta essa marca.</li>
+<li><strong>Reunir variantes sob uma forma autorizada</strong> faz-se com o controlo de
+  autoridades do catálogo. O Collect deixa cada nome numa forma de cabeçalho
+  coerente, e os casos duvidosos (homónimos, parecidos) ficam para a revisão de
+  quem cataloga.</li>
 <li><strong>A forma corrige-se sempre, ainda que não haja coincidência.</strong> A
   normalização do nome ocorre antes de consultar qualquer lista; o que a
   validação externa acrescenta é a procedência, não o bom formato.</li>

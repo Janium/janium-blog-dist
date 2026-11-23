@@ -13,15 +13,16 @@ a cloud service. The cloud performs better on many hard cases; sending
 personal data to a third party is what the protection framework seeks to
 avoid.</p>
 <h2>Local or hybrid</h2>
-<p>Collect works with two modes. The difference is what leaves the
-institution’s server.</p>
+<p>When the material cannot leave the institution, Collect works with two modes.
+The difference is what leaves the institution’s server.</p>
 <ul>
 <li><strong>Local.</strong> Processing happens entirely on the server. Nothing leaves. It
   is the mode for documents where the risk of a third party seeing the
   content is unacceptable: court files, medical data, classified
-  documents. Quality depends on the local model of that installation.</li>
-<li><strong>Hybrid.</strong> A local model does a first reading. If refinement is needed,
-  what goes to the cloud is a version where direct identifiers (names,
+  documents. Quality depends on the model that runs on the institution’s
+  infrastructure.</li>
+<li><strong>Hybrid.</strong> Processing runs on the institution’s infrastructure, and what is
+  sent to the cloud is a version where direct identifiers (names,
   emails, phone numbers, documentary identifiers, amounts) have already
   been replaced by <a href="/en/blog/glosario/#anonimizacion">markers</a>. On return,
   they are restored. It covers most institutional holdings, where
@@ -29,8 +30,8 @@ institution’s server.</p>
 </ul>
 <p>The choice belongs to whoever knows the material. A single holding may have
 series that allow hybrid processing and others that require local processing. It is worth
-deciding by document type before configuring, not after.</p>
-<p>In some installations the document image is read on the server and does
+deciding by document type before starting, not after.</p>
+<p>In some cases the document image is read on the server and does
 not leave. What may go to the cloud is the catalog text already extracted,
 with identifiers replaced. If the record cannot leave either, processing
 stays local.</p>

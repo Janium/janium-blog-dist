@@ -5,7 +5,7 @@ before opening it: which library the item belongs to, which collection it goes
 into, where it is kept, how many copies there are and which lending policy
 applies. These are known, stable data, and asking the model for them would only
 make them uncertain.</p>
-<p>Collect seeds them deterministically into every record after extraction. They
+<p>Collect seeds them into every record after extraction. They
 are fixed values that go in the same way every time, and the model concentrates
 on what has to be read from the document.</p>
 <h2>What is known and what is read</h2>
@@ -20,7 +20,7 @@ was never in doubt.</p>
 interpreted from the document. The predictable part of the record comes out the
 same across the whole batch, and the review concentrates on what really needs to
 be looked at. It is the same principle Collect applies to the Cutter number,
-which is calculated from the table, as explained in <a href="/en/blog/correctores-deterministas/">The Cutter number and the
+which rules calculate using the library&rsquo;s call number format, as explained in <a href="/en/blog/correctores-deterministas/">The Cutter number and the
 ISAD-G level</a>.</p>
 <h2>Three ways to seed a value</h2>
 <p>Collect uses a different injector depending on where the fixed value comes from.</p>

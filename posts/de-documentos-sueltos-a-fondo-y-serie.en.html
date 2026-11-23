@@ -20,9 +20,7 @@ the Series that hang from a Section, and so on up to the Fonds. The levels it
 exports run from Fonds to Item, passing through Subfonds, Section, Series,
 Subseries, File and Document; the fixed upper levels (Country, Institution) are
 taken from the context and are not emitted as records.</p>
-<p>The origin of that structure is explicit. <strong>The hierarchy is generated from the institution&rsquo;s classification scheme.</strong> The location of each document in that scheme comes from an inventory column, from the folder it sits in or, if the profile provides for it, from the language model, which places the document in the section that corresponds to its type from among those the scheme lists. If the documents
-arrive without their archival location, there is nothing from which to build the
-tree: the exporter can emit the document records, but not the parent nodes that
+<p>The origin of that structure is explicit. <strong>The hierarchy is generated from the institution&rsquo;s classification scheme.</strong> The location of each document in that scheme comes from the inventory or from the folder it sits in or, if the document does not arrive with it, the AI assigns it to one of the sections the institution defined in its profile. If the profile does not define those sections, the document is delivered without upper levels: the exporter can emit the document records, but not the parent nodes that
 organize them. The quality of the hierarchy depends on that provenance information
 coming with the material.</p>
 <h2>Raising what is shared</h2>
@@ -31,15 +29,12 @@ coming with the material.</p>
 documents of a Series is described once, at the Series level, not a thousand times
 in each document. The producer of a fonds, the conditions of access of a series and the language of the documentation are properties of the whole, and repeating
 them in each child hinders more than it helps.</p>
-<p>The exporter applies this by raising to the upper levels the fields that most of
-the children share. It does not raise just anything: only a bounded set of fields
+<p>The exporter applies this by raising to the upper levels the fields that the children share. It does not raise just anything: only a bounded set of fields
 where the principle makes archival sense: <strong>producer</strong>, administrative history,
 <strong>conditions of access</strong>, <strong>language</strong>, and the subject, geographic and corporate
-descriptors. A value is raised to a level when it is shared by a sufficient
-proportion of the documents that hang from it; that threshold is deliberately high (the great majority, not a simple majority): raising a value that actually only
+descriptors. A value is raised to a level only when almost all the documents that hang from it share it: raising a value that actually only
 half the children share would turn it into a false statement about the other half.</p>
-<p>The mechanism has a limit. <strong>It is a heuristic: a majority threshold, not a
-judgment about the meaning of the field.</strong> It may raise a value that statistically
+<p>The mechanism has a limit. <strong>It decides by what the documents have in common, not by the meaning of the field.</strong> It may raise a value that statistically
 dominates but that an archivist, looking at the fonds, would qualify; and it may
 leave below a value that did belong to the upper level because a few documents
 carried it differently. That is why the result is reviewed: the aggregation
@@ -48,16 +43,13 @@ proposes a reasonable structure, not a definitive one.</p>
 <p>There are data that a parent node does not inherit from its children but rather
 summarizes. The <strong>date range</strong> of a Series is the one that spans from the oldest
 document to the most recent it contains; the exporter computes it by aggregating
-the dates of the children, with outlier filtering, such as a biographical date
-that describes not the documentary production but a person mentioned. The
-<strong>extent</strong> is the count of documents under that node. Thus, a Fonds record may end
-up with &ldquo;1940 / 2020&rdquo; as its inclusive dates and &ldquo;9033 documents&rdquo; as its extent: two
-values that none of the individual documents contains, because they are properties
-of the aggregate.</p>
+the dates of the children. The <strong>extent</strong> is the count of documents under that
+node. Thus, a Fonds record may end up with &ldquo;1940 / 2020&rdquo; as its inclusive dates
+and &ldquo;9033 documents&rdquo; as its extent: two values that none of the individual
+documents contains, because they are properties of the aggregate.</p>
 <p>Here a distinction from the life cycle comes into play. In a current/active
 records archive, which keeps receiving documents, those ranges are <strong>recomputed</strong>
-in each export: the holding is open and its inclusive dates change as material comes in. In a historical archive, closed, the ranges are <strong>frozen</strong>, so that a minor
-correction to a document does not inadvertently alter the range of an entire
+in each export: the holding is open and its inclusive dates change as material comes in. In a historical archive, closed, the ranges can stay <strong>fixed</strong> and are recomputed only when someone corrects a date in the catalog, so that any other correction to a document does not inadvertently alter the range of an entire
 section.</p>
 <h2>Why the output is not the model&rsquo;s</h2>
 <p>From all of this a consequence follows: the ISAD-G archive that Collect delivers
@@ -69,9 +61,7 @@ raised to its level, the date range computed, the extent counted.</p>
 What is added on top is the context that makes it archivally legible: which series
 it comes from, who produced it, which fonds it belongs to. Without that layer,
 you would have an inventory of items; with it, a described classification scheme.</p>
-<p>The three limits, brought together. The hierarchy exists only if the documents
-carry their archival location. The <a href="/en/blog/glosario/#bubble-up">bubble-up</a> is a
-majority heuristic, with a configurable threshold, and that is why the result goes
+<p>The three limits, brought together. The upper levels come from the documents&rsquo; archival location, which arrives with the material or is assigned by the AI from the sections in the profile. The <a href="/en/blog/glosario/#bubble-up">bubble-up</a> raises what almost all the documents share, and that is why the result goes
 through review before entering the catalog. And the aggregation summarizes what the
 documents contain: it does not complete a series that the material left incomplete.</p>
 <p>If your institution describes with ISAD-G and has digitized documents waiting to be

@@ -18,30 +18,25 @@ catalog, <strong>ISAD-G</strong> for an archive where provenance matters. There 
 flow for audio; it is the usual process with a different initial stage.</p>
 <p>Not all of the record comes from speech. Some data comes from the <strong>file&rsquo;s
 technical metadata</strong>, not from the content: the duration, the codec, the sampling
-resolution. That is computed deterministically, without going through the model,
+resolution. That is read from the file itself, without going through the model,
 because these are measurable facts and it is not advisable to ask a system that
 might estimate them wrong. The resource type (that it is a sound recording) is also
 set this way; the model does not decide it.</p>
 <h2>Transcribing locally or in the cloud</h2>
-<p>Transcription can be done in two ways, and the choice has different cost and
-operational consequences.</p>
+<p>Transcription can be done in two ways, and the choice has different
+consequences.</p>
 <ul>
 <li><strong>Local.</strong> The audio is transcribed on the institution&rsquo;s own machine, without
-  leaving the institution. It processes long recordings, hours long, but it is
-  <strong>slow on CPU</strong>: transcription takes time. It is the option when the material
+  leaving the institution. It processes long recordings, hours long, though it takes
+  longer. It is the option when the material
   must not leave the environment or when there is no wish to depend on an external
   service.</li>
 <li><strong>In the cloud.</strong> Transcription is delegated to a service, faster and without
-  load on the local hardware. Here a useful cost lever appears: transcription does
-  not need the same expensive model that does metadata extraction. An inexpensive
-  model can be used just to transcribe, and the good model reserved for the
-  cataloging step. In internal tests, separating that lever and limiting the
-  model&rsquo;s reasoning reduced cost appreciably without the quality of the records
-  dropping in the sample.</li>
+  load on the local hardware.</li>
 </ul>
 <p>Neither is &ldquo;the right one&rdquo; in the abstract. Local protects the data and avoids
-external dependencies at the cost of time; the cloud gives speed and a lower cost
-per record at the cost of the audio leaving the institution. The decision depends
+external dependencies at the cost of time; the cloud gives speed
+at the cost of the audio leaving the institution. The decision depends
 on the collection and its constraints, not on a technical preference.</p>
 <h2>When the recording is not a single thing</h2>
 <p>An interview has turns. Recorded proceedings have agenda items. A session has interventions
@@ -60,7 +55,7 @@ with what the segmentation has already deduced, and inherits from the parent the
 common identity (author, date). Conversely, the record of the complete recording
 can be described from its children: its subject is the union of the subjects of the
 segments, its description the sum of their summaries. It is description derived
-deterministically, not invented.</p>
+from the segments, not invented.</p>
 <h2>Where the limits are</h2>
 <p>Automatic transcription <strong>has errors</strong>, and they increase as the audio quality drops.
 A clean recording transcribes well; one with background noise, overlapping voices

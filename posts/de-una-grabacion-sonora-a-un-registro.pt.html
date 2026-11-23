@@ -1,10 +1,9 @@
 <p>Um acervo com áudio apresenta um problema que o papel não tem: o conteúdo não se
 pode ler de relance. Uma gravação de uma hora esconde o seu tema, os seus
-nomes e as suas datas dentro de sessenta minutos de fala que alguém precisa
-ouvir para
-descrever. Uma coleção de entrevistas, atas orais ou registos sonoros
-cataloga-se devagar por essa razão, e muitas vezes fica sem catalogar porque
-ouvir cada ficheiro inteiro não cabe no tempo da equipa.</p>
+nomes e as suas datas dentro de sessenta minutos de fala que alguém precisa de
+ouvir para descrever. Uma coleção de entrevistas, atas orais ou registos
+sonoros cataloga-se devagar por essa razão, e muitas vezes fica sem catalogar
+porque ouvir cada ficheiro inteiro não cabe no tempo da equipa.</p>
 <p>O Janium Collect trata o áudio com o mesmo destino que um documento: lê-lo e
 propor um registo de catálogo. A diferença está no primeiro passo. Antes
 que um <a href="/pt/blog/glosario/#modelo-de-lenguaje">modelo de linguagem</a> possa extrair metadados, a voz tem de se converter em
@@ -20,29 +19,23 @@ Não há um fluxo à parte para áudio; é o processo de sempre com uma etapa in
 distinta.</p>
 <p>Nem todo o registo sai da fala. Alguns dados vêm dos <strong>metadados técnicos do
 ficheiro</strong>, não do conteúdo: a duração, o códec, a resolução de amostragem. Isso
-calcula-se de forma determinista, sem passar pelo modelo, porque são factos
+lê-se do próprio ficheiro, sem passar pelo modelo, porque são factos
 mensuráveis e não convém pedi-los a um sistema que poderia estimá-los mal. O tipo
 de recurso (que se trata de um registo sonoro) também se fixa assim, não o decide
 o modelo.</p>
 <h2>Transcrever local ou na nuvem</h2>
 <p>A transcrição pode ser feita de duas maneiras, e a escolha tem consequências
-de custo e de operação distintas.</p>
+distintas.</p>
 <ul>
 <li><strong>Local.</strong> O áudio é transcrito na própria máquina, sem sair da
-  instituição. Processa gravações longas, de horas, mas é <strong>lento em CPU</strong>: a
-  transcrição demora. É a opção quando o material não deve sair do ambiente ou
+  instituição. Processa gravações longas, de horas, embora demore mais. É a opção quando o material não deve sair do ambiente ou
   quando não se quer depender de um serviço externo.</li>
 <li><strong>Na nuvem.</strong> A transcrição é delegada a um serviço, mais rápido e sem carga
-  para o hardware local. Aqui aparece uma alavanca de custo útil: a transcrição
-  não precisa do mesmo modelo caro que faz a extração de metadados. Pode-se
-  usar um modelo económico apenas para transcrever, e reservar o modelo bom para
-  o passo de catalogação. Em testes internos, separar essa alavanca e limitar o
-  raciocínio do modelo reduziu o custo de forma apreciável sem que a qualidade dos
-  registos caísse na amostra.</li>
+  para o hardware local.</li>
 </ul>
 <p>Nenhuma das duas é &ldquo;a correta&rdquo; em abstrato. O local protege o dado e evita
-dependências externas em troca de tempo; a nuvem dá velocidade e menor custo por
-registo em troca de que o áudio saia da instituição. A decisão depende do
+dependências externas em troca de tempo; a nuvem dá velocidade
+em troca de que o áudio saia da instituição. A decisão depende do
 acervo e das suas restrições, não de uma preferência técnica.</p>
 <h2>Quando a gravação não é uma coisa só</h2>
 <p>Uma entrevista tem turnos. Uma ata oral tem pontos da ordem do dia. Uma
@@ -60,11 +53,11 @@ muitas vezes não anuncia o seu próprio tema, então o sistema completa os camp
 vazios do filho com o que a segmentação já deduziu, e herda do pai a
 identidade comum (autor, data). Ao contrário, o registo da gravação completa
 pode descrever-se a partir dos seus filhos: o seu tema é a união dos temas dos
-segmentos, a sua descrição a soma dos seus resumos. É descrição derivada de
-maneira determinista, não inventada.</p>
+segmentos, a sua descrição a soma dos seus resumos. É descrição derivada dos
+segmentos, não inventada.</p>
 <h2>Onde estão os limites</h2>
-<p>A transcrição automática <strong>tem erro</strong>, e o erro cresce com a qualidade do
-áudio. Uma gravação limpa transcreve-se bem; uma com ruído de fundo, vozes
+<p>A transcrição automática <strong>tem erro</strong>, e o erro cresce quanto pior é o áudio.
+Uma gravação limpa transcreve-se bem; uma com ruído de fundo, vozes
 sobrepostas ou microfone distante produz texto com falhas, e essas falhas arrastam-se para a
 extração de metadados. Quando o sistema deteta que um ficheiro quase não tem
 fala (música ou ambiente em vez de voz), não força uma descrição a partir de uma

@@ -40,12 +40,7 @@ dados que a fonte não trazia (assuntos, uma data, às vezes o ISBN), tirados do
 conhecimento do modelo. Esse enriquecimento é o valor. O risco é que um dado que soa
 razoável mas está errado fique no catálogo com aparência de correto.</p>
 <p>A confiança está em saber de onde vem cada dado. O que
-se pode verificar, verifica-se e atribui-se: nomes e assuntos contrastam-se com
-ficheiros de autoridade e vocabulários controlados e saem com a sua fonte anotada; o
-que vem apenas do conhecimento do modelo fica sem essa marca. Os campos com regra
-fixa (o número de classificação, por exemplo) computam-se, não se estimam. E cada
-registo passa por uma avaliação que o classifica e o marca para revisão quando cai
-abaixo do limiar, de modo que a revisão se concentre no que o sistema assinala.</p>
+se pode verificar, verifica-se e atribui-se: nomes e assuntos podem contrastar-se com ficheiros de autoridade e vocabulários controlados, consoante o que cada instituição ativa, e saem com a sua fonte anotada; o que a IA contribui fica marcado como inferido ou gerado, nunca sem marca, e cada registo é acompanhado de um registo à parte que indica, campo a campo, de onde saiu o dado. Os campos com regra fixa (o Cutter da cota, por exemplo) são calculados por regras, não se estimam. E cada registo passa por uma avaliação que o classifica; se a classificação for baixa, o registo é entregue com uma nota que pede revisão, de modo que a revisão se concentre no que o sistema assinala.</p>
 <h2>Onde se encaixa</h2>
 <p>O Collect produz os registos; o catálogo recebe-os. Integra-se com o sistema da
 instituição, Janium ou outro, por entrega (lote de carga, SFTP, pasta), não
@@ -62,8 +57,7 @@ medida que ninguém tomou, não se preenche com uma suposição. A qualidade do
 resultado depende da do material de partida, e o sistema não substitui o critério
 de quem conhece o acervo.</p>
 <p>O que muda é quanta atenção humana é precisa, e onde. Cada registo passa por uma
-avaliação que o classifica, e o sistema trava os que não chegam ao mínimo antes de
-entrarem no catálogo. Essa classificação permite calibrar a revisão conforme o
+avaliação que o classifica, e os que não chegam ao mínimo são entregues com uma nota que pede revisão; um lote incompleto ou alterado não é carregado no catálogo. Essa classificação permite calibrar a revisão conforme o
 contexto: uma biblioteca com catalogadores pode rever registo a registo; um
 escritório que processa milhares de contratos, ou um arquivo que descreve em ISAD-G
 em grande escala, não tem uma pessoa por registo e revê por exceção, atendendo ao que a classificação assinala e confiando no resto. A qualidade alcançada torna praticável

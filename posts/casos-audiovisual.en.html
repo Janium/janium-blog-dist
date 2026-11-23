@@ -49,7 +49,7 @@ of.</p>
 field with what it cannot support. A fragment in the middle of a recording rarely
 carries its own title, so the model leaves those fields empty. On the audio path,
 where segmentation has already deduced a topic and a summary for each intervention,
-those gaps are filled deterministically, and the record for the whole can be
+those gaps are filled with that topic and that summary, and the record for the whole can be
 described by aggregating from its parts: its subject is the union of the topics, its
 description the sum of the summaries. On the video path, the child of each scene is
 cataloged from its frames, without that filling pass. In both cases it is
@@ -61,9 +61,9 @@ the format the institution uses: <strong>Dublin Core</strong> for a simple descr
 library catalog. The child record comes out in the same format as the parent, not in
 a separate one.</p>
 <p>Part of the record, moreover, does not depend on the content at all. The file&rsquo;s
-technical data (duration, codec, resolution) are read directly from the container,
-without going through the model, because they are measurable facts; in MARC they
-feed the fixed fields for audiovisual material deterministically. The resource type
+technical data (duration, codec, resolution) are read directly from the
+container, without going through the model, because they are measurable facts;
+in MARC they feed the fixed fields for audiovisual material. The resource type
 (whether it is a sound recording or a moving image) is also set that way, not
 decided by the model. That leaves the model only the part that requires reading the
 content, which is where it contributes.</p>

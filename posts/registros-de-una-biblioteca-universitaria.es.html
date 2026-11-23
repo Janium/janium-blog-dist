@@ -21,14 +21,12 @@ libro —a veces es poco más que un ISBN y un título abreviado—, Collect
 completa las materias y un resumen, y marca como añadido lo que no venía
 escrito en el origen. Ese paso, de la hoja de cálculo al registro, está en
 <a href="/blog/catalogar-desde-listas-y-hojas-de-calculo/">Catalogar desde listas y hojas de cálculo</a>.</p>
-<p>El nombre del autor se contrasta primero con el fichero de autoridades de la
-propia biblioteca y después con VIAF e ISNI, para que la misma persona no
-acabe en el índice con tres grafías distintas; el problema y su tratamiento
-están en
-<a href="/blog/control-de-autoridades-y-vocabularios/">El mismo autor escrito de tres maneras</a>.
-La signatura sale de la regla que la biblioteca ya aplica, sea CDU, LC o
-Dewey, y el número Cutter, cuando esa norma lo pide, se calcula con la tabla
-en lugar de estimarse, como se explica en
+<p>El nombre del autor se contrasta con el fichero de autoridades de la propia biblioteca y con VIAF,
+para que la misma persona no acabe en el índice con tres grafías distintas; el problema y su tratamiento
+están en <a href="/blog/control-de-autoridades-y-vocabularios/">El mismo autor escrito de tres maneras</a>.
+El número de clasificación (CDU, LC o Dewey) lo propone la IA a partir del
+contenido, y el número Cutter, cuando la signatura lo lleva, lo calculan reglas
+con el formato de signatura de la biblioteca, como se explica en
 <a href="/blog/correctores-deterministas/">El número Cutter y el nivel ISAD-G</a>.</p>
 <p>La salida es MARC21, o UNIMARC si esa es la norma de la institución,
 serializada en archivo plano (FLAT), ISO 2709 o MarcEdit según la envoltura
@@ -52,8 +50,7 @@ depositar y la URL del PDF todavía no existen cuando se produce el registro,
 así que esos campos salen vacíos y los completa el depósito. La licencia y el
 embargo los fija la norma de la universidad, y Collect no propone ninguna. Si
 el repositorio espera el director o el grado en elementos propios, como
-<code>dc.contributor.advisor</code> o <code>thesis.degree</code>, esa instalación se configura para
-emitirlos: el Dublin Core cualificado que sale de serie no los incluye. Dónde
+<code>dc.contributor.advisor</code> o <code>thesis.degree</code>, Janium configura la salida para emitirlos: el Dublin Core cualificado que sale de serie no los incluye. Dónde
 el esquema se queda corto frente a un catálogo está en
 <a href="/blog/dublin-core-y-extendido/">Cuándo usar Dublin Core y dónde se queda corto</a>.</p>
 <p>El volumen del curso está en los trabajos de fin de grado y de máster: son
@@ -61,13 +58,11 @@ decenas o cientos cada año y llegan sin describir. Las tesis doctorales son
 muchas menos y suelen llegar ya descritas con cuidado. Los artículos, los
 documentos de trabajo y las publicaciones de la institución se tratan igual
 que los trabajos: el registro sale del PDF.</p>
-<p>Junto al PDF queda también un markdown con el resumen, los capítulos y el
-texto del documento, y de ahí salen la descripción y la búsqueda que
-acompañan a la ficha; el proceso está en
+<p>Del resumen, los capítulos y el texto del documento salen la descripción y la
+búsqueda que acompañan a la ficha; el proceso está en
 <a href="/blog/de-cualquier-formato-a-un-registro/">De cualquier formato a un registro</a>.
 Consultar el repositorio sobre ese texto, si la universidad lo quiere más
-adelante, es una capa aparte:
-<a href="/blog/puntos-de-acceso-texto-completo-y-rag/">Puntos de acceso, texto completo y RAG</a>.</p>
+adelante, es una capa aparte: <a href="/blog/puntos-de-acceso-texto-completo-y-rag/">Puntos de acceso, texto completo y RAG</a>.</p>
 <h2>Cuando la misma obra va a los dos sitios</h2>
 <p>Que un trabajo se deposite en el repositorio y no tenga registro en el
 catálogo es práctica corriente en muchas universidades, no una carencia del
@@ -97,8 +92,7 @@ descripción, mientras el título, los nombres, las fechas y los
 identificadores se quedan como en el original. El criterio completo está en
 <a href="/blog/fichas-en-otro-idioma/">Fichas en otro idioma</a>.</p>
 <p>Cuando el PDF trae datos personales —y en un campus los traen las actas, los
-expedientes y parte de los trabajos—, el procesamiento puede hacerse en
-servidores de la propia institución:
+expedientes y parte de los trabajos—, el procesamiento puede correr en la infraestructura de la propia institución:
 <a href="/blog/procesar-sin-exponer-datos-personales/">Procesar documentos sin exponer datos personales</a>.</p>
 <h2>Antes de cargar</h2>
 <p>Quien cataloga recibe el registro con su procedencia a la vista: qué vino de

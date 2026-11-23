@@ -9,13 +9,11 @@ proposes a form of the name from what it sees. That proposal is not accepted
 at face value. It is checked against the lists the institution already uses,
 and the record states which of those lists the final form came from. That trail
 is what makes the name trustworthy without typing it again. Why a catalog built
-with AI can be trusted is in
-<a href="/en/blog/confiar-en-catalogo-con-ia/">Why trust a catalog made with AI</a>.</p>
+with AI can be trusted is in <a href="/en/blog/confiar-en-catalogo-con-ia/">Why trust a catalog made with AI</a>.</p>
 <h2>The house catalog first, then the world</h2>
-<p>For a personal name, Collect follows a cascade and stops at the first rung that
-answers. Before it queries anything, it normalizes the form: it turns the name
+<p>For a personal name, Collect first normalizes the form: it turns the name
 to &ldquo;family name, given names&rdquo; and strips courtesy titles (&ldquo;Lic.&rdquo;, &ldquo;Dr.&rdquo;, &ldquo;Mr.&rdquo;).
-With that clean form it looks up, in order:</p>
+With that clean form it looks up:</p>
 <ul>
 <li><strong>The institution&rsquo;s authority file</strong> (the ILS: Janium, Alma, Sierra or Koha).
   If the house already fixed an authorized form for that author, that form wins.
@@ -24,13 +22,12 @@ With that clean form it looks up, in order:</p>
 <li><strong>VIAF</strong>, the international file where national libraries record the
   authorized form of each author. Birth and death dates, when the record has
   them, help tell homonyms apart. If VIAF resolves the name, the record also
-  carries the link to that entry (the VIAF identifier).</li>
+  carries the link to that entry (the VIAF identifier). These lookups are
+  enabled per institution.</li>
 <li><strong>The name normalizer</strong>, if no list had the author. It leaves the name well
   formed (family name first, without titles) but with no external backing and
   without that link.</li>
 </ul>
-<p>The cascade steps down only when the previous rung finds nothing. The rungs are
-also ordered by descending confidence, and the record keeps which rung resolved it.</p>
 <h2>Provenance is written in the record</h2>
 <p>What distinguishes a verified name from one that is only well written is a
 piece of information in the record itself. A name resolved by VIAF arrives
@@ -47,10 +44,10 @@ that code was not checked against any list.</p>
 come backed by an authority and which ones are worth reviewing, without
 checking them all. No inferred name is presented as if it were verified.</p>
 <h2>Organizations: companies, agencies, institutions</h2>
-<p>Entity names (a publisher, a ministry, a company) follow their own cascade,
-because the lists that cover them best are not the same as for persons: the
-local catalog first; <strong>ISNI</strong> when the institution has it on, because it covers
-organizations better; VIAF as fallback; and last the entity normalizer.</p>
+<p>Entity names (a publisher, a ministry, a company) are checked against their own lists,
+because the ones that cover them best are not the same as for persons: the
+local catalog; <strong>ISNI</strong> when the institution has it on, because it covers
+organizations better; VIAF; and the entity normalizer.</p>
 <p>That normalizer does work company names usually need: it strips the legal form
 (&ldquo;S.A. de C.V.&rdquo;, &ldquo;S. de R.L.&rdquo;) and puts the subordinate unit in its place, so
 that &ldquo;Editorial Planeta, S.A.&rdquo; enters the index as it should and not as a
@@ -76,7 +73,7 @@ queries them for work records, and here the rule is stricter than elsewhere:
 different places. Taking the first result would link to the wrong concept, and
 a wrong link is worse than none: it looks precise where it is not. If there is
 not exactly one concept whose name matches the term, Collect does not link and
-leaves the term unmarked.</p>
+leaves the term unlinked.</p>
 <h2>Limits</h2>
 <ul>
 <li><strong>Homonyms remain human work.</strong> Two &ldquo;Juan Pérez&rdquo; born in the same decade,
@@ -84,13 +81,13 @@ leaves the term unmarked.</p>
   leaves both in catalog form; deciding whether they are the same person is
   done by whoever knows the collection.</li>
 <li><strong>Names no list knows</strong> (a local official, a company that is not in VIAF or
-  ISNI) still enter well written, family name first and without titles, but
-  without the authority link. They are known to be unbacked precisely because
-  that mark is missing.</li>
-<li><strong>Bringing variants under a single heading for the collection</strong> is something
-  Collect does not yet do. Today it leaves each name in its authorized form;
-  unifying one author&rsquo;s spellings into a single heading for the holdings is a
-  planned extension, and we will say so when it is ready.</li>
+  ISNI) still enter well written (persons with the family name first and
+  without titles), but without the authority link. They are known to be
+  unbacked precisely because that mark is missing.</li>
+<li><strong>Bringing variants under one authorized form</strong> is done through the
+  catalog&rsquo;s authority control. Collect leaves each name in a consistent heading
+  form, and doubtful cases (homonyms, near matches) are left for the cataloger
+  to review.</li>
 <li><strong>The form is always corrected, even when there is no match.</strong> Name
   normalization happens before any list is queried; what external validation
   adds is provenance, not good formatting.</li>

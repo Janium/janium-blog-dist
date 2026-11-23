@@ -19,8 +19,7 @@ conjunto de regras com que se preenche o MARC21, não um formato de registo.
 Define, entre outras coisas, a pontuação com que se separam e fecham os
 subcampos (os espaços, hífenes, pontos e barras que um catalogador reconhece de
 imediato num registo bem formado) e os campos de tipo de conteúdo, de meio e de
-suporte. Essa pontuação não a decide o modelo: aplica-se de forma determinista
-no pós-processamento, depois de o modelo propor o conteúdo. Uma regra fixa
+suporte. Essa pontuação não a decide o modelo: aplicam-na regras, depois de o modelo propor o conteúdo. Uma regra fixa
 cumpre-se melhor com uma regra, não a pedindo a um modelo que pode acertá-la
 quase sempre mas não sempre.</p>
 <h2>UNIMARC: a alternativa de algumas regiões</h2>
@@ -56,8 +55,7 @@ catálogo é outra decisão. O exportador entrega o invólucro que corresponde:<
 </ul>
 <p>Um registo MARC21 e um UNIMARC podem sair em qualquer desses invólucros,
 conforme o que o recetor aceite. Antes de entregar o lote, o Collect verifica a
-integridade e detém-no se deteta degradação, para não carregar no catálogo
-material danificado. Como chega esse ficheiro ao ILS (lote de carga, SFTP,
+integridade: um lote incompleto ou alterado não se carrega no catálogo. Como chega esse ficheiro ao ILS (lote de carga, SFTP,
 pasta) está em <a href="/pt/blog/del-registro-al-catalogo/">Integrar a catalogação com IA no seu catálogo</a>.</p>
 <p>A descrição de arquivo, por proveniência e hierarquia, é outro formato:
 <a href="/pt/blog/formato-archivistico-isadg/">Como descrever um arquivo em ISAD-G</a>.</p>
@@ -65,9 +63,7 @@ pasta) está em <a href="/pt/blog/del-registro-al-catalogo/">Integrar a cataloga
 <p>O Collect não decide pela instituição se o catálogo é MARC21 ou UNIMARC. Essa
 escolha fixa-a a norma de catalogação e o sistema onde vive o catálogo; o
 Collect ajusta-se a ela. Também não garante que a pontuação RDA cubra cada
-caso-limite da norma: aplica as regras de pontuação no pós-processamento sobre o
-conteúdo que o modelo propõe, e os casos particulares que uma regra
-determinista não contemple ficam para a revisão de quem cataloga.</p>
+caso-limite da norma: os casos particulares que as regras não contemplem ficam para a revisão de quem cataloga.</p>
 <p>O modelo completa o registo com o que a fonte não trazia quando o pode
 sustentar, e deixa marcado o que inferiu: um dado inferido não se apresenta
 como verificado, e o que não se pode sustentar não se preenche para cumprir o
