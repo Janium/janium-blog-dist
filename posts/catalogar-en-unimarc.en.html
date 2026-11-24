@@ -1,0 +1,27 @@
+<p>Janium Collect generates the UNIMARC record directly from the data it extracts from the document, without first producing a MARC21 record to convert. The main fields of the record, from the title and contributors to the publication data, the physical description, the subjects, and the classification, are built in UNIMARC from the start, so they do not depend on a crosswalk between the two formats.</p>
+<p>The mechanism was tested end to end with books, digital documents, and articles. When to use UNIMARC and when to use MARC21 is explained in <a href="/en/blog/formatos-bibliograficos-marc/">How to generate MARC21 and UNIMARC records with AI</a>.</p>
+<h2>What the record contains</h2>
+<p>Besides the description, the record contains the coded data that a UNIMARC catalog expects:</p>
+<ul>
+<li><strong>The coded data block (100)</strong>, with the date the record was entered, the year of publication, the cataloging language set by the institution, the Unicode character set, and the script of the title.</li>
+<li><strong>Contributors with their relator code ($4)</strong>: 070 for the author, 340 for the editor or coordinator, 730 for the translator, 440 for the illustrator, 230 for the composer, based on what the document says about each one in Spanish, Portuguese, or English. The first author goes in 700 or 710, the other principal authors in 701 or 711, and the remaining contributors in 702 or 712; corporate bodies and conferences have their own indicator.</li>
+<li><strong>The country of publication (102)</strong>, in the two-letter ISO code.</li>
+<li><strong>The UDC (675) and the DDC (676)</strong>, proposed from the content of the document and flagged as inferred so the cataloger can review them.</li>
+<li><strong>The cataloging source (801)</strong>, with the country, the code of the cataloging agency, the date, and, if the institution declares them, the cataloging rules.</li>
+</ul>
+<p>A UNIMARC record for a book looks like this in MarcEdit text format, using a made-up example:</p>
+<pre><code>=100  \\$a20261122d1998       y0spay50      ba
+=101  0\$aspa
+=102  \\$aMX
+=200  1\$aHistoria de las bibliotecas novohispanas$fAna Martínez Ruiz ; traducción de Pedro Luna
+=210  \\$aMéxico$cEditorial Ejemplo$d1998
+=700  \1$aMartínez Ruiz$bAna$4070
+=702  \1$aLuna$bPedro$4730
+=801  \0$aMX$bAGENCIA$c20261122
+</code></pre>
+<h2>Quality, checked against UNIMARC rules</h2>
+<p>Before delivering it, Collect checks the record against quality rules specific to UNIMARC, different for a book, a serial, or an article, and compares the main values with the text of the document. <a href="/en/blog/marcado-procedencia-ia/">Provenance marking</a> distinguishes, field by field, what is written in the document from what the model filled in.</p>
+<h2>Punctuation, as UNIMARC requires</h2>
+<p>UNIMARC does not record ISBD punctuation at the boundaries between subfields: the subfields already identify each element, and the catalog adds the punctuation when it displays the record. Collect follows that rule and leaves inside a subfield only the punctuation that is part of the value, such as the semicolon that separates two contributors in 200 $f. MARC21 works the other way around, with the punctuation recorded in the record, and in that format Collect includes it.</p>
+<h2>To continue the conversation</h2>
+<p>If your library catalogs in UNIMARC and you have material waiting to be described, when we start, we go over with you what is specific to your catalog: what it expects in block 100, in the content type, media type, and carrier type fields, and in 801, and how it handles cases such as the main entry for a collective work. Write to us at info@janium.com and we will go over it with records from your catalog.</p>

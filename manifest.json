@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-11-23T10:27:20Z",
+  "generated": "2026-11-24T04:30:29Z",
   "posts": [
+    {
+      "slug": "catalogar-en-unimarc",
+      "date": "2026-11-24",
+      "datetime": "2026-11-24T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Registros UNIMARC generados desde los datos extraídos",
+          "description": "Janium Collect genera el registro UNIMARC directamente a partir de los datos que extrae del documento, sin convertir un MARC21: con el bloque 100, los responsables con su código de función, el país en el 102, la CDU y la CDD y la fuente de catalogación en el 801, revisado con criterios de calidad propios de UNIMARC.",
+          "cover": "assets/catalogar-en-unimarc-es-cover-c673737a.svg",
+          "html": "posts/catalogar-en-unimarc.es.html"
+        },
+        "en": {
+          "title": "UNIMARC records generated from extracted data",
+          "description": "Janium Collect generates the UNIMARC record directly from the data it extracts from the document, without converting a MARC21 record: with block 100, contributors with their relator code, the country in 102, the UDC and DDC, and the cataloging source in 801, checked against quality rules specific to UNIMARC.",
+          "cover": "assets/catalogar-en-unimarc-en-cover-c673737a.svg",
+          "html": "posts/catalogar-en-unimarc.en.html"
+        },
+        "pt": {
+          "title": "Registos UNIMARC gerados a partir dos dados extraídos",
+          "description": "O Janium Collect gera o registo UNIMARC diretamente a partir dos dados que extrai do documento, sem converter um MARC21: com o bloco 100, os responsáveis com o seu código de função, o país no 102, a CDU e a CDD e a fonte de catalogação no 801, revisto com critérios de qualidade próprios do UNIMARC.",
+          "cover": "assets/catalogar-en-unimarc-pt-cover-c673737a.svg",
+          "html": "posts/catalogar-en-unimarc.pt.html"
+        }
+      }
+    },
     {
       "slug": "que-es-janium-collect",
       "date": "2026-11-23",

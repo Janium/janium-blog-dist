@@ -1,0 +1,27 @@
+<p>Janium Collect genera el registro UNIMARC directamente a partir de los datos que extrae del documento, sin producir antes un MARC21 para convertirlo. Los campos principales del registro, del título y los responsables a la publicación, la descripción física, las materias y la clasificación, se construyen en UNIMARC desde el principio, así que no dependen de una tabla de equivalencias entre los dos formatos.</p>
+<p>El mecanismo se probó de principio a fin con libros, documentos digitales y artículos. Cuándo se usa UNIMARC y cuándo MARC21 se explica en <a href="/blog/formatos-bibliograficos-marc/">Cómo generar registros MARC21 y UNIMARC con IA</a>.</p>
+<h2>Qué lleva el registro</h2>
+<p>Además de la descripción, el registro trae los datos codificados que un catálogo UNIMARC espera:</p>
+<ul>
+<li><strong>El bloque de datos codificados (100)</strong>, con la fecha de entrada del registro, el año de publicación, el idioma de catalogación que fija la institución, el juego de caracteres Unicode y el alfabeto del título.</li>
+<li><strong>Los responsables con su código de función ($4)</strong>: 070 para el autor, 340 para el editor o coordinador, 730 para el traductor, 440 para el ilustrador, 230 para el compositor, a partir de lo que el documento dice de cada uno en español, portugués o inglés. El primer autor va al 700 o al 710, los demás autores principales al 701 o al 711, y el resto de los responsables al 702 o al 712; las entidades y los congresos llevan su indicador propio.</li>
+<li><strong>El país de publicación (102)</strong>, en el código ISO de dos letras.</li>
+<li><strong>La CDU (675) y la CDD (676)</strong>, propuestas a partir del contenido del documento y marcadas como inferidas para que las revise quien cataloga.</li>
+<li><strong>La fuente de catalogación (801)</strong>, con el país, el código de la agencia catalogadora, la fecha y, si la institución las declara, las reglas de catalogación.</li>
+</ul>
+<p>Un registro UNIMARC de un libro se ve así en texto MarcEdit, con un ejemplo inventado:</p>
+<pre><code>=100  \\$a20261122d1998       y0spay50      ba
+=101  0\$aspa
+=102  \\$aMX
+=200  1\$aHistoria de las bibliotecas novohispanas$fAna Martínez Ruiz ; traducción de Pedro Luna
+=210  \\$aMéxico$cEditorial Ejemplo$d1998
+=700  \1$aMartínez Ruiz$bAna$4070
+=702  \1$aLuna$bPedro$4730
+=801  \0$aMX$bAGENCIA$c20261122
+</code></pre>
+<h2>La calidad, con criterios de UNIMARC</h2>
+<p>Antes de entregarlo, Collect revisa el registro con criterios de calidad propios de UNIMARC, distintos para un libro, una publicación seriada o un artículo, y contrasta los datos principales con el texto del documento. El <a href="/blog/marcado-procedencia-ia/">marcado de procedencia</a> distingue, campo a campo, lo que está escrito en el documento de lo que completó el modelo.</p>
+<h2>La puntuación, como pide UNIMARC</h2>
+<p>UNIMARC no graba la puntuación ISBD en los límites entre subcampos: los subcampos ya identifican cada elemento, y el catálogo pone la puntuación al mostrar el registro. Collect sigue esa regla y deja dentro de un subcampo solo la puntuación que forma parte del dato, como el punto y coma que separa a dos responsables en el 200 $f. MARC21 trabaja al revés, con la puntuación grabada en el registro, y en ese formato Collect la incluye.</p>
+<h2>Para continuar la conversación</h2>
+<p>Si tu biblioteca cataloga en UNIMARC y tienes material esperando descripción, al empezar revisamos contigo lo que es propio de tu catálogo: qué espera en el bloque 100, en los campos de tipo de contenido, de medio y de soporte y en el 801, y cómo resuelve casos como el asiento de una obra colectiva. Escríbenos a info@janium.com y lo vemos con registros de tu catálogo.</p>
