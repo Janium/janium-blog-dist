@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-11-24T04:30:29Z",
+  "generated": "2026-11-25T04:30:29Z",
   "posts": [
+    {
+      "slug": "instrumentos-notariales",
+      "date": "2026-11-25",
+      "datetime": "2026-11-25T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Escrituras y poderes descritos con los datos del instrumento",
+          "description": "Janium Collect describe escrituras, poderes y otros documentos de notaría en ISAD-G con los datos del instrumento: actos, comparecientes, identificaciones, inmuebles, montos e inscripción en el registro público. Con reglas, arma la jerarquía del protocolo, coteja la portada contra el cuerpo y califica cada registro.",
+          "cover": "assets/instrumentos-notariales-es-cover-c3bd238b.svg",
+          "html": "posts/instrumentos-notariales.es.html"
+        },
+        "en": {
+          "title": "Deeds and powers of attorney described with the instrument's own data",
+          "description": "Janium Collect describes deeds, powers of attorney, and other notarial documents in ISAD-G with the instrument's own data: acts, appearing parties, identification, properties, amounts, and public registry entries. With rules, it builds the protocol hierarchy, cross-checks the cover against the body, and rates each record.",
+          "cover": "assets/instrumentos-notariales-en-cover-c3bd238b.svg",
+          "html": "posts/instrumentos-notariales.en.html"
+        },
+        "pt": {
+          "title": "Escrituras e procurações descritas com os dados do instrumento",
+          "description": "O Janium Collect descreve escrituras, procurações e outros documentos notariais em ISAD-G com os dados do instrumento: atos, outorgantes, identificações, imóveis, montantes e inscrição no registo público. Com regras, monta a hierarquia do protocolo, compara a capa com o corpo e atribui uma pontuação a cada registo.",
+          "cover": "assets/instrumentos-notariales-pt-cover-c3bd238b.svg",
+          "html": "posts/instrumentos-notariales.pt.html"
+        }
+      }
+    },
     {
       "slug": "catalogar-en-unimarc",
       "date": "2026-11-24",
