@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-11-25T04:30:29Z",
+  "generated": "2026-11-26T04:30:29Z",
   "posts": [
+    {
+      "slug": "pdf-imagenes-ocr-lectura-directa",
+      "date": "2026-11-26",
+      "datetime": "2026-11-26T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Collect transcribe las páginas del PDF antes de catalogarlo",
+          "description": "Janium Collect transcribe las páginas de un PDF, nacido digital o escaneado, y cataloga sobre esa transcripción, que además permite marcar qué datos están escritos en el documento. Con el documento completo, hasta quinientas páginas, el resumen, las materias y los puntos de acceso salen de todo el texto; cuando solo se digitalizan las primeras páginas, salen registros viables a partir de ellas.",
+          "cover": "assets/pdf-imagenes-ocr-lectura-directa-es-cover-65d15243.svg",
+          "html": "posts/pdf-imagenes-ocr-lectura-directa.es.html"
+        },
+        "en": {
+          "title": "Collect transcribes a PDF's pages before cataloging it",
+          "description": "Janium Collect transcribes the pages of a PDF, born-digital or scanned, and catalogs from that transcription, which also makes it possible to mark which data is written in the document. With the complete document, up to five hundred pages, the summary, subjects, and access points come from the full text; when only the first pages are digitized, workable records come from those pages.",
+          "cover": "assets/pdf-imagenes-ocr-lectura-directa-en-cover-65d15243.svg",
+          "html": "posts/pdf-imagenes-ocr-lectura-directa.en.html"
+        },
+        "pt": {
+          "title": "O Collect transcreve as páginas do PDF antes de o catalogar",
+          "description": "O Janium Collect transcreve as páginas de um PDF, nado digital ou digitalizado, e cataloga a partir dessa transcrição, que permite ainda marcar quais os dados que estão escritos no documento. Com o documento completo, até quinhentas páginas, o resumo, os assuntos e os pontos de acesso resultam de todo o texto; quando só se digitalizam as primeiras páginas, obtêm-se registos viáveis a partir delas.",
+          "cover": "assets/pdf-imagenes-ocr-lectura-directa-pt-cover-65d15243.svg",
+          "html": "posts/pdf-imagenes-ocr-lectura-directa.pt.html"
+        }
+      }
+    },
     {
       "slug": "instrumentos-notariales",
       "date": "2026-11-25",
