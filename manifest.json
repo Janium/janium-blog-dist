@@ -1,7 +1,36 @@
 {
   "contract": 1,
-  "generated": "2026-11-26T04:30:29Z",
+  "generated": "2026-11-27T04:30:29Z",
   "posts": [
+    {
+      "slug": "primeros-lotes-en-revision",
+      "date": "2026-11-27",
+      "datetime": "2026-11-27T00:00:00Z",
+      "tags": [
+        "janiumcollect",
+        "ia"
+      ],
+      "translations": {
+        "es": {
+          "title": "Los primeros lotes se revisan antes de la carga automática",
+          "description": "Al poner en marcha Janium Collect, los primeros lotes de registros se preparan completos pero no entran solos al catálogo: el equipo de Janium los carga, la institución revisa el resultado y, con su visto bueno, la carga pasa a ser automática. Cada lote llega con su reporte de calidad, las miniportadas y, si la institución lo pide, el PDF o el índice de cada registro.",
+          "cover": "assets/primeros-lotes-en-revision-es-cover-66f77f59.svg",
+          "html": "posts/primeros-lotes-en-revision.es.html"
+        },
+        "en": {
+          "title": "The first batches are reviewed before automatic loading",
+          "description": "When Janium Collect goes live, the first batches of records are prepared in full but do not go into the catalog on their own: the Janium team loads them, the institution reviews the result and, with its sign-off, loading becomes automatic. Each batch arrives with its quality report, the cover thumbnails and, if the institution asks for it, the PDF or table of contents of each record.",
+          "cover": "assets/primeros-lotes-en-revision-en-cover-66f77f59.svg",
+          "html": "posts/primeros-lotes-en-revision.en.html"
+        },
+        "pt": {
+          "title": "Os primeiros lotes são revistos antes do carregamento automático",
+          "description": "Ao arrancar o Janium Collect, os primeiros lotes de registos são preparados por completo, mas não entram sozinhos no catálogo: a equipa da Janium carrega-os, a instituição revê o resultado e, com a sua aprovação, o carregamento passa a ser automático. Cada lote chega com o seu relatório de qualidade, as miniaturas de capa e, se a instituição o pedir, o PDF ou o índice de cada registo.",
+          "cover": "assets/primeros-lotes-en-revision-pt-cover-66f77f59.svg",
+          "html": "posts/primeros-lotes-en-revision.pt.html"
+        }
+      }
+    },
     {
       "slug": "pdf-imagenes-ocr-lectura-directa",
       "date": "2026-11-26",
